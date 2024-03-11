@@ -2,19 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:51722/docs/quickstart/</loc>
+    <loc>http://localhost:52150/docs/quickstart/</loc>
   </url><url>
-    <loc>http://localhost:51722/docs/peak_detect/</loc>
+    <loc>http://localhost:52150/docs/peak_detect/</loc>
   </url><url>
-    <loc>http://localhost:51722/</loc>
-    <lastmod>2024-03-10T19:05:27-07:00</lastmod>
+    <loc>http://localhost:52150/categories/</loc>
   </url><url>
-    <loc>http://localhost:51722/categories/</loc>
+    <loc>http://localhost:52150/docs/</loc>
   </url><url>
-    <loc>http://localhost:51722/docs/</loc>
+    <loc>http://localhost:52150/docs/peak_detect/mass_bining/</loc>
   </url><url>
-    <loc>http://localhost:51722/docs/peak_detect/mass_bining/</loc>
+    <loc>http://localhost:52150/</loc>
   </url><url>
-    <loc>http://localhost:51722/tags/</loc>
+    <loc>http://localhost:52150/tags/</loc>
   </url>
 </urlset>

@@ -1,9 +1,7 @@
-+++
-title = 'MassCube'
-date = 2024-03-10T19:05:27-07:00
-draft = false
-toc = false
-+++
+---
+title: MassCube
+toc: false
+---
 
 
 <br/><br/>
@@ -12,7 +10,7 @@ MassCube is an end-to-end mass spectrometry-based metabolomics data processing f
 
 **MassCube** enables:
 
-* Untargeted feature extraction
+* **Untargeted feature extraction**
     * Accurate and comprehensive feature detection in LC-MS/MS data, with accurate annotation of isotopes, charge states,
     adducts, and in-source fragments.
 
@@ -24,7 +22,7 @@ MassCube is an end-to-end mass spectrometry-based metabolomics data processing f
     single spectrum, MS/MS matching plots, and molecular networks.
    
 * Tools for data analysis
-    *A variety of tools for data analysis, including data normalization, missing value imputation, and statistical analysis.
+    * A variety of tools for data analysis, including data normalization, missing value imputation, and statistical analysis.
 
 ## Installation
 

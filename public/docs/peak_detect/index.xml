@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – a</title>
-    <link>http://localhost:51722/docs/peak_detect/</link>
+    <link>http://localhost:52150/docs/peak_detect/</link>
     <description>Recent content in a on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:51722/docs/peak_detect/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:52150/docs/peak_detect/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>binning</title>
-      <link>http://localhost:51722/docs/peak_detect/mass_bining/</link>
+      <link>http://localhost:52150/docs/peak_detect/mass_bining/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:51722/docs/peak_detect/mass_bining/</guid>
+      <guid>http://localhost:52150/docs/peak_detect/mass_bining/</guid>
       <description>
         
         
