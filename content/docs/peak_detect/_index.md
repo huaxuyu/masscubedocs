@@ -1,5 +1,7 @@
 ---
 linkTitle: "Peak detection"
-title: a
+title: Peak detection
 weight: 2
 ---
+
+Working on it.
