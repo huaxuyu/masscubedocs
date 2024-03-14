@@ -4,13 +4,29 @@
   <url>
     <loc>http://localhost:1313/docs/quickstart/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/parameter/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/peak_detect/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/feature_evaluation/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/feature_grouping/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/alignment/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/annotation/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/statistical_analysis/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/visualization/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/api/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/plans/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/peak_detect/mass_bining/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>

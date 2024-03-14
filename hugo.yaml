@@ -23,7 +23,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: ""
+      url: "https://github.com/Waddlessss"
       params:
         icon: github
     - name: Twitter
@@ -38,14 +38,18 @@ menu:
       params:
         type: separator
       weight: 1
-    - identifier: about
-      name: "About"
+    - identifier: Contribution
+      name: "Contribution"
       pageRef: "/about"
       weight: 2
-    - identifier: hugoDocs
-      name: "Hugo Docs ↗"
-      url: "https://gohugo.io/documentation/"
+    - identifier: Community
+      name: "Community"
+      url: ""
       weight: 3
+    - identifier: "Collaboration"
+      name: "Collaboration"
+      url: ""
+      weight: 4
 
 params:
   navbar:

@@ -1,7 +1,7 @@
 ---
 linkTitle: "Peak detection"
 title: Peak detection
-weight: 2
+weight: 3
 ---
 
 Working on it.
