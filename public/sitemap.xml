@@ -6,6 +6,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/parameter/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/workflows/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/peak_detect/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/feature_evaluation/</loc>
