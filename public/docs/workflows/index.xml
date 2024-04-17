@@ -14,5 +14,44 @@
       
     
     
+    <item>
+      <title>Untargeted metabolomics workflow</title>
+      <link>http://localhost:1313/docs/workflows/untargeted-metabolomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/untargeted-metabolomics/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Single file processing (batch mode)</title>
+      <link>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Targeted metabolomics workflow</title>
+      <link>http://localhost:1313/docs/workflows/targeted-metabolomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/targeted-metabolomics/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
   </channel>
 </rss>

@@ -7,19 +7,19 @@ Use MassCube for common tasks in mass spectrometry data processing!
 
 <!--more-->
 
-## The First Time Use
+## Installation
 
 ### Installation of Python
 
 Visit the [official Python website](https://www.python.org/) to download Python.
 
 {{< callout type="warning" >}}
-  To use the neural network model for peak shape evaluation, **Python 3.9-3.11** is required. Click here to download the [Python 3.11](https://www.python.org/downloads/release/python-3117/).
+   **Python >= 3.9** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
 {{< /callout >}}
 
 ### Installation of *masscube*
 
-The easiest way to install the masscube python package is using **pip**. Open terminal and run
+The easiest way to install *masscube* is using **pip**. Open terminal and run
 
 ```console
 pip install masscube
@@ -63,7 +63,7 @@ untargeted-metabolomics
 ```
 
 {{< callout type="warning" >}}
-  Make sure the terminal directory is the peoject folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.)
+  Make sure the terminal directory is the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.)
 {{< /callout >}}
 
 ### Output

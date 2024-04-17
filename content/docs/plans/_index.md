@@ -4,4 +4,10 @@ title: Plans for development
 weight: 11
 ---
 
-Working on it.
+{{< callout emoji="🌐" >}}
+  Join us to contribute to the MassCube project!
+{{< /callout >}}
+
+Wanted:
+
+1. 

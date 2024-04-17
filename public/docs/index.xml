@@ -24,8 +24,8 @@
         
         
         &lt;p&gt;Use MassCube for common tasks in mass spectrometry data processing!&lt;/p&gt;
-&lt;h2&gt;The First Time Use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;the-first-time-use&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#the-first-time-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Installation of Python&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-python&#34;&gt;&lt;/span&gt;
+&lt;h2&gt;Installation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#installation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Installation of Python&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-python&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#installation-of-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Python website&lt;/a&gt; to download Python.&lt;/p&gt;
 
 
@@ -52,13 +52,13 @@
 
   &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
     &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      To use the neural network model for peak shape evaluation, &lt;strong&gt;Python 3.9-3.11&lt;/strong&gt; is required. Click here to download the &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11&lt;/a&gt;.
+      &lt;strong&gt;Python &amp;gt;= 3.9&lt;/strong&gt; is recommended. Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11&lt;/a&gt;.
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Installation of &lt;em&gt;masscube&lt;/em&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-masscube&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#installation-of-masscube&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The easiest way to install the masscube python package is using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
+    &lt;a href=&#34;#installation-of-masscube&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The easiest way to install &lt;em&gt;masscube&lt;/em&gt; is using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install masscube
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
@@ -139,7 +139,7 @@
 
   &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
     &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      Make sure the terminal directory is the peoject folder. For &lt;a href=&#34;https://johnwargo.com/posts/2024/launch-windows-terminal/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows user&lt;/a&gt; and &lt;a href=&#34;https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&amp;amp;text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacOS user&lt;/a&gt;
+      Make sure the terminal directory is the project folder. For &lt;a href=&#34;https://johnwargo.com/posts/2024/launch-windows-terminal/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows user&lt;/a&gt; and &lt;a href=&#34;https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&amp;amp;text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacOS user&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -183,6 +183,45 @@
 &lt;li&gt;&lt;code&gt;ms2_matching&lt;/code&gt; folder: mirror plot of MS2 matching results.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;statistics&lt;/code&gt; folder: results from statistical analysis. For example, principal component analysis plots.&lt;/li&gt;
 &lt;/ol&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Untargeted metabolomics workflow</title>
+      <link>http://localhost:1313/docs/workflows/untargeted-metabolomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/untargeted-metabolomics/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Single file processing (batch mode)</title>
+      <link>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Targeted metabolomics workflow</title>
+      <link>http://localhost:1313/docs/workflows/targeted-metabolomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/targeted-metabolomics/</guid>
+      <description>
+        
+        
+        
       </description>
     </item>
     

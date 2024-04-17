@@ -3,38 +3,39 @@ title: MassCube
 toc: false
 ---
 
-
 <br/><br/>
 
-MassCube is an end-to-end mass spectrometry-based metabolomics data processing framework.
+MassCube is an end-to-end mass spectrometry data processing framework designed to manage everything 
+from individual files to ultra-large metabolomics studies involving more than 10,000 injections.
 
 **MassCube** enables:
 
-* **Untargeted feature extraction**
-    * Accurate and comprehensive feature detection in LC-MS/MS data, with accurate annotation of isotopes, charge states,
+* **Untargeted feature detection**
+    * Accurate and comprehensive feature detection, with accurate annotation of isotopes, charge states,
     adducts, and in-source fragments.
 
-* Compound annotation and analog search
+* **Comprehensive feature evalution**
+    * Understand chromatographic peak shapes using Gaussian similarity, noise score, asymmetry factor and more.
+
+* **Compound annotation and analog search**
     * Ultra-fast annotation of MS/MS spectra with high confidence, suppoted by entropy similarity.
 
-* Data visualization
+* **Data visualization**
     * Visualize the data in a variety of ways and generate publication-quality graphs, including chromatograms, 
-    single spectrum, MS/MS matching plots, and molecular networks.
+    single spectrum, MS/MS matching plots, PCA plots and more.
    
-* Tools for data analysis
-    * A variety of tools for data analysis, including data normalization, missing value imputation, and statistical analysis.
+* **Flexible development and implementation**
+    * A variety of fundemental algorithms are available for flexible usage, including data normalization, network analysis, and statistical analysis.
 
 ## Installation
 
-*masscube* python package is available from [PyPI](https://pypi.org/project/masscube)
-
-### Windows or Mac
-
-Open terminal and using pip to install *masscube* python package.
+In terminal, using pip to install the *masscube* python package.
 
 ```console
 pip install masscube
 ```
+
+*masscube* python package is available from [PyPI](https://pypi.org/project/masscube)
 
 ## Explore
 
