@@ -3,40 +3,18 @@ title: "Quick Start"
 weight: 1
 ---
 
-Use MassCube for common tasks in mass spectrometry data processing!
-
-<!--more-->
-
-## Installation
-
-### Installation of Python
-
-Visit the [official Python website](https://www.python.org/) to download Python.
-
-{{< callout type="warning" >}}
-   **Python >= 3.9** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
-{{< /callout >}}
-
-### Installation of *masscube*
-
-The easiest way to install *masscube* is using **pip**. Open terminal and run
-
-```console
-pip install masscube
-```
-
-Dependencies will be automatically installed. This progress may take several minutes. Consider creating a [virtual environment](https://docs.python.org/3/library/venv.html) if you're working with Python on multiple projects.
+Let's get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command. 
 
 
 ## The OneClick Untargeted Metabolomics workflow
 
-Finish the complete untargeted metabolomics workflow (**Fig. 1**) with a single line of command.
+The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (**Fig. 1**).
 
-![](workflow.png "Fig. 1. The OneClick workflow")
+![](workflow.png "Fig. 1. The OneClick Untargeted Metabolomics workflow")
 
 ### Input
 
-Organize the files of a project (i.e. **my_project**) in a folder
+In your project folder (e.g. **my_project**), you need to prepare the following files and folders:
 
 ```
 my_project
@@ -48,11 +26,16 @@ my_project
 └── parameters.csv
 ```
 
-There are three types of data
+There are three components for a project:
 
-1. `data` folder: a subfolder containing all raw MS data in mzML or mzXML format. It's **mandatory**.
+1. `data` folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It's **mandatory**.
 2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. An example is [here](). It's **mandatory**.
-3. `parameters.csv` file: a csv file to set parameters for the workflow. An example is [here](). It's **optional**. If not provided, the [default parameters]() will be applied. See [Parameters]() for more details. 
+3. `parameters.csv` file: a csv file to set parameters for the workflow. An example is [here](). It's **optional**. If not provided, the [default parameters]() will be applied, yet MS/MS annotation will not be performed since the library directory is not provided. See [Parameters]() for more details. 
+
+{{< cards >}}
+  {{< card link="../data_preparation" title="Data Preparation" icon="play">}}
+{{< /cards >}}
+
 
 ### Processing
 
