@@ -1,12 +1,10 @@
 ---
 title: "Installation"
-weight: 2
+weight: 1
 ---
 
 
-## Installation
-
-### Installation of Python
+## Installation of Python
 
 Visit the [official Python website](https://www.python.org/) to download Python.
 
@@ -14,7 +12,7 @@ Visit the [official Python website](https://www.python.org/) to download Python.
    **Python 3.9-3.11** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
 {{< /callout >}}
 
-### Installation of *masscube*
+## Installation of *masscube*
 
 The easiest way to install *masscube* is using **pip**. Open terminal and run
 

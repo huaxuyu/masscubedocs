@@ -15,6 +15,78 @@
     
     
     <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/docs/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/installation/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Installation of Python&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-python&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#installation-of-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Python website&lt;/a&gt; to download Python.&lt;/p&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200&#34;&gt;
+  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;div class=&#34;select-none text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ⚠️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
+    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
+      &lt;strong&gt;Python 3.9-3.11&lt;/strong&gt; is recommended. Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11&lt;/a&gt;.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Installation of &lt;em&gt;masscube&lt;/em&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-masscube&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#installation-of-masscube&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The easiest way to install &lt;em&gt;masscube&lt;/em&gt; is using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install masscube
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Dependencies will be automatically installed. This progress may take several minutes. Consider creating a &lt;a href=&#34;https://docs.python.org/3/library/venv.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtual environment&lt;/a&gt; if you&amp;rsquo;re working with Python on multiple projects.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Untargeted metabolomics workflow</title>
+      <link>http://localhost:1313/docs/workflows/untargeted-metabolomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/workflows/untargeted-metabolomics/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Quick Start</title>
       <link>http://localhost:1313/docs/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -24,6 +96,7 @@
         
         
         &lt;p&gt;Let&amp;rsquo;s get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t installed MassCube, please follow the &lt;a href=&#34;../installation&#34; &gt;installation guide&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;The OneClick Untargeted Metabolomics workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;the-oneclick-untargeted-metabolomics-workflow&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#the-oneclick-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (&lt;strong&gt;Fig. 1&lt;/strong&gt;).&lt;/p&gt;
 &lt;p&gt;
@@ -52,9 +125,10 @@
 &lt;p&gt;There are three components for a project:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. An example is &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. An example is &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, the &lt;a href=&#34;&#34; &gt;default parameters&lt;/a&gt; will be applied, yet MS/MS annotation will not be performed since the library directory is not provided. See &lt;a href=&#34;&#34; &gt;Parameters&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. A template is &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, the &lt;a href=&#34;../docs/parameter&#34; &gt;default parameters&lt;/a&gt; will be applied, yet MS/MS annotation will not be performed since the library directory is not provided.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;More about the data preparation:&lt;/p&gt;
 
 
 &lt;div class=&#34;hextra-cards mt-4 gap-4 grid not-prose&#34; style=&#34;--rows: 3;&#34;&gt;
@@ -63,8 +137,8 @@
 &lt;/div&gt;
 
 &lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Within the project folder, open terminal and run&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;untargeted-metabolomics&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;untargeted-metabolomics&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -99,13 +173,13 @@
 
   &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
     &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      Make sure the terminal directory is the project folder. For &lt;a href=&#34;https://johnwargo.com/posts/2024/launch-windows-terminal/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows user&lt;/a&gt; and &lt;a href=&#34;https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&amp;amp;text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacOS user&lt;/a&gt;
+      Make sure the terminal directory is the project folder. For &lt;a href=&#34;https://johnwargo.com/posts/2024/launch-windows-terminal/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows user&lt;/a&gt; and &lt;a href=&#34;https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacOS user&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A set of output files will be provided in the &lt;strong&gt;project folder&lt;/strong&gt; depending on the parameters settings. The general output will be&lt;/p&gt;
+    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After the processing, you will find the following files and folders in the project folder:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;project/
 ├── data
 ├── sample_table.csv
@@ -141,81 +215,8 @@
 &lt;li&gt;&lt;code&gt;single_file_output&lt;/code&gt; folder: a file folder containing the detected features from individual files.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;chromatogram&lt;/code&gt; folder: a file folder to store base peak chromatograms (BPCs) for individual files.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ms2_matching&lt;/code&gt; folder: mirror plot of MS2 matching results.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;statistics&lt;/code&gt; folder: results from statistical analysis. For example, principal component analysis plots.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistics&lt;/code&gt; folder: results from statistical analysis like principal component analysis (PCA).&lt;/li&gt;
 &lt;/ol&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Untargeted metabolomics workflow</title>
-      <link>http://localhost:1313/docs/workflows/untargeted-metabolomics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/docs/workflows/untargeted-metabolomics/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>http://localhost:1313/docs/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/docs/installation/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;Installation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#installation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Installation of Python&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-python&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#installation-of-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Python website&lt;/a&gt; to download Python.&lt;/p&gt;
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200&#34;&gt;
-  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;div class=&#34;select-none text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        ⚠️
-      &lt;/div&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
-    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      &lt;strong&gt;Python 3.9-3.11&lt;/strong&gt; is recommended. Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11&lt;/a&gt;.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3&gt;Installation of &lt;em&gt;masscube&lt;/em&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;installation-of-masscube&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#installation-of-masscube&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The easiest way to install &lt;em&gt;masscube&lt;/em&gt; is using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install masscube
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Dependencies will be automatically installed. This progress may take several minutes. Consider creating a &lt;a href=&#34;https://docs.python.org/3/library/venv.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtual environment&lt;/a&gt; if you&amp;rsquo;re working with Python on multiple projects.&lt;/p&gt;
 
       </description>
     </item>
@@ -243,8 +244,36 @@
         
         
         &lt;h2&gt;File conversion&lt;span class=&#34;absolute -mt-20&#34; id=&#34;file-conversion&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#file-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Raw LC-MS data need to be converted to &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format. We recommend to use &lt;strong&gt;ProteoWizard&lt;/strong&gt;
-for file conversion.&lt;/p&gt;
+    &lt;a href=&#34;#file-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Raw LC-MS data need to be converted to &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format.&lt;/p&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
+    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
+      Only &lt;strong&gt;centroid&lt;/strong&gt; data are supported in &lt;em&gt;masscube&lt;/em&gt; to maximize the speed and reduce the memory usage.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We recommend to use &lt;strong&gt;ProteoWizard&lt;/strong&gt; for file conversion.&lt;/p&gt;
 &lt;h3&gt;Download and install ProteoWizard&lt;span class=&#34;absolute -mt-20&#34; id=&#34;download-and-install-proteowizard&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#download-and-install-proteowizard&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard.&lt;/p&gt;
 &lt;h3&gt;File conversion using MSConvert&lt;span class=&#34;absolute -mt-20&#34; id=&#34;file-conversion-using-msconvert&#34;&gt;&lt;/span&gt;
@@ -332,10 +361,24 @@ for file conversion.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h2&gt;Sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sample table&lt;/p&gt;
 &lt;h2&gt;Parameter file&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter-file&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#parameter-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+    &lt;a href=&#34;#parameter-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A parameter file (.csv) is used to set parameters for the workflow. A templete is provided &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../parameter&#34; &gt;default parameters&lt;/a&gt; will be applied.&lt;/p&gt;
+&lt;h2&gt;Sample table (Untargeted metabolomics workflow)&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-table-untargeted-metabolomics-workflow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample-table-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided &lt;a href=&#34;&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For large-scale metabolomics data, it&amp;rsquo;s not easy to prepare the sample table manually. In &lt;em&gt;masscube&lt;/em&gt;, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.&lt;/p&gt;
+&lt;h3&gt;Generate sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;generate-sample-table&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#generate-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;generate-sample-table&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
       </description>
     </item>
     

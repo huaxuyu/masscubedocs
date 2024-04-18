@@ -1,10 +1,11 @@
 ---
 title: "Quick Start"
-weight: 1
+weight: 2
 ---
 
 Let's get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command. 
 
+If you haven't installed MassCube, please follow the [installation guide](../installation).
 
 ## The OneClick Untargeted Metabolomics workflow
 
@@ -29,8 +30,10 @@ my_project
 There are three components for a project:
 
 1. `data` folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It's **mandatory**.
-2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. An example is [here](). It's **mandatory**.
-3. `parameters.csv` file: a csv file to set parameters for the workflow. An example is [here](). It's **optional**. If not provided, the [default parameters]() will be applied, yet MS/MS annotation will not be performed since the library directory is not provided. See [Parameters]() for more details. 
+2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is [here](). It's **mandatory**.
+3. `parameters.csv` file: a csv file to set parameters for the workflow. A template is [here](). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet MS/MS annotation will not be performed since the library directory is not provided.
+
+More about the data preparation:
 
 {{< cards >}}
   {{< card link="../data_preparation" title="Data Preparation" icon="play">}}
@@ -39,19 +42,19 @@ There are three components for a project:
 
 ### Processing
 
-Within the project folder, open terminal and run
+In the project folder, open a terminal and run the following command:
 
-```
+```bash
 untargeted-metabolomics
 ```
 
 {{< callout type="warning" >}}
-  Make sure the terminal directory is the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-new-terminal-windows-and-tabs-trmlb20c7888/mac#:~:text=Open%20new%20Terminal%20windows%20or%20tabs%20from%20the%20Finder&text=Control%2Dclick%20the%20folder%20in,New%20Terminal%20Tab%20at%20Folder.)
+  Make sure the terminal directory is the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.)
 {{< /callout >}}
 
 ### Output
 
-A set of output files will be provided in the **project folder** depending on the parameters settings. The general output will be
+After the processing, you will find the following files and folders in the project folder:
 
 ```
 project/
@@ -81,4 +84,4 @@ project/
 3. `single_file_output` folder: a file folder containing the detected features from individual files.
 4.  `chromatogram` folder: a file folder to store base peak chromatograms (BPCs) for individual files.
 5. `ms2_matching` folder: mirror plot of MS2 matching results.
-6. `statistics` folder: results from statistical analysis. For example, principal component analysis plots.
+6. `statistics` folder: results from statistical analysis like principal component analysis (PCA).

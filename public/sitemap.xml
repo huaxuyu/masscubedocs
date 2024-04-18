@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/quickstart/</loc>
+    <loc>http://localhost:1313/docs/installation/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/workflows/untargeted-metabolomics/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/installation/</loc>
+    <loc>http://localhost:1313/docs/quickstart/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</loc>
   </url><url>
@@ -14,7 +14,7 @@
   </url><url>
     <loc>http://localhost:1313/docs/data_preparation/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/peak_detect/</loc>
+    <loc>http://localhost:1313/docs/feature_detect/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/workflows/targeted-metabolomics/</loc>
   </url><url>
