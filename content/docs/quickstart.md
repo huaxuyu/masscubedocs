@@ -38,6 +38,9 @@ There are three components for a project:
 
 3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet **MS/MS annotation will not be performed since the library directory is not provided**.
 
+{{< callout type="warning" >}}
+  To annotate MS/MS spectra, you also need to download a database if you don't have one. You can download the database from [here](https://zenodo.org/records/11043488). For a faster loading, please use the .pkl format.
+{{< /callout >}}
 
 
 More about the data preparation:
