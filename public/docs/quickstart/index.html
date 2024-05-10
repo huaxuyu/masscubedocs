@@ -39,7 +39,7 @@ If you haven&rsquo;t installed MassCube, please follow the installation guide.
 The OneClick Untargeted Metabolomics workflow The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (Fig. 1).
 Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project folder (e.">
 
-<meta itemprop="wordCount" content="358">
+<meta itemprop="wordCount" content="387">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Quick Start"/>
 <meta name="twitter:description" content="Let&rsquo;s get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command.
 If you haven&rsquo;t installed MassCube, please follow the installation guide.
@@ -592,7 +592,7 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
     <a href="#the-oneclick-untargeted-metabolomics-workflow" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (<strong>Fig. 1</strong>).</p>
 <p>
     <figure>
-    <img src="../workflow.png" title="Fig. 1. The OneClick Untargeted Metabolomics workflow" alt="" loading="lazy" />
+    <img src="../untargeted_workflow.png" title="Fig. 1. The OneClick Untargeted Metabolomics workflow" alt="" loading="lazy" />
     <figcaption>Fig. 1. The OneClick Untargeted Metabolomics workflow</figcaption>
   </figure></p>
 <h3>Input<span class="absolute -mt-20" id="input"></span>
@@ -616,8 +616,40 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
 <p>There are three components for a project:</p>
 <ol>
 <li><code>data</code> folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It&rsquo;s <strong>mandatory</strong>.</li>
-<li><code>sample_table.csv</code> file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is <a href="" >here</a>. It&rsquo;s <strong>mandatory</strong>.</li>
-<li><code>parameters.csv</code> file: a csv file to set parameters for the workflow. A template is <a href="" >here</a>. It&rsquo;s <strong>optional</strong>. If not provided, the <a href="../docs/parameter" >default parameters</a> will be applied, yet MS/MS annotation will not be performed since the library directory is not provided.</li>
+<li><code>sample_table.csv</code> file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is <a href="" >here</a>. It&rsquo;s <strong>optional</strong>. If not provided, normalization and statistical analysis will not be applied.</li>
+</ol>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ⚠️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      In sample table, please name quality control samples as &ldquo;qc&rdquo; and blank samples as &ldquo;blank&rdquo; (not case-sensitive).
+    </div>
+  </div>
+</div>
+
+<ol start="3">
+<li><code>parameters.csv</code> file: a csv file to set parameters for the workflow. A template is <a href="" >here</a>. It&rsquo;s <strong>optional</strong>. If not provided, the <a href="../docs/parameter" >default parameters</a> will be applied, yet <strong>MS/MS annotation will not be performed since the library directory is not provided</strong>.</li>
 </ol>
 <p>More about the data preparation:</p>
 
@@ -629,7 +661,7 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
 
 <h3>Processing<span class="absolute -mt-20" id="processing"></span>
     <a href="#processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the project folder, open a terminal and run the following command:</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>untargeted-metabolomics</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">untargeted-metabolomics</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"

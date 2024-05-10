@@ -11,7 +11,7 @@ If you haven't installed MassCube, please follow the [installation guide](../ins
 
 The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (**Fig. 1**).
 
-![](workflow.png "Fig. 1. The OneClick Untargeted Metabolomics workflow")
+![](untargeted_workflow.png "Fig. 1. The OneClick Untargeted Metabolomics workflow")
 
 ### Input
 
@@ -30,8 +30,15 @@ my_project
 There are three components for a project:
 
 1. `data` folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It's **mandatory**.
-2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is [here](). It's **mandatory**.
-3. `parameters.csv` file: a csv file to set parameters for the workflow. A template is [here](). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet MS/MS annotation will not be performed since the library directory is not provided.
+2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is [here](). It's **optional**. If not provided, normalization and statistical analysis will not be applied.
+
+{{< callout type="warning" >}}
+  In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
+{{< /callout >}}
+
+3. `parameters.csv` file: a csv file to set parameters for the workflow. A template is [here](). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet **MS/MS annotation will not be performed since the library directory is not provided**.
+
+
 
 More about the data preparation:
 

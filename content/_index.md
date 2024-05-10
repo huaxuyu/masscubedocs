@@ -45,4 +45,3 @@ pip install masscube
   {{< card link="about" title="About" icon="user" >}}
   
 {{< /cards >}}
-
