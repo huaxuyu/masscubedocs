@@ -30,13 +30,13 @@ my_project
 There are three components for a project:
 
 1. `data` folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It's **mandatory**.
-2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is [here](). It's **optional**. If not provided, normalization and statistical analysis will not be applied.
+2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied.
 
 {{< callout type="warning" >}}
   In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
 {{< /callout >}}
 
-3. `parameters.csv` file: a csv file to set parameters for the workflow. A template is [here](). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet **MS/MS annotation will not be performed since the library directory is not provided**.
+3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet **MS/MS annotation will not be performed since the library directory is not provided**.
 
 
 
@@ -71,8 +71,8 @@ project/
 ├── project.mc
 ├── aligned_feature_table.csv
 ├── single_file_output
-│   ├── sample1.csv
-│   ├── sample2.csv
+│   ├── sample1.txt
+│   ├── sample2.txt
 │   └── ...
 ├── chromatogram
 │   ├── sample1.png

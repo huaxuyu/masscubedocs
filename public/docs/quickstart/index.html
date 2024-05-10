@@ -39,7 +39,7 @@ If you haven&rsquo;t installed MassCube, please follow the installation guide.
 The OneClick Untargeted Metabolomics workflow The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (Fig. 1).
 Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project folder (e.">
 
-<meta itemprop="wordCount" content="387">
+<meta itemprop="wordCount" content="393">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Quick Start"/>
 <meta name="twitter:description" content="Let&rsquo;s get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command.
 If you haven&rsquo;t installed MassCube, please follow the installation guide.
@@ -616,7 +616,7 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
 <p>There are three components for a project:</p>
 <ol>
 <li><code>data</code> folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It&rsquo;s <strong>mandatory</strong>.</li>
-<li><code>sample_table.csv</code> file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template is <a href="" >here</a>. It&rsquo;s <strong>optional</strong>. If not provided, normalization and statistical analysis will not be applied.</li>
+<li><code>sample_table.csv</code> file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template can be downloaded from <a href="https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv" target="_blank" rel="noopener">here</a>. It&rsquo;s <strong>optional</strong>. If not provided, normalization and statistical analysis will not be applied.</li>
 </ol>
 
 
@@ -649,7 +649,7 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
 </div>
 
 <ol start="3">
-<li><code>parameters.csv</code> file: a csv file to set parameters for the workflow. A template is <a href="" >here</a>. It&rsquo;s <strong>optional</strong>. If not provided, the <a href="../docs/parameter" >default parameters</a> will be applied, yet <strong>MS/MS annotation will not be performed since the library directory is not provided</strong>.</li>
+<li><code>parameters.csv</code> file: a csv file to set parameters for the workflow. A template can be downloaded from <a href="https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv" target="_blank" rel="noopener">here</a>. It&rsquo;s <strong>optional</strong>. If not provided, the <a href="../docs/parameter" >default parameters</a> will be applied, yet <strong>MS/MS annotation will not be performed since the library directory is not provided</strong>.</li>
 </ol>
 <p>More about the data preparation:</p>
 
@@ -710,8 +710,8 @@ Fig. 1. The OneClick Untargeted Metabolomics workflow Input In your project fold
 ├── project.mc
 ├── aligned_feature_table.csv
 ├── single_file_output
-│   ├── sample1.csv
-│   ├── sample2.csv
+│   ├── sample1.txt
+│   ├── sample2.txt
 │   └── ...
 ├── chromatogram
 │   ├── sample1.png
