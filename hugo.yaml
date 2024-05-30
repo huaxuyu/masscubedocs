@@ -24,9 +24,9 @@ menu:
     - name: About
       pageRef: /about
       weight: 2
-    - name: Contact ↗
-      pageRef: /contact
+    - name: Contribute↗
       weight: 3
+      pageRef: /contribute
     - name: Search
       weight: 4
       params:
@@ -41,25 +41,6 @@ menu:
       url: ""
       params:
         icon: x-twitter
-  
-  sidebar:
-    - identifier: more
-      name: More
-      params:
-        type: separator
-      weight: 1
-    - identifier: Contribution
-      name: "Contribution"
-      pageRef: "/about"
-      weight: 2
-    - identifier: Community
-      name: "Community"
-      url: ""
-      weight: 3
-    - identifier: "Collaboration"
-      name: "Collaboration"
-      url: ""
-      weight: 4
 
 params:
   navbar:

@@ -50,4 +50,4 @@ From the [template](), users can customize the parameters by providing a paramet
 
 ## More about parameters
 
-Almost all parameters in *masscube* are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](../api) for more details.
+Almost all parameters in *masscube* are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](/docs/api/) for more details.

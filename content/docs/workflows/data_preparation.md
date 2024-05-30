@@ -22,7 +22,9 @@ Visit the [official website](https://proteowizard.sourceforge.io/download.html) 
 
 ![](MSConvert.png "Fig. 1. MSConvert GUI")
 
-* **Step 1. Set options**
+{{% steps %}}
+
+### Step 1. Set options
 
 Check the boxes as shown in **Fig. 1**.
 
@@ -30,29 +32,31 @@ Check the boxes as shown in **Fig. 1**.
    Do NOT check **Use Zlib compression**.
 {{< /callout >}}
 
-* **Step 2. Set the Peak Picking filter**
+### Step 2. Set the Peak Picking filter
 
-* **Step 3. Add the Peak Picking filter**
+### Step 3. Add the Peak Picking filter
 
-* **Step 4. Browse and load files**
+### Step 4. Browse and load files
 
-* **Step 5. Start conversion**
+### Step 5. Start conversion
 
 By default, the converted files will be saved in the same directory as the raw files.
 
-{{< callout type="info" >}}
+{{% /steps %}}
+
+{{< details title="Convert files in command line mode" closed="true">}}
    You can also convert files using MSConvert in command line mode. For more information, please refer to the [documentation](https://proteowizard.sourceforge.io/tools/msconvert.html).
-{{< /callout >}}
+{{< /details >}}
 
 
 ## Parameter file
 
-A parameter file (.csv) is used to set parameters for the workflow. A templete is provided [here](). If not provided, the [default parameters](../parameter) will be applied.
+A parameter file (.csv) is used to set parameters for the workflow. A templete is provided [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). If not provided, the [default parameters](../parameters) will be applied.
 
 
-## Sample table (Untargeted metabolomics workflow)
+## Sample table (for the OneClick workflow)
 
-A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided [here]().
+A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv).
 
 For large-scale metabolomics data, it's not easy to prepare the sample table manually. In *masscube*, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.
 
