@@ -5,10 +5,13 @@ toc: false
 
 <br/><br/>
 
-MassCube is an end-to-end mass spectrometry data processing framework designed to manage everything 
-from individual files to ultra-large metabolomics studies involving more than 10,000 injections.
+MassCube is an end-to-end mass spectrometry data processing framework designed for both end users in metabolomics research and developers in the field of mass spectrometry. 
 
-**MassCube** enables:
+It helps manage everything from individual files to ultra-large metabolomics studies involving more than 10,000 injections.
+
+![](combined_fig1.png "Design of MassCube")
+
+## MassCube enables
 
 * **Untargeted feature detection**
     * Accurate and comprehensive feature detection, with accurate annotation of isotopes, charge states,
@@ -26,16 +29,6 @@ from individual files to ultra-large metabolomics studies involving more than 10
    
 * **Flexible development and implementation**
     * A variety of fundemental algorithms are available for flexible usage, including data normalization, network analysis, and statistical analysis.
-
-## Installation
-
-In terminal, using pip to install the *masscube* python package.
-
-```console
-pip install masscube
-```
-
-*masscube* python package is available from [PyPI](https://pypi.org/project/masscube)
 
 ## Explore
 

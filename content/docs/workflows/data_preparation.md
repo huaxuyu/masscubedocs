@@ -1,7 +1,7 @@
 ---
 linkTitle: "Data preparation"
 title: "Data preparation"
-weight: 3
+weight: 1
 ---
 
 ## File conversion

@@ -1,27 +1,38 @@
 ---
 linkTitle: "Documentation"
-title: Introduction
+title: MassCube Documentation
 ---
 
 Hello! Welcome to the MassCube documentation!
+
+**Date**: 2024-05-29 **Version**: 1.0.0
 
 <!--more-->
 
 ## What is MassCube?
 
-MassCube is designed for mass spectrometry-based metabolomics data processing. The project aims to provide the fundemental functions and purpose-oriented workflows for metabolomics research.
+The advancement of metabolomics requires robust tools to support mass spectrometry data processing. 
 
-Docs to be constructed.
+MassCube, an open-source computing framework in Python that provides a flexible infrastructure to support data processing and method development in mass spectrometry-based metabolomics.
 
 
-{{% steps %}}
+## Features
 
-### Step 1
+- **Open-source**: MassCube is an open-source project and free for non-commercial use.
 
-This is the first step.
+- **Modular design**: MassCube is designed with a modular structure, which allows users to easily extend the functionalities.
 
-### Step 2
+- **User-friendly**: MassCube provides a user-friendly command-line interface (CLI) to facilitate data processing.
 
-This is the second step.
+- **Scalable**: MassCube is designed to handle large-scale metabolomics data.
 
-{{% /steps %}}
+- **Reproducible**: MassCube provides a project file to store all the parameters and results, which ensures the reproducibility of the analysis.
+
+- **Visualization**: MassCube provides visualization tools to help users understand the data better.
+
+## Getting Started
+
+{{< cards >}}
+  {{< card link="../docs/installation" title="Installation" icon="play">}}
+  {{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
+{{< /cards >}}

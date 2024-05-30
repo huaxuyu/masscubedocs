@@ -1,21 +1,28 @@
 ---
+linkTitle: "Quick start"
 title: "Quick Start"
 weight: 2
 ---
 
-Let's get started with the OneClick Untargeted Metabolomics workflow. This page will show you how to process your data with a single line of command. 
+Let's get started with the **OneClick** untargeted metabolomics workflow. This workflow is designed to streamline untargeted metabolomics analysis, providing comprehensive results with a single command.
 
 If you haven't installed MassCube, please follow the [installation guide](../installation).
 
-## The OneClick Untargeted Metabolomics workflow
+## The OneClick untargeted metabolomics workflow
 
-The OneClick workflow is designed make the untargeted metabolomics analysis easier. It integrates metadata curation, feature detection, evaluation, alignment, annotation, signal correction, and statistical analysis (**Fig. 1**).
+Metabolomics data processing could be challenging for researchers. The OneClick untargeted metabolomics workflow was developed to address the burdens and support metabolomics research.
 
-![](untargeted_workflow.png "Fig. 1. The OneClick Untargeted Metabolomics workflow")
+The OneClick workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (**Fig. 1**).
 
-### Input
+![](untargeted_workflow.png "Fig. 1. The OneClick untargeted metabolomics workflow")
 
-In your project folder (e.g. **my_project**), you need to prepare the following files and folders:
+{{% steps %}}
+
+### Input (3+1)
+
+You need <u>three components</u> for the project plus <u>one MS/MS library</u> for annotation.
+
+In your project folder (e.g. **my_project**), you need to prepare the following components:
 
 ```
 my_project
@@ -27,23 +34,13 @@ my_project
 └── parameters.csv
 ```
 
-There are three components for a project:
+1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../data_preparation).
 
-1. `data` folder: a file folder containing all raw LC-MS data in .mzML or .mzXML format. It's **mandatory**.
-2. `sample_table.csv` file: a csv file to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied.
+2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
 
-{{< callout type="warning" >}}
-  In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
-{{< /callout >}}
+3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
 
-3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../docs/parameter) will be applied, yet **MS/MS annotation will not be performed since the library directory is not provided**.
-
-{{< callout type="warning" >}}
-  To annotate MS/MS spectra, you also need to download a database if you don't have one. You can download the database from [here](https://zenodo.org/records/11043488). For a faster loading, please use the .pkl format.
-{{< /callout >}}
-
-
-More about the data preparation:
+To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/11363475). For faster loading, please download and use the .pkl format.
 
 {{< cards >}}
   {{< card link="../data_preparation" title="Data Preparation" icon="play">}}
@@ -58,9 +55,9 @@ In the project folder, open a terminal and run the following command:
 untargeted-metabolomics
 ```
 
-{{< callout type="warning" >}}
-  Make sure the terminal directory is the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.)
-{{< /callout >}}
+{{< details title="Use terminal" >}}
+  Make sure the terminal directory is set to the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.)
+{{< /details >}}
 
 ### Output
 
@@ -72,7 +69,9 @@ project/
 ├── sample_table.csv
 ├── parameters.csv
 ├── project.mc
-├── aligned_feature_table.csv
+├── aligned_feature_table.txt
+├── aligned_feature_table_before_normalization.txt
+├── ms2.msp
 ├── single_file_output
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -90,8 +89,12 @@ project/
 ```
 
 1. `project.mc` file: the project file of *masscube*.
-2. `aligned_feature_table.csv` file: feature table after alignment.
-3. `single_file_output` folder: a file folder containing the detected features from individual files.
-4.  `chromatogram` folder: a file folder to store base peak chromatograms (BPCs) for individual files.
-5. `ms2_matching` folder: mirror plot of MS2 matching results.
-6. `statistics` folder: results from statistical analysis like principal component analysis (PCA).
+2. `aligned_feature_table.csv` file: feature table after alignment (if applied).
+3. `aligned_feature_table_before_normalization.csv` file: feature table before normalization.
+4. `ms2.msp` file: MS/MS spectra for detected features that can be further analyzed on other platforms.
+5. `single_file_output` folder: a folder containing the feature table for each sample.
+6. `chromatogram` folder: a folder containing the chromatogram for each sample.
+7. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.
+8. `statistics` folder: a folder containing the statistical analysis results.
+
+{{% /steps %}}

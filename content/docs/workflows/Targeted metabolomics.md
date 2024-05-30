@@ -1,5 +1,5 @@
 ---
 linkTitle: "Targeted metabolomics"
 title: Targeted metabolomics workflow
-weight: 3
+weight: 4
 ---

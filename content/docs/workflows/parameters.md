@@ -1,7 +1,7 @@
 ---
 linkTitle: "Parameters"
 title: Parameters
-weight: 5
+weight: 2
 ---
 
 Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. *masscube* provides a default parameter setting for users to start with. 

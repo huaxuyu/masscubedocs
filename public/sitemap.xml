@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/docs/workflows/data_preparation/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/installation/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/workflows/untargeted-metabolomics/</loc>
@@ -10,27 +12,11 @@
   </url><url>
     <loc>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/data_preparation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/feature_detect/</loc>
-  </url><url>
     <loc>http://localhost:1313/docs/workflows/targeted-metabolomics/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/feature_evaluation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/feature_grouping/</loc>
+    <loc>http://localhost:1313/docs/workflows/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/parameter/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/alignment/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/annotation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/statistical_analysis/</loc>
-  </url><url>
-    <loc>http://localhost:1313/docs/visualization/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/api/</loc>
   </url><url>

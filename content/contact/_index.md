@@ -1,8 +1,8 @@
 ---
+linkTitle: "Contact"
 title: Contact
-toc: false
 ---
 
-Developer and maintainer: Huaxu Yu
+- **Corresponding author:** Oliver Fiehn: ofiehn@ucdavis.edu
 
-Corresponding auther: Oliver Fiehn
+- **Developer and maintainer:** Huaxu Yu: hxuyu@ucdavis.edu; yhxchem@outlook.com

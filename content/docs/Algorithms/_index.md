@@ -1,7 +1,7 @@
 ---
-linkTitle: "Workflows"
-title: Workflows
-weight: 3
+linkTitle: "Algorithms"
+title: Algorithms
+weight: 5
 ---
 
 Application-oriented workflows as command line applications.
