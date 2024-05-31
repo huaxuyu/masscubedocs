@@ -49,13 +49,13 @@ To annotate MS/MS spectra, you need to download a MS/MS library from [here](http
 
 ### Processing
 
-In the project folder, open a terminal and run the following command:
+**In the project folder**, open a terminal and run the following command:
 
 ```bash
 untargeted-metabolomics
 ```
 
-{{< details title="Use terminal" >}}
+{{< details title="How to open the terminal" closed="true" >}}
   Make sure the terminal directory is set to the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.)
 {{< /details >}}
 

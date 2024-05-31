@@ -8,19 +8,19 @@ weight: 1
 
 Visit the [official Python website](https://www.python.org/) to download Python.
 
-{{< callout type="warning" >}}
+{{% details title="Download Python 3.11" closed="true" %}}
    **Python 3.9-3.11** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
-{{< /callout >}}
+{{% /details %}}
 
 ## Install *masscube*
 
-The easiest way to install *masscube* is using **pip**. Open terminal and run
+*masscube* is a Python package that can be installed using **pip**. Open terminal and run
 
 ```console
 pip install masscube
 ```
 
-Dependencies will be automatically installed. This progress may take several minutes. Consider creating a [virtual environment](https://docs.python.org/3/library/venv.html) if you're working with Python on multiple projects.
+Dependencies will be automatically installed. Consider creating a [virtual environment](https://docs.python.org/3/library/venv.html) if you're working with Python on multiple projects.
 
 {{% details title="Dependencies" closed="true"%}}
 

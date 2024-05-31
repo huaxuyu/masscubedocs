@@ -24,9 +24,9 @@ MassCube, an open-source computing framework in Python that provides a flexible 
 
 - **User-friendly**: MassCube provides a user-friendly command-line interface (CLI) to facilitate data processing.
 
-- **Scalable**: MassCube is designed to handle large-scale metabolomics data.
+- **Scalable**: MassCube handles large-scale metabolomics data efficiently and memory-friendly.
 
-- **Reproducible**: MassCube provides a project file to store all the parameters and results, which ensures the reproducibility of the analysis.
+- **Reproducible**: A project file contains all the parameters and package versions used in the analysis, which ensures reproducibility.
 
 - **Visualization**: MassCube provides visualization tools to help users understand the data better.
 

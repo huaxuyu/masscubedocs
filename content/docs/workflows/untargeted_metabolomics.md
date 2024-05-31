@@ -4,13 +4,15 @@ title: Untargeted metabolomics workflow
 weight: 3
 ---
 
-To use the OneClick untargeted metabolomics workflow, please refer to the [quick start guide](/docs/quickstart).
-
 ## Introduction
 
 Data processing is critical for metabolomics studies. A series of steps are required to process the raw data to generate biological hypothesis that can be further validated. 
 
 The OneClick untargeted metabolomics workflow aims to address the burdens in mass spectrometry-based metabolomics data processing. It integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data.
+
+## How to use
+
+To use the OneClick untargeted metabolomics workflow, please refer to the [quick start guide](/docs/quickstart).
 
 ## Explainations of the workflow
 

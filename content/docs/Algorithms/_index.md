@@ -1,13 +1,11 @@
 ---
 linkTitle: "Algorithms"
 title: Algorithms
-weight: 5
+weight: 4
 ---
 
-Application-oriented workflows as command line applications.
+*masscube* provides fundemental and novel algorithms for mass spectrometry data processing. These algorithms are designed to improve the accuracy and efficiency of data processing and analysis. The proposed algorithms covers the following aspects:
 
-## Introduction
+## Data import and metadata curation 
 
-Mass spectrometry data processing is application-oriented, tailored to meet the specific needs of diverse scientific investigations. 
-
-One of the main purpose of MassCube is to provide a flexible and robust data processing framework that can be adapted to various applications. Here, we provided a series of pre-defined workflows that can be used as command line applications.
+## 
