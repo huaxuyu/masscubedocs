@@ -10,15 +10,17 @@
   </url><url>
     <loc>http://localhost:1313/docs/quickstart/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/algorithms/alignment/</loc>
+  </url><url>
     <loc>http://localhost:1313/docs/workflows/untargeted-metabolomics/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/workflows/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/targeted-metabolomics/</loc>
+    <loc>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/algorithms/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/single-file-processing-batch-mode/</loc>
+    <loc>http://localhost:1313/docs/workflows/targeted-metabolomics/</loc>
   </url><url>
     <loc>http://localhost:1313/docs/api/</loc>
   </url><url>
@@ -27,8 +29,6 @@
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/contact/</loc>
   </url><url>
     <loc>http://localhost:1313/contribute/</loc>
   </url><url>

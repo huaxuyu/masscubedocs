@@ -33,12 +33,12 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/Waddlessss"
+      url: "https://github.com/huaxuyu"
       params:
         icon: github
     - name: Twitter
       weight: 6
-      url: ""
+      url: "https://x.com/huaxu_yu"
       params:
         icon: x-twitter
 
