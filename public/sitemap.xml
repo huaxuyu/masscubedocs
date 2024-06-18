@@ -28,6 +28,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/workflows/targeted_metabolomics/</loc>
   </url><url>
+    <loc>http://localhost:1313/docs/api/raw_data_utils/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
