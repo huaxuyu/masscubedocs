@@ -700,7 +700,7 @@
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; do NOT include blank samples in the data folder.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; do NOT include blank samples in the data folder or provide a sample table to specify the blank samples.&lt;/p&gt;
 &lt;h3&gt;Step 2. Run the outlier detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-run-the-outlier-detection&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-2-run-the-outlier-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the data folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find-outliers&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;

@@ -8,7 +8,7 @@ weight: 5
 
 Outliers are data points that are significantly different from the rest of the data. In metabolomics, outliers can be caused by various reasons, such as instrument error, sample preparation, or biological variation. It is important to identify and remove outliers before downstream analysis to avoid misleading results.
 
-*masscube* evaluate the analytical sequnce and report the problematic samples in an unsupervised manner. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.
+_masscube_ evaluate the analytical sequnce and report the problematic samples in an unsupervised manner. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.
 
 ## How to use
 
@@ -25,7 +25,7 @@ data
 └── ...
 ```
 
-**Note:** do NOT include blank samples in the data folder.
+**Note:** do NOT include blank samples in the data folder or provide a sample table to specify the blank samples.
 
 ### Step 2. Run the outlier detection
 
