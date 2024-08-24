@@ -34,7 +34,7 @@ my_project
 └── parameters.csv
 ```
 
-1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../data_preparation).
+1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../workflows/data_preparation).
 
 2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
 
@@ -47,7 +47,7 @@ my_project
 1. `mzrt_list.csv` file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate full-scan MS data or annotate the spiked internal standards. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv). It's **optional**. If not provided, the annotation will not be performed.
 
 {{< cards >}}
-{{< card link="../data_preparation" title="Data Preparation" icon="play">}}
+{{< card link="../workflows/data_preparation" title="Data Preparation" icon="play">}}
 {{< /cards >}}
 
 ### Processing

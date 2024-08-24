@@ -3,23 +3,28 @@ title: "Installation"
 weight: 1
 ---
 
-
 ## Install Python
 
 Visit the [official Python website](https://www.python.org/) to download Python.
 
 {{% details title="Download Python 3.11" closed="true" %}}
-   **Python 3.9-3.11** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
+**Python 3.9-3.11** is recommended. Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
 {{% /details %}}
 
 **IMPORTANT**: Make sure to check the box that says "Add Python to PATH" during installation.
 
-## Install *masscube*
+## Install _masscube_
 
-*masscube* is a Python package that can be installed using **pip**. Open terminal and run
+_masscube_ is a Python package that can be installed using **pip**. Open terminal and run
 
 ```console
 pip install masscube
+```
+
+To update the package to the latest version, open terminal and run
+
+```console
+pip install masscube --upgrade
 ```
 
 Dependencies will be automatically installed. Consider creating a [virtual environment](https://docs.python.org/3/library/venv.html) if you're working with Python on multiple projects.

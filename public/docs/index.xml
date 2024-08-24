@@ -131,9 +131,21 @@
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: Make sure to check the box that says &amp;ldquo;Add Python to PATH&amp;rdquo; during installation.&lt;/p&gt;
-&lt;h2&gt;Install &lt;em&gt;masscube&lt;/em&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;install-masscube&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#install-masscube&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; is a Python package that can be installed using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
+&lt;h2&gt;Install &lt;em&gt;masscube&lt;/em&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;install-_masscube_&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#install-_masscube_&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; is a Python package that can be installed using &lt;strong&gt;pip&lt;/strong&gt;. Open terminal and run&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;pip install masscube
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To update the package to the latest version, open terminal and run&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;pip install masscube --upgrade
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
@@ -335,7 +347,7 @@
 &lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. Instructions for file conversion are provided &lt;a href=&#34;../data_preparation&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. Instructions for file conversion are provided &lt;a href=&#34;../workflows/data_preparation&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, normalization and statistical analysis will not be applied. &lt;strong&gt;Note:&lt;/strong&gt; In sample table, please name quality control samples as &amp;ldquo;qc&amp;rdquo; and blank samples as &amp;ldquo;blank&amp;rdquo; (not case-sensitive).&lt;/p&gt;
@@ -353,7 +365,7 @@
 &lt;/ol&gt;
 &lt;div class=&#34;hextra-cards mt-4 gap-4 grid not-prose&#34; style=&#34;--rows: 3;&#34;&gt;
 &lt;a
-  class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;../data_preparation&#34; &gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z&#34;/&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Data Preparation&lt;/span&gt;&lt;/a&gt;
+  class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;../workflows/data_preparation&#34; &gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z&#34;/&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Data Preparation&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the project folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
