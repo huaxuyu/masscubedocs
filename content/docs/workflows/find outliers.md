@@ -6,9 +6,9 @@ weight: 5
 
 ## Introduction
 
-Outliers are data points that are significantly different from the rest of the data. In metabolomics, outliers can be caused by various reasons, such as instrument error, sample preparation, or biological variation. It is important to identify and remove outliers before downstream analysis to avoid misleading results.
+Outliers are data files that differ significantly from the rest of the dataset. In MS experiments, outliers can arise due to various factors such as instrument error, sample preparation issues, or biological variation. Identifying and removing outliers before downstream analysis is crucial to avoid misleading results.
 
-_masscube_ evaluate the analytical sequnce and report the problematic samples in an unsupervised manner. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.
+_masscube_ evaluates the analytical sequence and reports problematic samples in an unsupervised manner. It assesses the quality of the raw data by analyzing the total peak height of all detected features. Files with a Z-score lower than -2 (by default) are recognized as outliers, ensuring that only high-quality data are included in the downstream analysis.
 
 ## How to use
 
@@ -19,13 +19,15 @@ _masscube_ evaluate the analytical sequnce and report the problematic samples in
 Put all the raw data files in a folder. The data should be organized in the following structure:
 
 ```
-data
-├── sample1.mzML
-├── sample2.mzML
-└── ...
+my_project
+├── data
+│   ├── sample1.mzML
+│   ├── sample2.mzML
+|   └── ...
+└── sample_table.csv
 ```
 
-**Note:** do NOT include blank samples in the data folder or provide a sample table to specify the blank samples.
+**Note:** Please provide a sample table to specify the blank samples so that they can be excluded from the outlier detection.
 
 ### Step 2. Run the outlier detection
 
@@ -40,28 +42,35 @@ find-outliers
 After the processing, you will find the following files and folders in the data folder:
 
 ```
-data
-├── sample1.mzML
-├── sample2.mzML
-├── ...
-├── problematic_samples.txt
+my_project
+├── data
+│   ├── sample1.mzML
+│   ├── sample2.mzML
+|   └── ...
+├── single_files
+│   ├── sample1.txt
+│   ├── sample2.txt
+|   └── ...
+|── sample_table.csv
+└── problematic_files.txt
 ```
 
 1. `problematic_samples.txt`: a text file containing the names of the problematic samples.
+2. `single_files`: a folder containing the feature detection results for each sample.
 
 {{< /steps >}}
 
 ## Explanation of the workflow
 
 ```python {linenos=table,hl_lines=[],linenostart=1}
-def run_evaluation(path):
+def run_evaluation(path=None):
     """
     Evaluate the run and report the problematic files.
 
     Parameters
     ----------
     path : str
-        Path to the mzML or mzXML files.
+        Path to the project directory.
     """
 
     ...
