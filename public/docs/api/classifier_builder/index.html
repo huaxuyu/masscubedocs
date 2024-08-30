@@ -11,44 +11,32 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>stats.py – MassCube</title>
-  <meta name="description" content="This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).
-Univariate Analysis statistical_analysis statistical_analysis(feature_table, params, before_norm=False)
-Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).
-Parameters:
-feature_table (pandas DataFrame): The feature table containing metabolomics data. params (Params object): The parameters for the experiment. before_norm (bool): Whether the analysis is performed before normalization." />
+  <title>classifier_builder.py – MassCube</title>
+  <meta name="description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
+Module Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction." />
   
   
-    <link rel="canonical" href="http://localhost:60542/docs/api/stats/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:60542/docs/api/classifier_builder/" itemprop="url" />
   
 
   
 
-<meta property="og:title" content="stats.py" />
-<meta property="og:description" content="This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).
-Univariate Analysis statistical_analysis statistical_analysis(feature_table, params, before_norm=False)
-Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).
-Parameters:
-feature_table (pandas DataFrame): The feature table containing metabolomics data. params (Params object): The parameters for the experiment. before_norm (bool): Whether the analysis is performed before normalization." />
+<meta property="og:title" content="classifier_builder.py" />
+<meta property="og:description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
+Module Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:60542/docs/api/stats/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:60542/docs/api/classifier_builder/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="stats.py">
-<meta itemprop="description" content="This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).
-Univariate Analysis statistical_analysis statistical_analysis(feature_table, params, before_norm=False)
-Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).
-Parameters:
-feature_table (pandas DataFrame): The feature table containing metabolomics data. params (Params object): The parameters for the experiment. before_norm (bool): Whether the analysis is performed before normalization.">
+  <meta itemprop="name" content="classifier_builder.py">
+<meta itemprop="description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
+Module Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction.">
 
-<meta itemprop="wordCount" content="276">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="stats.py"/>
-<meta name="twitter:description" content="This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).
-Univariate Analysis statistical_analysis statistical_analysis(feature_table, params, before_norm=False)
-Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).
-Parameters:
-feature_table (pandas DataFrame): The feature table containing metabolomics data. params (Params object): The parameters for the experiment. before_norm (bool): Whether the analysis is performed before normalization."/>
+<meta itemprop="wordCount" content="442">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="classifier_builder.py"/>
+<meta name="twitter:description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
+Module Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction."/>
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -313,13 +301,22 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
   >annotation.py
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
     href="/docs/api/classifier_builder/"
     
   >classifier_builder.py
     </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              ></a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -377,22 +374,13 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
   >raw_data_utils.py
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/stats/"
     
   >stats.py
     </a>
-  
-    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
-              <a
-                href="#"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              ></a>
-            </li>
-          </ul>
-  
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -553,9 +541,9 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
   >annotation.py
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
     href="/docs/api/classifier_builder/"
     
   >classifier_builder.py
@@ -617,9 +605,9 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
   >raw_data_utils.py
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/stats/"
     
   >stats.py
@@ -693,27 +681,31 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
     <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#univariate-analysis">Univariate Analysis
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#module-overview">Module Overview
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#statistical_analysis">statistical_analysis
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#key-functions">Key Functions
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#t_test">t_test
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#helper-functions">Helper Functions
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#anova">anova
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#main-functions">Main Functions
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#multivariate-analysis">Multivariate Analysis
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#workflow-integration">Workflow Integration
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#pca_analysis">pca_analysis
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#example-usage">Example Usage
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#dependencies">Dependencies
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -736,81 +728,198 @@ feature_table (pandas DataFrame): The feature table containing metabolomics data
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="http://localhost:60542/docs/api/">APIs</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">stats.py</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">classifier_builder.py</div>
 </div>
 
         <div class="content">
-          <h1>stats.py</h1>
-          <p>This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).</p>
+          <h1>classifier_builder.py</h1>
+          <p>This module, <code>classifier_builder.py</code>, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.</p>
+<h3><strong>Module Overview</strong><span class="absolute -mt-20" id="module-overview"></span>
+    <a href="#module-overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction. The module supports various steps, including untargeted metabolomics workflows and utility functions for managing data.</p>
 <hr>
-<h3><strong>Univariate Analysis</strong><span class="absolute -mt-20" id="univariate-analysis"></span>
-    <a href="#univariate-analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>statistical_analysis<span class="absolute -mt-20" id="statistical_analysis"></span>
-    <a href="#statistical_analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>statistical_analysis(feature_table, params, before_norm=False)</code></p>
-<p>Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).</p>
-<p><strong>Parameters:</strong></p>
+<h3><strong>Key Functions</strong><span class="absolute -mt-20" id="key-functions"></span>
+    <a href="#key-functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4><strong>Helper Functions</strong><span class="absolute -mt-20" id="helper-functions"></span>
+    <a href="#helper-functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ol>
+<li>
+<p><strong><code>feature_selection(X, y, k=None)</code></strong></p>
 <ul>
-<li><code>feature_table</code> (pandas DataFrame): The feature table containing metabolomics data.</li>
-<li><code>params</code> (Params object): The parameters for the experiment.</li>
-<li><code>before_norm</code> (bool): Whether the analysis is performed before normalization. Default is <code>False</code>.</li>
-</ul>
-<p><strong>Returns:</strong></p>
+<li><strong>Purpose:</strong> Selects the top <code>k</code> features based on statistical tests.</li>
+<li><strong>Parameters:</strong>
 <ul>
-<li><code>pandas DataFrame</code>: The updated feature table with p-values from statistical tests.</li>
+<li><code>X</code>: Feature matrix.</li>
+<li><code>y</code>: Target variable.</li>
+<li><code>k</code>: Number of features to select.</li>
 </ul>
-<h4>t_test<span class="absolute -mt-20" id="t_test"></span>
-    <a href="#t_test" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>t_test(data_array, individual_sample_groups)</code></p>
-<p>Performs a t-test on a feature list for two groups.</p>
-<p><strong>Parameters:</strong></p>
+</li>
+<li><strong>Returns:</strong> Selected features and their indices.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>train_rdf_model(X_train, y_train)</code></strong></p>
 <ul>
-<li><code>data_array</code> (numpy array): The feature intensities.</li>
-<li><code>individual_sample_groups</code> (list): A list of groups of individual samples.</li>
-</ul>
-<p><strong>Returns:</strong></p>
+<li><strong>Purpose:</strong> Trains a random forest classifier.</li>
+<li><strong>Parameters:</strong>
 <ul>
-<li><code>list</code>: p-values from the t-test.</li>
+<li><code>X_train</code>: Training feature matrix.</li>
+<li><code>y_train</code>: Training target variable.</li>
 </ul>
-<h4>anova<span class="absolute -mt-20" id="anova"></span>
-    <a href="#anova" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>anova(data_array, individual_sample_groups)</code></p>
-<p>Performs ANOVA on a feature list for more than two groups.</p>
-<p><strong>Parameters:</strong></p>
+</li>
+<li><strong>Returns:</strong> Trained random forest model.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>cross_validate_model(X, y, model, k=5, random_state=0)</code></strong></p>
 <ul>
-<li><code>data_array</code> (numpy array): The feature intensities.</li>
-<li><code>individual_sample_groups</code> (list): A list of groups of individual samples.</li>
-</ul>
-<p><strong>Returns:</strong></p>
+<li><strong>Purpose:</strong> Performs k-fold cross-validation on the model.</li>
+<li><strong>Parameters:</strong>
 <ul>
-<li><code>list</code>: p-values from the ANOVA test.</li>
+<li><code>X</code>: Feature matrix.</li>
+<li><code>y</code>: Target variable.</li>
+<li><code>model</code>: Trained random forest model.</li>
+<li><code>k</code>: Number of folds.</li>
+<li><code>random_state</code>: Random state for reproducibility.</li>
 </ul>
-<h3><strong>Multivariate Analysis</strong><span class="absolute -mt-20" id="multivariate-analysis"></span>
-    <a href="#multivariate-analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>pca_analysis<span class="absolute -mt-20" id="pca_analysis"></span>
-    <a href="#pca_analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>pca_analysis(data_array, individual_sample_groups, scaling=True, transformation=True, gapFillingRatio=0.2, output_dir=None, before_norm=False)</code></p>
-<p>Performs Principal Component Analysis (PCA) on the data.</p>
-<p><strong>Parameters:</strong></p>
+</li>
+<li><strong>Returns:</strong> List of accuracy scores for each fold.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>predict(model, X_test)</code></strong></p>
 <ul>
-<li><code>data_array</code> (numpy array): The feature intensities. Features are in rows and samples are in columns.</li>
-<li><code>individual_sample_groups</code> (list): A list of groups of individual samples.</li>
-<li><code>scaling</code> (bool): Whether to scale the data. Default is <code>True</code>.</li>
-<li><code>transformation</code> (bool): Whether to transform the data (log10). Default is <code>True</code>.</li>
-<li><code>gapFillingRatio</code> (float): The ratio for gap-filling. Default is <code>0.2</code>.</li>
-<li><code>output_dir</code> (str): The directory to save the PCA plot. Default is <code>None</code>.</li>
-<li><code>before_norm</code> (bool): Whether the analysis is performed before normalization. Default is <code>False</code>.</li>
-</ul>
-<p><strong>Returns:</strong></p>
+<li><strong>Purpose:</strong> Predicts the class labels for test data.</li>
+<li><strong>Parameters:</strong>
 <ul>
-<li><code>vecPC1, vecPC2, var_PC1, var_PC2</code>: PCA results including the principal component vectors and their explained variance ratios.</li>
+<li><code>model</code>: Trained random forest model.</li>
+<li><code>X_test</code>: Test feature matrix.</li>
 </ul>
+</li>
+<li><strong>Returns:</strong> Predicted class labels.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>evaluate_model(predictions, y_test)</code></strong></p>
+<ul>
+<li><strong>Purpose:</strong> Evaluates the model&rsquo;s performance using accuracy.</li>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>predictions</code>: Predicted class labels.</li>
+<li><code>y_test</code>: True class labels.</li>
+</ul>
+</li>
+<li><strong>Returns:</strong> Accuracy score.</li>
+</ul>
+</li>
+</ol>
+<h4><strong>Main Functions</strong><span class="absolute -mt-20" id="main-functions"></span>
+    <a href="#main-functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ol>
+<li>
+<p><strong><code>build_classifier(path=None, feature_num=None, gaussian_cutoff=0.6, fill_percentage_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5, data_processed=False)</code></strong></p>
+<ul>
+<li><strong>Purpose:</strong> Builds a random forest classifier from raw or processed data.</li>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>path</code>: Project path.</li>
+<li><code>feature_num</code>: Number of features to select.</li>
+<li><code>gaussian_cutoff</code>: Cutoff for Gaussian similarity.</li>
+<li><code>fill_percentage_cutoff</code>: Minimum percentage of non-zero values to retain a feature.</li>
+<li><code>fill_ratio</code>: Ratio to replace zero values in the data.</li>
+<li><code>cross_validation_k</code>: Number of folds for cross-validation.</li>
+<li><code>data_processed</code>: Flag to indicate if the data is already processed.</li>
+</ul>
+</li>
+<li><strong>Outputs:</strong> Saves the trained model, selected features, and evaluation metrics.</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">build_classifier</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">,</span> <span class="n">feature_num</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</li>
+<li>
+<p><strong><code>predict_samples(path, mz_tol=0.01, rt_tol=0.3)</code></strong></p>
+<ul>
+<li><strong>Purpose:</strong> Predicts sample classes using the trained model.</li>
+<li><strong>Parameters:</strong>
+<ul>
+<li><code>path</code>: Project path.</li>
+<li><code>mz_tol</code>: m/z tolerance for matching features.</li>
+<li><code>rt_tol</code>: Retention time tolerance for matching features.</li>
+</ul>
+</li>
+<li><strong>Outputs:</strong> Saves predictions in the specified project path.</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">predict_samples</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</li>
+</ol>
+<hr>
+<h3><strong>Workflow Integration</strong><span class="absolute -mt-20" id="workflow-integration"></span>
+    <a href="#workflow-integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong><code>untargeted_metabolomics_workflow</code>:</strong> This function, called within <code>build_classifier</code> and <code>predict_samples</code>, processes raw metabolomics data and prepares it for model building or prediction.</li>
+</ul>
+<h3><strong>Example Usage</strong><span class="absolute -mt-20" id="example-usage"></span>
+    <a href="#example-usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li>
+<p><strong>Building a Classifier:</strong></p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">build_classifier</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">,</span> <span class="n">feature_num</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">gaussian_cutoff</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">cross_validation_k</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</li>
+<li>
+<p><strong>Predicting New Samples:</strong></p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">predict_samples</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</li>
+</ol>
+<hr>
+<h3><strong>Dependencies</strong><span class="absolute -mt-20" id="dependencies"></span>
+    <a href="#dependencies" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ensure that the following Python packages are installed:</p>
+<ul>
+<li><code>scikit-learn</code>, <code>pandas</code>, <code>numpy</code>, <code>os</code>, <code>pickle</code>, <code>shutil</code></li>
+</ul>
+<p>This module is designed to be used in metabolomics projects, providing a comprehensive approach to feature selection, model training, and prediction using random forest classifiers. It leverages the untargeted metabolomics workflow for data preparation and supports automated processing and analysis.</p>
 
         </div>
         <div class="mt-16"></div>
         <div class="mb-8 flex items-center border-t pt-8 dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400 print:hidden"><a
-        href="/docs/api/raw_data_utils/"
-        title="raw_data_utils.py"
+        href="/docs/api/annotation/"
+        title="annotation.py"
         class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:pr-4 rtl:pl-4"
-      ><svg class="inline h-5 shrink-0 ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>raw_data_utils.py</a><a
-        href="/docs/api/utils_functions/"
-        title="utils_functions.py"
+      ><svg class="inline h-5 shrink-0 ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>annotation.py</a><a
+        href="/docs/api/feature_evaluation/"
+        title="feature_evaluation.py"
         class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:ml-auto ltr:pl-4 ltr:text-right rtl:mr-auto rtl:pr-4 rtl:text-left"
-      >utils_functions.py<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >feature_evaluation.py<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

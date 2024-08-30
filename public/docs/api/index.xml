@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – APIs reference</title>
-    <link>https://example.org/docs/api/</link>
+    <link>http://localhost:60542/docs/api/</link>
     <description>Recent content in APIs reference on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://example.org/docs/api/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:60542/docs/api/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Alignment.py</title>
-      <link>https://example.org/docs/api/alignment/</link>
+      <link>http://localhost:60542/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/alignment/</guid>
+      <guid>http://localhost:60542/docs/api/alignment/</guid>
       <description>
         
         
@@ -163,10 +163,10 @@
     
     <item>
       <title>annotation.py</title>
-      <link>https://example.org/docs/api/annotation/</link>
+      <link>http://localhost:60542/docs/api/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/annotation/</guid>
+      <guid>http://localhost:60542/docs/api/annotation/</guid>
       <description>
         
         
@@ -298,11 +298,199 @@
     </item>
     
     <item>
-      <title>feature_evaluation.py</title>
-      <link>https://example.org/docs/api/feature_evaluation/</link>
+      <title>classifier_builder.py</title>
+      <link>http://localhost:60542/docs/api/classifier_builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_evaluation/</guid>
+      <guid>http://localhost:60542/docs/api/classifier_builder/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module, &lt;code&gt;classifier_builder.py&lt;/code&gt;, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Module Overview&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;module-overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#module-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction. The module supports various steps, including untargeted metabolomics workflows and utility functions for managing data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Key Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;key-functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#key-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;helper-functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#helper-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;feature_selection(X, y, k=None)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Selects the top &lt;code&gt;k&lt;/code&gt; features based on statistical tests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X&lt;/code&gt;: Feature matrix.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt;: Target variable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;k&lt;/code&gt;: Number of features to select.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Selected features and their indices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;train_rdf_model(X_train, y_train)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Trains a random forest classifier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X_train&lt;/code&gt;: Training feature matrix.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y_train&lt;/code&gt;: Training target variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Trained random forest model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;cross_validate_model(X, y, model, k=5, random_state=0)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Performs k-fold cross-validation on the model.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X&lt;/code&gt;: Feature matrix.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt;: Target variable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;model&lt;/code&gt;: Trained random forest model.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;k&lt;/code&gt;: Number of folds.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;random_state&lt;/code&gt;: Random state for reproducibility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; List of accuracy scores for each fold.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;predict(model, X_test)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Predicts the class labels for test data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;model&lt;/code&gt;: Trained random forest model.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X_test&lt;/code&gt;: Test feature matrix.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Predicted class labels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;evaluate_model(predictions, y_test)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Evaluates the model&amp;rsquo;s performance using accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;predictions&lt;/code&gt;: Predicted class labels.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y_test&lt;/code&gt;: True class labels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Accuracy score.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;&lt;strong&gt;Main Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;main-functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#main-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;build_classifier(path=None, feature_num=None, gaussian_cutoff=0.6, fill_percentage_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5, data_processed=False)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Builds a random forest classifier from raw or processed data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt;: Project path.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature_num&lt;/code&gt;: Number of features to select.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gaussian_cutoff&lt;/code&gt;: Cutoff for Gaussian similarity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fill_percentage_cutoff&lt;/code&gt;: Minimum percentage of non-zero values to retain a feature.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fill_ratio&lt;/code&gt;: Ratio to replace zero values in the data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cross_validation_k&lt;/code&gt;: Number of folds for cross-validation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data_processed&lt;/code&gt;: Flag to indicate if the data is already processed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outputs:&lt;/strong&gt; Saves the trained model, selected features, and evaluation metrics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;build_classifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;feature_num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;predict_samples(path, mz_tol=0.01, rt_tol=0.3)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Predicts sample classes using the trained model.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt;: Project path.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt;: m/z tolerance for matching features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt;: Retention time tolerance for matching features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outputs:&lt;/strong&gt; Saves predictions in the specified project path.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;predict_samples&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Workflow Integration&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;workflow-integration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#workflow-integration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;untargeted_metabolomics_workflow&lt;/code&gt;:&lt;/strong&gt; This function, called within &lt;code&gt;build_classifier&lt;/code&gt; and &lt;code&gt;predict_samples&lt;/code&gt;, processes raw metabolomics data and prepares it for model building or prediction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;strong&gt;Example Usage&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-usage&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-usage&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Building a Classifier:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;build_classifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;feature_num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gaussian_cutoff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross_validation_k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Predicting New Samples:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;predict_samples&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;dependencies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dependencies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ensure that the following Python packages are installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scikit-learn&lt;/code&gt;, &lt;code&gt;pandas&lt;/code&gt;, &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;os&lt;/code&gt;, &lt;code&gt;pickle&lt;/code&gt;, &lt;code&gt;shutil&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This module is designed to be used in metabolomics projects, providing a comprehensive approach to feature selection, model training, and prediction using random forest classifiers. It leverages the untargeted metabolomics workflow for data preparation and supports automated processing and analysis.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>feature_evaluation.py</title>
+      <link>http://localhost:60542/docs/api/feature_evaluation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:60542/docs/api/feature_evaluation/</guid>
       <description>
         
         
@@ -404,10 +592,10 @@
     
     <item>
       <title>feature_grouping.py</title>
-      <link>https://example.org/docs/api/feature_grouping/</link>
+      <link>http://localhost:60542/docs/api/feature_grouping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_grouping/</guid>
+      <guid>http://localhost:60542/docs/api/feature_grouping/</guid>
       <description>
         
         
@@ -532,11 +720,117 @@
     </item>
     
     <item>
-      <title>normalization.py</title>
-      <link>https://example.org/docs/api/normalization/</link>
+      <title>feature_table_utils.py</title>
+      <link>http://localhost:60542/docs/api/feature_table_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/normalization/</guid>
+      <guid>http://localhost:60542/docs/api/feature_table_utils/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This utility module provides functions for manipulating and exporting feature tables in metabolomics data analysis. It focuses on converting feature lists to DataFrame format and exporting MS2 spectra to the MSP format. Below are detailed descriptions of the provided functions.&lt;/p&gt;
+&lt;h3&gt;output_feature_to_msp&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_feature_to_msp&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output_feature_to_msp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;output_feature_to_msp(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt;&lt;br&gt;
+This function exports MS2 spectra from a DataFrame to the MSP format, which is commonly used in metabolomics for sharing spectral data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (&lt;code&gt;pandas.DataFrame&lt;/code&gt;): The DataFrame containing MS2 spectra data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_path&lt;/code&gt; (&lt;code&gt;str&lt;/code&gt;): The path where the MSP file will be saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Functionality:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Checks if the provided output path ends with &lt;code&gt;.msp&lt;/code&gt; and raises a &lt;code&gt;ValueError&lt;/code&gt; if not.&lt;/li&gt;
+&lt;li&gt;Iterates through the rows of the &lt;code&gt;feature_table&lt;/code&gt; DataFrame.&lt;/li&gt;
+&lt;li&gt;For each feature, it writes the relevant information (e.g., precursor m/z, adduct type, retention time) and MS2 peaks to the MSP file.&lt;/li&gt;
+&lt;li&gt;Handles cases where no MS2 spectrum is available by writing a default &amp;ldquo;Unknown&amp;rdquo; entry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Example Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_feature_to_msp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;feature_table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output.msp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;convert_features_to_df&lt;span class=&#34;absolute -mt-20&#34; id=&#34;convert_features_to_df&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#convert_features_to_df&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;convert_features_to_df(features, sample_names)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt;&lt;br&gt;
+This function converts a list of feature objects into a pandas DataFrame, which is useful for further data analysis or export.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (&lt;code&gt;list&lt;/code&gt;): A list of feature objects, each representing a detected metabolite or compound.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_names&lt;/code&gt; (&lt;code&gt;list&lt;/code&gt; or &lt;code&gt;array&lt;/code&gt;): A list of sample names corresponding to the columns in the DataFrame.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (&lt;code&gt;pandas.DataFrame&lt;/code&gt;): A DataFrame where each row corresponds to a feature, and the columns contain metadata and intensity values across samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Functionality:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Collects various attributes of each feature, such as m/z, retention time, adduct type, and any annotation information.&lt;/li&gt;
+&lt;li&gt;Includes additional columns for sample-specific peak heights.&lt;/li&gt;
+&lt;li&gt;Returns the constructed DataFrame, which is structured for easy export or further analysis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Example Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convert_features_to_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Example Workflow&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-workflow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Convert Features to DataFrame:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Suppose you have a list of feature objects detected during a metabolomics study. You can convert these features into a DataFrame for easier manipulation and analysis.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convert_features_to_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Export MS2 Spectra to MSP:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After converting the features to a DataFrame, you might want to export the MS2 spectra data to an MSP file for use in spectral databases or other analysis tools.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_feature_to_msp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_data.msp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;These utility functions are designed to streamline the process of handling and exporting feature data in metabolomics workflows, particularly when dealing with large datasets and the need for standardized formats like MSP.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>normalization.py</title>
+      <link>http://localhost:60542/docs/api/normalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:60542/docs/api/normalization/</guid>
       <description>
         
         
@@ -633,10 +927,10 @@
     
     <item>
       <title>params.py</title>
-      <link>https://example.org/docs/api/params/</link>
+      <link>http://localhost:60542/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/params/</guid>
+      <guid>http://localhost:60542/docs/api/params/</guid>
       <description>
         
         
@@ -798,10 +1092,10 @@
     
     <item>
       <title>peak_detect.py</title>
-      <link>https://example.org/docs/api/peak_detect/</link>
+      <link>http://localhost:60542/docs/api/peak_detect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/peak_detect/</guid>
+      <guid>http://localhost:60542/docs/api/peak_detect/</guid>
       <description>
         
         
@@ -912,10 +1206,10 @@
     
     <item>
       <title>raw_data_utils.py</title>
-      <link>https://example.org/docs/api/raw_data_utils/</link>
+      <link>http://localhost:60542/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/raw_data_utils/</guid>
+      <guid>http://localhost:60542/docs/api/raw_data_utils/</guid>
       <description>
         
         
@@ -1045,10 +1339,10 @@
     
     <item>
       <title>stats.py</title>
-      <link>https://example.org/docs/api/stats/</link>
+      <link>http://localhost:60542/docs/api/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/stats/</guid>
+      <guid>http://localhost:60542/docs/api/stats/</guid>
       <description>
         
         
@@ -1116,10 +1410,10 @@
     
     <item>
       <title>utils_functions.py</title>
-      <link>https://example.org/docs/api/utils_functions/</link>
+      <link>http://localhost:60542/docs/api/utils_functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/utils_functions/</guid>
+      <guid>http://localhost:60542/docs/api/utils_functions/</guid>
       <description>
         
         
@@ -1184,10 +1478,10 @@
     
     <item>
       <title>visualization.py</title>
-      <link>https://example.org/docs/api/visualization/</link>
+      <link>http://localhost:60542/docs/api/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/visualization/</guid>
+      <guid>http://localhost:60542/docs/api/visualization/</guid>
       <description>
         
         
@@ -1400,10 +1694,10 @@
     
     <item>
       <title>workflows.py</title>
-      <link>https://example.org/docs/api/workflows/</link>
+      <link>http://localhost:60542/docs/api/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/workflows/</guid>
+      <guid>http://localhost:60542/docs/api/workflows/</guid>
       <description>
         
         
@@ -1505,10 +1799,10 @@
     
     <item>
       <title>msjson.py</title>
-      <link>https://example.org/docs/api/msjson/</link>
+      <link>http://localhost:60542/docs/api/msjson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/msjson/</guid>
+      <guid>http://localhost:60542/docs/api/msjson/</guid>
       <description>
         
         
@@ -1519,10 +1813,10 @@
     
     <item>
       <title>network.py</title>
-      <link>https://example.org/docs/api/network/</link>
+      <link>http://localhost:60542/docs/api/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/network/</guid>
+      <guid>http://localhost:60542/docs/api/network/</guid>
       <description>
         
         
