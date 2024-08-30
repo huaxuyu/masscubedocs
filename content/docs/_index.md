@@ -5,34 +5,31 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2024-05-29 **Version**: 1.0.0
+**Date**: 2024-08-30 **Version**: 1.0.16
 
 <!--more-->
 
 ## What is MassCube?
 
-The advancement of metabolomics requires robust tools to support mass spectrometry data processing. 
-
-MassCube, an open-source computing framework in Python that provides a flexible infrastructure to support data processing and method development in mass spectrometry-based metabolomics.
-
+MassCube is an open-source computing library in Python that offers a flexible infrastructure for data processing and method development in mass spectrometry-based chemical analysis.
 
 ## Features
 
-- **Open-source**: MassCube is an open-source project and free for non-commercial use.
+- **Open-source**: Free for non-commercial use.
 
-- **Modular design**: MassCube is designed with a modular structure, which allows users to easily extend the functionalities.
+- **Modular design**: Easily extendable functionalities.
 
-- **User-friendly**: MassCube provides a user-friendly command-line interface (CLI) to facilitate data processing.
+- **User-friendly**: Command-line interface (CLI) for easy data processing.
 
-- **Scalable**: MassCube handles large-scale metabolomics data efficiently and memory-friendly.
+- **Scalable**: Efficient and memory-friendly handling of large-scale metabolomics data.
 
-- **Reproducible**: A project file contains all the parameters and package versions used in the analysis, which ensures reproducibility.
+- **Reproducible**: Metadata tracking for recording parameters, dependencies, and module order.
 
-- **Visualization**: MassCube provides visualization tools to help users understand the data better.
+- **Visualization**: Tools for intuitive data exploration and publication-quality figure creation.
 
 ## Getting Started
 
 {{< cards >}}
-  {{< card link="../docs/installation" title="Installation" icon="play">}}
-  {{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
+{{< card link="../docs/installation" title="Installation" icon="play">}}
+{{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
 {{< /cards >}}

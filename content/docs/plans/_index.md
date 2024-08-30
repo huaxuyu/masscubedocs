@@ -8,18 +8,8 @@ We are working on the following features and improvements and welcome contributi
 
 1. Targeted metabolomics workflows
 
-2. Isotope-based refinement of feature annotation
+2. More data normalization algorithms and evaluation metrics
 
-3. More data normalization algorithms and evaluation metrics
+3. Workflows and functions for data-independent acquisition (DIA) data.
 
-4. Workflows and functions for data-independent acquisition (DIA) data.
-
-5. MS imaging data processing
-
-## Contact
-
-Please contact us if you are interested in contributing to any of these features.
-
-- **Corresponding author:** Oliver Fiehn: ofiehn@ucdavis.edu
-
-- **Developer and maintainer:** Huaxu Yu: hxuyu@ucdavis.edu; yhxchem@outlook.com
+4. MS imaging data processing

@@ -92,9 +92,9 @@ project/
 ```
 
 1. `project.mc` file: the project file of _masscube_.
-2. `aligned_feature_table.csv` file: feature table after alignment (if applied).
-3. `aligned_feature_table_before_normalization.csv` file: feature table before normalization.
-4. `ms2.msp` file: MS/MS spectra for detected features that can be further analyzed on other platforms.
+2. `aligned_feature_table.txt` file: feature table after alignment (if applied).
+3. `aligned_feature_table_before_normalization.txt` file: feature table before normalization.
+4. `ms2.msp`: MS/MS spectra for detected features that can be further analyzed on other platforms such as [GNPS](https://gnps.ucsd.edu/).
 5. `single_file_output` folder: a folder containing the feature table for each sample.
 6. `chromatogram` folder: a folder containing the chromatogram for each sample.
 7. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.

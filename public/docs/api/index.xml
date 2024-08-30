@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MassCube – MassCube</title>
+    <title>MassCube – APIs reference</title>
     <link>https://example.org/docs/api/</link>
-    <description>Recent content on MassCube</description>
+    <description>Recent content in APIs reference on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -15,7 +15,903 @@
     
     
     <item>
-      <title></title>
+      <title>Alignment.py</title>
+      <link>https://example.org/docs/api/alignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/alignment/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides functionality for aligning metabolic features from different samples in mass spectrometry data. Isotopes and in-source fragments are not considered in the alignment process.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The main components of this module include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Feature Alignment&lt;/strong&gt;: Align features across different samples, considering parameters like m/z tolerance and retention time tolerance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gap Filling&lt;/strong&gt;: Fill in missing features across aligned samples using various strategies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retention Time Correction&lt;/strong&gt;: Correct retention times to align features more accurately.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Output&lt;/strong&gt;: Save the aligned features to a file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;feature_alignment(path, parameters, drop_by_fill_pct_ratio=0.1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Aligns features from individual files (.txt) based on m/z and retention time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the feature tables.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameters&lt;/code&gt; (Params object): The parameters used for alignment, including tolerances and correction settings.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drop_by_fill_pct_ratio&lt;/code&gt; (float): The threshold for dropping features based on fill percentage (default 0.1).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (DataFrame): The aligned feature table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;gap_filling(features, parameters, mode=&#39;forced_peak_picking&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Fills the gaps in the aligned feature table using specified strategies.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): The aligned features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameters&lt;/code&gt; (Params object): The parameters used for gap filling.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mode&lt;/code&gt; (str): The mode of gap filling (&lt;code&gt;&#39;forced_peak_picking&#39;&lt;/code&gt; or &lt;code&gt;&#39;0.1_min_intensity&#39;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): The aligned features with filled gaps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;output_feature_table(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Outputs the aligned feature table to a specified file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (DataFrame): The aligned feature table.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_path&lt;/code&gt; (str): The path where the aligned feature table will be saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, rt_max=50, mode=&#39;linear_interpolation&#39;, mz_tol=0.015, rt_tol=2.0, found_marker_ratio=0.4, return_model=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Corrects retention times for feature alignment using selected anchors and a specified correction model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_ref&lt;/code&gt; (np.array): The m/z values of the reference features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_ref&lt;/code&gt; (np.array): The retention times of the reference features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_arr&lt;/code&gt; (np.array): The m/z values of the features to be corrected.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_arr&lt;/code&gt; (np.array): The retention times of the features to be corrected.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_max&lt;/code&gt; (float): Maximum retention time (default 50).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mode&lt;/code&gt; (str): Mode of correction (&lt;code&gt;&#39;linear_interpolation&#39;&lt;/code&gt; by default).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for selecting anchors.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float): Retention time tolerance for selecting anchors.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;found_marker_ratio&lt;/code&gt; (float): Ratio of found markers required for correction (default 0.4).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return_model&lt;/code&gt; (bool): Whether to return the correction model (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rt_corr&lt;/code&gt; (np.array): The corrected retention times.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;rt_anchor_selection(data_list, num=50, noise_tol=0.3, mz_tol=0.01, return_all_anchor=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Selects anchors for retention time correction based on the provided data. Anchors are selected based on intensity, peak shape, and distribution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data_list&lt;/code&gt; (list): A list of &lt;code&gt;MSData&lt;/code&gt; objects or file names of the output &lt;code&gt;.txt&lt;/code&gt; files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;num&lt;/code&gt; (int): Number of anchors to be selected (default 50).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;noise_tol&lt;/code&gt; (float): Noise level tolerance for selecting anchors (default 0.3).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for anchor selection (default 0.01).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return_all_anchor&lt;/code&gt; (bool): Whether to return all anchors (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;anchors&lt;/code&gt; (list): A list of anchors (m/z and retention times) for retention time correction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;_split_to_train_test(array, interval=0.3)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Splits selected anchors into training and testing sets based on a specified time interval.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (numpy.ndarray): The retention times of the selected anchors.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;interval&lt;/code&gt; (float): The time interval for splitting the anchors (default 0.3).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;train_idx&lt;/code&gt; (list): Indices of the training set.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test_idx&lt;/code&gt; (list): Indices of the testing set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Feature&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class that models a feature in mass spectrometry data, typically defined by a unique pair of m/z and retention time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt; (int): Index of the feature.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reference_file&lt;/code&gt; (str): The reference file for the feature.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz&lt;/code&gt; (float): m/z value.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt&lt;/code&gt; (float): Retention time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;highest_intensity&lt;/code&gt; (float): The highest peak height from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;best_ms2&lt;/code&gt; (str): The best MS2 spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gaussian_similarity&lt;/code&gt; (float): Gaussian similarity score.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;noise_level&lt;/code&gt; (float): Noise level.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asymmetry_factor&lt;/code&gt; (float): Asymmetry factor.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fill_percentage&lt;/code&gt; (float): Fill percentage across samples.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;charge_state&lt;/code&gt; (int): Charge state (default 1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_isotope&lt;/code&gt; (bool): Indicates if the feature is an isotope.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotopes&lt;/code&gt; (list): List of isotopes associated with the feature.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_in_source_fragment&lt;/code&gt; (bool): Indicates if the feature is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_type&lt;/code&gt; (str): Adduct type.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (str): Annotation of the feature.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;search_mode&lt;/code&gt; (str): Search mode (&lt;code&gt;&#39;identity search&#39;&lt;/code&gt;, &lt;code&gt;&#39;hybrid search&#39;&lt;/code&gt;, &lt;code&gt;&#39;mzrt_search&#39;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;formula&lt;/code&gt; (str): Molecular formula.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;similarity&lt;/code&gt; (float): Similarity score (0-1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;matched_peak_number&lt;/code&gt; (int): Number of matched peaks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;smiles&lt;/code&gt; (str): SMILES notation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inchikey&lt;/code&gt; (str): InChIKey notation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;matched_ms2&lt;/code&gt; (str): Matched MS2 spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (numpy array): m/z values from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_seq&lt;/code&gt; (numpy array): Retention time values from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_height_seq&lt;/code&gt; (numpy array): Peak heights from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_area_seq&lt;/code&gt; (numpy array): Peak areas from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): List of best MS2 spectra from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;detected_seq&lt;/code&gt; (numpy array): Boolean array indicating detection in individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi_id_seq&lt;/code&gt; (numpy array): ROI IDs from individual files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fold_change&lt;/code&gt; (float): Fold change value.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t_test_p&lt;/code&gt; (float): t-test p-value.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adjusted_t_test_p&lt;/code&gt; (float): Adjusted t-test p-value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self, file_number=1)&lt;/code&gt;: Initializes a &lt;code&gt;Feature&lt;/code&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;calculate_mzrt(self)&lt;/code&gt;: Calculates the m/z and retention time of the feature by averaging detected values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This documentation should serve as a comprehensive guide for understanding and using the code. You can further enhance it by adding specific examples, diagrams, or more in-depth explanations if needed.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>annotation.py</title>
+      <link>https://example.org/docs/api/annotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/annotation/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module is designed for annotating metabolites based on their MS/MS spectra. It includes functions for loading MS/MS databases, performing feature annotation, and exporting results. The module supports various input formats and annotation methods, providing flexibility for different workflows.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;load_msms_db&lt;span class=&#34;absolute -mt-20&#34; id=&#34;load_msms_db&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#load_msms_db&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;load_msms_db(path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Loads the MS/MS database from a specified path, which can be in &lt;code&gt;.msp&lt;/code&gt;, &lt;code&gt;.pkl&lt;/code&gt;, or &lt;code&gt;.json&lt;/code&gt; format.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the MS/MS database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An instance of &lt;code&gt;FlashEntropySearch&lt;/code&gt; with the loaded database indexed for fast searches.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;feature_annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_annotation(features, parameters, num=5)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates a list of features based on their MS/MS spectra using a loaded MS/MS database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): A list of features to be annotated.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parameters&lt;/code&gt; (Params object): An object containing parameters for the annotation workflow.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;num&lt;/code&gt; (int): The number of top MS/MS spectra to search.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): The annotated features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;feature_annotation_mzrt&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_annotation_mzrt&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_annotation_mzrt&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_annotation_mzrt(features, path, default_adduct=&amp;quot;[M+H]+&amp;quot;, mz_tol=0.01, rt_tol=0.3)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates features based on a provided mzrt file, typically in CSV format.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): A list of features to be annotated.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the mzrt file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default_adduct&lt;/code&gt; (str): The default adduct type for annotation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): The m/z tolerance for matching.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float): The RT tolerance for matching.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): The annotated features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;annotate_rois&lt;span class=&#34;absolute -mt-20&#34; id=&#34;annotate_rois&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annotate_rois&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;annotate_rois(d)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates regions of interest (ROIs) within the MS data using their MS/MS spectra and a loaded MS/MS database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): The MS data object containing the detected ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None. The ROIs in the MSData object are annotated in place.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;annotate_ms2&lt;span class=&#34;absolute -mt-20&#34; id=&#34;annotate_ms2&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annotate_ms2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;annotate_ms2(ms2_seq, path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates a sequence of MS/MS spectra using a loaded MS/MS database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): A list of MS/MS spectra (each can be a Scan object).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the MS/MS database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;annotations&lt;/code&gt; (list): A list of annotations for each spectrum in the sequence.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;feature_to_feature_search&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_to_feature_search&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_to_feature_search&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_to_feature_search(feature_list, sim_tol=0.8)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Calculates MS2 similarity between features using a hybrid search method, building a similarity matrix.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_list&lt;/code&gt; (list): A list of AlignedFeature objects.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sim_tol&lt;/code&gt; (float): The similarity threshold for the feature-to-feature search.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;similarity_matrix&lt;/code&gt; (pandas.DataFrame): A DataFrame containing the similarity matrix between features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;index_feature_list&lt;span class=&#34;absolute -mt-20&#34; id=&#34;index_feature_list&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#index_feature_list&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;index_feature_list(feature_list, return_db=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Indexes a list of features for spectrum entropy search.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_list&lt;/code&gt; (list): A list of AlignedFeature objects.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return_db&lt;/code&gt; (bool): Whether to return the indexed database along with the search object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either an instance of &lt;code&gt;FlashEntropySearch&lt;/code&gt; or a tuple of (&lt;code&gt;FlashEntropySearch&lt;/code&gt;, &lt;code&gt;db&lt;/code&gt;) depending on the &lt;code&gt;return_db&lt;/code&gt; parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;output_ms2_to_msp&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_ms2_to_msp&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output_ms2_to_msp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;output_ms2_to_msp(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Exports MS2 spectra to MSP format.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (pandas.DataFrame): A DataFrame containing the MS2 spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_path&lt;/code&gt; (str): The path to the output MSP file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None. The spectra are written to the specified MSP file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;extract_peaks_from_string&lt;span class=&#34;absolute -mt-20&#34; id=&#34;extract_peaks_from_string&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#extract_peaks_from_string&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;extract_peaks_from_string(ms2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Extracts peaks from an MS2 spectrum provided as a string.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2&lt;/code&gt; (str): The MS2 spectrum in string format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;peaks&lt;/code&gt; (numpy.array): The peaks extracted as a numpy array.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;_convert_peaks_to_string&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_convert_peaks_to_string&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_convert_peaks_to_string&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;_convert_peaks_to_string(peaks)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Converts peaks from a numpy array to a string format suitable for storage or export.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;peaks&lt;/code&gt; (numpy.array): The peaks in numpy array format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2&lt;/code&gt; (str): The peaks converted to a string format.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>feature_evaluation.py</title>
+      <link>https://example.org/docs/api/feature_evaluation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/feature_evaluation/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Gaussian Similarity Calculation&lt;/strong&gt;: Estimates how closely the shape of a peak matches a Gaussian distribution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Noise Level Calculation&lt;/strong&gt;: Measures the level of noise in the peak, which can indicate the reliability of the peak detection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Asymmetry Factor Calculation&lt;/strong&gt;: Evaluates the symmetry of a peak, with ideal peaks being more symmetrical.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;calculate_gaussian_similarity&lt;span class=&#34;absolute -mt-20&#34; id=&#34;calculate_gaussian_similarity&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculate_gaussian_similarity&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;calculate_gaussian_similarity(x, y)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Calculates the similarity between the observed peak shape and a Gaussian shape using a dot product.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; (numpy array): Retention time values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; (numpy array): Intensity values corresponding to the retention times.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;similarity&lt;/code&gt; (float): Similarity score, where 1 indicates a perfect Gaussian shape and values closer to 0 indicate less similarity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;calculate_noise_level&lt;span class=&#34;absolute -mt-20&#34; id=&#34;calculate_noise_level&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculate_noise_level&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;calculate_noise_level(y, intensity_threshold=0.1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Calculates the noise level of a peak by analyzing intensity fluctuations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; (numpy array): Intensity values of the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;intensity_threshold&lt;/code&gt; (float): Threshold relative to the maximum intensity for considering points in noise calculation (default 0.1).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;noise_level&lt;/code&gt; (float): Noise level of the peak, with higher values indicating more noise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;calculate_asymmetry_factor&lt;span class=&#34;absolute -mt-20&#34; id=&#34;calculate_asymmetry_factor&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculate_asymmetry_factor&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;calculate_asymmetry_factor(y)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Calculates the asymmetry factor of the peak at 10% of the peak height.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; (numpy array): Intensity values of the peak.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;asymmetry_factor&lt;/code&gt; (float): Asymmetry factor, where values closer to 1 indicate more symmetrical peaks, and values deviating significantly from 1 indicate asymmetry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Usage&lt;span class=&#34;absolute -mt-20&#34; id=&#34;usage&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#usage&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Gaussian Similarity Calculation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;gaussian-similarity-calculation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gaussian-similarity-calculation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gaussian similarity is a measure of how closely a detected peak&amp;rsquo;s shape matches a Gaussian distribution. This is useful for assessing the quality of the peak, as Gaussian-shaped peaks are often indicative of well-resolved features in chromatography.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calculate_gaussian_similarity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Gaussian Similarity: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Noise Level Calculation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;noise-level-calculation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#noise-level-calculation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The noise level is calculated by observing the intensity fluctuations in the peak. Peaks with higher noise levels may be less reliable and indicative of poor detection or background noise.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;noise_level&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calculate_noise_level&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Noise Level: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noise_level&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Asymmetry Factor Calculation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;asymmetry-factor-calculation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#asymmetry-factor-calculation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The asymmetry factor provides insight into the symmetry of the peak, which is another important characteristic of high-quality peaks. Ideal peaks should be symmetrical.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;asymmetry_factor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calculate_asymmetry_factor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Asymmetry Factor: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asymmetry_factor&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>feature_grouping.py</title>
+      <link>https://example.org/docs/api/feature_grouping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/feature_grouping/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Isotope Annotation&lt;/strong&gt;: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adduct Annotation&lt;/strong&gt;: Detects and annotates different adducts of a compound, which can appear due to various ionization processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In-Source Fragment Annotation&lt;/strong&gt;: Identifies and annotates fragments that may form in the ion source, ensuring they are correctly associated with their parent compounds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;annotate_isotope&lt;span class=&#34;absolute -mt-20&#34; id=&#34;annotate_isotope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annotate_isotope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;annotate_isotope(d, mz_tol=0.015, rt_tol=0.1, valid_intensity_ratio_range=[0.001, 1.2], charge_state_range=[1, 2])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates isotopes in the MS data by comparing m/z and retention time values.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An MSData object containing the detected regions of interest (ROIs).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for identifying isotopes (default 0.015).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float): Retention time tolerance for identifying isotopes (default 0.1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid_intensity_ratio_range&lt;/code&gt; (list): Valid intensity ratio range between isotopes (default [0.001, 1.2]).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;charge_state_range&lt;/code&gt; (list): The range of charge states to consider for isotopes (default [1, 2]).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None. The function directly annotates the &lt;code&gt;d.rois&lt;/code&gt; list with isotope information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;annotate_in_source_fragment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;annotate_in_source_fragment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annotate_in_source_fragment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;annotate_in_source_fragment(d, mz_tol=0.01, rt_tol=0.05)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Annotates in-source fragments by analyzing the MS data, focusing on peaks that may represent fragments of parent compounds.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An MSData object containing the detected ROIs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for identifying in-source fragments (default 0.01).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float): Retention time tolerance for identifying in-source fragments (default 0.05).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None. The function annotates the &lt;code&gt;d.rois&lt;/code&gt; list with in-source fragment information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;annotate_adduct(d, mz_tol=0.01, rt_tol=0.05)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;annotate_adductd-mz_tol001-rt_tol005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annotate_adductd-mz_tol001-rt_tol005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Annotates adducts within the MS data by comparing m/z values and retention times, assuming different adducts of the same compound.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An MSData object containing the detected ROIs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for identifying adducts (default 0.01).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float): Retention time tolerance for identifying adducts (default 0.05).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;None. The function annotates the &lt;code&gt;d.rois&lt;/code&gt; list with adduct information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;peak_peak_correlation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;peak_peak_correlation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#peak_peak_correlation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;peak_peak_correlation(roi1, roi2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Calculates the peak-peak correlation between two ROIs based on their intensity profiles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;roi1&lt;/code&gt; (ROI object): The first ROI to compare.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi2&lt;/code&gt; (ROI object): The second ROI to compare.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pp_cor&lt;/code&gt; (float): The peak-peak correlation value, where values close to 1 indicate strong correlation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;get_charge_state&lt;span class=&#34;absolute -mt-20&#34; id=&#34;get_charge_state&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#get_charge_state&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;get_charge_state(mz_seq)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Determines the charge state of a compound based on the difference between m/z values in its isotope series.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (list of floats): A list of m/z values representing the isotope series.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;charge_state&lt;/code&gt; (int): The inferred charge state, either 1 or 2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Usage&lt;span class=&#34;absolute -mt-20&#34; id=&#34;usage&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#usage&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Isotope Annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;isotope-annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#isotope-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To annotate isotopes in your mass spectrometry data:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;annotate_isotope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mz_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rt_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;In-Source Fragment Annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;in-source-fragment-annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#in-source-fragment-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To annotate in-source fragments:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;annotate_in_source_fragment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mz_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rt_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Adduct Annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;adduct-annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#adduct-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To annotate adducts in the MS data:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;annotate_adduct&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mz_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rt_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;Constants&lt;span class=&#34;absolute -mt-20&#34; id=&#34;constants&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;_ADDUCT_MASS_DIFFERENCE_POS_AGAINST_H&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_adduct_mass_difference_pos_against_h&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_adduct_mass_difference_pos_against_h&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A dictionary containing the mass differences for common adducts in positive ion mode, relative to the proton adduct &lt;code&gt;[M+H]+&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;_ADDUCT_MASS_DIFFERENCE_NEG_AGAINST_H&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_adduct_mass_difference_neg_against_h&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_adduct_mass_difference_neg_against_h&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A dictionary containing the mass differences for common adducts in negative ion mode, relative to the deprotonated molecule &lt;code&gt;[M-H]-&lt;/code&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>normalization.py</title>
+      <link>https://example.org/docs/api/normalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/normalization/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: &lt;strong&gt;Sample Normalization&lt;/strong&gt; and &lt;strong&gt;Signal Normalization&lt;/strong&gt;. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.&lt;/p&gt;
+&lt;h3&gt;Sample Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.&lt;/p&gt;
+&lt;h4&gt;find_normalization_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_normalization_factors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_normalization_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;find_normalization_factors(array, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Finds normalization factors for a dataset based on the specified method.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (numpy array): The data to be normalized.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;method&lt;/code&gt; (str): The method to find the normalization factors. Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;pqn&#39;&lt;/code&gt;: Probabilistic Quotient Normalization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;numpy array&lt;/code&gt;: Normalization factors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;sample_normalization_by_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization_by_factors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample_normalization_by_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sample_normalization_by_factors(array, v)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Normalizes the data based on the provided normalization factors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (numpy array): The data to be normalized.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v&lt;/code&gt; (numpy array): The normalization factors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;numpy array&lt;/code&gt;: The normalized data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;find_reference_sample&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_reference_sample&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_reference_sample&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;find_reference_sample(array, method=&#39;median_intensity&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Finds the reference sample for normalization.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (numpy array): The data to be normalized.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;method&lt;/code&gt; (str): The method to find the reference sample. Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;number&#39;&lt;/code&gt;: The sample with the most detected features.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;total_intensity&#39;&lt;/code&gt;: The sample with the highest total intensity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&#39;median_intensity&#39;&lt;/code&gt;: The sample with the highest median intensity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;int&lt;/code&gt;: The index of the reference sample.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;sample_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sample_normalization(feature_table, individual_sample_groups, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Normalizes samples using a feature list, typically excluding blank samples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (pandas DataFrame): The feature table.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;individual_sample_groups&lt;/code&gt; (list): List of groups for individual samples. Blank samples will be skipped.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;method&lt;/code&gt; (str): The method to find the normalization factors. Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;pqn&#39;&lt;/code&gt;: Probabilistic Quotient Normalization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pandas DataFrame&lt;/code&gt;: The normalized feature table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;strong&gt;Signal Normalization&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;signal-normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#signal-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;These functions focus on correcting signal drift in the data, particularly important in mass spectrometry.&lt;/p&gt;
+&lt;h4&gt;qc_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;qc_normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#qc_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;qc_normalization(array, order, qc_idx, batch_idx=None, method=&#39;lowess&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Normalizes samples using quality control (QC) samples to correct for signal drift.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (numpy array): The data to be normalized. Samples are in columns, and features are in rows.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;order&lt;/code&gt; (list): The order of the samples. It should have the same length as the number of samples.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;qc_idx&lt;/code&gt; (list): The index of the quality control samples.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch_idx&lt;/code&gt; (list): The index of the batches. Not used currently.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;method&lt;/code&gt; (str): The method to normalize the data. Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;lowess&#39;&lt;/code&gt;: Locally Weighted Scatterplot Smoothing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;numpy array&lt;/code&gt;: The normalized data.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>params.py</title>
+      <link>https://example.org/docs/api/params/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/params/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Params Class&lt;/strong&gt;: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Params&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;params&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#params&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to store and manage parameters for the project and individual files in mass spectrometry data processing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Project-Related:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;project_dir&lt;/code&gt; (str): Project directory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_names&lt;/code&gt; (list of str): List of raw file paths (without extension).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_groups&lt;/code&gt; (list of str): List of sample group names.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_group_num&lt;/code&gt; (int): Number of sample groups.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_dir&lt;/code&gt; (str): Directory for sample information.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;single_file_dir&lt;/code&gt; (str): Directory for single file output.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation_dir&lt;/code&gt; (str): Directory for annotation output.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chromatogram_dir&lt;/code&gt; (str): Directory for chromatogram output.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistics_dir&lt;/code&gt; (str): Directory for statistical analysis output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MS Data Acquisition:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rt_range&lt;/code&gt; (list of float): Retention time range in minutes, default [0.0, 1000.0].&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): Ionization mode, either &amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature Detection:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms1&lt;/code&gt; (float): m/z tolerance for MS1, default 0.01.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms2&lt;/code&gt; (float): m/z tolerance for MS2, default 0.015.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_tol&lt;/code&gt; (int): Intensity tolerance, default 30000 for Orbitrap and 1000 for other instruments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi_gap&lt;/code&gt; (int): Gap within a feature, default 30.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ppr&lt;/code&gt; (float): Peak correlation threshold for feature grouping, default 0.7.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature Alignment:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;align_mz_tol&lt;/code&gt; (float): m/z tolerance for MS1, default 0.01.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align_rt_tol&lt;/code&gt; (float): Retention time tolerance, default 0.2.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run_rt_correction&lt;/code&gt; (bool): Whether to perform retention time correction, default True.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_scan_num_for_alignment&lt;/code&gt; (int): Minimum scan number for feature alignment, default 6.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature Annotation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;msms_library&lt;/code&gt; (str): Path to the MS/MS library file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_sim_tol&lt;/code&gt; (float): MS2 similarity tolerance, default 0.7.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Normalization:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;run_normalization&lt;/code&gt; (bool): Whether to normalize the data, default False.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normalization_method&lt;/code&gt; (str): Normalization method, default &amp;ldquo;pqn&amp;rdquo; (probabilistic quotient normalization).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;output_single_file&lt;/code&gt; (bool): Whether to output processed individual files as CSV, default False.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_aligned_file&lt;/code&gt; (bool): Whether to output aligned features as CSV, default False.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Statistical Analysis:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;run_statistics&lt;/code&gt; (bool): Whether to perform statistical analysis, default False.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Visualization:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;plot_bpc&lt;/code&gt; (bool): Whether to plot base peak chromatogram, default False.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_ms2&lt;/code&gt; (bool): Whether to plot MS2 mirror plots for matching, default False.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self)&lt;/code&gt;: Initializes a Params object with default values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read_parameters_from_csv(self, path)&lt;/code&gt;: Reads parameters from a CSV file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_untargeted_metabolomics_workflow_preparation(self)&lt;/code&gt;: Prepares parameters for an untargeted metabolomics workflow.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set_default(self, ms_type, ion_mode)&lt;/code&gt;: Sets default parameters based on the type of mass spectrometer and ionization mode.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;check_parameters(self)&lt;/code&gt;: Validates the parameters using predefined ranges.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_parameters(self, path, format=&amp;quot;json&amp;quot;)&lt;/code&gt;: Outputs the parameters to a file, currently only supports JSON format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;find_ms_info(file_name)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Determines the type of mass spectrometer and ionization mode from a raw file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): The file name of the raw MS data file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; (str): The type of mass spectrometer (&amp;ldquo;orbitrap&amp;rdquo; or &amp;ldquo;tof&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): The ionization mode (&amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt; (bool): Whether the data is centroided.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Constants&lt;span class=&#34;absolute -mt-20&#34; id=&#34;constants&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;PARAMETER_RAGES&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_rages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_rages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A dictionary containing the acceptable ranges for various parameters.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Keys and Values:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;rt_start&amp;quot;&lt;/code&gt;: [0.0, 1000.0]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;rt_end&amp;quot;&lt;/code&gt;: [0.0, 1000.0]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;mz_tol_ms1&amp;quot;&lt;/code&gt;: [0.0, 0.02]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;mz_tol_ms2&amp;quot;&lt;/code&gt;: [0.0, 0.02]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;int_tol&amp;quot;&lt;/code&gt;: [0, 1e10]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;roi_gap&amp;quot;&lt;/code&gt;: [0, 50]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;min_scan_num_for_alignment&amp;quot;&lt;/code&gt;: [0, 50]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;align_mz_tol&amp;quot;&lt;/code&gt;: [0.0, 0.02]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;align_rt_tol&amp;quot;&lt;/code&gt;: [0.0, 2.0]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ppr&amp;quot;&lt;/code&gt;: [0.5, 1.0]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ms2_sim_tol&amp;quot;&lt;/code&gt;: [0.0, 1.0]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_default&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_default&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A dictionary containing default values for various parameters.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Keys and Values:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;rt_start&amp;quot;&lt;/code&gt;: 0.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;rt_end&amp;quot;&lt;/code&gt;: 1000.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;mz_tol_ms1&amp;quot;&lt;/code&gt;: 0.01&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;mz_tol_ms2&amp;quot;&lt;/code&gt;: 0.015&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;int_tol&amp;quot;&lt;/code&gt;: 30000&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;roi_gap&amp;quot;&lt;/code&gt;: 10&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;min_scan_num_for_alignment&amp;quot;&lt;/code&gt;: 5&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;align_mz_tol&amp;quot;&lt;/code&gt;: 0.01&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;align_rt_tol&amp;quot;&lt;/code&gt;: 0.2&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ppr&amp;quot;&lt;/code&gt;: 0.7&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;ms2_sim_tol&amp;quot;&lt;/code&gt;: 0.7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This documentation provides a clear and detailed overview of the &lt;code&gt;Params&lt;/code&gt; class and associated functions, which are crucial for managing and validating parameters in mass spectrometry data processing. This should be useful for users who need to configure and customize their data analysis workflows.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>peak_detect.py</title>
+      <link>https://example.org/docs/api/peak_detect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/peak_detect/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ROI Detection&lt;/strong&gt;: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ROI Processing&lt;/strong&gt;: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Utilities&lt;/strong&gt;: Helper functions to support the detection and processing of ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;find_rois&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_rois&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_rois&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_rois(d)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identifies regions of interest (ROIs) in the MS data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An object that contains the MS data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;final_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of detected ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;cut_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;cut_roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cut_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cut_roi(r, int_tol=1000, sigma=1.2, prominence_ratio=0.1, distance=5)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cuts a region of interest (ROI) into smaller segments based on intensity and peak prominence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; (Roi object): The ROI object to be cut.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_tol&lt;/code&gt; (int): Intensity tolerance for cutting (default 1000).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigma&lt;/code&gt; (float): Sigma value for Gaussian filtering (default 1.2).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prominence_ratio&lt;/code&gt; (float): Ratio of prominence used for finding peaks (default 0.1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;distance&lt;/code&gt; (int): Minimum distance between peaks (default 5).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cut_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of cut ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;find_closest_index_ordered(array, target, tol=0.01)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Finds the index of the closest value in an ordered array.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (list or numpy array): The ordered array to search.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; (float): The target value to find.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tol&lt;/code&gt; (float): Tolerance for considering a match (default 0.01).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;idx&lt;/code&gt; (int or None): The index of the closest value, or &lt;code&gt;None&lt;/code&gt; if no suitable match is found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Roi&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to represent a region of interest (ROI) in mass spectrometry data. An ROI typically corresponds to a peak or a group of peaks in a chromatogram.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt; (int): Identifier for the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_idx_seq&lt;/code&gt; (list of int): List of scan indices.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_seq&lt;/code&gt; (list of float): List of retention times.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (list of float): List of m/z values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_seq&lt;/code&gt; (list of int): List of intensity values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): List of associated MS2 spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_counter&lt;/code&gt; (int): Counter for the number of gaps in the ROI&amp;rsquo;s tail.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz&lt;/code&gt; (float): m/z value of the ROI peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt&lt;/code&gt; (float): Retention time of the ROI peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_number&lt;/code&gt; (int): Number of scans in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_area&lt;/code&gt; (float): Area under the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_height&lt;/code&gt; (float): Height of the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;best_ms2&lt;/code&gt; (MS2 object): The best associated MS2 spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;length&lt;/code&gt; (int): Length of the ROI in terms of the number of scans.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merged&lt;/code&gt; (bool): Indicates if the ROI has been merged with others.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gaussian_similarity&lt;/code&gt; (float): Gaussian similarity score of the peak shape.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;noise_level&lt;/code&gt; (float): Estimated noise level in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asymmetry_factor&lt;/code&gt; (float): Asymmetry factor of the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cut&lt;/code&gt; (bool): Indicates if the ROI has been cut into smaller segments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;charge_state&lt;/code&gt; (int): Charge state of the ROI (default 1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_isotope&lt;/code&gt; (bool): Indicates if the ROI represents an isotope.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_mz_seq&lt;/code&gt; (list of float): List of m/z values for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_int_seq&lt;/code&gt; (list of int): List of intensities for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_id_seq&lt;/code&gt; (list of int): List of identifiers for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_in_source_fragment&lt;/code&gt; (bool): Indicates if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isf_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isf_parent_roi_id&lt;/code&gt; (int): Parent ROI ID if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_type&lt;/code&gt; (str): Type of adduct, if applicable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_parent_roi_id&lt;/code&gt; (int): Parent ROI ID for the adduct.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs for the adduct.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (str): Annotation of the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;formula&lt;/code&gt; (str): Molecular formula associated with the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;similarity&lt;/code&gt; (float): Similarity score for annotation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;matched_peak_number&lt;/code&gt; (int): Number of matched peaks in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;smiles&lt;/code&gt; (str): SMILES notation of the associated molecule.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inchikey&lt;/code&gt; (str): InChIKey notation of the associated molecule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Initializes an ROI with scan index, retention time, m/z, and intensity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extend_roi(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Extends an ROI with new data points.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_roi_info(self, show_annotation=False)&lt;/code&gt;: Prints information about the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_mz_error(self)&lt;/code&gt;: Calculates the m/z error (maximum - minimum) of the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_rt_ph_pa(self)&lt;/code&gt;: Calculates the peak area and height using the trapezoidal rule.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_top_average(self, num=3)&lt;/code&gt;: Finds the peak height by averaging the top three intensities.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sum_roi(self, cal_g_score=True, cal_a_score=True)&lt;/code&gt;: Summarizes the ROI, calculating key attributes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subset_roi(self, start, end)&lt;/code&gt;: Subsets the ROI based on provided start and end positions.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>raw_data_utils.py</title>
       <link>https://example.org/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -23,7 +919,614 @@
       <description>
         
         
-        &lt;p&gt; &lt;/p&gt;
+        &lt;p&gt;This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The main components of this module include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MSData Class&lt;/strong&gt;: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scan Class&lt;/strong&gt;: A class that represents individual MS scans, including both MS1 and MS2 levels.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;: Various utility functions to assist in data processing, such as reading files, centroiding data, and finding the best MS2 spectrum.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;MSData&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;msdata&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#msdata&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class that models a single MS file (mzML or mzXML) and processes the raw data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): Name of the raw data file without extension.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;start_time&lt;/code&gt; (datetime): Start acquisition time of the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;params&lt;/code&gt; (Params object): Contains the parameters used for processing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scans&lt;/code&gt; (list): A list of &lt;code&gt;Scan&lt;/code&gt; objects representing each scan in the data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms1_rt_seq&lt;/code&gt; (numpy array): Retention times of all MS1 scans.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bpc_int&lt;/code&gt; (numpy array): Intensity of the Base Peak Chromatogram (BPC).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rois&lt;/code&gt; (list): A list of ROI objects.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi_mz_seq&lt;/code&gt; (numpy array): m/z values of all ROIs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi_rt_seq&lt;/code&gt; (numpy array): Retention time of all ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self)&lt;/code&gt;: Initializes the &lt;code&gt;MSData&lt;/code&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read_raw_data(self, file_name, params, read_ms2=True, clean_ms2=False, centroid=True)&lt;/code&gt;: Reads raw MS data and extracts MS1 and MS2 scans.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extract_scan_mzml(self, spectra, int_tol=0, read_ms2=True, clean_ms2=False, centroid=True)&lt;/code&gt;: Extracts scans from an mzML file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extract_scan_mzxml(self, spectra, int_tol, read_ms2=True, clean_ms2=False, centroid=True)&lt;/code&gt;: Extracts scans from an mzXML file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drop_ion_by_int(self)&lt;/code&gt;: Drops ions by intensity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_rois(self)&lt;/code&gt;: Identifies ROIs in MS1 scans.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cut_rois(self)&lt;/code&gt;: Splits ROIs into smaller pieces.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;summarize_roi(self, cal_g_score=True, cal_a_score=True)&lt;/code&gt;: Processes ROIs and assigns MS2 spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allocate_ms2_to_rois(self)&lt;/code&gt;: Allocates MS2 spectra to ROIs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drop_rois_without_ms2(self)&lt;/code&gt;: Removes ROIs without MS2 spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drop_rois_by_length(self, length=5)&lt;/code&gt;: Removes ROIs shorter than a specified length.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_bpc(self, rt_range=None, label_name=False, output_dir=None)&lt;/code&gt;: Plots the Base Peak Chromatogram (BPC).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_single_file(self, user_defined_output_path=None)&lt;/code&gt;: Generates a CSV report of ROIs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_eic_data(self, target_mz, target_rt=None, mz_tol=0.005, rt_tol=0.3, rt_range=None)&lt;/code&gt;: Extracts Extracted Ion Chromatogram (EIC) data for a target m/z.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_eics(self, target_mz_seq, target_rt=None, mz_tol=0.005, rt_tol=0.3, output=None, show_rt_line=True, ylim=None, return_eic_data=False)&lt;/code&gt;: Plots EICs for multiple target m/z values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_eic(self, target_mz, target_rt=None, mz_tol=0.005, rt_tol=0.3, output=None, show_rt_line=True, ylim=None, return_eic_data=False)&lt;/code&gt;: Plots the EIC for a single target m/z.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_ms2_by_mzrt(self, mz_target, rt_target, mz_tol=0.01, rt_tol=0.3, return_best=False)&lt;/code&gt;: Finds MS2 scans by precursor m/z and retention time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_roi_by_mzrt(self, mz_target, rt_target=None, mz_tol=0.01, rt_tol=0.3)&lt;/code&gt;: Finds ROIs by m/z and retention time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_ms1_scan_by_rt(self, rt_target)&lt;/code&gt;: Finds an MS1 scan by retention time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;correct_retention_time(self, f)&lt;/code&gt;: Corrects retention times based on a provided function.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_roi(self, roi_idx, mz_tol=0.005, rt_range=[0, np.inf], rt_window=None, output=False)&lt;/code&gt;: Plots the EIC for a specific ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_all_rois(self, output_path, mz_tol=0.01, rt_range=[0, np.inf], rt_window=None)&lt;/code&gt;: Plots the EICs for all ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;Scan&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;scan&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#scan&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class that represents an individual MS scan, either MS1 or MS2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;level&lt;/code&gt; (int): The MS level of the scan (1 or 2).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan&lt;/code&gt; (int): Scan number.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt&lt;/code&gt; (float): Retention time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (numpy array): m/z sequence (for MS1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_seq&lt;/code&gt; (numpy array): Intensity sequence (for MS1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;precursor_mz&lt;/code&gt; (float): Precursor m/z (for MS2).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peaks&lt;/code&gt; (numpy array): Product m/z and intensity pairs (for MS2).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self, level=None, scan=None, rt=None)&lt;/code&gt;: Initializes the &lt;code&gt;Scan&lt;/code&gt; object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;add_info_by_level(self, **kwargs)&lt;/code&gt;: Adds scan information depending on the MS level.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_scan_info(self)&lt;/code&gt;: Prints the scan&amp;rsquo;s information.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_scan(self, mz_range=None, return_data=False)&lt;/code&gt;: Plots the scan data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Helper Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;helper-functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#helper-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;_clean_ms2(ms2, offset=2, int_drop_ratio=0.01)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_clean_ms2ms2-offset2-int_drop_ratio001&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_clean_ms2ms2-offset2-int_drop_ratio001&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Cleans MS/MS spectra by removing ions with m/z greater than a specified offset and by removing ions with low intensity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2&lt;/code&gt; (Scan object): The MS2 scan to clean.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;offset&lt;/code&gt; (float): m/z offset for dropping ions.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_drop_ratio&lt;/code&gt; (float): Ratio of the base peak intensity below which ions will be dropped.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;_centroid(mz_seq, int_seq, mz_tol=0.005)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_centroidmz_seq-int_seq-mz_tol0005&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_centroidmz_seq-int_seq-mz_tol0005&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Centroids m/z and intensity sequences.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (numpy array): m/z sequence.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_seq&lt;/code&gt; (numpy array): Intensity sequence.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float): m/z tolerance for centroiding.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;read_raw_file_to_obj(file_name, params=None, int_tol=1000, centroid=True, read_ms2=True, clean_ms2=False, print_summary=False)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read_raw_file_to_objfile_name-paramsnone-int_tol1000-centroidtrue-read_ms2true-clean_ms2false-print_summaryfalse&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read_raw_file_to_objfile_name-paramsnone-int_tol1000-centroidtrue-read_ms2true-clean_ms2false-print_summaryfalse&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Reads a raw MS file into an &lt;code&gt;MSData&lt;/code&gt; object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): Name of the raw MS data file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;params&lt;/code&gt; (Params object): Parameters for processing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_tol&lt;/code&gt; (float): Intensity tolerance for ion filtering.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt; (bool): Whether to centroid the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;print_summary&lt;/code&gt; (bool): Whether to print a summary of the data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): The processed MSData object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;find_best_ms2(ms2_seq)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_best_ms2ms2_seq&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_best_ms2ms2_seq&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Finds the best MS2 spectrum from a list of MS2 spectra based on intensity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): List of MS2 spectra.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;best_ms2&lt;/code&gt; (Scan object): The MS2 scan with the highest intensity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;code&gt;get_start_time(file_name)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;get_start_timefile_name&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#get_start_timefile_name&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Extracts the start time of the raw data from the file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): Absolute path to the raw data file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;start_time&lt;/code&gt; (datetime): The start acquisition time of the raw data.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>stats.py</title>
+      <link>https://example.org/docs/api/stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/stats/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides functions for performing statistical analysis on metabolomics data, including univariate analysis (t-tests and ANOVA) and multivariate analysis (Principal Component Analysis or PCA).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Univariate Analysis&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;univariate-analysis&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#univariate-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;statistical_analysis&lt;span class=&#34;absolute -mt-20&#34; id=&#34;statistical_analysis&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#statistical_analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;statistical_analysis(feature_table, params, before_norm=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs statistical analysis on the feature table, including univariate analysis (t-test or ANOVA) and multivariate analysis (PCA).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (pandas DataFrame): The feature table containing metabolomics data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;params&lt;/code&gt; (Params object): The parameters for the experiment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;before_norm&lt;/code&gt; (bool): Whether the analysis is performed before normalization. Default is &lt;code&gt;False&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pandas DataFrame&lt;/code&gt;: The updated feature table with p-values from statistical tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;t_test&lt;span class=&#34;absolute -mt-20&#34; id=&#34;t_test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#t_test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;t_test(data_array, individual_sample_groups)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs a t-test on a feature list for two groups.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data_array&lt;/code&gt; (numpy array): The feature intensities.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;individual_sample_groups&lt;/code&gt; (list): A list of groups of individual samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list&lt;/code&gt;: p-values from the t-test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;anova&lt;span class=&#34;absolute -mt-20&#34; id=&#34;anova&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#anova&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;anova(data_array, individual_sample_groups)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs ANOVA on a feature list for more than two groups.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data_array&lt;/code&gt; (numpy array): The feature intensities.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;individual_sample_groups&lt;/code&gt; (list): A list of groups of individual samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list&lt;/code&gt;: p-values from the ANOVA test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;strong&gt;Multivariate Analysis&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;multivariate-analysis&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#multivariate-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;pca_analysis&lt;span class=&#34;absolute -mt-20&#34; id=&#34;pca_analysis&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#pca_analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;pca_analysis(data_array, individual_sample_groups, scaling=True, transformation=True, gapFillingRatio=0.2, output_dir=None, before_norm=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs Principal Component Analysis (PCA) on the data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data_array&lt;/code&gt; (numpy array): The feature intensities. Features are in rows and samples are in columns.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;individual_sample_groups&lt;/code&gt; (list): A list of groups of individual samples.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scaling&lt;/code&gt; (bool): Whether to scale the data. Default is &lt;code&gt;True&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;transformation&lt;/code&gt; (bool): Whether to transform the data (log10). Default is &lt;code&gt;True&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gapFillingRatio&lt;/code&gt; (float): The ratio for gap-filling. Default is &lt;code&gt;0.2&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_dir&lt;/code&gt; (str): The directory to save the PCA plot. Default is &lt;code&gt;None&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;before_norm&lt;/code&gt; (bool): Whether the analysis is performed before normalization. Default is &lt;code&gt;False&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vecPC1, vecPC2, var_PC1, var_PC2&lt;/code&gt;: PCA results including the principal component vectors and their explained variance ratios.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>utils_functions.py</title>
+      <link>https://example.org/docs/api/utils_functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/utils_functions/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides utility functions for metabolomics data processing, including generating sample tables, obtaining timestamps from files, calculating ion masses, and estimating isotope distributions.&lt;/p&gt;
+&lt;h3&gt;generate_sample_table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;generate_sample_table&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#generate_sample_table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;generate_sample_table(path=None, output=True)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Generates a sample table from the mzML or mzXML files in a specified directory.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the directory containing the &amp;lsquo;data&amp;rsquo; subdirectory with mzML or mzXML files. If not specified, the current working directory is used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (bool): If &lt;code&gt;True&lt;/code&gt;, outputs the sample table to a CSV file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pandas DataFrame&lt;/code&gt; (if &lt;code&gt;output=False&lt;/code&gt;): The sample table containing two columns: &amp;lsquo;Sample&amp;rsquo; and &amp;lsquo;Groups&amp;rsquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; (if &lt;code&gt;output=True&lt;/code&gt;): A CSV file with the sample table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sample_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;generate_sample_table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;get_timestamps&lt;span class=&#34;absolute -mt-20&#34; id=&#34;get_timestamps&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#get_timestamps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;get_timestamps(path, output=True)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Obtains timestamps for individual mzML or mzXML files and sorts the files by acquisition time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str): The path to the directory containing the &amp;lsquo;data&amp;rsquo; subdirectory with mzML or mzXML files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (bool): If &lt;code&gt;True&lt;/code&gt;, outputs the timestamps to a TXT file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list&lt;/code&gt; or &lt;code&gt;pandas DataFrame&lt;/code&gt; (if &lt;code&gt;output=False&lt;/code&gt;): A list or DataFrame of tuples containing &amp;lsquo;file_name&amp;rsquo; and &amp;lsquo;acquisition_time&amp;rsquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Outputs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;timestamps.txt&lt;/code&gt; (if &lt;code&gt;output=True&lt;/code&gt;): A TXT file with the timestamps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;timestamps&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_timestamps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>visualization.py</title>
+      <link>https://example.org/docs/api/visualization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/visualization/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides a suite of data visualization functions tailored for metabolomics data analysis. It includes tools for plotting base peak chromatograms, extracted ion chromatograms (EIC), histograms, mirror images of MS² spectra, and Principal Component Analysis (PCA) plots. These visualizations aid in the interpretation and quality control of metabolomics experiments.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;plot_bpcs&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_bpcs&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_bpcs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Plots overlapped Base Peak Chromatograms (BPC) from a list of MSData objects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data_list&lt;/code&gt; (list of MSData objects, optional): A list of MSData objects to be plotted. Each object should contain &lt;code&gt;ms1_rt_seq&lt;/code&gt; (retention time sequence), &lt;code&gt;bpc_int&lt;/code&gt; (BPC intensities), and &lt;code&gt;file_name&lt;/code&gt; attributes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (str, optional): Path to save the plot as an image file. If &lt;code&gt;None&lt;/code&gt;, the plot is displayed instead of being saved.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;autocolor&lt;/code&gt; (bool, default &lt;code&gt;False&lt;/code&gt;): If &lt;code&gt;True&lt;/code&gt;, assigns distinct colors to each BPC using a predefined color list. Otherwise, all BPCs are plotted in black.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_legend&lt;/code&gt; (bool, default &lt;code&gt;True&lt;/code&gt;): If &lt;code&gt;True&lt;/code&gt;, displays a legend with the file names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plot_bpcs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms_data_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;bpc_plot.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;autocolor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;show_legend&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;plot_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_roi(d, roi, mz_tol=0.01, rt_tol=1.0, output=False, break_scan=None)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Plots the Extracted Ion Chromatogram (EIC) for a specified region of interest (ROI).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): The MSData object containing EIC data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roi&lt;/code&gt; (ROI object): The region of interest containing attributes like &lt;code&gt;mz&lt;/code&gt;, &lt;code&gt;rt_seq&lt;/code&gt;, &lt;code&gt;int_seq&lt;/code&gt;, &lt;code&gt;scan_idx_seq&lt;/code&gt;, &lt;code&gt;gaussian_similarity&lt;/code&gt;, &lt;code&gt;noise_level&lt;/code&gt;, &lt;code&gt;asymmetry_factor&lt;/code&gt;, and &lt;code&gt;rt&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol&lt;/code&gt; (float, default &lt;code&gt;0.01&lt;/code&gt;): Mass-to-charge ratio (m/z) tolerance for EIC extraction.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol&lt;/code&gt; (float, default &lt;code&gt;1.0&lt;/code&gt;): Retention time (RT) tolerance around the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (str, optional): Path to save the plot as an image file. If &lt;code&gt;False&lt;/code&gt;, the plot is displayed instead of being saved.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;break_scan&lt;/code&gt; (int, optional): Scan index at which to break and color the EIC differently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plot_roi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;roi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mz_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rt_tol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;roi_plot.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;mirror_ms2_from_scans&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2_from_scans&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mirror_ms2_from_scans&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mirror_ms2_from_scans(scan1, scan2, output=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Generates a mirror plot of two MS² spectra for comparison.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scan1&lt;/code&gt; (MS2Scan object): The first MS² scan (experimental).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan2&lt;/code&gt; (MS2Scan object): The second MS² scan (database).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (str, optional): Path to save the plot as an image file. If &lt;code&gt;False&lt;/code&gt;, the plot is displayed instead of being saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mirror_ms2_from_scans&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scan_exp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scan_db&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ms2_mirror.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;mirror_ms2&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mirror_ms2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mirror_ms2(precursor_mz1, precursor_mz2, peaks1, peaks2, annotation=None, score=None, output=False)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Creates a mirror image plot of two MS² spectra based on precursor m/z and fragment peaks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;precursor_mz1&lt;/code&gt; (float): Precursor m/z of the first spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;precursor_mz2&lt;/code&gt; (float): Precursor m/z of the second spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peaks1&lt;/code&gt; (numpy array): Fragment peaks of the first spectrum, shape &lt;code&gt;(n, 2)&lt;/code&gt; where each row is &lt;code&gt;[m/z, intensity]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peaks2&lt;/code&gt; (numpy array): Fragment peaks of the second spectrum, shape &lt;code&gt;(n, 2)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (str, optional): Annotation or name for the second spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;score&lt;/code&gt; (float, optional): Similarity score between the two spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output&lt;/code&gt; (str, optional): Path to save the plot as an image file. If &lt;code&gt;False&lt;/code&gt;, the plot is displayed instead of being saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mirror_ms2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;precursor1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;precursor2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;peaks_exp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;peaks_db&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Compound A&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;score&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.85&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;mirror_ms2.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;plot_pca&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_pca&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_pca&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_pca(vecPC1, vecPC2, var_PC1, var_PC2, group_names, colors=None, plot_order=None, output_dir=None)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Plots a PCA scatter plot with confidence ellipses for each group.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vecPC1&lt;/code&gt; (array-like): Principal Component 1 scores.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vecPC2&lt;/code&gt; (array-like): Principal Component 2 scores.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;var_PC1&lt;/code&gt; (float): Explained variance ratio for PC1.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;var_PC2&lt;/code&gt; (float): Explained variance ratio for PC2.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_names&lt;/code&gt; (list or array-like): Group labels for each sample.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;colors&lt;/code&gt; (list, optional): List of colors for each group. Defaults to a predefined color palette.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_order&lt;/code&gt; (list, optional): Order in which groups are plotted.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_dir&lt;/code&gt; (str, optional): Path to save the PCA plot as an image file. If &lt;code&gt;None&lt;/code&gt;, the plot is displayed instead of being saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plot_pca&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PC1_scores&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PC2_scores&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.45&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;group_labels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#FF5050&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#0078F0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output_dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pca_plot.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;helper-functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#helper-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;confidence_ellipse&lt;span class=&#34;absolute -mt-20&#34; id=&#34;confidence_ellipse&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#confidence_ellipse&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;confidence_ellipse(x, y, ax, n_std=3.0, facecolor=&#39;none&#39;, **kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Adds a covariance confidence ellipse to a plot.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; (array-like): Data for the x-axis.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; (array-like): Data for the y-axis.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ax&lt;/code&gt; (matplotlib.axes.Axes): The axes object to draw the ellipse on.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n_std&lt;/code&gt; (float, default &lt;code&gt;3.0&lt;/code&gt;): Number of standard deviations for the ellipse radius.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;facecolor&lt;/code&gt; (str, default &lt;code&gt;&#39;none&#39;&lt;/code&gt;): Face color of the ellipse.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**kwargs&lt;/code&gt;: Additional keyword arguments for &lt;code&gt;matplotlib.patches.Ellipse&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;confidence_ellipse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;edgecolor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;random_color_generator&lt;span class=&#34;absolute -mt-20&#34; id=&#34;random_color_generator&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#random_color_generator&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;random_color_generator()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Generates a random CSS4 color name.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;str&lt;/code&gt;: A randomly selected CSS4 color name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;random_color_generator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h4&gt;Predefined Color Lists&lt;span class=&#34;absolute -mt-20&#34; id=&#34;predefined-color-lists&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#predefined-color-lists&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;_color_list&lt;/code&gt;: A predefined list of colors used when &lt;code&gt;autocolor=True&lt;/code&gt; in &lt;code&gt;plot_bpcs&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;_color_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;brown&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gray&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;olive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cyan&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;COLORS&lt;/code&gt;: A predefined list of hex color codes used in PCA plotting.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;COLORS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#FF5050&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#0078F0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#00B050&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#FFC000&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#7030A0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#FF00FF&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#00B0F0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#FF0000&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#00FF00&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#0000FF&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;dependencies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dependencies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ensure the following Python packages are installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;matplotlib&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pandas&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tqdm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pyteomics&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Other custom modules:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.annotation&lt;/code&gt; (for &lt;code&gt;extract_peaks_from_string&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.raw_data_utils&lt;/code&gt; (for &lt;code&gt;get_start_time&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>workflows.py</title>
+      <link>https://example.org/docs/api/workflows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/workflows/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.&lt;/p&gt;
+&lt;h3&gt;feature_detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_detection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs untargeted feature detection from a single file (e.g., &lt;code&gt;.mzML&lt;/code&gt; or &lt;code&gt;.mzXML&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): Path to the raw data file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;params&lt;/code&gt; (Params object, optional): Parameters for feature detection. If &lt;code&gt;None&lt;/code&gt;, default parameters are used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cal_g_score&lt;/code&gt; (bool, default &lt;code&gt;True&lt;/code&gt;): Whether to calculate the Gaussian similarity score for each ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;anno_isotope&lt;/code&gt; (bool, default &lt;code&gt;True&lt;/code&gt;): Whether to annotate isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;anno_adduct&lt;/code&gt; (bool, default &lt;code&gt;True&lt;/code&gt;): Whether to annotate adducts.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;anno_in_source_fragment&lt;/code&gt; (bool, default &lt;code&gt;True&lt;/code&gt;): Whether to annotate in-source fragments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (bool, default &lt;code&gt;False&lt;/code&gt;): Whether to annotate MS2 spectra using an MS2 library.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_library_path&lt;/code&gt; (str, optional): Path to the MS2 library file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_dir&lt;/code&gt; (str, optional): Directory to save output files. If &lt;code&gt;None&lt;/code&gt;, the output is saved in a default location.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An MSData object containing processed data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;feature_detection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sample.mzML&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;custom_params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ms2_library_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;library.msp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;untargeted_metabolomics_workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;untargeted_metabolomics_workflow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#untargeted_metabolomics_workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;untargeted_metabolomics_workflow(path=None, batch_size=100, cpu_ratio=0.8)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Performs the full untargeted metabolomics workflow, including feature detection, alignment, annotation, normalization, and statistical analysis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str, optional): Path to the working directory. If &lt;code&gt;None&lt;/code&gt;, the current working directory is used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; (int, default &lt;code&gt;100&lt;/code&gt;): Number of files to process in each batch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cpu_ratio&lt;/code&gt; (float, default &lt;code&gt;0.8&lt;/code&gt;): Ratio of CPU cores to use for parallel processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;untargeted_metabolomics_workflow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpu_ratio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;batch_file_processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;batch_file_processing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#batch_file_processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;batch_file_processing(path=None, batch_size=100, cpu_ratio=0.8)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Processes multiple files in batch mode using the untargeted metabolomics workflow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt; (str, optional): Path to the working directory. If &lt;code&gt;None&lt;/code&gt;, the current working directory is used.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; (int, default &lt;code&gt;100&lt;/code&gt;): Number of files to process in each batch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cpu_ratio&lt;/code&gt; (float, default &lt;code&gt;0.8&lt;/code&gt;): Ratio of CPU cores to use for parallel processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;batch_file_processing&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpu_ratio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3&gt;Dependencies&lt;span class=&#34;absolute -mt-20&#34; id=&#34;dependencies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dependencies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ensure that the following Python packages are installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;os&lt;/code&gt;, &lt;code&gt;multiprocessing&lt;/code&gt;, &lt;code&gt;pickle&lt;/code&gt;, &lt;code&gt;deepcopy&lt;/code&gt;, &lt;code&gt;pandas&lt;/code&gt;, &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;tqdm&lt;/code&gt;, &lt;code&gt;importlib.metadata&lt;/code&gt;, &lt;code&gt;scipy&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt;, &lt;code&gt;json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The module also relies on several internal modules and functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MSData&lt;/code&gt;, &lt;code&gt;get_start_time&lt;/code&gt; from &lt;code&gt;.raw_data_utils&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Params&lt;/code&gt;, &lt;code&gt;find_ms_info&lt;/code&gt; from &lt;code&gt;.params&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotate_isotope&lt;/code&gt;, &lt;code&gt;annotate_adduct&lt;/code&gt;, &lt;code&gt;annotate_in_source_fragment&lt;/code&gt; from &lt;code&gt;.feature_grouping&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature_alignment&lt;/code&gt;, &lt;code&gt;gap_filling&lt;/code&gt;, &lt;code&gt;output_feature_table&lt;/code&gt; from &lt;code&gt;.alignment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature_annotation&lt;/code&gt;, &lt;code&gt;annotate_rois&lt;/code&gt;, &lt;code&gt;feature_annotation_mzrt&lt;/code&gt; from &lt;code&gt;.annotation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_normalization&lt;/code&gt; from &lt;code&gt;.normalization&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_ms2_matching_from_feature_table&lt;/code&gt; from &lt;code&gt;.visualization&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistical_analysis&lt;/code&gt; from &lt;code&gt;.stats&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;convert_features_to_df&lt;/code&gt;, &lt;code&gt;output_feature_to_msp&lt;/code&gt; from &lt;code&gt;.feature_table_utils&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>msjson.py</title>
+      <link>https://example.org/docs/api/msjson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/msjson/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Documentation is under construction. Please check back later.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>network.py</title>
+      <link>https://example.org/docs/api/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/network/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Documentation is under construction. Please check back later.&lt;/p&gt;
 
       </description>
     </item>
