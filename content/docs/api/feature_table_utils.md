@@ -5,6 +5,8 @@ weight: 1
 
 This utility module provides functions for manipulating and exporting feature tables in metabolomics data analysis. It focuses on converting feature lists to DataFrame format and exporting MS2 spectra to the MSP format. Below are detailed descriptions of the provided functions.
 
+## Functions
+
 ### output_feature_to_msp
 
 `output_feature_to_msp(feature_table, output_path)`

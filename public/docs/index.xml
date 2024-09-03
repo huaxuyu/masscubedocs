@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Alignment.py</title>
+      <title>alignment.py</title>
       <link>https://example.org/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -34,7 +34,8 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;feature_alignment(path, parameters, drop_by_fill_pct_ratio=0.1)&lt;/code&gt;&lt;/p&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;feature_alignment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_alignment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_alignment(path, parameters, drop_by_fill_pct_ratio=0.1)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Aligns features from individual files (.txt) based on m/z and retention time.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -46,7 +47,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (DataFrame): The aligned feature table.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;gap_filling(features, parameters, mode=&#39;forced_peak_picking&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;gap_filling&lt;span class=&#34;absolute -mt-20&#34; id=&#34;gap_filling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gap_filling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;gap_filling(features, parameters, mode=&#39;forced_peak_picking&#39;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Fills the gaps in the aligned feature table using specified strategies.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -58,14 +61,18 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;features&lt;/code&gt; (list): The aligned features with filled gaps.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;output_feature_table(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;output_feature_table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_feature_table&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output_feature_table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;output_feature_table(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Outputs the aligned feature table to a specified file.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (DataFrame): The aligned feature table.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;output_path&lt;/code&gt; (str): The path where the aligned feature table will be saved.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, rt_max=50, mode=&#39;linear_interpolation&#39;, mz_tol=0.015, rt_tol=2.0, found_marker_ratio=0.4, return_model=False)&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;retention_time_correction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;retention_time_correction&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#retention_time_correction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, rt_max=50, mode=&#39;linear_interpolation&#39;, mz_tol=0.015, rt_tol=2.0, found_marker_ratio=0.4, return_model=False)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Corrects retention times for feature alignment using selected anchors and a specified correction model.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -84,7 +91,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;rt_corr&lt;/code&gt; (np.array): The corrected retention times.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;rt_anchor_selection(data_list, num=50, noise_tol=0.3, mz_tol=0.01, return_all_anchor=False)&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;rt_anchor_selection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;rt_anchor_selection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#rt_anchor_selection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;rt_anchor_selection(data_list, num=50, noise_tol=0.3, mz_tol=0.01, return_all_anchor=False)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Selects anchors for retention time correction based on the provided data. Anchors are selected based on intensity, peak shape, and distribution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -98,7 +107,8 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;anchors&lt;/code&gt; (list): A list of anchors (m/z and retention times) for retention time correction.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;_split_to_train_test(array, interval=0.3)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;_split_to_train_test&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_split_to_train_test&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_split_to_train_test&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;_split_to_train_test(array, interval=0.3)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Splits selected anchors into training and testing sets based on a specified time interval.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -171,7 +181,6 @@
         
         
         &lt;p&gt;This module is designed for annotating metabolites based on their MS/MS spectra. It includes functions for loading MS/MS databases, performing feature annotation, and exporting results. The module supports various input formats and annotation methods, providing flexibility for different workflows.&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;load_msms_db&lt;span class=&#34;absolute -mt-20&#34; id=&#34;load_msms_db&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#load_msms_db&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;load_msms_db(path)&lt;/code&gt;&lt;/p&gt;
@@ -307,14 +316,12 @@
         
         
         &lt;p&gt;This module, &lt;code&gt;classifier_builder.py&lt;/code&gt;, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.&lt;/p&gt;
-&lt;h3&gt;&lt;strong&gt;Module Overview&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;module-overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#module-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction. The module supports various steps, including untargeted metabolomics workflows and utility functions for managing data.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction. The module supports various steps, including untargeted metabolomics workflows and utility functions for managing data.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Key Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;key-functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;helper-functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#helper-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;feature_selection(X, y, k=None)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;feature_selection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature_selection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature_selection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;feature_selection(X, y, k=None)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Selects the top &lt;code&gt;k&lt;/code&gt; features based on statistical tests.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -326,9 +333,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Selected features and their indices.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;train_rdf_model(X_train, y_train)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;train_rdf_model&lt;span class=&#34;absolute -mt-20&#34; id=&#34;train_rdf_model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#train_rdf_model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;train_rdf_model(X_train, y_train)&lt;/code&gt;**&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Trains a random forest classifier.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -339,9 +346,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Trained random forest model.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;cross_validate_model(X, y, model, k=5, random_state=0)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;cross_validate_model&lt;span class=&#34;absolute -mt-20&#34; id=&#34;cross_validate_model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cross_validate_model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cross_validate_model(X, y, model, k=5, random_state=0)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Performs k-fold cross-validation on the model.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -355,9 +362,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; List of accuracy scores for each fold.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;predict(model, X_test)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;predict&lt;span class=&#34;absolute -mt-20&#34; id=&#34;predict&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#predict&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;predict(model, X_test)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Predicts the class labels for test data.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -368,9 +375,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Predicted class labels.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;evaluate_model(predictions, y_test)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;evaluate_model&lt;span class=&#34;absolute -mt-20&#34; id=&#34;evaluate_model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#evaluate_model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;evaluate_model(predictions, y_test)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Evaluates the model&amp;rsquo;s performance using accuracy.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -381,12 +388,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Returns:&lt;/strong&gt; Accuracy score.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;&lt;strong&gt;Main Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;main-functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#main-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;build_classifier(path=None, feature_num=None, gaussian_cutoff=0.6, fill_percentage_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5, data_processed=False)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;build_classifier&lt;span class=&#34;absolute -mt-20&#34; id=&#34;build_classifier&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#build_classifier&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;build_classifier(path=None, feature_num=None, gaussian_cutoff=0.6, fill_percentage_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5, data_processed=False)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Builds a random forest classifier from raw or processed data.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -402,20 +406,9 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Outputs:&lt;/strong&gt; Saves the trained model, selected features, and evaluation metrics.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;build_classifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;feature_num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;predict_samples(path, mz_tol=0.01, rt_tol=0.3)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;predict_samples&lt;span class=&#34;absolute -mt-20&#34; id=&#34;predict_samples&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#predict_samples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;predict_samples(path, mz_tol=0.01, rt_tol=0.3)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Predicts sample classes using the trained model.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;
@@ -427,60 +420,6 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Outputs:&lt;/strong&gt; Saves predictions in the specified project path.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;predict_samples&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Workflow Integration&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;workflow-integration&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#workflow-integration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;code&gt;untargeted_metabolomics_workflow&lt;/code&gt;:&lt;/strong&gt; This function, called within &lt;code&gt;build_classifier&lt;/code&gt; and &lt;code&gt;predict_samples&lt;/code&gt;, processes raw metabolomics data and prepares it for model building or prediction.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;Example Usage&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-usage&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#example-usage&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Building a Classifier:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;build_classifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;feature_num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gaussian_cutoff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross_validation_k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Predicting New Samples:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;predict_samples&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;dependencies&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#dependencies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ensure that the following Python packages are installed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;scikit-learn&lt;/code&gt;, &lt;code&gt;pandas&lt;/code&gt;, &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;os&lt;/code&gt;, &lt;code&gt;pickle&lt;/code&gt;, &lt;code&gt;shutil&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This module is designed to be used in metabolomics projects, providing a comprehensive approach to feature selection, model training, and prediction using random forest classifiers. It leverages the untargeted metabolomics workflow for data preparation and supports automated processing and analysis.&lt;/p&gt;
 
       </description>
     </item>
@@ -870,7 +809,8 @@
         
         
         &lt;p&gt;This utility module provides functions for manipulating and exporting feature tables in metabolomics data analysis. It focuses on converting feature lists to DataFrame format and exporting MS2 spectra to the MSP format. Below are detailed descriptions of the provided functions.&lt;/p&gt;
-&lt;h3&gt;output_feature_to_msp&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_feature_to_msp&#34;&gt;&lt;/span&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;output_feature_to_msp&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_feature_to_msp&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#output_feature_to_msp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;output_feature_to_msp(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt;&lt;br&gt;
 This function exports MS2 spectra from a DataFrame to the MSP format, which is commonly used in metabolomics for sharing spectral data.&lt;/p&gt;
@@ -1054,10 +994,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
         
         
         &lt;p&gt;This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: &lt;strong&gt;Sample Normalization&lt;/strong&gt; and &lt;strong&gt;Signal Normalization&lt;/strong&gt;. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.&lt;/p&gt;
-&lt;h3&gt;Sample Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.&lt;/p&gt;
-&lt;h4&gt;find_normalization_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_normalization_factors&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#find_normalization_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;find_normalization_factors(array, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Sample Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.&lt;/p&gt;
+&lt;h3&gt;find_normalization_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_normalization_factors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_normalization_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_normalization_factors(array, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Finds normalization factors for a dataset based on the specified method.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1072,8 +1012,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;numpy array&lt;/code&gt;: Normalization factors.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;sample_normalization_by_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization_by_factors&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample_normalization_by_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sample_normalization_by_factors(array, v)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;sample_normalization_by_factors&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization_by_factors&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample_normalization_by_factors&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sample_normalization_by_factors(array, v)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Normalizes the data based on the provided normalization factors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1084,8 +1024,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;numpy array&lt;/code&gt;: The normalized data.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;find_reference_sample&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_reference_sample&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#find_reference_sample&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;find_reference_sample(array, method=&#39;median_intensity&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;find_reference_sample&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_reference_sample&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_reference_sample&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_reference_sample(array, method=&#39;median_intensity&#39;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Finds the reference sample for normalization.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1102,8 +1042,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;int&lt;/code&gt;: The index of the reference sample.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;sample_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sample_normalization(feature_table, individual_sample_groups, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;sample_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample_normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sample_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;sample_normalization(feature_table, individual_sample_groups, method=&#39;pqn&#39;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Normalizes samples using a feature list, typically excluding blank samples.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1119,10 +1059,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pandas DataFrame&lt;/code&gt;: The normalized feature table.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;Signal Normalization&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;signal-normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#signal-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;These functions focus on correcting signal drift in the data, particularly important in mass spectrometry.&lt;/p&gt;
-&lt;h4&gt;qc_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;qc_normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#qc_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;qc_normalization(array, order, qc_idx, batch_idx=None, method=&#39;lowess&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Signal Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;signal-normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#signal-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;These functions focus on correcting signal drift in the data, particularly important in mass spectrometry.&lt;/p&gt;
+&lt;h3&gt;qc_normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;qc_normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#qc_normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;qc_normalization(array, order, qc_idx, batch_idx=None, method=&#39;lowess&#39;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Normalizes samples using quality control (QC) samples to correct for signal drift.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1705,9 +1645,9 @@ This function converts a list of feature objects into a pandas DataFrame, which 
         
         
         &lt;p&gt;This module provides a suite of data visualization functions tailored for metabolomics data analysis. It includes tools for plotting base peak chromatograms, extracted ion chromatograms (EIC), histograms, mirror images of MS² spectra, and Principal Component Analysis (PCA) plots. These visualizations aid in the interpretation and quality control of metabolomics experiments.&lt;/p&gt;
-&lt;h3&gt;&lt;strong&gt;Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;plot_bpcs&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_bpcs&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#plot_bpcs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;plot_bpcs&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_bpcs&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_bpcs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Plots overlapped Base Peak Chromatograms (BPC) from a list of MSData objects.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1727,8 +1667,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;plot_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_roi&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#plot_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_roi(d, roi, mz_tol=0.01, rt_tol=1.0, output=False, break_scan=None)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;plot_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;plot_roi(d, roi, mz_tol=0.01, rt_tol=1.0, output=False, break_scan=None)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Plots the Extracted Ion Chromatogram (EIC) for a specified region of interest (ROI).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1750,8 +1690,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;mirror_ms2_from_scans&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2_from_scans&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#mirror_ms2_from_scans&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mirror_ms2_from_scans(scan1, scan2, output=False)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;mirror_ms2_from_scans&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2_from_scans&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mirror_ms2_from_scans&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;mirror_ms2_from_scans(scan1, scan2, output=False)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Generates a mirror plot of two MS² spectra for comparison.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1770,8 +1710,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;mirror_ms2&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#mirror_ms2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;mirror_ms2(precursor_mz1, precursor_mz2, peaks1, peaks2, annotation=None, score=None, output=False)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;mirror_ms2&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror_ms2&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mirror_ms2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;mirror_ms2(precursor_mz1, precursor_mz2, peaks1, peaks2, annotation=None, score=None, output=False)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Creates a mirror image plot of two MS² spectra based on precursor m/z and fragment peaks.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1794,8 +1734,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;plot_pca&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_pca&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#plot_pca&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;plot_pca(vecPC1, vecPC2, var_PC1, var_PC2, group_names, colors=None, plot_order=None, output_dir=None)&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;plot_pca&lt;span class=&#34;absolute -mt-20&#34; id=&#34;plot_pca&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#plot_pca&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;plot_pca(vecPC1, vecPC2, var_PC1, var_PC2, group_names, colors=None, plot_order=None, output_dir=None)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Plots a PCA scatter plot with confidence ellipses for each group.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1819,9 +1759,9 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;&lt;strong&gt;Helper Functions&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;helper-functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#helper-functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;confidence_ellipse&lt;span class=&#34;absolute -mt-20&#34; id=&#34;confidence_ellipse&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#confidence_ellipse&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;confidence_ellipse(x, y, ax, n_std=3.0, facecolor=&#39;none&#39;, **kwargs)&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;confidence_ellipse&lt;span class=&#34;absolute -mt-20&#34; id=&#34;confidence_ellipse&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#confidence_ellipse&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;confidence_ellipse(x, y, ax, n_std=3.0, facecolor=&#39;none&#39;, **kwargs)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Adds a covariance confidence ellipse to a plot.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1844,8 +1784,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;random_color_generator&lt;span class=&#34;absolute -mt-20&#34; id=&#34;random_color_generator&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#random_color_generator&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;code&gt;random_color_generator()&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;random_color_generator&lt;span class=&#34;absolute -mt-20&#34; id=&#34;random_color_generator&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#random_color_generator&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;random_color_generator()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Generates a random CSS4 color name.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1862,8 +1802,8 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h4&gt;Predefined Color Lists&lt;span class=&#34;absolute -mt-20&#34; id=&#34;predefined-color-lists&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#predefined-color-lists&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;h2&gt;Predefined Color Lists&lt;span class=&#34;absolute -mt-20&#34; id=&#34;predefined-color-lists&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#predefined-color-lists&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;_color_list&lt;/code&gt;: A predefined list of colors used when &lt;code&gt;autocolor=True&lt;/code&gt; in &lt;code&gt;plot_bpcs&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;_color_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;purple&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;brown&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gray&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;olive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cyan&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
@@ -1889,22 +1829,6 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Dependencies&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;dependencies&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#dependencies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ensure the following Python packages are installed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;matplotlib&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pandas&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tqdm&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pyteomics&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Other custom modules:
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.annotation&lt;/code&gt; (for &lt;code&gt;extract_peaks_from_string&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.raw_data_utils&lt;/code&gt; (for &lt;code&gt;get_start_time&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 

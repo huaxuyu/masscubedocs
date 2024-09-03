@@ -5,11 +5,11 @@ weight: 1
 
 This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: **Sample Normalization** and **Signal Normalization**. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.
 
-### Sample Normalization
+## Sample Normalization
 
 These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.
 
-#### find_normalization_factors
+### find_normalization_factors
 
 `find_normalization_factors(array, method='pqn')`
 
@@ -25,7 +25,7 @@ Finds normalization factors for a dataset based on the specified method.
 
 - `numpy array`: Normalization factors.
 
-#### sample_normalization_by_factors
+### sample_normalization_by_factors
 
 `sample_normalization_by_factors(array, v)`
 
@@ -40,7 +40,7 @@ Normalizes the data based on the provided normalization factors.
 
 - `numpy array`: The normalized data.
 
-#### find_reference_sample
+### find_reference_sample
 
 `find_reference_sample(array, method='median_intensity')`
 
@@ -58,7 +58,7 @@ Finds the reference sample for normalization.
 
 - `int`: The index of the reference sample.
 
-#### sample_normalization
+### sample_normalization
 
 `sample_normalization(feature_table, individual_sample_groups, method='pqn')`
 
@@ -75,11 +75,11 @@ Normalizes samples using a feature list, typically excluding blank samples.
 
 - `pandas DataFrame`: The normalized feature table.
 
-### **Signal Normalization**
+## Signal Normalization
 
 These functions focus on correcting signal drift in the data, particularly important in mass spectrometry.
 
-#### qc_normalization
+### qc_normalization
 
 `qc_normalization(array, order, qc_idx, batch_idx=None, method='lowess')`
 

@@ -5,8 +5,6 @@ weight: 1
 
 This module is designed for annotating metabolites based on their MS/MS spectra. It includes functions for loading MS/MS databases, performing feature annotation, and exporting results. The module supports various input formats and annotation methods, providing flexibility for different workflows.
 
----
-
 ## Functions
 
 ### load_msms_db

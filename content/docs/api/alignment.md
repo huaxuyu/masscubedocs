@@ -1,5 +1,5 @@
 ---
-title: "Alignment.py"
+title: "alignment.py"
 weight: 1
 ---
 
@@ -18,6 +18,8 @@ The main components of this module include:
 
 ## Functions
 
+### feature_alignment
+
 `feature_alignment(path, parameters, drop_by_fill_pct_ratio=0.1)`
 
 Aligns features from individual files (.txt) based on m/z and retention time.
@@ -31,6 +33,10 @@ Aligns features from individual files (.txt) based on m/z and retention time.
 **Returns:**
 
 - `feature_table` (DataFrame): The aligned feature table.
+
+---
+
+### gap_filling
 
 `gap_filling(features, parameters, mode='forced_peak_picking')`
 
@@ -46,6 +52,10 @@ Fills the gaps in the aligned feature table using specified strategies.
 
 - `features` (list): The aligned features with filled gaps.
 
+---
+
+### output_feature_table
+
 `output_feature_table(feature_table, output_path)`
 
 Outputs the aligned feature table to a specified file.
@@ -54,6 +64,10 @@ Outputs the aligned feature table to a specified file.
 
 - `feature_table` (DataFrame): The aligned feature table.
 - `output_path` (str): The path where the aligned feature table will be saved.
+
+---
+
+### retention_time_correction
 
 `retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, rt_max=50, mode='linear_interpolation', mz_tol=0.015, rt_tol=2.0, found_marker_ratio=0.4, return_model=False)`
 
@@ -76,6 +90,10 @@ Corrects retention times for feature alignment using selected anchors and a spec
 
 - `rt_corr` (np.array): The corrected retention times.
 
+---
+
+### rt_anchor_selection
+
 `rt_anchor_selection(data_list, num=50, noise_tol=0.3, mz_tol=0.01, return_all_anchor=False)`
 
 Selects anchors for retention time correction based on the provided data. Anchors are selected based on intensity, peak shape, and distribution.
@@ -91,6 +109,8 @@ Selects anchors for retention time correction based on the provided data. Anchor
 **Returns:**
 
 - `anchors` (list): A list of anchors (m/z and retention times) for retention time correction.
+
+### \_split_to_train_test
 
 `_split_to_train_test(array, interval=0.3)`
 

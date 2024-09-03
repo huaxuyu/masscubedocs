@@ -42,7 +42,7 @@ Plots overlapped Base Peak Chromatograms (BPC) from a list of MSData objects.
 Parameters:
 data_list (list of MSData objects, optional): A list of MSData objects to be plotted.">
 
-<meta itemprop="wordCount" content="733">
+<meta itemprop="wordCount" content="709">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="visualization.py"/>
 <meta name="twitter:description" content="This module provides a suite of data visualization functions tailored for metabolomics data analysis. It includes tools for plotting base peak chromatograms, extracted ion chromatograms (EIC), histograms, mirror images of MS² spectra, and Principal Component Analysis (PCA) plots. These visualizations aid in the interpretation and quality control of metabolomics experiments.
 Functions plot_bpcs plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)
@@ -303,7 +303,7 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/alignment/"
     
-  >Alignment.py
+  >alignment.py
     </a>
               
             </li><li class="flex flex-col "><a
@@ -404,9 +404,15 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
   
     <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
               <a
-                href="#"
+                href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              ></a>
+              >Functions</a>
+            </li>
+          <li>
+              <a
+                href="#predefined-color-lists"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Predefined Color Lists</a>
             </li>
           </ul>
   
@@ -543,7 +549,7 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/alignment/"
     
-  >Alignment.py
+  >alignment.py
     </a>
               
             </li><li class="flex flex-col "><a
@@ -694,47 +700,39 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
     <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_bpcs">plot_bpcs
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_bpcs">plot_bpcs
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_roi">plot_roi
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_roi">plot_roi
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#mirror_ms2_from_scans">mirror_ms2_from_scans
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#mirror_ms2_from_scans">mirror_ms2_from_scans
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#mirror_ms2">mirror_ms2
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#mirror_ms2">mirror_ms2
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_pca">plot_pca
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#plot_pca">plot_pca
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#helper-functions">Helper Functions
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#confidence_ellipse">confidence_ellipse
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#confidence_ellipse">confidence_ellipse
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#random_color_generator">random_color_generator
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#random_color_generator">random_color_generator
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#predefined-color-lists">Predefined Color Lists
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#dependencies">Dependencies
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#predefined-color-lists">Predefined Color Lists
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -763,9 +761,9 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
         <div class="content">
           <h1>visualization.py</h1>
           <p>This module provides a suite of data visualization functions tailored for metabolomics data analysis. It includes tools for plotting base peak chromatograms, extracted ion chromatograms (EIC), histograms, mirror images of MS² spectra, and Principal Component Analysis (PCA) plots. These visualizations aid in the interpretation and quality control of metabolomics experiments.</p>
-<h3><strong>Functions</strong><span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>plot_bpcs<span class="absolute -mt-20" id="plot_bpcs"></span>
-    <a href="#plot_bpcs" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)</code></p>
+<h2>Functions<span class="absolute -mt-20" id="functions"></span>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>plot_bpcs<span class="absolute -mt-20" id="plot_bpcs"></span>
+    <a href="#plot_bpcs" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>plot_bpcs(data_list=None, output=None, autocolor=False, show_legend=True)</code></p>
 <p>Plots overlapped Base Peak Chromatograms (BPC) from a list of MSData objects.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -785,8 +783,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>plot_roi<span class="absolute -mt-20" id="plot_roi"></span>
-    <a href="#plot_roi" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>plot_roi(d, roi, mz_tol=0.01, rt_tol=1.0, output=False, break_scan=None)</code></p>
+<h3>plot_roi<span class="absolute -mt-20" id="plot_roi"></span>
+    <a href="#plot_roi" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>plot_roi(d, roi, mz_tol=0.01, rt_tol=1.0, output=False, break_scan=None)</code></p>
 <p>Plots the Extracted Ion Chromatogram (EIC) for a specified region of interest (ROI).</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -808,8 +806,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>mirror_ms2_from_scans<span class="absolute -mt-20" id="mirror_ms2_from_scans"></span>
-    <a href="#mirror_ms2_from_scans" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>mirror_ms2_from_scans(scan1, scan2, output=False)</code></p>
+<h3>mirror_ms2_from_scans<span class="absolute -mt-20" id="mirror_ms2_from_scans"></span>
+    <a href="#mirror_ms2_from_scans" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>mirror_ms2_from_scans(scan1, scan2, output=False)</code></p>
 <p>Generates a mirror plot of two MS² spectra for comparison.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -828,8 +826,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>mirror_ms2<span class="absolute -mt-20" id="mirror_ms2"></span>
-    <a href="#mirror_ms2" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>mirror_ms2(precursor_mz1, precursor_mz2, peaks1, peaks2, annotation=None, score=None, output=False)</code></p>
+<h3>mirror_ms2<span class="absolute -mt-20" id="mirror_ms2"></span>
+    <a href="#mirror_ms2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>mirror_ms2(precursor_mz1, precursor_mz2, peaks1, peaks2, annotation=None, score=None, output=False)</code></p>
 <p>Creates a mirror image plot of two MS² spectra based on precursor m/z and fragment peaks.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -852,8 +850,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>plot_pca<span class="absolute -mt-20" id="plot_pca"></span>
-    <a href="#plot_pca" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>plot_pca(vecPC1, vecPC2, var_PC1, var_PC2, group_names, colors=None, plot_order=None, output_dir=None)</code></p>
+<h3>plot_pca<span class="absolute -mt-20" id="plot_pca"></span>
+    <a href="#plot_pca" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>plot_pca(vecPC1, vecPC2, var_PC1, var_PC2, group_names, colors=None, plot_order=None, output_dir=None)</code></p>
 <p>Plots a PCA scatter plot with confidence ellipses for each group.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -877,9 +875,9 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h3><strong>Helper Functions</strong><span class="absolute -mt-20" id="helper-functions"></span>
-    <a href="#helper-functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>confidence_ellipse<span class="absolute -mt-20" id="confidence_ellipse"></span>
-    <a href="#confidence_ellipse" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>confidence_ellipse(x, y, ax, n_std=3.0, facecolor='none', **kwargs)</code></p>
+<hr>
+<h3>confidence_ellipse<span class="absolute -mt-20" id="confidence_ellipse"></span>
+    <a href="#confidence_ellipse" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>confidence_ellipse(x, y, ax, n_std=3.0, facecolor='none', **kwargs)</code></p>
 <p>Adds a covariance confidence ellipse to a plot.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -902,8 +900,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>random_color_generator<span class="absolute -mt-20" id="random_color_generator"></span>
-    <a href="#random_color_generator" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><code>random_color_generator()</code></p>
+<h3>random_color_generator<span class="absolute -mt-20" id="random_color_generator"></span>
+    <a href="#random_color_generator" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>random_color_generator()</code></p>
 <p>Generates a random CSS4 color name.</p>
 <p><strong>Returns:</strong></p>
 <ul>
@@ -920,8 +918,8 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-<h4>Predefined Color Lists<span class="absolute -mt-20" id="predefined-color-lists"></span>
-    <a href="#predefined-color-lists" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
+<h2>Predefined Color Lists<span class="absolute -mt-20" id="predefined-color-lists"></span>
+    <a href="#predefined-color-lists" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>
 <p><code>_color_list</code>: A predefined list of colors used when <code>autocolor=True</code> in <code>plot_bpcs</code>.</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">_color_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;red&#34;</span><span class="p">,</span> <span class="s2">&#34;blue&#34;</span><span class="p">,</span> <span class="s2">&#34;green&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">,</span> <span class="s2">&#34;purple&#34;</span><span class="p">,</span> <span class="s2">&#34;brown&#34;</span><span class="p">,</span> <span class="s2">&#34;pink&#34;</span><span class="p">,</span> <span class="s2">&#34;gray&#34;</span><span class="p">,</span> <span class="s2">&#34;olive&#34;</span><span class="p">,</span> <span class="s2">&#34;cyan&#34;</span><span class="p">]</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
@@ -947,22 +945,6 @@ data_list (list of MSData objects, optional): A list of MSData objects to be plo
     </button>
   </div>
 </div>
-</li>
-</ul>
-<hr>
-<h3><strong>Dependencies</strong><span class="absolute -mt-20" id="dependencies"></span>
-    <a href="#dependencies" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ensure the following Python packages are installed:</p>
-<ul>
-<li><code>matplotlib</code></li>
-<li><code>numpy</code></li>
-<li><code>pandas</code></li>
-<li><code>tqdm</code></li>
-<li><code>pyteomics</code></li>
-<li>Other custom modules:
-<ul>
-<li><code>.annotation</code> (for <code>extract_peaks_from_string</code>)</li>
-<li><code>.raw_data_utils</code> (for <code>get_start_time</code>)</li>
-</ul>
 </li>
 </ul>
 
