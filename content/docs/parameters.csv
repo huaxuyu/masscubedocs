@@ -8,6 +8,7 @@ run_rt_correction,FALSE,TRUE or FALSE; whether to correct retention time
 int_tol,30000,Intensity tolerance; 1000 for TOF and 30000 for orbitrap
 align_mz_tol,0.01,m/z tolerance for alignment; Da
 align_rt_tol,0.2,retention time tolerance for alignment; minute
+clean_feature_table,TRUE,TRUE or FALSE; whether to clean feature table
 msms_library,~/MassCube_DB/PICKLE/lipidomics_negative.pkl,path to the MS2 library; msp or pickle
 ms2_sim_tol,0.5,MS2 similarity tolerance
 run_normalization,FALSE,TRUE or FALSE; whether to run post-acquisition sample normalization
