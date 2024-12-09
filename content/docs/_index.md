@@ -5,13 +5,13 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2024-08-30 **Version**: 1.0.16
+**Date**: 2024-12-09 **Version**: 1.1.4
 
 <!--more-->
 
 ## What is MassCube?
 
-MassCube is an open-source computing library in Python that offers a flexible infrastructure for data processing and method development in mass spectrometry-based chemical analysis.
+MassCube is an open-source computing library and framework for MS data processing in Python. It supports comprehensive functionalities and workflows designed for versatile data processing tasks.
 
 ## Features
 

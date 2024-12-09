@@ -33,14 +33,14 @@ Dependencies will be automatically installed. Consider creating a [virtual envir
 
 ```
 dependencies = [
-    "numpy>=1.24,<=1.26",
+    "numpy>=1.24",
     "pandas>=2.2.1",
     "pyteomics==4.6.3",
     "scipy>=1.10.1",
     "tqdm>=4.66.1",
     "lxml>=4.9.3",
     "matplotlib>=3.8.2",
-    "ms_entropy==1.1.1",
+    "ms_entropy==1.2.2",
     "scikit-learn>=1.3.2",
     "statsmodels>=0.14.2"
 ]

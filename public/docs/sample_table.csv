@@ -1,7 +1,20 @@
-file_name (with no extension),group
-Sample1,G1
-Sample2,G2
-MB_P1-B-2_01_14241,blank
-QC_1_1_P1-B-1_01_14281,qc
-QC_1_2_P1-B-1_01_14282,qc
-QC_1_3_P1-B-1_01_14283,qc
+Sample,is_qc,is_blank,sex
+sample1, no,no,male
+sample2, no,no,male
+sample3, no,no,male
+sample4, no,no,male
+sample5, no,no,male
+method_blank, no,yes,blank
+qc1,yes,no,qc
+qc2,yes,no,qc
+qc3,yes,no,qc
+sample6, no,no,female
+sample7, no,no,female
+sample8, no,no,female
+sample9, no,no,female
+sample10, no,no,female
+sample11, no,no,male
+sample12, no,no,male
+sample13, no,no,male
+sample14, no,no,male
+sample15, no,no,male

@@ -4,13 +4,11 @@ title: "Quick Start"
 weight: 2
 ---
 
-Let's get started with the **OneClick** untargeted metabolomics workflow. This workflow is designed to streamline untargeted metabolomics analysis, providing comprehensive results with a single command.
+Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.
 
-If you haven't installed MassCube, please follow the [installation guide](../installation).
+If you haven’t installed MassCube yet, be sure to follow the [installation guide](../installation) before proceeding.
 
 ## The OneClick untargeted metabolomics workflow
-
-Metabolomics data processing could be challenging for researchers. The OneClick untargeted metabolomics workflow was developed to address the burdens and support metabolomics research.
 
 The OneClick workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (**Fig. 1**).
 
@@ -36,7 +34,7 @@ my_project
 
 1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../workflows/data_preparation).
 
-2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please name quality control samples as "qc" and blank samples as "blank" (not case-sensitive).
+2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please specify if a sample is blank or qc from the "is_blank" and "is_qc" columns, respectively.
 
 3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
 
@@ -44,7 +42,7 @@ my_project
 
 **Extra component for annotation:**
 
-1. `mzrt_list.csv` file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate full-scan MS data or annotate the spiked internal standards. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv). It's **optional**. If not provided, the annotation will not be performed.
+1. `mzrt_list.csv` file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate features using retention time (e.g. internal standards). A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv). It's **optional**.
 
 {{< cards >}}
 {{< card link="../workflows/data_preparation" title="Data Preparation" icon="play">}}
@@ -71,15 +69,16 @@ project/
 ├── data
 ├── sample_table.csv
 ├── parameters.csv
-├── project.mc
+├── project_files
+│   ├── data_processing_metadata_[DATE].pkl
+│   ├── features.msp
+│   └── ...
 ├── aligned_feature_table.txt
-├── aligned_feature_table_before_normalization.txt
-├── ms2.msp
-├── single_file_output
+├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
 │   └── ...
-├── chromatogram
+├── chromatograms
 │   ├── sample1.png
 │   ├── sample2.png
 │   └── ...
@@ -87,17 +86,15 @@ project/
 │   ├── compound1.png
 │   ├── compound2.png
 │   └── ...
-├── statistics
+├── statistical_analysis
 ├── ...
 ```
 
-1. `project.mc` file: the project file of _masscube_.
+1. `project_files` folder: a folder containing the metadata file for data processing.
 2. `aligned_feature_table.txt` file: feature table after alignment (if applied).
-3. `aligned_feature_table_before_normalization.txt` file: feature table before normalization.
-4. `ms2.msp`: MS/MS spectra for detected features that can be further analyzed on other platforms such as [GNPS](https://gnps.ucsd.edu/).
-5. `single_file_output` folder: a folder containing the feature table for each sample.
-6. `chromatogram` folder: a folder containing the chromatogram for each sample.
-7. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.
-8. `statistics` folder: a folder containing the statistical analysis results.
+3. `single_files` folder: a folder containing the feature table for each sample.
+4. `chromatograms` folder: a folder containing the chromatogram for each sample.
+5. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.
+6. `statistical_analysis` folder: a folder containing the statistical analysis results.
 
 {{% /steps %}}

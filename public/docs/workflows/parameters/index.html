@@ -39,7 +39,7 @@ The default parameters are optimized for most untargeted metabolomics studies. U
 Key parameters Here we summarized six most important parameters in masscube for untargeted metabolomics data processing:
 MS1 mass tolerance: the mass tolerance for MS1 feature detection.">
 
-<meta itemprop="wordCount" content="373">
+<meta itemprop="wordCount" content="494">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Parameters"/>
 <meta name="twitter:description" content="Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. masscube provides a default parameter setting for users to start with.
 The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.
@@ -85,7 +85,7 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 <body dir="ltr"><div class="nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
   <div class="nav-container-blur pointer-events-none absolute z-[-1] h-full w-full bg-white dark:bg-dark shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:shadow-[0_0_0_1px_#000] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div>
 
-  <nav class="mx-auto flex items-center justify-end gap-2 h-16 px-6 max-w-[90rem]">
+  <nav class="mx-auto flex items-center justify-end gap-2 h-16 px-6 max-w-full">
     <a class="flex items-center hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
         <img class="block dark:hidden" src="/images/logo.png" alt="MassCube" height="20" width="40" />
         <img class="hidden dark:block" src="/images/logo_dark.png" alt="MassCube" height="20" width="40" />
@@ -145,7 +145,7 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
   </nav>
 </div>
 
-  <div class='mx-auto flex max-w-[90rem]'>
+  <div class='mx-auto flex max-w-full'>
     <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] fixed inset-0 z-10 bg-black/80 dark:bg-black/60 hidden"></div>
 <aside class="sidebar-container flex flex-col print:hidden md:top-16 md:shrink-0 md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:sticky">
   
@@ -773,49 +773,89 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 </thead>
 <tbody>
 <tr>
-<td>rt_start</td>
-<td>0</td>
-<td>start of the analytical gradient; minute</td>
-</tr>
-<tr>
-<td>rt_end</td>
-<td>23</td>
-<td>end of the analytical gradient; minute</td>
-</tr>
-<tr>
 <td>ion_mode</td>
-<td>negative</td>
-<td>&ldquo;positive&rdquo; or &ldquo;negative&rdquo;</td>
+<td>positive</td>
+<td>MS ion mode, &ldquo;positive&rdquo; or &ldquo;negative&rdquo;</td>
+</tr>
+<tr>
+<td>ms_type</td>
+<td>qtof</td>
+<td>type of MS, &ldquo;orbitrap&rdquo;, &ldquo;qtof&rdquo;, &ldquo;tripletof&rdquo; or &ldquo;others&rdquo;</td>
+</tr>
+<tr>
+<td>is_centroid</td>
+<td>yes</td>
+<td>whether the raw data is centroid data, &ldquo;yes&rdquo; or &ldquo;no&rdquo;</td>
+</tr>
+<tr>
+<td>mz_lower_limit</td>
+<td>0</td>
+<td>lower limit of m/z in Da</td>
+</tr>
+<tr>
+<td>mz_upper_limit</td>
+<td>100000</td>
+<td>upper limit of m/z in Da</td>
+</tr>
+<tr>
+<td>rt_lower_limit</td>
+<td>0</td>
+<td>lower limit of retention time in minutes</td>
+</tr>
+<tr>
+<td>rt_upper_limit</td>
+<td>10000</td>
+<td>upper limit of retention time in minutes</td>
+</tr>
+<tr>
+<td>ms1_abs_int_tol</td>
+<td>1000</td>
+<td>absolute intensity threshold for MS1, recommend 30000 for Orbitrap and 1000 for QTOF</td>
+</tr>
+<tr>
+<td>ms2_abs_int_tol</td>
+<td>500</td>
+<td>absolute intensity threshold for MS2, recommend 10000 for Orbitrap and 500 for QTOF</td>
 </tr>
 <tr>
 <td>mz_tol_ms1</td>
 <td>0.01</td>
-<td>m/z tolerance for MS1 spectra; Da</td>
+<td>m/z tolerance for MS1, default is 0.01</td>
 </tr>
 <tr>
 <td>mz_tol_ms2</td>
 <td>0.015</td>
-<td>m/z tolerance for MS2 spectra; Da</td>
+<td>m/z tolerance for MS2, default is 0.015</td>
 </tr>
 <tr>
-<td>int_tol</td>
-<td>1000</td>
-<td>Intensity tolerance; 1000 for TOF and 30000 for orbitrap</td>
+<td>scan_scan_cor_tol</td>
+<td>0.7</td>
+<td>scan-to-scan correlation tolerance for feature grouping, default is 0.7</td>
 </tr>
 <tr>
-<td>align_mz_tol</td>
+<td>mz_tol_alignment</td>
 <td>0.01</td>
-<td>m/z tolerance for alignment; Da</td>
+<td>m/z tolerance for alignment, default is 0.01</td>
 </tr>
 <tr>
-<td>align_rt_tol</td>
+<td>rt_tol_alignment</td>
 <td>0.2</td>
-<td>retention time tolerance for alignment; minute</td>
+<td>RT tolerance for alignment, default is 0.2</td>
 </tr>
 <tr>
-<td>msms_library</td>
+<td>correct_rt</td>
+<td>yes</td>
+<td>whether to perform RT correction</td>
+</tr>
+<tr>
+<td>merge_features</td>
+<td>yes</td>
+<td>whether to clean feature table by merging features with almost the same m/z and RT</td>
+</tr>
+<tr>
+<td>ms2_library_path</td>
 <td></td>
-<td>path to the MS2 library; msp or pickle</td>
+<td>path to the MS2 library (.msp or .pickle)</td>
 </tr>
 <tr>
 <td>ms2_sim_tol</td>
@@ -823,29 +863,44 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 <td>MS2 similarity tolerance</td>
 </tr>
 <tr>
-<td>run_normalization</td>
-<td>TRUE</td>
-<td>TRUE or FALSE; whether to run post-acquisition sample normalization</td>
+<td>fuzzy_search</td>
+<td>yes</td>
+<td>whether to perform fuzzy search</td>
 </tr>
 <tr>
-<td>normalization_method</td>
-<td>pqn</td>
-<td>sample normalization algorithm</td>
+<td>sample_normalization</td>
+<td>no</td>
+<td>whether to normalize the data based on total sample amount/concentration</td>
 </tr>
 <tr>
-<td>plot_bpc</td>
-<td>FALSE</td>
-<td>TRUE or FALSE; whether to plot base peak chromatogram for individual files</td>
-</tr>
-<tr>
-<td>plot_ms2</td>
-<td>TRUE</td>
-<td>TRUE or FALSE; whether to plot mirror plots for MS2 matching</td>
+<td>signal_normalization</td>
+<td>no</td>
+<td>whether to run feature-wised normalization to correct systematic signal drift</td>
 </tr>
 <tr>
 <td>run_statistics</td>
-<td>TRUE</td>
-<td>TRUE or FALSE; whether to run statistical analysis</td>
+<td>no</td>
+<td>whether to perform statistical analysis</td>
+</tr>
+<tr>
+<td>plot_bpc</td>
+<td>yes</td>
+<td>whether to plot base peak chromatograms</td>
+</tr>
+<tr>
+<td>plot_ms2</td>
+<td>yes</td>
+<td>whether to plot mirror plots for MS2 matching</td>
+</tr>
+<tr>
+<td>quant_method</td>
+<td>peak_height</td>
+<td>value for quantification and output, &ldquo;peak_height&rdquo;, &ldquo;peak_area&rdquo; or &ldquo;top_average&rdquo;</td>
+</tr>
+<tr>
+<td>by_group_name</td>
+<td></td>
+<td>group name for classification</td>
 </tr>
 </tbody>
 </table>

@@ -46,13 +46,14 @@ params:
   navbar:
     displayTitle: true
     displayLogo: true
+    width: full
     logo:
       path: images/logo.png
       dark: images/logo_dark.png
       width: 40
       height: 20
   page:
-    width: wide
+    width: full
   footer:
     displayCopyright: true
     displayPoweredBy: false
