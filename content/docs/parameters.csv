@@ -11,8 +11,10 @@ align_rt_tol,0.2,retention time tolerance for alignment; minute
 clean_feature_table,TRUE,TRUE or FALSE; whether to clean feature table
 msms_library,~/MassCube_DB/PICKLE/lipidomics_negative.pkl,path to the MS2 library; msp or pickle
 ms2_sim_tol,0.5,MS2 similarity tolerance
-run_normalization,FALSE,TRUE or FALSE; whether to run post-acquisition sample normalization
-normalization_method,pqn,
+sample_normalization,FALSE,TRUE or FALSE; whether to normalize the data based on total sample amount/concentration
+sample_norm_method,pqn,"Normalization method, default is ""pqn"""
+signal_normalization,FALSE,TRUE or FALSE; whether to run feature-wised normalization to correct systematic signal drift
+signal_norm_method,lowess,
 plot_bpc,FALSE,TRUE or FALSE; whether to plot base peak chromatogram for individual files
 plot_ms2,FALSE,TRUE or FALSE; whether to plot mirror plots for MS2 matching
 run_statistics,FALSE,TRUE or FALSE; whether to run statistical analysis
