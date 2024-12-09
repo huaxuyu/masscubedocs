@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – Workflows</title>
-    <link>https://example.org/docs/workflows/</link>
+    <link>http://localhost:1313/docs/workflows/</link>
     <description>Recent content in Workflows on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://example.org/docs/workflows/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/docs/workflows/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Data preparation</title>
-      <link>https://example.org/docs/workflows/data_preparation/</link>
+      <link>http://localhost:1313/docs/workflows/data_preparation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/data_preparation/</guid>
+      <guid>http://localhost:1313/docs/workflows/data_preparation/</guid>
       <description>
         
         
@@ -157,10 +157,10 @@
     
     <item>
       <title>Parameters</title>
-      <link>https://example.org/docs/workflows/parameters/</link>
+      <link>http://localhost:1313/docs/workflows/parameters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/parameters/</guid>
+      <guid>http://localhost:1313/docs/workflows/parameters/</guid>
       <description>
         
         
@@ -267,17 +267,17 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Almost all parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;https://example.org/docs/api/&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Almost all parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;http://localhost:1313/docs/api/&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Untargeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/untargeted_metabolomics/</link>
+      <link>http://localhost:1313/docs/workflows/untargeted_metabolomics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/untargeted_metabolomics/</guid>
+      <guid>http://localhost:1313/docs/workflows/untargeted_metabolomics/</guid>
       <description>
         
         
@@ -285,7 +285,7 @@
     &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Data processing is critical for metabolomics studies. A series of steps are required to process the raw data to generate biological hypothesis that can be further validated.&lt;/p&gt;
 &lt;p&gt;The OneClick untargeted metabolomics workflow aims to address the burdens in mass spectrometry-based metabolomics data processing. It integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data.&lt;/p&gt;
 &lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To use the OneClick untargeted metabolomics workflow, please refer to the &lt;a href=&#34;https://example.org/docs/quickstart&#34; &gt;quick start guide&lt;/a&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To use the OneClick untargeted metabolomics workflow, please refer to the &lt;a href=&#34;http://localhost:1313/docs/quickstart&#34; &gt;quick start guide&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Explainations of the workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;explainations-of-the-workflow&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#explainations-of-the-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -336,20 +336,20 @@
     &lt;a href=&#34;#step-3-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
 &lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (&lt;code&gt;cpu_ratio=0.8&lt;/code&gt;) of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
 &lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100 (&lt;code&gt;batch_size=100&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;https://example.org/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;http://localhost:1313/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Step 4. Feature alignment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-4-feature-alignment&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-4-feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. See &lt;a href=&#34;https://example.org/docs/algorithms/alignment&#34; &gt;alignment&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-4-feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/alignment&#34; &gt;alignment&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;Step 5. Gap filling&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-5-gap-filling&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-5-gap-filling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection. See &lt;a href=&#34;https://example.org/docs/algorithms/gap_filling&#34; &gt;gap filling&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-5-gap-filling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/gap_filling&#34; &gt;gap filling&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;Step 6. MS/MS annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-6-msms-annotation&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-6-msms-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Compound annotation was performed by matching the experimental MS/MS spectra with the MS/MS library. The MS/MS similarity score is generated to indicate the confidence of the annotation.&lt;/p&gt;
-&lt;p&gt;Flash entropy search is used to accelerate the annotation. &lt;em&gt;masscube&lt;/em&gt; also provides analog search (i.e. hybrid search) for unknown discovery. See &lt;a href=&#34;https://example.org/docs/algorithms/annotation&#34; &gt;annotation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Flash entropy search is used to accelerate the annotation. &lt;em&gt;masscube&lt;/em&gt; also provides analog search (i.e. hybrid search) for unknown discovery. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/annotation&#34; &gt;annotation&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;Step 7. Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-7-normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-7-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). &lt;em&gt;masscube&lt;/em&gt; provides multiple post-acquisition normalization algorithms to address the normalization issue. See &lt;a href=&#34;https://example.org/docs/algorithms/normalization&#34; &gt;normalization&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-7-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). &lt;em&gt;masscube&lt;/em&gt; provides multiple post-acquisition normalization algorithms to address the normalization issue. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/normalization&#34; &gt;normalization&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;Step 8. Statistical analysis&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-8-statistical-analysis&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-8-statistical-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the &lt;code&gt;statistics&lt;/code&gt; folder. See &lt;a href=&#34;https://example.org/docs/algorithms/statistics&#34; &gt;statistics&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-8-statistical-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the &lt;code&gt;statistics&lt;/code&gt; folder. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/statistics&#34; &gt;statistics&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;Step 9. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-9-data-visualization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-9-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis. See &lt;a href=&#34;https://example.org/docs/algorithms/visualization&#34; &gt;visualization&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-9-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis. See &lt;a href=&#34;http://localhost:1313/docs/algorithms/visualization&#34; &gt;visualization&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;/div&gt;
 
       </description>
@@ -357,15 +357,15 @@
     
     <item>
       <title>Untargeted single file processing in batch mode</title>
-      <link>https://example.org/docs/workflows/batch_processing/</link>
+      <link>http://localhost:1313/docs/workflows/batch_processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/batch_processing/</guid>
+      <guid>http://localhost:1313/docs/workflows/batch_processing/</guid>
       <description>
         
         
         &lt;h2&gt;Introduction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using &lt;em&gt;masscube&lt;/em&gt;. Note, the processed files will not be aligned across samples. Users may employ the &lt;a href=&#34;https://example.org/docs/quickstart&#34; &gt;OneClick untargeted metabolomics workflow&lt;/a&gt; for comprehensive data processing.&lt;/p&gt;
+    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using &lt;em&gt;masscube&lt;/em&gt;. Note, the processed files will not be aligned across samples. Users may employ the &lt;a href=&#34;http://localhost:1313/docs/quickstart&#34; &gt;OneClick untargeted metabolomics workflow&lt;/a&gt; for comprehensive data processing.&lt;/p&gt;
 &lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Organize the data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;organize-the-data&#34;&gt;&lt;/span&gt;
@@ -483,7 +483,7 @@
     &lt;a href=&#34;#step-2-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
 &lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (&lt;code&gt;cpu_ratio=0.8&lt;/code&gt;) of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
 &lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100 (&lt;code&gt;batch_size=100&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;https://example.org/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;http://localhost:1313/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Step 3. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-data-visualization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-3-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.&lt;/p&gt;
 &lt;/div&gt;
@@ -493,10 +493,10 @@
     
     <item>
       <title>Find outliers</title>
-      <link>https://example.org/docs/workflows/find-outliers/</link>
+      <link>http://localhost:1313/docs/workflows/find-outliers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/find-outliers/</guid>
+      <guid>http://localhost:1313/docs/workflows/find-outliers/</guid>
       <description>
         
         
@@ -616,10 +616,10 @@
     
     <item>
       <title>Targeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/targeted_metabolomics/</link>
+      <link>http://localhost:1313/docs/workflows/targeted_metabolomics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/targeted_metabolomics/</guid>
+      <guid>http://localhost:1313/docs/workflows/targeted_metabolomics/</guid>
       <description>
         
         
