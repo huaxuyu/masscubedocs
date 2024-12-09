@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – APIs reference</title>
-    <link>http://localhost:1313/docs/api/</link>
+    <link>https://example.org/docs/api/</link>
     <description>Recent content in APIs reference on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/docs/api/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://example.org/docs/api/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>alignment.py</title>
-      <link>http://localhost:1313/docs/api/alignment/</link>
+      <link>https://example.org/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/alignment/</guid>
+      <guid>https://example.org/docs/api/alignment/</guid>
       <description>
         
         
@@ -173,10 +173,10 @@
     
     <item>
       <title>annotation.py</title>
-      <link>http://localhost:1313/docs/api/annotation/</link>
+      <link>https://example.org/docs/api/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/annotation/</guid>
+      <guid>https://example.org/docs/api/annotation/</guid>
       <description>
         
         
@@ -308,10 +308,10 @@
     
     <item>
       <title>classifier_builder.py</title>
-      <link>http://localhost:1313/docs/api/classifier_builder/</link>
+      <link>https://example.org/docs/api/classifier_builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/classifier_builder/</guid>
+      <guid>https://example.org/docs/api/classifier_builder/</guid>
       <description>
         
         
@@ -426,10 +426,10 @@
     
     <item>
       <title>feature_evaluation.py</title>
-      <link>http://localhost:1313/docs/api/feature_evaluation/</link>
+      <link>https://example.org/docs/api/feature_evaluation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/feature_evaluation/</guid>
+      <guid>https://example.org/docs/api/feature_evaluation/</guid>
       <description>
         
         
@@ -531,10 +531,10 @@
     
     <item>
       <title>feature_grouping.py</title>
-      <link>http://localhost:1313/docs/api/feature_grouping/</link>
+      <link>https://example.org/docs/api/feature_grouping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/feature_grouping/</guid>
+      <guid>https://example.org/docs/api/feature_grouping/</guid>
       <description>
         
         
@@ -660,10 +660,10 @@
     
     <item>
       <title>feature_table_utils.py</title>
-      <link>http://localhost:1313/docs/api/feature_table_utils/</link>
+      <link>https://example.org/docs/api/feature_table_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/feature_table_utils/</guid>
+      <guid>https://example.org/docs/api/feature_table_utils/</guid>
       <description>
         
         
@@ -767,10 +767,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>normalization.py</title>
-      <link>http://localhost:1313/docs/api/normalization/</link>
+      <link>https://example.org/docs/api/normalization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/normalization/</guid>
+      <guid>https://example.org/docs/api/normalization/</guid>
       <description>
         
         
@@ -867,10 +867,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>params.py</title>
-      <link>http://localhost:1313/docs/api/params/</link>
+      <link>https://example.org/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/params/</guid>
+      <guid>https://example.org/docs/api/params/</guid>
       <description>
         
         
@@ -1032,10 +1032,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>peak_detect.py</title>
-      <link>http://localhost:1313/docs/api/peak_detect/</link>
+      <link>https://example.org/docs/api/peak_detect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/peak_detect/</guid>
+      <guid>https://example.org/docs/api/peak_detect/</guid>
       <description>
         
         
@@ -1146,10 +1146,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>raw_data_utils.py</title>
-      <link>http://localhost:1313/docs/api/raw_data_utils/</link>
+      <link>https://example.org/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/raw_data_utils/</guid>
+      <guid>https://example.org/docs/api/raw_data_utils/</guid>
       <description>
         
         
@@ -1279,10 +1279,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>stats.py</title>
-      <link>http://localhost:1313/docs/api/stats/</link>
+      <link>https://example.org/docs/api/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/stats/</guid>
+      <guid>https://example.org/docs/api/stats/</guid>
       <description>
         
         
@@ -1350,10 +1350,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>utils_functions.py</title>
-      <link>http://localhost:1313/docs/api/utils_functions/</link>
+      <link>https://example.org/docs/api/utils_functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/utils_functions/</guid>
+      <guid>https://example.org/docs/api/utils_functions/</guid>
       <description>
         
         
@@ -1418,10 +1418,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>visualization.py</title>
-      <link>http://localhost:1313/docs/api/visualization/</link>
+      <link>https://example.org/docs/api/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/visualization/</guid>
+      <guid>https://example.org/docs/api/visualization/</guid>
       <description>
         
         
@@ -1618,10 +1618,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>workflows.py</title>
-      <link>http://localhost:1313/docs/api/workflows/</link>
+      <link>https://example.org/docs/api/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/workflows/</guid>
+      <guid>https://example.org/docs/api/workflows/</guid>
       <description>
         
         
@@ -1723,10 +1723,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>msjson.py</title>
-      <link>http://localhost:1313/docs/api/msjson/</link>
+      <link>https://example.org/docs/api/msjson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/msjson/</guid>
+      <guid>https://example.org/docs/api/msjson/</guid>
       <description>
         
         
@@ -1737,10 +1737,10 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     
     <item>
       <title>network.py</title>
-      <link>http://localhost:1313/docs/api/network/</link>
+      <link>https://example.org/docs/api/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/api/network/</guid>
+      <guid>https://example.org/docs/api/network/</guid>
       <description>
         
         
