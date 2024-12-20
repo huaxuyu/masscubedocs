@@ -8,11 +8,11 @@ Let’s dive into the untargeted metabolomics workflow, designed to simplify and
 
 If you haven’t installed MassCube yet, be sure to follow the [installation guide](../installation) before proceeding.
 
-## The OneClick untargeted metabolomics workflow
+## The MassCube untargeted metabolomics workflow
 
-The OneClick workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (**Fig. 1**).
+The workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (**Fig. 1**).
 
-![](untargeted_workflow.png "Fig. 1. The OneClick untargeted metabolomics workflow")
+![](untargeted_workflow.png "Fig. 1. The MassCube untargeted metabolomics workflow")
 
 {{% steps %}}
 
@@ -36,7 +36,7 @@ my_project
 
 2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please specify if a sample is blank or qc from the "is_blank" and "is_qc" columns, respectively.
 
-3. `parameters.csv` file: a csv file to set parameters for the workflow. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
+3. `parameters.csv` file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from [here](https://huaxuyu.github.io/masscube_parameters/). A template can also be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
 
 4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/11363475). For faster database loading, please download and use the .pkl format.
 

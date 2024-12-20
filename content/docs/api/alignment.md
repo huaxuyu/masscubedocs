@@ -1,5 +1,5 @@
 ---
-title: "alignment.py"
+title: "alignment"
 weight: 1
 ---
 

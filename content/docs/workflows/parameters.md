@@ -25,7 +25,7 @@ _masscube_ automatically acquire the analytical metadata from the raw files incl
 
 ## Customize parameters
 
-From the [template](), users can customize the parameters by providing a parameter file. The parameter file should be a `.csv` file with the following columns:
+From the [template](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv), you can customize the parameters by providing a parameter file. The parameter file should be a `.csv` file with the following columns:
 
 | Parameter            | Value       | Explanation                                                                          |
 | -------------------- | ----------- | ------------------------------------------------------------------------------------ |

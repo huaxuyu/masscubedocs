@@ -1,5 +1,5 @@
 ---
-title: "peak_detect.py"
+title: "feature_detection"
 weight: 1
 ---
 
