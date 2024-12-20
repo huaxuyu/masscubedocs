@@ -10,6 +10,8 @@
   </url><url>
     <loc>https://example.org/docs/workflows/data_preparation/</loc>
   </url><url>
+    <loc>https://example.org/docs/api/feature_detection/</loc>
+  </url><url>
     <loc>https://example.org/docs/api/feature_evaluation/</loc>
   </url><url>
     <loc>https://example.org/docs/api/feature_grouping/</loc>
@@ -21,8 +23,6 @@
     <loc>https://example.org/docs/api/normalization/</loc>
   </url><url>
     <loc>https://example.org/docs/api/params/</loc>
-  </url><url>
-    <loc>https://example.org/docs/api/peak_detect/</loc>
   </url><url>
     <loc>https://example.org/docs/api/raw_data_utils/</loc>
   </url><url>

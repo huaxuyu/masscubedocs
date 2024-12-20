@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>alignment.py</title>
+      <title>alignment</title>
       <link>https://example.org/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -501,9 +501,9 @@
 &lt;/details&gt;
 
 &lt;h2&gt;Parameter file&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter-file&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#parameter-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A parameter file (.csv) is used to set parameters for the workflow. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../parameters&#34; &gt;default parameters&lt;/a&gt; will be applied. For MassCube version 1.0, please find a template &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#parameter-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A parameter file (.csv) is used to set parameters for the workflow. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../parameters&#34; &gt;default parameters&lt;/a&gt; will be applied. For MassCube version 1.0 or earlier, please use this &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For MassCube version 1.0, please find a template &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+    &lt;a href=&#34;#sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For MassCube version 1.0 or earlier, please use this &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For large-scale metabolomics data, it&amp;rsquo;s not easy to prepare the sample table manually. In MassCube, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.&lt;/p&gt;
 &lt;h3&gt;Quickly generate sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;quickly-generate-sample-table&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#quickly-generate-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
@@ -561,6 +561,120 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
+
+      </description>
+    </item>
+    
+    <item>
+      <title>feature_detection</title>
+      <link>https://example.org/docs/api/feature_detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/api/feature_detection/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.&lt;/p&gt;
+&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ROI Detection&lt;/strong&gt;: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ROI Processing&lt;/strong&gt;: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Utilities&lt;/strong&gt;: Helper functions to support the detection and processing of ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;find_rois&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_rois&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_rois&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_rois(d)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identifies regions of interest (ROIs) in the MS data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An object that contains the MS data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;final_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of detected ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;cut_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;cut_roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#cut_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cut_roi(r, int_tol=1000, sigma=1.2, prominence_ratio=0.1, distance=5)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cuts a region of interest (ROI) into smaller segments based on intensity and peak prominence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; (Roi object): The ROI object to be cut.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_tol&lt;/code&gt; (int): Intensity tolerance for cutting (default 1000).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sigma&lt;/code&gt; (float): Sigma value for Gaussian filtering (default 1.2).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;prominence_ratio&lt;/code&gt; (float): Ratio of prominence used for finding peaks (default 0.1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;distance&lt;/code&gt; (int): Minimum distance between peaks (default 5).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cut_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of cut ROIs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;find_closest_index_ordered(array, target, tol=0.01)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Finds the index of the closest value in an ordered array.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (list or numpy array): The ordered array to search.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; (float): The target value to find.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tol&lt;/code&gt; (float): Tolerance for considering a match (default 0.01).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;idx&lt;/code&gt; (int or None): The index of the closest value, or &lt;code&gt;None&lt;/code&gt; if no suitable match is found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Roi&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;roi&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to represent a region of interest (ROI) in mass spectrometry data. An ROI typically corresponds to a peak or a group of peaks in a chromatogram.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt; (int): Identifier for the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_idx_seq&lt;/code&gt; (list of int): List of scan indices.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_seq&lt;/code&gt; (list of float): List of retention times.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (list of float): List of m/z values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int_seq&lt;/code&gt; (list of int): List of intensity values.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): List of associated MS2 spectra.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_counter&lt;/code&gt; (int): Counter for the number of gaps in the ROI&amp;rsquo;s tail.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz&lt;/code&gt; (float): m/z value of the ROI peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt&lt;/code&gt; (float): Retention time of the ROI peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_number&lt;/code&gt; (int): Number of scans in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_area&lt;/code&gt; (float): Area under the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peak_height&lt;/code&gt; (float): Height of the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;best_ms2&lt;/code&gt; (MS2 object): The best associated MS2 spectrum.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;length&lt;/code&gt; (int): Length of the ROI in terms of the number of scans.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merged&lt;/code&gt; (bool): Indicates if the ROI has been merged with others.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gaussian_similarity&lt;/code&gt; (float): Gaussian similarity score of the peak shape.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;noise_level&lt;/code&gt; (float): Estimated noise level in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asymmetry_factor&lt;/code&gt; (float): Asymmetry factor of the peak.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cut&lt;/code&gt; (bool): Indicates if the ROI has been cut into smaller segments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;charge_state&lt;/code&gt; (int): Charge state of the ROI (default 1).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_isotope&lt;/code&gt; (bool): Indicates if the ROI represents an isotope.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_mz_seq&lt;/code&gt; (list of float): List of m/z values for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_int_seq&lt;/code&gt; (list of int): List of intensities for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_id_seq&lt;/code&gt; (list of int): List of identifiers for isotopes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_in_source_fragment&lt;/code&gt; (bool): Indicates if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isf_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isf_parent_roi_id&lt;/code&gt; (int): Parent ROI ID if the ROI is an in-source fragment.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_type&lt;/code&gt; (str): Type of adduct, if applicable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_parent_roi_id&lt;/code&gt; (int): Parent ROI ID for the adduct.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adduct_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs for the adduct.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (str): Annotation of the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;formula&lt;/code&gt; (str): Molecular formula associated with the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;similarity&lt;/code&gt; (float): Similarity score for annotation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;matched_peak_number&lt;/code&gt; (int): Number of matched peaks in the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;smiles&lt;/code&gt; (str): SMILES notation of the associated molecule.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inchikey&lt;/code&gt; (str): InChIKey notation of the associated molecule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;__init__(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Initializes an ROI with scan index, retention time, m/z, and intensity.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extend_roi(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Extends an ROI with new data points.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_roi_info(self, show_annotation=False)&lt;/code&gt;: Prints information about the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_mz_error(self)&lt;/code&gt;: Calculates the m/z error (maximum - minimum) of the ROI.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_rt_ph_pa(self)&lt;/code&gt;: Calculates the peak area and height using the trapezoidal rule.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;find_top_average(self, num=3)&lt;/code&gt;: Finds the peak height by averaging the top three intensities.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sum_roi(self, cal_g_score=True, cal_a_score=True)&lt;/code&gt;: Summarizes the ROI, calculating key attributes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subset_roi(self, start, end)&lt;/code&gt;: Subsets the ROI based on provided start and end positions.&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
@@ -1250,120 +1364,6 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>peak_detect.py</title>
-      <link>https://example.org/docs/api/peak_detect/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/api/peak_detect/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.&lt;/p&gt;
-&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ROI Detection&lt;/strong&gt;: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ROI Processing&lt;/strong&gt;: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Utilities&lt;/strong&gt;: Helper functions to support the detection and processing of ROIs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;find_rois&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_rois&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#find_rois&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_rois(d)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Identifies regions of interest (ROIs) in the MS data.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData object): An object that contains the MS data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;final_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of detected ROIs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;cut_roi&lt;span class=&#34;absolute -mt-20&#34; id=&#34;cut_roi&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#cut_roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cut_roi(r, int_tol=1000, sigma=1.2, prominence_ratio=0.1, distance=5)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Cuts a region of interest (ROI) into smaller segments based on intensity and peak prominence.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;r&lt;/code&gt; (Roi object): The ROI object to be cut.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;int_tol&lt;/code&gt; (int): Intensity tolerance for cutting (default 1000).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sigma&lt;/code&gt; (float): Sigma value for Gaussian filtering (default 1.2).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;prominence_ratio&lt;/code&gt; (float): Ratio of prominence used for finding peaks (default 0.1).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;distance&lt;/code&gt; (int): Minimum distance between peaks (default 5).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cut_rois&lt;/code&gt; (list of &lt;code&gt;Roi&lt;/code&gt; objects): A list of cut ROIs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;find_closest_index_ordered(array, target, tol=0.01)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Finds the index of the closest value in an ordered array.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;array&lt;/code&gt; (list or numpy array): The ordered array to search.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;target&lt;/code&gt; (float): The target value to find.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tol&lt;/code&gt; (float): Tolerance for considering a match (default 0.01).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;idx&lt;/code&gt; (int or None): The index of the closest value, or &lt;code&gt;None&lt;/code&gt; if no suitable match is found.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Roi&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;roi&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#roi&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to represent a region of interest (ROI) in mass spectrometry data. An ROI typically corresponds to a peak or a group of peaks in a chromatogram.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;id&lt;/code&gt; (int): Identifier for the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_idx_seq&lt;/code&gt; (list of int): List of scan indices.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_seq&lt;/code&gt; (list of float): List of retention times.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_seq&lt;/code&gt; (list of float): List of m/z values.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;int_seq&lt;/code&gt; (list of int): List of intensity values.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_seq&lt;/code&gt; (list): List of associated MS2 spectra.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gap_counter&lt;/code&gt; (int): Counter for the number of gaps in the ROI&amp;rsquo;s tail.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz&lt;/code&gt; (float): m/z value of the ROI peak.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt&lt;/code&gt; (float): Retention time of the ROI peak.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_number&lt;/code&gt; (int): Number of scans in the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;peak_area&lt;/code&gt; (float): Area under the peak.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;peak_height&lt;/code&gt; (float): Height of the peak.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;best_ms2&lt;/code&gt; (MS2 object): The best associated MS2 spectrum.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;length&lt;/code&gt; (int): Length of the ROI in terms of the number of scans.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;merged&lt;/code&gt; (bool): Indicates if the ROI has been merged with others.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gaussian_similarity&lt;/code&gt; (float): Gaussian similarity score of the peak shape.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;noise_level&lt;/code&gt; (float): Estimated noise level in the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;asymmetry_factor&lt;/code&gt; (float): Asymmetry factor of the peak.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cut&lt;/code&gt; (bool): Indicates if the ROI has been cut into smaller segments.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;charge_state&lt;/code&gt; (int): Charge state of the ROI (default 1).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;is_isotope&lt;/code&gt; (bool): Indicates if the ROI represents an isotope.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;isotope_mz_seq&lt;/code&gt; (list of float): List of m/z values for isotopes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;isotope_int_seq&lt;/code&gt; (list of int): List of intensities for isotopes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;isotope_id_seq&lt;/code&gt; (list of int): List of identifiers for isotopes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;is_in_source_fragment&lt;/code&gt; (bool): Indicates if the ROI is an in-source fragment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;isf_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs if the ROI is an in-source fragment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;isf_parent_roi_id&lt;/code&gt; (int): Parent ROI ID if the ROI is an in-source fragment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;adduct_type&lt;/code&gt; (str): Type of adduct, if applicable.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;adduct_parent_roi_id&lt;/code&gt; (int): Parent ROI ID for the adduct.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;adduct_child_roi_id&lt;/code&gt; (list of int): List of child ROI IDs for the adduct.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;annotation&lt;/code&gt; (str): Annotation of the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;formula&lt;/code&gt; (str): Molecular formula associated with the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;similarity&lt;/code&gt; (float): Similarity score for annotation.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;matched_peak_number&lt;/code&gt; (int): Number of matched peaks in the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;smiles&lt;/code&gt; (str): SMILES notation of the associated molecule.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;inchikey&lt;/code&gt; (str): InChIKey notation of the associated molecule.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;__init__(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Initializes an ROI with scan index, retention time, m/z, and intensity.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;extend_roi(self, scan_idx, rt, mz, intensity)&lt;/code&gt;: Extends an ROI with new data points.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;show_roi_info(self, show_annotation=False)&lt;/code&gt;: Prints information about the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_mz_error(self)&lt;/code&gt;: Calculates the m/z error (maximum - minimum) of the ROI.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;find_rt_ph_pa(self)&lt;/code&gt;: Calculates the peak area and height using the trapezoidal rule.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;find_top_average(self, num=3)&lt;/code&gt;: Finds the peak height by averaging the top three intensities.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sum_roi(self, cal_g_score=True, cal_a_score=True)&lt;/code&gt;: Summarizes the ROI, calculating key attributes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;subset_roi(self, start, end)&lt;/code&gt;: Subsets the ROI based on provided start and end positions.&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>raw_data_utils.py</title>
       <link>https://example.org/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1992,7 +1992,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;h2&gt;Default parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;default-parameters&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#default-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; automatically acquire the analytical metadata from the raw files including the mass spectrometer type and ionization mode. The corresponding default parameters will be applied based on the metadata.&lt;/p&gt;
 &lt;h2&gt;Customize parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;customize-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#customize-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the &lt;a href=&#34;&#34; &gt;template&lt;/a&gt;, users can customize the parameters by providing a parameter file. The parameter file should be a &lt;code&gt;.csv&lt;/code&gt; file with the following columns:&lt;/p&gt;
+    &lt;a href=&#34;#customize-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;, you can customize the parameters by providing a parameter file. The parameter file should be a &lt;code&gt;.csv&lt;/code&gt; file with the following columns:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2151,12 +2151,12 @@ This function converts a list of feature objects into a pandas DataFrame, which 
         
         &lt;p&gt;Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.&lt;/p&gt;
 &lt;p&gt;If you haven’t installed MassCube yet, be sure to follow the &lt;a href=&#34;../installation&#34; &gt;installation guide&lt;/a&gt; before proceeding.&lt;/p&gt;
-&lt;h2&gt;The OneClick untargeted metabolomics workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;the-oneclick-untargeted-metabolomics-workflow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#the-oneclick-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The OneClick workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (&lt;strong&gt;Fig. 1&lt;/strong&gt;).&lt;/p&gt;
+&lt;h2&gt;The MassCube untargeted metabolomics workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;the-masscube-untargeted-metabolomics-workflow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#the-masscube-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (&lt;strong&gt;Fig. 1&lt;/strong&gt;).&lt;/p&gt;
 &lt;p&gt;
     &lt;figure&gt;
-    &lt;img src=&#34;../untargeted_workflow.png&#34; title=&#34;Fig. 1. The OneClick untargeted metabolomics workflow&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
-    &lt;figcaption&gt;Fig. 1. The OneClick untargeted metabolomics workflow&lt;/figcaption&gt;
+    &lt;img src=&#34;../untargeted_workflow.png&#34; title=&#34;Fig. 1. The MassCube untargeted metabolomics workflow&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Fig. 1. The MassCube untargeted metabolomics workflow&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Input (3+1)&lt;span class=&#34;absolute -mt-20&#34; id=&#34;input-31&#34;&gt;&lt;/span&gt;
@@ -2186,7 +2186,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
 &lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, normalization and statistical analysis will not be applied. &lt;strong&gt;Note:&lt;/strong&gt; In sample table, please specify if a sample is blank or qc from the &amp;ldquo;is_blank&amp;rdquo; and &amp;ldquo;is_qc&amp;rdquo; columns, respectively.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, the &lt;a href=&#34;../parameter&#34; &gt;default parameters&lt;/a&gt; will be applied, yet &lt;strong&gt;annotation will not be performed since the MS/MS library is not provided&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. A template can also be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, the &lt;a href=&#34;../parameter&#34; &gt;default parameters&lt;/a&gt; will be applied, yet &lt;strong&gt;annotation will not be performed since the MS/MS library is not provided&lt;/strong&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;MS2 database&lt;/strong&gt;: To annotate MS/MS spectra, you need to download a MS/MS library from &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For faster database loading, please download and use the .pkl format.&lt;/p&gt;

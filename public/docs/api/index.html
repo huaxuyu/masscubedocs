@@ -12,7 +12,8 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>APIs reference – MassCube</title>
-  <meta name="description" content="All the functions and objects in masscube are documented in the API reference. MassCube includes 16 modules developed to handle a wide range of data processing tasks, with fundamental objects specifically defined for MS data, particularly data acquired from LC-MS." />
+  <meta name="description" content="All functions and objects in MassCube are documented in the API reference. Version 1.1 of MassCube includes 16 modules designed to manage a variety of data processing tasks, featuring core objects specifically tailored for MS data, particularly data generated from LC-MS experiments.
+MassCube modules masscube ├───init ├───alignment ├───annotation ├───classifier_builder ├───feature_detection ├───feature_evaluation ├───feature_grouping ├───mzpkl ├───network ├───normalization ├───params ├───raw_data_utils ├───stats ├───utils_functions ├───visualization └───workflows " />
   
   
     <link rel="canonical" href="https://example.org/docs/api/" itemprop="url" />
@@ -283,7 +284,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/alignment/"
     
-  >alignment.py
+  >alignment
     </a>
               
             </li><li class="flex flex-col "><a
@@ -300,6 +301,14 @@
     href="/docs/api/classifier_builder/"
     
   >classifier_builder.py
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/api/feature_detection/"
+    
+  >feature_detection
     </a>
               
             </li><li class="flex flex-col "><a
@@ -340,14 +349,6 @@
     href="/docs/api/params/"
     
   >params.py
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/api/peak_detect/"
-    
-  >peak_detect.py
     </a>
               
             </li><li class="flex flex-col "><a
@@ -514,7 +515,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/api/alignment/"
     
-  >alignment.py
+  >alignment
     </a>
               
             </li><li class="flex flex-col "><a
@@ -531,6 +532,14 @@
     href="/docs/api/classifier_builder/"
     
   >classifier_builder.py
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/api/feature_detection/"
+    
+  >feature_detection
     </a>
               
             </li><li class="flex flex-col "><a
@@ -571,14 +580,6 @@
     href="/docs/api/params/"
     
   >params.py
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/api/peak_detect/"
-    
-  >peak_detect.py
     </a>
               
             </li><li class="flex flex-col "><a
@@ -686,7 +687,40 @@
 
         <div class="content">
           <h1>APIs reference</h1>
-          <p>All the functions and objects in <em>masscube</em> are documented in the API reference. MassCube includes 16 modules developed to handle a wide range of data processing tasks, with fundamental objects specifically defined for MS data, particularly data acquired from LC-MS.</p>
+          <p>All functions and objects in MassCube are documented in the API reference. Version 1.1 of MassCube includes 16 modules designed to manage a variety of data processing tasks, featuring core objects specifically tailored for MS data, particularly data generated from LC-MS experiments.</p>
+<details class="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group" open>
+  <summary class="flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[''] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90">
+    <strong class="text-lg">MassCube modules</strong>
+  </summary>
+  <div class="p-2 overflow-hidden">
+    <div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>masscube
+├───init
+├───alignment
+├───annotation
+├───classifier_builder
+├───feature_detection
+├───feature_evaluation
+├───feature_grouping
+├───mzpkl
+├───network
+├───normalization
+├───params
+├───raw_data_utils
+├───stats
+├───utils_functions
+├───visualization
+└───workflows</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+  </div>
+</details>
 
         </div>
         <div class="mt-16"></div>
