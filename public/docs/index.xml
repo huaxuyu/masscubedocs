@@ -1941,15 +1941,57 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>msjson.py</title>
-      <link>https://example.org/docs/api/msjson/</link>
+      <title>mzpkl</title>
+      <link>https://example.org/docs/api/mzpkl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/msjson/</guid>
+      <guid>https://example.org/docs/api/mzpkl/</guid>
       <description>
         
         
-        &lt;p&gt;Documentation is under construction. Please check back later.&lt;/p&gt;
+        &lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This module defines the structure of the &lt;code&gt;mzpkl&lt;/code&gt; file format, which is a temporary file format used to store the raw MS data
+for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle file that is organized this way:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;{
+    &amp;#34;name&amp;#34;: str, # the name of the file
+    &amp;#34;ion_mode&amp;#34;: str, # the ion mode of the file
+    &amp;#34;ms1_time_arr&amp;#34;: np.ndarray, # the time array of the MS1 scans
+    &amp;#34;ms1_idx&amp;#34;: np.ndarray, # the index array of the MS1 scans
+    &amp;#34;ms2_idx&amp;#34;: np.ndarray, # the index array of the MS2 scans
+    &amp;#34;scans&amp;#34;: list of 2D np.ndarray # MS1 and MS2 scans in the file. Each scan is a 2D np.ndarray with shape (n, 2), [[m/z, intensity], ...]
+}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Convert MS Data object to mzpkl&lt;span class=&#34;absolute -mt-20&#34; id=&#34;convert-ms-data-object-to-mzpkl&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#convert-ms-data-object-to-mzpkl&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;convert_MSData_to_mzpkl(d, output_dir: str = None)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Converts an &lt;code&gt;MSData&lt;/code&gt; object to an &lt;code&gt;mzpkl&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData): The MSData object to be converted.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_dir&lt;/code&gt; (str): The directory where the &lt;code&gt;mzpkl&lt;/code&gt; file will be saved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the converted &lt;code&gt;mzpkl&lt;/code&gt; file will be saved in the specified directory.&lt;/li&gt;
+&lt;li&gt;if the output directory is not specified, the &lt;code&gt;mzpkl&lt;/code&gt; file will be returned as a dictionary.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Read mzpkl to MS Data object&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read-mzpkl-to-ms-data-object&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read-mzpkl-to-ms-data-object&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;read_mzpkl_to_MSData(d, file_path: str)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Reads an &lt;code&gt;mzpkl&lt;/code&gt; file to an &lt;code&gt;MSData&lt;/code&gt; object.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; (MSData): The initiated MSData object without scans data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file_path&lt;/code&gt; (str): The path to the &lt;code&gt;mzpkl&lt;/code&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
