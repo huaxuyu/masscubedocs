@@ -1,5 +1,5 @@
 ---
-title: "feature_grouping.py"
+title: "feature_grouping"
 weight: 1
 ---
 

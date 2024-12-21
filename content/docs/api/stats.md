@@ -1,5 +1,5 @@
 ---
-title: "stats.py"
+title: "stats"
 weight: 1
 ---
 

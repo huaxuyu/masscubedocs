@@ -1,5 +1,5 @@
 ---
-title: "utils_functions.py"
+title: "utils_functions"
 weight: 1
 ---
 

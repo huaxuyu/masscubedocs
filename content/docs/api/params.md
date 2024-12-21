@@ -1,5 +1,5 @@
 ---
-title: "params.py"
+title: "params"
 weight: 1
 ---
 

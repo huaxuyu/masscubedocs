@@ -1,5 +1,5 @@
 ---
-title: "workflows.py"
+title: "workflows"
 weight: 1
 ---
 

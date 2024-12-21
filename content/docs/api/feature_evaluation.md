@@ -1,5 +1,5 @@
 ---
-title: "feature_evaluation.py"
+title: "feature_evaluation"
 weight: 1
 ---
 

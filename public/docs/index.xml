@@ -192,7 +192,7 @@
     </item>
     
     <item>
-      <title>annotation.py</title>
+      <title>annotation</title>
       <link>https://example.org/docs/api/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -304,7 +304,7 @@
     </item>
     
     <item>
-      <title>classifier_builder.py</title>
+      <title>classifier_builder</title>
       <link>https://example.org/docs/api/classifier_builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -677,7 +677,7 @@
     </item>
     
     <item>
-      <title>feature_evaluation.py</title>
+      <title>feature_evaluation</title>
       <link>https://example.org/docs/api/feature_evaluation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -782,7 +782,7 @@
     </item>
     
     <item>
-      <title>feature_grouping.py</title>
+      <title>feature_grouping</title>
       <link>https://example.org/docs/api/feature_grouping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -911,113 +911,6 @@
     </item>
     
     <item>
-      <title>feature_table_utils.py</title>
-      <link>https://example.org/docs/api/feature_table_utils/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/api/feature_table_utils/</guid>
-      <description>
-        
-        
-        &lt;p&gt;This utility module provides functions for manipulating and exporting feature tables in metabolomics data analysis. It focuses on converting feature lists to DataFrame format and exporting MS2 spectra to the MSP format. Below are detailed descriptions of the provided functions.&lt;/p&gt;
-&lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;output_feature_to_msp&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_feature_to_msp&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#output_feature_to_msp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;output_feature_to_msp(feature_table, output_path)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt;&lt;br&gt;
-This function exports MS2 spectra from a DataFrame to the MSP format, which is commonly used in metabolomics for sharing spectral data.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (&lt;code&gt;pandas.DataFrame&lt;/code&gt;): The DataFrame containing MS2 spectra data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_path&lt;/code&gt; (&lt;code&gt;str&lt;/code&gt;): The path where the MSP file will be saved.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Functionality:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Checks if the provided output path ends with &lt;code&gt;.msp&lt;/code&gt; and raises a &lt;code&gt;ValueError&lt;/code&gt; if not.&lt;/li&gt;
-&lt;li&gt;Iterates through the rows of the &lt;code&gt;feature_table&lt;/code&gt; DataFrame.&lt;/li&gt;
-&lt;li&gt;For each feature, it writes the relevant information (e.g., precursor m/z, adduct type, retention time) and MS2 peaks to the MSP file.&lt;/li&gt;
-&lt;li&gt;Handles cases where no MS2 spectrum is available by writing a default &amp;ldquo;Unknown&amp;rdquo; entry.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example Usage:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_feature_to_msp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;feature_table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output.msp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;h3&gt;convert_features_to_df&lt;span class=&#34;absolute -mt-20&#34; id=&#34;convert_features_to_df&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#convert_features_to_df&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;convert_features_to_df(features, sample_names)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt;&lt;br&gt;
-This function converts a list of feature objects into a pandas DataFrame, which is useful for further data analysis or export.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;features&lt;/code&gt; (&lt;code&gt;list&lt;/code&gt;): A list of feature objects, each representing a detected metabolite or compound.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_names&lt;/code&gt; (&lt;code&gt;list&lt;/code&gt; or &lt;code&gt;array&lt;/code&gt;): A list of sample names corresponding to the columns in the DataFrame.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;feature_table&lt;/code&gt; (&lt;code&gt;pandas.DataFrame&lt;/code&gt;): A DataFrame where each row corresponds to a feature, and the columns contain metadata and intensity values across samples.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Functionality:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Collects various attributes of each feature, such as m/z, retention time, adduct type, and any annotation information.&lt;/li&gt;
-&lt;li&gt;Includes additional columns for sample-specific peak heights.&lt;/li&gt;
-&lt;li&gt;Returns the constructed DataFrame, which is structured for easy export or further analysis.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example Usage:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convert_features_to_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Example Workflow&lt;/strong&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-workflow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#example-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Convert Features to DataFrame:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Suppose you have a list of feature objects detected during a metabolomics study. You can convert these features into a DataFrame for easier manipulation and analysis.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convert_features_to_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Export MS2 Spectra to MSP:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;After converting the features to a DataFrame, you might want to export the MS2 spectra data to an MSP file for use in spectral databases or other analysis tools.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_feature_to_msp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;feature_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_data.msp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;p&gt;These utility functions are designed to streamline the process of handling and exporting feature data in metabolomics workflows, particularly when dealing with large datasets and the need for standardized formats like MSP.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Installation</title>
       <link>https://example.org/docs/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1096,7 +989,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>normalization.py</title>
+      <title>normalization</title>
       <link>https://example.org/docs/api/normalization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1196,7 +1089,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>params.py</title>
+      <title>params</title>
       <link>https://example.org/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1361,7 +1254,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>raw_data_utils.py</title>
+      <title>raw_data_utils</title>
       <link>https://example.org/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1494,7 +1387,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>stats.py</title>
+      <title>stats</title>
       <link>https://example.org/docs/api/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1565,7 +1458,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>utils_functions.py</title>
+      <title>utils_functions</title>
       <link>https://example.org/docs/api/utils_functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1633,7 +1526,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>visualization.py</title>
+      <title>visualization</title>
       <link>https://example.org/docs/api/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1833,7 +1726,7 @@ This function converts a list of feature objects into a pandas DataFrame, which 
     </item>
     
     <item>
-      <title>workflows.py</title>
+      <title>workflows</title>
       <link>https://example.org/docs/api/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1994,7 +1887,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     </item>
     
     <item>
-      <title>network.py</title>
+      <title>network</title>
       <link>https://example.org/docs/api/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

@@ -1,5 +1,5 @@
 ---
-title: "normalization.py"
+title: "normalization"
 weight: 1
 ---
 

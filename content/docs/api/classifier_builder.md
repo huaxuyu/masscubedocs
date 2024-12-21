@@ -1,5 +1,5 @@
 ---
-title: "classifier_builder.py"
+title: "classifier_builder"
 weight: 1
 ---
 

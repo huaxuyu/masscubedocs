@@ -1,5 +1,5 @@
 ---
-title: "visualization.py"
+title: "visualization"
 weight: 1
 ---
 

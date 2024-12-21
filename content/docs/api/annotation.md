@@ -1,5 +1,5 @@
 ---
-title: "annotation.py"
+title: "annotation"
 weight: 1
 ---
 

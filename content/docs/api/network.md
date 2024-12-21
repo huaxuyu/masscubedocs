@@ -1,5 +1,5 @@
 ---
-title: "network.py"
+title: "network"
 weight: 2
 ---
 
