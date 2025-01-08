@@ -58,4 +58,4 @@ From the [template](https://github.com/huaxuyu/masscubedocs/blob/main/content/do
 
 ## More about parameters
 
-Much more parameters in _masscube_ are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](../docs/api) for more details.
+Much more parameters in _masscube_ are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](/masscubedocs/docs/api) for more details.
