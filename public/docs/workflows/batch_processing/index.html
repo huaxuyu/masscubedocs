@@ -11,8 +11,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>Untargeted single file processing in batch mode – MassCube</title>
-  <meta name="description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Users may employ the OneClick untargeted metabolomics workflow for comprehensive data processing.
+  <title>Single file processing by applying default parameters depending on the data – MassCube</title>
+  <meta name="description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as masscube will apply different parameters depending on the data.
 How to use Organize the data Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:" />
   
   
@@ -21,21 +21,21 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
 
   
 
-<meta property="og:title" content="Untargeted single file processing in batch mode" />
-<meta property="og:description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Users may employ the OneClick untargeted metabolomics workflow for comprehensive data processing.
+<meta property="og:title" content="Single file processing by applying default parameters depending on the data" />
+<meta property="og:description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as masscube will apply different parameters depending on the data.
 How to use Organize the data Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/workflows/batch_processing/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="Untargeted single file processing in batch mode">
-<meta itemprop="description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Users may employ the OneClick untargeted metabolomics workflow for comprehensive data processing.
+  <meta itemprop="name" content="Single file processing by applying default parameters depending on the data">
+<meta itemprop="description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as masscube will apply different parameters depending on the data.
 How to use Organize the data Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:">
 
-<meta itemprop="wordCount" content="459">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Untargeted single file processing in batch mode"/>
-<meta name="twitter:description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Users may employ the OneClick untargeted metabolomics workflow for comprehensive data processing.
+<meta itemprop="wordCount" content="461">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Single file processing by applying default parameters depending on the data"/>
+<meta name="twitter:description" content="Introduction Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using masscube. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as masscube will apply different parameters depending on the data.
 How to use Organize the data Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:"/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -702,15 +702,11 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-1-define-or-load-parameters">Step 1. Define or load parameters
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-1-single-file-processing">Step 1. Single file processing
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-2-single-file-processing">Step 2. Single file processing
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-3-data-visualization">Step 3. Data visualization
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-2-data-visualization">Step 2. Data visualization
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -737,21 +733,19 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
 </div>
 
         <div class="content">
-          <h1>Untargeted single file processing in batch mode</h1>
+          <h1>Single file processing by applying default parameters depending on the data</h1>
           <h2>Introduction<span class="absolute -mt-20" id="introduction"></span>
-    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using <em>masscube</em>. Note, the processed files will not be aligned across samples. Users may employ the <a href="/docs/quickstart" >OneClick untargeted metabolomics workflow</a> for comprehensive data processing.</p>
+    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using <em>masscube</em>. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as <em>masscube</em> will apply different parameters depending on the data.</p>
 <h2>How to use<span class="absolute -mt-20" id="how-to-use"></span>
     <a href="#how-to-use" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
 <h3>Organize the data<span class="absolute -mt-20" id="organize-the-data"></span>
     <a href="#organize-the-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:</p>
-<p>You need <u>two components</u> for the project plus <u>one MS/MS library</u> for annotation.</p>
-<p>In your project folder (e.g. <strong>my_project</strong>), you need to prepare the following components:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>my_project
 ├── data
 │   ├── sample1.mzML
 │   ├── sample2.mzML
 |   └── ...
-└── parameters.csv</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+├── ...</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -761,6 +755,7 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
     </button>
   </div>
 </div>
+<p>You cannot set parameters here.</p>
 <h3>Processing<span class="absolute -mt-20" id="processing"></span>
     <a href="#processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>In the project folder</strong>, open a terminal and run the following command:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">process-files</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
@@ -777,8 +772,6 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
     <a href="#output" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After the processing, you will find the following files and folders in the project folder:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>project/
 ├── data
-├── parameters.csv
-├── project.mc
 ├── single_file_output
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -798,7 +791,6 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
   </div>
 </div>
 <ol>
-<li><code>project.mc</code> file: the project file of <em>masscube</em>.</li>
 <li><code>single_file_output</code> folder: a folder containing the feature table for each sample.</li>
 <li><code>chromatogram</code> folder: a folder containing the chromatogram for each sample.</li>
 </ol>
@@ -821,22 +813,42 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">batch_file_processing</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">cpu_ratio</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">batch_file_processing</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">segment_feature</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_features</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">evaluate_peak_shape</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                         <span class="n">annotate_ms2</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ms2_library_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cpu_ratio</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">    The untargeted metabolomics workflow. See the documentation for details.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Process single files using default parameters.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Parameters
 </span></span></span><span class="line"><span class="cl"><span class="s2">    ----------
 </span></span></span><span class="line"><span class="cl"><span class="s2">    path : str
 </span></span></span><span class="line"><span class="cl"><span class="s2">        The working directory. If None, the current working directory is used.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    batch_size : int
-</span></span></span><span class="line"><span class="cl"><span class="s2">        The number of files to be processed in each batch.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    segment_feature : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to segment the feature to peaks for distinguishing possible isomers. Default is True.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    group_features : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to group features by isotopes, adducts and in-source fragments. Default is True.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    evaluate_peak_shape : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to evaluate the peak shape by calculating noise score and asymmetry factor. Default is True.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    annotate_ms2 : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to annotate MS2 spectra. Default is True.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    ms2_library_path : str
+</span></span></span><span class="line"><span class="cl"><span class="s2">        The path to the MS2 library.
 </span></span></span><span class="line"><span class="cl"><span class="s2">    cpu_ratio : float
-</span></span></span><span class="line"><span class="cl"><span class="s2">        The ratio of CPU cores to be used.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        The percentage of CPU cores to use. Default is 0.8.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    batch_size : int
+</span></span></span><span class="line"><span class="cl"><span class="s2">        The number of files to process in each batch. Default is 100.
 </span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
@@ -850,16 +862,12 @@ How to use Organize the data Similar to the untargeted metabolomics workflow, th
   </div>
 </div>
 <div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
-<h3>Step 1. Define or load parameters<span class="absolute -mt-20" id="step-1-define-or-load-parameters"></span>
-    <a href="#step-1-define-or-load-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.</p>
-<p><em>masscube</em> automatically read the MS data and apply the corresponding default parameters. Users can also customize the parameters by providing a parameter file.</p>
-<h3>Step 2. Single file processing<span class="absolute -mt-20" id="step-2-single-file-processing"></span>
-    <a href="#step-2-single-file-processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.</p>
+<h3>Step 1. Single file processing<span class="absolute -mt-20" id="step-1-single-file-processing"></span>
+    <a href="#step-1-single-file-processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.</p>
 <p>To accelerate the processing, <em>masscube</em> supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (<code>cpu_ratio=0.8</code>) of the total CPU cores so that the computer can still be used for other tasks.</p>
 <p>To control the memory usage, the files are processed in batches. The default batch size is 100 (<code>batch_size=100</code>).</p>
-<p>More details about the feature detection can be found <a href="/docs/algorithms/feature_detection" >here</a>.</p>
-<h3>Step 3. Data visualization<span class="absolute -mt-20" id="step-3-data-visualization"></span>
-    <a href="#step-3-data-visualization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.</p>
+<h3>Step 2. Data visualization<span class="absolute -mt-20" id="step-2-data-visualization"></span>
+    <a href="#step-2-data-visualization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.</p>
 </div>
 
         </div>

@@ -33,7 +33,7 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 <meta itemprop="description" content="Introduction Outliers are data files that differ significantly from the rest of the dataset. In MS experiments, outliers can arise due to various factors such as instrument error, sample preparation issues, or biological variation. Identifying and removing outliers before downstream analysis is crucial to avoid misleading results.
 masscube evaluates the analytical sequence and reports problematic samples in an unsupervised manner. It assesses the quality of the raw data by analyzing the total peak height of all detected features.">
 
-<meta itemprop="wordCount" content="457">
+<meta itemprop="wordCount" content="350">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Find outliers"/>
 <meta name="twitter:description" content="Introduction Outliers are data files that differ significantly from the rest of the dataset. In MS experiments, outliers can arise due to various factors such as instrument error, sample preparation issues, or biological variation. Identifying and removing outliers before downstream analysis is crucial to avoid misleading results.
 masscube evaluates the analytical sequence and reports problematic samples in an unsupervised manner. It assesses the quality of the raw data by analyzing the total peak height of all detected features."/>
@@ -700,18 +700,6 @@ masscube evaluates the analytical sequence and reports problematic samples in an
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#explanation-of-the-workflow">Explanation of the workflow
         </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-1-fast-untargeted-feature-detection">Step 1. Fast untargeted feature detection
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-2-find-outliers">Step 2. Find outliers
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#step-3-report-problematic-samples">Step 3. Report problematic samples
-        </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
@@ -744,11 +732,11 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 <h2>How to use<span class="absolute -mt-20" id="how-to-use"></span>
     <a href="#how-to-use" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
 <h3>Step 1. Organize the data<span class="absolute -mt-20" id="step-1-organize-the-data"></span>
-    <a href="#step-1-organize-the-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Put all the raw data files in a folder. The data should be organized in the following structure:</p>
+    <a href="#step-1-organize-the-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Put all processed raw data files in a folder. The data should be organized in the following structure:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
+├── single_files
+│   ├── sample1.txt
+│   ├── sample2.txt
 |   └── ...
 └── sample_table.csv</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
@@ -776,10 +764,6 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 <h3>Output<span class="absolute -mt-20" id="output"></span>
     <a href="#output" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After the processing, you will find the following files and folders in the data folder:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
-|   └── ...
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -814,9 +798,10 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run_evaluation</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run_evaluation</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">zscore_threshold</span><span class="o">=-</span><span class="mi">2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Evaluate the run and report the problematic files.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
@@ -824,8 +809,9 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 </span></span></span><span class="line"><span class="cl"><span class="s2">    ----------
 </span></span></span><span class="line"><span class="cl"><span class="s2">    path : str
 </span></span></span><span class="line"><span class="cl"><span class="s2">        Path to the project directory.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    zscore_threshold : float
+</span></span></span><span class="line"><span class="cl"><span class="s2">        The threshold of z-score for detecting problematic files. Default is -2.
 </span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="o">...</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
@@ -840,14 +826,6 @@ masscube evaluates the analytical sequence and reports problematic samples in an
 </div>
 <p>The <code>run_evaluation</code> function evaluates the run and reports the problematic files. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.</p>
 <p>The function generates a <code>problematic_samples.txt</code> file that lists the names of the problematic samples. Users can further investigate the outliers and decide whether to remove them before downstream analysis.</p>
-<div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
-<h3>Step 1. Fast untargeted feature detection<span class="absolute -mt-20" id="step-1-fast-untargeted-feature-detection"></span>
-    <a href="#step-1-fast-untargeted-feature-detection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A fast untargeted feature detection algorithm is applied to the raw data. The algorithm automatically applies the default parameters for feature detection based on the metadata of the raw files. Parameters are not needed to be set by the users.</p>
-<h3>Step 2. Find outliers<span class="absolute -mt-20" id="step-2-find-outliers"></span>
-    <a href="#step-2-find-outliers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The total number of features detected in each sample is calculated. Samples with total feature numnber deviating from the mean by more than 3 standard deviations are considered as outliers.</p>
-<h3>Step 3. Report problematic samples<span class="absolute -mt-20" id="step-3-report-problematic-samples"></span>
-    <a href="#step-3-report-problematic-samples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The names of the problematic samples are saved in the <code>problematic_samples.txt</code> file. Users can further investigate the outliers and decide whether to remove them before downstream analysis.</p>
-</div>
 
         </div>
         <div class="mt-16"></div>

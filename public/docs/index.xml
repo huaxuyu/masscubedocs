@@ -502,8 +502,8 @@
 &lt;h2&gt;Sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-table&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For MassCube version 1.0 or earlier, please use this &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For large-scale metabolomics data, it&amp;rsquo;s not easy to prepare the sample table manually. In MassCube, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.&lt;/p&gt;
-&lt;h3&gt;Quickly generate sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;quickly-generate-sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#quickly-generate-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
+&lt;h3&gt;Automatically generate sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;automatically-generate-sample-table&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#automatically-generate-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;generate-sample-table&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
@@ -553,7 +553,7 @@
 
   &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
     &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      You need to further specify the groups in the generated sample table.
+      You need to further edit the generated sample table to specify QCs, blanks and sample groups.
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -923,10 +923,10 @@
     &lt;a href=&#34;#install-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Python website&lt;/a&gt; to download Python. &lt;strong&gt;Python 3.9-3.11&lt;/strong&gt; is recommended.&lt;/p&gt;
 &lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;
   &lt;summary class=&#34;flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[&#39;&#39;] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90&#34;&gt;
-    &lt;strong class=&#34;text-lg&#34;&gt;Download Python 3.11&lt;/strong&gt;
+    &lt;strong class=&#34;text-lg&#34;&gt;Download Python 3.11.7&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;p-2 overflow-hidden&#34;&gt;
-    Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11&lt;/a&gt;.
+    Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11.7&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: Make sure to check the box that says &amp;ldquo;Add Python to PATH&amp;rdquo; during installation.&lt;/p&gt;
@@ -971,7 +971,8 @@
     &amp;#34;matplotlib&amp;gt;=3.8.2&amp;#34;,
     &amp;#34;ms_entropy==1.2.2&amp;#34;,
     &amp;#34;scikit-learn&amp;gt;=1.3.2&amp;#34;,
-    &amp;#34;statsmodels&amp;gt;=0.14.2&amp;#34;
+    &amp;#34;statsmodels&amp;gt;=0.14.2&amp;#34;,
+    &amp;#34;umap-learn&amp;gt;=0.5.7&amp;#34;,
 ]&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
@@ -2055,19 +2056,19 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;td&gt;whether to plot mirror plots for MS2 matching&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;plot_normalization&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;whether to plot normalization results&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;quant_method&lt;/td&gt;
 &lt;td&gt;peak_height&lt;/td&gt;
 &lt;td&gt;value for quantification and output, &amp;ldquo;peak_height&amp;rdquo;, &amp;ldquo;peak_area&amp;rdquo; or &amp;ldquo;top_average&amp;rdquo;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;by_group_name&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;group name for classification&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Almost all parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;https://example.org/docs/api/&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Much more parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;https://example.org/content/docs/api/_index.md&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
@@ -2115,10 +2116,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. Instructions for file conversion are provided &lt;a href=&#34;../workflows/data_preparation&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, normalization and statistical analysis will not be applied. &lt;strong&gt;Note:&lt;/strong&gt; In sample table, please specify if a sample is blank or qc from the &amp;ldquo;is_blank&amp;rdquo; and &amp;ldquo;is_qc&amp;rdquo; columns, respectively.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. You could also use MassCube to &lt;a href=&#34;../workflows/data_preparation.md&#34; &gt;generate&lt;/a&gt; a sample table and edit. If not provided, normalization and statistical analysis will not be applied. &lt;strong&gt;Note:&lt;/strong&gt; In sample table, please specify if a sample is blank or qc from the &amp;ldquo;is_blank&amp;rdquo; and &amp;ldquo;is_qc&amp;rdquo; columns, respectively.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. A template can also be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;. If not provided, the &lt;a href=&#34;../parameter&#34; &gt;default parameters&lt;/a&gt; will be applied, yet &lt;strong&gt;annotation will not be performed since the MS/MS library is not provided&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; or download a template &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../parameter&#34; &gt;default parameters&lt;/a&gt; will be applied, yet &lt;strong&gt;annotation will not be performed since the MS/MS library is not provided&lt;/strong&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;MS2 database&lt;/strong&gt;: To annotate MS/MS spectra, you need to download a MS/MS library from &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For faster database loading, please download and use the .pkl format.&lt;/p&gt;
@@ -2158,11 +2159,13 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 ├── data
 ├── sample_table.csv
 ├── parameters.csv
+├── mzrt_list.csv (optional)
 ├── project_files
 │   ├── data_processing_metadata_[DATE].pkl
 │   ├── features.msp
 │   └── ...
 ├── aligned_feature_table.txt
+|── normalized_feature_table.txt (if signal normalization applied)
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -2176,6 +2179,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 │   ├── compound2.png
 │   └── ...
 ├── statistical_analysis
+├── normalization results
+|   ├──feature_0_normalization.png
+|   ├──feature_1_normalization.png
+|   └── ...
 ├── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
@@ -2193,6 +2200,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;li&gt;&lt;code&gt;chromatograms&lt;/code&gt; folder: a folder containing the chromatogram for each sample.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ms2_matching&lt;/code&gt; folder: a folder containing the MS/MS matching for each annotated compound.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;statistical_analysis&lt;/code&gt; folder: a folder containing the statistical analysis results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normalization results&lt;/code&gt; folder: a folder containing the normalization results (if applied).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -2235,9 +2243,13 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;untargeted_metabolomics_workflow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_results&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;untargeted_metabolomics_workflow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_results&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;only_process_single_files&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_params_only&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    The untargeted metabolomics workflow. See the documentation for details.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
@@ -2247,6 +2259,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The working directory. If None, the current working directory is used.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    return_results : bool
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to return the results. Default is False.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    only_process_single_files : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to only process the single files. Default is False.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    return_params_only : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to return the parameters only. Default is False.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Returns
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    -------
@@ -2269,35 +2285,34 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/div&gt;
 &lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Step 1. Define or load parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-define-or-load-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-define-or-load-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.&lt;/p&gt;
+    &lt;a href=&#34;#step-1-define-or-load-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; automatically read the MS data and apply the corresponding default parameters. Users can also customize the parameters by providing a parameter file.&lt;/p&gt;
 &lt;h3&gt;Step 2. Load sample table and organize data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-load-sample-table-and-organize-data&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-2-load-sample-table-and-organize-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A sample table is used to claim the name of samples and their groups. In most metabolomics studies, quality control samples and blank samples are included. &lt;em&gt;masscube&lt;/em&gt; automatically apply normalization and statistical analysis if the sample table is provided.&lt;/p&gt;
 &lt;h3&gt;Step 3. Single file processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-single-file-processing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-3-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
-&lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (&lt;code&gt;cpu_ratio=0.8&lt;/code&gt;) of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
-&lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100 (&lt;code&gt;batch_size=100&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;https://example.org/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#step-3-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. By default, features are not grouped in this step to reduce computational cost, and grouping will be performed in the alignment step.&lt;/p&gt;
+&lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
+&lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100.&lt;/p&gt;
 &lt;h3&gt;Step 4. Feature alignment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-4-feature-alignment&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-4-feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. See &lt;a href=&#34;https://example.org/docs/algorithms/alignment&#34; &gt;alignment&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-4-feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. It also includes the annotation of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
 &lt;h3&gt;Step 5. Gap filling&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-5-gap-filling&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-5-gap-filling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection. See &lt;a href=&#34;https://example.org/docs/algorithms/gap_filling&#34; &gt;gap filling&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-5-gap-filling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection.&lt;/p&gt;
 &lt;h3&gt;Step 6. MS/MS annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-6-msms-annotation&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-6-msms-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Compound annotation was performed by matching the experimental MS/MS spectra with the MS/MS library. The MS/MS similarity score is generated to indicate the confidence of the annotation.&lt;/p&gt;
-&lt;p&gt;Flash entropy search is used to accelerate the annotation. &lt;em&gt;masscube&lt;/em&gt; also provides analog search (i.e. hybrid search) for unknown discovery. See &lt;a href=&#34;https://example.org/docs/algorithms/annotation&#34; &gt;annotation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Flash entropy search is used to accelerate the annotation. &lt;em&gt;masscube&lt;/em&gt; also provides analog search (i.e. hybrid search) for unknown discovery.&lt;/p&gt;
 &lt;h3&gt;Step 7. Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-7-normalization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-7-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). &lt;em&gt;masscube&lt;/em&gt; provides multiple post-acquisition normalization algorithms to address the normalization issue. See &lt;a href=&#34;https://example.org/docs/algorithms/normalization&#34; &gt;normalization&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-7-normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). &lt;em&gt;masscube&lt;/em&gt; provides multiple post-acquisition normalization algorithms to address the normalization issue.&lt;/p&gt;
 &lt;h3&gt;Step 8. Statistical analysis&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-8-statistical-analysis&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-8-statistical-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the &lt;code&gt;statistics&lt;/code&gt; folder. See &lt;a href=&#34;https://example.org/docs/algorithms/statistics&#34; &gt;statistics&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-8-statistical-analysis&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the &lt;code&gt;statistics&lt;/code&gt; folder.&lt;/p&gt;
 &lt;h3&gt;Step 9. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-9-data-visualization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-9-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis. See &lt;a href=&#34;https://example.org/docs/algorithms/visualization&#34; &gt;visualization&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#step-9-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis.&lt;/p&gt;
 &lt;/div&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Untargeted single file processing in batch mode</title>
+      <title>Single file processing by applying default parameters depending on the data</title>
       <link>https://example.org/docs/workflows/batch_processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2306,19 +2321,17 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
         
         
         &lt;h2&gt;Introduction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using &lt;em&gt;masscube&lt;/em&gt;. Note, the processed files will not be aligned across samples. Users may employ the &lt;a href=&#34;https://example.org/docs/quickstart&#34; &gt;OneClick untargeted metabolomics workflow&lt;/a&gt; for comprehensive data processing.&lt;/p&gt;
+    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using &lt;em&gt;masscube&lt;/em&gt;. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as &lt;em&gt;masscube&lt;/em&gt; will apply different parameters depending on the data.&lt;/p&gt;
 &lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Organize the data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;organize-the-data&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#organize-the-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:&lt;/p&gt;
-&lt;p&gt;You need &lt;u&gt;two components&lt;/u&gt; for the project plus &lt;u&gt;one MS/MS library&lt;/u&gt; for annotation.&lt;/p&gt;
-&lt;p&gt;In your project folder (e.g. &lt;strong&gt;my_project&lt;/strong&gt;), you need to prepare the following components:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
 ├── data
 │   ├── sample1.mzML
 │   ├── sample2.mzML
 |   └── ...
-└── parameters.csv&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+├── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -2328,6 +2341,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;You cannot set parameters here.&lt;/p&gt;
 &lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the project folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;process-files&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
@@ -2344,8 +2358,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After the processing, you will find the following files and folders in the project folder:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;project/
 ├── data
-├── parameters.csv
-├── project.mc
 ├── single_file_output
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -2365,7 +2377,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;project.mc&lt;/code&gt; file: the project file of &lt;em&gt;masscube&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;single_file_output&lt;/code&gt; folder: a folder containing the feature table for each sample.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;chromatogram&lt;/code&gt; folder: a folder containing the chromatogram for each sample.&lt;/li&gt;
 &lt;/ol&gt;
@@ -2388,22 +2399,42 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;batch_file_processing&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpu_ratio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;batch_file_processing&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segment_feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;group_features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;evaluate_peak_shape&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         &lt;span class=&#34;n&#34;&gt;annotate_ms2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ms2_library_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpu_ratio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    The untargeted metabolomics workflow. See the documentation for details.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Process single files using default parameters.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Parameters
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ----------
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    path : str
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The working directory. If None, the current working directory is used.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    batch_size : int
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The number of files to be processed in each batch.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    segment_feature : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to segment the feature to peaks for distinguishing possible isomers. Default is True.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    group_features : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to group features by isotopes, adducts and in-source fragments. Default is True.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    evaluate_peak_shape : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to evaluate the peak shape by calculating noise score and asymmetry factor. Default is True.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    annotate_ms2 : bool
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to annotate MS2 spectra. Default is True.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ms2_library_path : str
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The path to the MS2 library.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    cpu_ratio : float
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The ratio of CPU cores to be used.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The percentage of CPU cores to use. Default is 0.8.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    batch_size : int
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The number of files to process in each batch. Default is 100.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
@@ -2417,16 +2448,12 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Step 1. Define or load parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-define-or-load-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-define-or-load-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; automatically read the MS data and apply the corresponding default parameters. Users can also customize the parameters by providing a parameter file.&lt;/p&gt;
-&lt;h3&gt;Step 2. Single file processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-single-file-processing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-2-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
+&lt;h3&gt;Step 1. Single file processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-single-file-processing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-1-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
 &lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (&lt;code&gt;cpu_ratio=0.8&lt;/code&gt;) of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
 &lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100 (&lt;code&gt;batch_size=100&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;More details about the feature detection can be found &lt;a href=&#34;https://example.org/docs/algorithms/feature_detection&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Step 3. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-data-visualization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-3-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.&lt;/p&gt;
+&lt;h3&gt;Step 2. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-data-visualization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-2-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.&lt;/p&gt;
 &lt;/div&gt;
 
       </description>
@@ -2447,11 +2474,11 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
 &lt;h3&gt;Step 1. Organize the data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-organize-the-data&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-organize-the-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Put all the raw data files in a folder. The data should be organized in the following structure:&lt;/p&gt;
+    &lt;a href=&#34;#step-1-organize-the-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Put all processed raw data files in a folder. The data should be organized in the following structure:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
+├── single_files
+│   ├── sample1.txt
+│   ├── sample2.txt
 |   └── ...
 └── sample_table.csv&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
@@ -2479,10 +2506,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After the processing, you will find the following files and folders in the data folder:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
-|   └── ...
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -2517,9 +2540,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run_evaluation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run_evaluation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Evaluate the run and report the problematic files.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
@@ -2527,8 +2551,9 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ----------
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    path : str
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Path to the project directory.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    zscore_threshold : float
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The threshold of z-score for detecting problematic files. Default is -2.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
@@ -2543,14 +2568,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/div&gt;
 &lt;p&gt;The &lt;code&gt;run_evaluation&lt;/code&gt; function evaluates the run and reports the problematic files. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.&lt;/p&gt;
 &lt;p&gt;The function generates a &lt;code&gt;problematic_samples.txt&lt;/code&gt; file that lists the names of the problematic samples. Users can further investigate the outliers and decide whether to remove them before downstream analysis.&lt;/p&gt;
-&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Step 1. Fast untargeted feature detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-fast-untargeted-feature-detection&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-fast-untargeted-feature-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A fast untargeted feature detection algorithm is applied to the raw data. The algorithm automatically applies the default parameters for feature detection based on the metadata of the raw files. Parameters are not needed to be set by the users.&lt;/p&gt;
-&lt;h3&gt;Step 2. Find outliers&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-find-outliers&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-2-find-outliers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The total number of features detected in each sample is calculated. Samples with total feature numnber deviating from the mean by more than 3 standard deviations are considered as outliers.&lt;/p&gt;
-&lt;h3&gt;Step 3. Report problematic samples&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-report-problematic-samples&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-3-report-problematic-samples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The names of the problematic samples are saved in the &lt;code&gt;problematic_samples.txt&lt;/code&gt; file. Users can further investigate the outliers and decide whether to remove them before downstream analysis.&lt;/p&gt;
-&lt;/div&gt;
 
       </description>
     </item>

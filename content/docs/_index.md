@@ -5,7 +5,7 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2024-12-16 **Version**: 1.1.5
+**Date**: 2025-01-07 **Version**: 1.1.11
 
 <!--more-->
 
@@ -19,7 +19,7 @@ MassCube is an open-source computing library and framework for MS data processin
 
 - **Modular design**: Easily extendable functionalities.
 
-- **User-friendly**: Command-line interface (CLI) for easy data processing.
+- **User-friendly**: Command-line interface for easy data processing.
 
 - **Scalable**: Efficient and memory-friendly handling of large-scale metabolomics data.
 

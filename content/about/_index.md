@@ -25,4 +25,3 @@ Please contact us for any questions or suggestions. We welcome contributions to 
 - **Corresponding author:** Oliver Fiehn: ofiehn@ucdavis.edu
 
 - **Developer and maintainer:** Huaxu Yu: hxuyu@ucdavis.edu; yhxchem@outlook.com
-

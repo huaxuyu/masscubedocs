@@ -16,13 +16,13 @@ _masscube_ evaluates the analytical sequence and reports problematic samples in 
 
 ### Step 1. Organize the data
 
-Put all the raw data files in a folder. The data should be organized in the following structure:
+Put all processed raw data files in a folder. The data should be organized in the following structure:
 
 ```
 my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
+├── single_files
+│   ├── sample1.txt
+│   ├── sample2.txt
 |   └── ...
 └── sample_table.csv
 ```
@@ -43,10 +43,6 @@ After the processing, you will find the following files and folders in the data 
 
 ```
 my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
-|   └── ...
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -63,7 +59,7 @@ my_project
 ## Explanation of the workflow
 
 ```python {linenos=table,hl_lines=[],linenostart=1}
-def run_evaluation(path=None):
+def run_evaluation(path=None, zscore_threshold=-2):
     """
     Evaluate the run and report the problematic files.
 
@@ -71,27 +67,12 @@ def run_evaluation(path=None):
     ----------
     path : str
         Path to the project directory.
+    zscore_threshold : float
+        The threshold of z-score for detecting problematic files. Default is -2.
     """
-
     ...
 ```
 
 The `run_evaluation` function evaluates the run and reports the problematic files. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.
 
 The function generates a `problematic_samples.txt` file that lists the names of the problematic samples. Users can further investigate the outliers and decide whether to remove them before downstream analysis.
-
-{{% steps %}}
-
-### Step 1. Fast untargeted feature detection
-
-A fast untargeted feature detection algorithm is applied to the raw data. The algorithm automatically applies the default parameters for feature detection based on the metadata of the raw files. Parameters are not needed to be set by the users.
-
-### Step 2. Find outliers
-
-The total number of features detected in each sample is calculated. Samples with total feature numnber deviating from the mean by more than 3 standard deviations are considered as outliers.
-
-### Step 3. Report problematic samples
-
-The names of the problematic samples are saved in the `problematic_samples.txt` file. Users can further investigate the outliers and decide whether to remove them before downstream analysis.
-
-{{% /steps %}}

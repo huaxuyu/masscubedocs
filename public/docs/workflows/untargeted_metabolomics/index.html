@@ -36,7 +36,7 @@ How to use Please refer to the quick start guide." />
 The MassCube untargeted metabolomics workflow aims to address the burdens in mass spectrometry-based metabolomics data processing. It integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data.
 How to use Please refer to the quick start guide.">
 
-<meta itemprop="wordCount" content="611">
+<meta itemprop="wordCount" content="620">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Untargeted metabolomics workflow"/>
 <meta name="twitter:description" content="Introduction Data processing is critical for metabolomics studies. A series of steps are required to process the raw data to generate biological hypothesis that can be further validated.
 The MassCube untargeted metabolomics workflow aims to address the burdens in mass spectrometry-based metabolomics data processing. It integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data.
@@ -781,9 +781,13 @@ How to use Please refer to the quick start guide."/>
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">untargeted_metabolomics_workflow</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_results</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">untargeted_metabolomics_workflow</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_results</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">only_process_single_files</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_params_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
 </span></span></span><span class="line"><span class="cl"><span class="s2">    The untargeted metabolomics workflow. See the documentation for details.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
@@ -793,6 +797,10 @@ How to use Please refer to the quick start guide."/>
 </span></span></span><span class="line"><span class="cl"><span class="s2">        The working directory. If None, the current working directory is used.
 </span></span></span><span class="line"><span class="cl"><span class="s2">    return_results : bool
 </span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to return the results. Default is False.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    only_process_single_files : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to only process the single files. Default is False.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    return_params_only : bool
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Whether to return the parameters only. Default is False.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Returns
 </span></span></span><span class="line"><span class="cl"><span class="s2">    -------
@@ -815,28 +823,27 @@ How to use Please refer to the quick start guide."/>
 </div>
 <div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
 <h3>Step 1. Define or load parameters<span class="absolute -mt-20" id="step-1-define-or-load-parameters"></span>
-    <a href="#step-1-define-or-load-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.</p>
+    <a href="#step-1-define-or-load-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners or scientists who are not familiar with the MS data.</p>
 <p><em>masscube</em> automatically read the MS data and apply the corresponding default parameters. Users can also customize the parameters by providing a parameter file.</p>
 <h3>Step 2. Load sample table and organize data<span class="absolute -mt-20" id="step-2-load-sample-table-and-organize-data"></span>
     <a href="#step-2-load-sample-table-and-organize-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A sample table is used to claim the name of samples and their groups. In most metabolomics studies, quality control samples and blank samples are included. <em>masscube</em> automatically apply normalization and statistical analysis if the sample table is provided.</p>
 <h3>Step 3. Single file processing<span class="absolute -mt-20" id="step-3-single-file-processing"></span>
-    <a href="#step-3-single-file-processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.</p>
-<p>To accelerate the processing, <em>masscube</em> supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (<code>cpu_ratio=0.8</code>) of the total CPU cores so that the computer can still be used for other tasks.</p>
-<p>To control the memory usage, the files are processed in batches. The default batch size is 100 (<code>batch_size=100</code>).</p>
-<p>More details about the feature detection can be found <a href="/docs/algorithms/feature_detection" >here</a>.</p>
+    <a href="#step-3-single-file-processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. By default, features are not grouped in this step to reduce computational cost, and grouping will be performed in the alignment step.</p>
+<p>To accelerate the processing, <em>masscube</em> supports parallel computing for multiple files. By default, the number of threads is set to be the 80% of the total CPU cores so that the computer can still be used for other tasks.</p>
+<p>To control the memory usage, the files are processed in batches. The default batch size is 100.</p>
 <h3>Step 4. Feature alignment<span class="absolute -mt-20" id="step-4-feature-alignment"></span>
-    <a href="#step-4-feature-alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. See <a href="/docs/algorithms/alignment" >alignment</a> for more details.</p>
+    <a href="#step-4-feature-alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Feature alignment aims to match the same feature across different samples. The alignment is based on the mass-to-charge ratio and retention time. The mass tolerance and retention time tolerance are critical for the alignment. It also includes the annotation of isotopes, charge states, adducts, and in-source fragments.</p>
 <h3>Step 5. Gap filling<span class="absolute -mt-20" id="step-5-gap-filling"></span>
-    <a href="#step-5-gap-filling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection. See <a href="/docs/algorithms/gap_filling" >gap filling</a> for more details.</p>
+    <a href="#step-5-gap-filling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Gap filling is critical for the downstream statistical analysis, and missing values are treated by forced peak detection.</p>
 <h3>Step 6. MS/MS annotation<span class="absolute -mt-20" id="step-6-msms-annotation"></span>
     <a href="#step-6-msms-annotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Compound annotation was performed by matching the experimental MS/MS spectra with the MS/MS library. The MS/MS similarity score is generated to indicate the confidence of the annotation.</p>
-<p>Flash entropy search is used to accelerate the annotation. <em>masscube</em> also provides analog search (i.e. hybrid search) for unknown discovery. See <a href="/docs/algorithms/annotation" >annotation</a> for more details.</p>
+<p>Flash entropy search is used to accelerate the annotation. <em>masscube</em> also provides analog search (i.e. hybrid search) for unknown discovery.</p>
 <h3>Step 7. Normalization<span class="absolute -mt-20" id="step-7-normalization"></span>
-    <a href="#step-7-normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). <em>masscube</em> provides multiple post-acquisition normalization algorithms to address the normalization issue. See <a href="/docs/algorithms/normalization" >normalization</a> for more details.</p>
+    <a href="#step-7-normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Two types of normalization could be needed in metabolomics to address the systematic signal drifts and the sample-to-sample variation (i.e. total amount/concentration difference). <em>masscube</em> provides multiple post-acquisition normalization algorithms to address the normalization issue.</p>
 <h3>Step 8. Statistical analysis<span class="absolute -mt-20" id="step-8-statistical-analysis"></span>
-    <a href="#step-8-statistical-analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the <code>statistics</code> folder. See <a href="/docs/algorithms/statistics" >statistics</a> for more details.</p>
+    <a href="#step-8-statistical-analysis" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Univariate and multivariate statistical analysis will be performed if sample table is provided. The results will be saved in the <code>statistics</code> folder.</p>
 <h3>Step 9. Data visualization<span class="absolute -mt-20" id="step-9-data-visualization"></span>
-    <a href="#step-9-data-visualization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis. See <a href="/docs/algorithms/visualization" >visualization</a> for more details.</p>
+    <a href="#step-9-data-visualization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis.</p>
 </div>
 
         </div>

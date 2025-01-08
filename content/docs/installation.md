@@ -7,8 +7,8 @@ weight: 1
 
 Visit the [official Python website](https://www.python.org/) to download Python. **Python 3.9-3.11** is recommended.
 
-{{% details title="Download Python 3.11" closed="true" %}}
-Download [Python 3.11](https://www.python.org/downloads/release/python-3117/).
+{{% details title="Download Python 3.11.7" closed="true" %}}
+Download [Python 3.11.7](https://www.python.org/downloads/release/python-3117/).
 {{% /details %}}
 
 **IMPORTANT**: Make sure to check the box that says "Add Python to PATH" during installation.
@@ -42,7 +42,8 @@ dependencies = [
     "matplotlib>=3.8.2",
     "ms_entropy==1.2.2",
     "scikit-learn>=1.3.2",
-    "statsmodels>=0.14.2"
+    "statsmodels>=0.14.2",
+    "umap-learn>=0.5.7",
 ]
 ```
 

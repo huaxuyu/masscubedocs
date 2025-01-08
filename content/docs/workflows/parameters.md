@@ -53,9 +53,9 @@ From the [template](https://github.com/huaxuyu/masscubedocs/blob/main/content/do
 | run_statistics       | no          | whether to perform statistical analysis                                              |
 | plot_bpc             | yes         | whether to plot base peak chromatograms                                              |
 | plot_ms2             | yes         | whether to plot mirror plots for MS2 matching                                        |
+| plot_normalization   | yes         | whether to plot normalization results                                                |
 | quant_method         | peak_height | value for quantification and output, "peak_height", "peak_area" or "top_average"     |
-| by_group_name        |             | group name for classification                                                        |
 
 ## More about parameters
 
-Almost all parameters in _masscube_ are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](/docs/api/) for more details.
+Much more parameters in _masscube_ are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the [API documentation](/content/docs/api/_index.md) for more details.

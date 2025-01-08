@@ -34,9 +34,9 @@ my_project
 
 1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../workflows/data_preparation).
 
-2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). It's **optional**. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please specify if a sample is blank or qc from the "is_blank" and "is_qc" columns, respectively.
+2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). You could also use MassCube to [generate](../workflows/data_preparation.md) a sample table and edit. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please specify if a sample is blank or qc from the "is_blank" and "is_qc" columns, respectively.
 
-3. `parameters.csv` file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from [here](https://huaxuyu.github.io/masscube_parameters/). A template can also be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). It's **optional**. If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
+3. `parameters.csv` file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from [here](https://huaxuyu.github.io/masscube_parameters/) or download a template [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
 
 4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/11363475). For faster database loading, please download and use the .pkl format.
 
@@ -69,11 +69,13 @@ project/
 ├── data
 ├── sample_table.csv
 ├── parameters.csv
+├── mzrt_list.csv (optional)
 ├── project_files
 │   ├── data_processing_metadata_[DATE].pkl
 │   ├── features.msp
 │   └── ...
 ├── aligned_feature_table.txt
+|── normalized_feature_table.txt (if signal normalization applied)
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -87,6 +89,10 @@ project/
 │   ├── compound2.png
 │   └── ...
 ├── statistical_analysis
+├── normalization results
+|   ├──feature_0_normalization.png
+|   ├──feature_1_normalization.png
+|   └── ...
 ├── ...
 ```
 
@@ -96,5 +102,6 @@ project/
 4. `chromatograms` folder: a folder containing the chromatogram for each sample.
 5. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.
 6. `statistical_analysis` folder: a folder containing the statistical analysis results.
+7. `normalization results` folder: a folder containing the normalization results (if applied).
 
 {{% /steps %}}

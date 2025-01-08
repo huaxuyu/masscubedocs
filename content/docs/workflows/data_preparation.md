@@ -58,7 +58,7 @@ A sample table (.csv) is used to claim the name of samples and their groups incl
 
 For large-scale metabolomics data, it's not easy to prepare the sample table manually. In MassCube, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.
 
-### Quickly generate sample table
+### Automatically generate sample table
 
 In the project folder, open a terminal and run the following command:
 
@@ -78,5 +78,5 @@ my_project
 ```
 
 {{< callout type="warnings" >}}
-You need to further specify the groups in the generated sample table.
+You need to further edit the generated sample table to specify QCs, blanks and sample groups.
 {{< /callout >}}
