@@ -12,8 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>params – MassCube</title>
-  <meta name="description" content="This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.
-Overview Params Class: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing. Helper Functions: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges." />
+  <meta name="description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/params/" itemprop="url" />
@@ -22,21 +21,18 @@ Overview Params Class: A class to store, manage, and validate parameters for var
   
 
 <meta property="og:title" content="params" />
-<meta property="og:description" content="This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.
-Overview Params Class: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing. Helper Functions: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges." />
+<meta property="og:description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/params/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="params">
-<meta itemprop="description" content="This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.
-Overview Params Class: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing. Helper Functions: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges.">
+<meta itemprop="description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file.">
 
-<meta itemprop="wordCount" content="599">
+<meta itemprop="wordCount" content="908">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="params"/>
-<meta name="twitter:description" content="This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.
-Overview Params Class: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing. Helper Functions: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges."/>
+<meta name="twitter:description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -700,15 +696,19 @@ Overview Params Class: A class to store, manage, and validate parameters for var
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_ms_info">find_ms_info
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#constants">Constants
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#parameter_rages">PARAMETER_RAGES
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#valid-parameter-ranges">valid parameter ranges
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#parameter_default">PARAMETER_DEFAULT
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#default-parameters">default parameters
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -736,158 +736,231 @@ Overview Params Class: A class to store, manage, and validate parameters for var
 
         <div class="content">
           <h1>params</h1>
-          <p>This module defines and manages parameters for mass spectrometry data analysis, including feature detection, alignment, normalization, and statistical analysis. It provides functionalities to read, validate, and output parameters, as well as to prepare workflows for untargeted metabolomics.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><strong>Params Class</strong>: A class to store, manage, and validate parameters for various stages of mass spectrometry data processing.</li>
-<li><strong>Helper Functions</strong>: Functions to determine mass spectrometry (MS) type, ion mode, and to validate parameter ranges.</li>
-</ul>
-<hr>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>params</code> module defines a class <code>Params</code> to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function <code>find_ms_info</code> to determine the type of mass spectrometer and ionization mode from a raw file.</p>
 <h2>Classes<span class="absolute -mt-20" id="classes"></span>
     <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>Params</code><span class="absolute -mt-20" id="params"></span>
-    <a href="#params" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to store and manage parameters for the project and individual files in mass spectrometry data processing.</p>
+    <a href="#params" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to store and manage parameters for mass spectrometry data processing.</p>
 <p><strong>Attributes:</strong></p>
 <ul>
-<li>
-<p><strong>Project-Related:</strong></p>
-<ul>
+<li><code>sample_names</code> (list): Sample names without extension.</li>
+<li><code>sample_abs_paths</code> (list): Absolute paths of the raw MS data.</li>
+<li><code>sample_metadata</code> (DataFrame): Sample metadata.</li>
 <li><code>project_dir</code> (str): Project directory.</li>
-<li><code>sample_names</code> (list of str): List of raw file paths (without extension).</li>
-<li><code>sample_groups</code> (list of str): List of sample group names.</li>
-<li><code>sample_group_num</code> (int): Number of sample groups.</li>
-<li><code>sample_dir</code> (str): Directory for sample information.</li>
-<li><code>single_file_dir</code> (str): Directory for single file output.</li>
-<li><code>annotation_dir</code> (str): Directory for annotation output.</li>
-<li><code>chromatogram_dir</code> (str): Directory for chromatogram output.</li>
-<li><code>statistics_dir</code> (str): Directory for statistical analysis output.</li>
-</ul>
-</li>
-<li>
-<p><strong>MS Data Acquisition:</strong></p>
-<ul>
-<li><code>rt_range</code> (list of float): Retention time range in minutes, default [0.0, 1000.0].</li>
-<li><code>ion_mode</code> (str): Ionization mode, either &ldquo;positive&rdquo; or &ldquo;negative&rdquo;.</li>
-</ul>
-</li>
-<li>
-<p><strong>Feature Detection:</strong></p>
-<ul>
-<li><code>mz_tol_ms1</code> (float): m/z tolerance for MS1, default 0.01.</li>
-<li><code>mz_tol_ms2</code> (float): m/z tolerance for MS2, default 0.015.</li>
-<li><code>int_tol</code> (int): Intensity tolerance, default 30000 for Orbitrap and 1000 for other instruments.</li>
-<li><code>roi_gap</code> (int): Gap within a feature, default 30.</li>
-<li><code>ppr</code> (float): Peak correlation threshold for feature grouping, default 0.7.</li>
-</ul>
-</li>
-<li>
-<p><strong>Feature Alignment:</strong></p>
-<ul>
-<li><code>align_mz_tol</code> (float): m/z tolerance for MS1, default 0.01.</li>
-<li><code>align_rt_tol</code> (float): Retention time tolerance, default 0.2.</li>
-<li><code>run_rt_correction</code> (bool): Whether to perform retention time correction, default True.</li>
-<li><code>min_scan_num_for_alignment</code> (int): Minimum scan number for feature alignment, default 6.</li>
-</ul>
-</li>
-<li>
-<p><strong>Feature Annotation:</strong></p>
-<ul>
-<li><code>msms_library</code> (str): Path to the MS/MS library file.</li>
-<li><code>ms2_sim_tol</code> (float): MS2 similarity tolerance, default 0.7.</li>
-</ul>
-</li>
-<li>
-<p><strong>Normalization:</strong></p>
-<ul>
-<li><code>run_normalization</code> (bool): Whether to normalize the data, default False.</li>
-<li><code>normalization_method</code> (str): Normalization method, default &ldquo;pqn&rdquo; (probabilistic quotient normalization).</li>
-</ul>
-</li>
-<li>
-<p><strong>Output:</strong></p>
-<ul>
-<li><code>output_single_file</code> (bool): Whether to output processed individual files as CSV, default False.</li>
-<li><code>output_aligned_file</code> (bool): Whether to output aligned features as CSV, default False.</li>
-</ul>
-</li>
-<li>
-<p><strong>Statistical Analysis:</strong></p>
-<ul>
-<li><code>run_statistics</code> (bool): Whether to perform statistical analysis, default False.</li>
-</ul>
-</li>
-<li>
-<p><strong>Visualization:</strong></p>
-<ul>
-<li><code>plot_bpc</code> (bool): Whether to plot base peak chromatogram, default False.</li>
-<li><code>plot_ms2</code> (bool): Whether to plot MS2 mirror plots for matching, default False.</li>
-</ul>
-</li>
+<li><code>sample_dir</code> (str): Directory for the raw MS data.</li>
+<li><code>single_file_dir</code> (str): Directory for the single file output.</li>
+<li><code>tmp_file_dir</code> (str): Directory for the intermediate file output.</li>
+<li><code>ms2_matching_dir</code> (str): Directory for the MS2 matching output.</li>
+<li><code>bpc_dir</code> (str): Directory for the base peak chromatogram output.</li>
+<li><code>project_file_dir</code> (str): Directory for the project files.</li>
+<li><code>normalization_dir</code> (str): Directory for the normalization output.</li>
+<li><code>statistics_dir</code> (str): Directory for the statistical analysis output.</li>
+<li><code>problematic_files</code> (dict): Problematic files.</li>
+<li><code>file_name</code> (str): File name of the raw data.</li>
+<li><code>file_path</code> (str): Absolute path of the raw data.</li>
+<li><code>ion_mode</code> (str): MS ion mode.</li>
+<li><code>ms_type</code> (str): Type of MS.</li>
+<li><code>is_centroid</code> (bool): Whether the raw data is centroid data.</li>
+<li><code>file_format</code> (str): File type in lower case.</li>
+<li><code>time</code> (datetime): When the data file was acquired.</li>
+<li><code>scan_time_unit</code> (str): Time unit of the scan time.</li>
+<li><code>mz_lower_limit</code> (float): Lower limit of m/z in Da.</li>
+<li><code>mz_upper_limit</code> (float): Upper limit of m/z in Da.</li>
+<li><code>rt_lower_limit</code> (float): Lower limit of RT in minutes.</li>
+<li><code>rt_upper_limit</code> (float): Upper limit of RT in minutes.</li>
+<li><code>scan_levels</code> (list): Scan levels to be read.</li>
+<li><code>centroid_mz_tol</code> (float): m/z tolerance for centroiding.</li>
+<li><code>ms1_abs_int_tol</code> (float): Absolute intensity threshold for MS1.</li>
+<li><code>ms2_abs_int_tol</code> (float): Absolute intensity threshold for MS2.</li>
+<li><code>ms2_rel_int_tol</code> (float): Relative intensity threshold to base peak for MS2.</li>
+<li><code>precursor_mz_offset</code> (float): Offset for MS2 m/z range in Da.</li>
+<li><code>mz_tol_ms1</code> (float): m/z tolerance for MS1.</li>
+<li><code>mz_tol_ms2</code> (float): m/z tolerance for MS2.</li>
+<li><code>feature_gap_tol</code> (int): Gap tolerance within a feature.</li>
+<li><code>batch_size</code> (int): Batch size for parallel processing.</li>
+<li><code>percent_cpu_to_use</code> (float): Percentage of CPU to use.</li>
+<li><code>group_features_single_file</code> (bool): Whether to group features in a single file.</li>
+<li><code>scan_scan_cor_tol</code> (float): Scan-to-scan correlation tolerance for feature grouping.</li>
+<li><code>mz_tol_feature_grouping</code> (float): m/z tolerance for feature grouping.</li>
+<li><code>rt_tol_feature_grouping</code> (float): RT tolerance for feature grouping.</li>
+<li><code>valid_charge_states</code> (list): Valid charge states for feature grouping.</li>
+<li><code>mz_tol_alignment</code> (float): m/z tolerance for alignment.</li>
+<li><code>rt_tol_alignment</code> (float): RT tolerance for alignment.</li>
+<li><code>correct_rt</code> (bool): Whether to perform RT correction.</li>
+<li><code>scan_number_cutoff</code> (int): Feature with non-zero scan number greater than the cutoff will be aligned.</li>
+<li><code>detection_rate_cutoff</code> (float): Features detected need to be &gt;rate*(qc+sample).</li>
+<li><code>merge_features</code> (bool): Whether to merge features with almost the same m/z and RT.</li>
+<li><code>mz_tol_merge_features</code> (float): m/z tolerance for merging features.</li>
+<li><code>rt_tol_merge_features</code> (float): RT tolerance for merging features.</li>
+<li><code>group_features_after_alignment</code> (bool): Whether to group features after alignment.</li>
+<li><code>fill_gaps</code> (bool): Whether to fill the gaps in the aligned features.</li>
+<li><code>gap_filling_method</code> (str): Method for gap filling.</li>
+<li><code>gap_filling_rt_window</code> (float): RT window for finding local maximum.</li>
+<li><code>ms2_library_path</code> (str): Path to the MS2 library.</li>
+<li><code>ms2_sim_tol</code> (float): MS2 similarity tolerance.</li>
+<li><code>fuzzy_search</code> (bool): Whether to perform fuzzy search.</li>
+<li><code>sample_normalization</code> (bool): Whether to normalize the data based on total sample amount/concentration.</li>
+<li><code>sample_norm_method</code> (str): Sample normalization method.</li>
+<li><code>signal_normalization</code> (bool): Whether to run feature-wised normalization to correct systematic signal drift.</li>
+<li><code>signal_norm_method</code> (str): Normalization method for signal drift.</li>
+<li><code>run_statistics</code> (bool): Whether to perform statistical analysis.</li>
+<li><code>plot_bpc</code> (bool): Whether to plot base peak chromatograms.</li>
+<li><code>plot_ms2</code> (bool): Whether to plot mirror plots for MS2 matching.</li>
+<li><code>plot_normalization</code> (bool): Whether to plot the normalization results.</li>
+<li><code>by_group_name</code> (str): Group name for classifier building.</li>
+<li><code>output_single_file</code> (bool): Whether to output the processed individual files to a csv file.</li>
+<li><code>output_ms1_scans</code> (bool): Whether to output all MS1 scans to a pickle file for faster data reloading.</li>
+<li><code>output_aligned_file</code> (bool): Whether to output aligned features to a csv file.</li>
+<li><code>quant_method</code> (str): Value for quantification and output.</li>
 </ul>
 <p><strong>Methods:</strong></p>
 <ul>
-<li><code>__init__(self)</code>: Initializes a Params object with default values.</li>
-<li><code>read_parameters_from_csv(self, path)</code>: Reads parameters from a CSV file.</li>
-<li><code>_untargeted_metabolomics_workflow_preparation(self)</code>: Prepares parameters for an untargeted metabolomics workflow.</li>
-<li><code>set_default(self, ms_type, ion_mode)</code>: Sets default parameters based on the type of mass spectrometer and ionization mode.</li>
-<li><code>check_parameters(self)</code>: Validates the parameters using predefined ranges.</li>
-<li><code>output_parameters(self, path, format=&quot;json&quot;)</code>: Outputs the parameters to a file, currently only supports JSON format.</li>
+<li><code>read_parameters_from_csv(path)</code>: Read parameters from a CSV file.</li>
+<li><code>read_sample_metadata(path)</code>: Read sample metadata from a CSV file.</li>
+<li><code>_untargeted_metabolomics_workflow_preparation()</code>: Prepare the parameters for the untargeted metabolomics workflow.</li>
+<li><code>set_default(ms_type, ion_mode)</code>: Set the parameters by the type of MS.</li>
+<li><code>check_parameters()</code>: Check if the parameters are correct using <code>PARAMETER_RAGES</code>.</li>
+<li><code>output_parameters(path, format=&quot;json&quot;)</code>: Output the parameters to a file.</li>
 </ul>
-<hr>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>find_ms_info(file_name)</code></p>
-<p>Determines the type of mass spectrometer and ionization mode from a raw file.</p>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>find_ms_info<span class="absolute -mt-20" id="find_ms_info"></span>
+    <a href="#find_ms_info" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_ms_info(file_name)</code></p>
+<p>Find the type of mass spectrometer and ionization mode from the raw file.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>file_name</code> (str): The file name of the raw MS data file.</li>
+<li><code>file_name</code> (str): The file name of the raw file.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>ms_type</code> (str): The type of mass spectrometer (&ldquo;orbitrap&rdquo; or &ldquo;tof&rdquo;).</li>
-<li><code>ion_mode</code> (str): The ionization mode (&ldquo;positive&rdquo; or &ldquo;negative&rdquo;).</li>
-<li><code>centroid</code> (bool): Whether the data is centroided.</li>
+<li><code>ms_type</code> (str): The type of MS, &ldquo;orbitrap&rdquo;, &ldquo;qtof&rdquo;, &ldquo;tripletof&rdquo; or &ldquo;others&rdquo;.</li>
+<li><code>ion_mode</code> (str): The ion mode, &ldquo;positive&rdquo; or &ldquo;negative&rdquo;.</li>
+<li><code>centroid</code> (bool): Whether the data is centroid data.</li>
 </ul>
-<hr>
 <h2>Constants<span class="absolute -mt-20" id="constants"></span>
-    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>PARAMETER_RAGES</code><span class="absolute -mt-20" id="parameter_rages"></span>
-    <a href="#parameter_rages" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary containing the acceptable ranges for various parameters.</p>
-<ul>
-<li><strong>Keys and Values:</strong>
-<ul>
-<li><code>&quot;rt_start&quot;</code>: [0.0, 1000.0]</li>
-<li><code>&quot;rt_end&quot;</code>: [0.0, 1000.0]</li>
-<li><code>&quot;mz_tol_ms1&quot;</code>: [0.0, 0.02]</li>
-<li><code>&quot;mz_tol_ms2&quot;</code>: [0.0, 0.02]</li>
-<li><code>&quot;int_tol&quot;</code>: [0, 1e10]</li>
-<li><code>&quot;roi_gap&quot;</code>: [0, 50]</li>
-<li><code>&quot;min_scan_num_for_alignment&quot;</code>: [0, 50]</li>
-<li><code>&quot;align_mz_tol&quot;</code>: [0.0, 0.02]</li>
-<li><code>&quot;align_rt_tol&quot;</code>: [0.0, 2.0]</li>
-<li><code>&quot;ppr&quot;</code>: [0.5, 1.0]</li>
-<li><code>&quot;ms2_sim_tol&quot;</code>: [0.0, 1.0]</li>
-</ul>
-</li>
-</ul>
-<h3><code>PARAMETER_DEFAULT</code><span class="absolute -mt-20" id="parameter_default"></span>
-    <a href="#parameter_default" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary containing default values for various parameters.</p>
-<ul>
-<li><strong>Keys and Values:</strong>
-<ul>
-<li><code>&quot;rt_start&quot;</code>: 0.0</li>
-<li><code>&quot;rt_end&quot;</code>: 1000.0</li>
-<li><code>&quot;mz_tol_ms1&quot;</code>: 0.01</li>
-<li><code>&quot;mz_tol_ms2&quot;</code>: 0.015</li>
-<li><code>&quot;int_tol&quot;</code>: 30000</li>
-<li><code>&quot;roi_gap&quot;</code>: 10</li>
-<li><code>&quot;min_scan_num_for_alignment&quot;</code>: 5</li>
-<li><code>&quot;align_mz_tol&quot;</code>: 0.01</li>
-<li><code>&quot;align_rt_tol&quot;</code>: 0.2</li>
-<li><code>&quot;ppr&quot;</code>: 0.7</li>
-<li><code>&quot;ms2_sim_tol&quot;</code>: 0.7</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>This documentation provides a clear and detailed overview of the <code>Params</code> class and associated functions, which are crucial for managing and validating parameters in mass spectrometry data processing. This should be useful for users who need to configure and customize their data analysis workflows.</p>
+    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>valid parameter ranges<span class="absolute -mt-20" id="valid-parameter-ranges"></span>
+    <a href="#valid-parameter-ranges" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>PARAMETER_RAGES</code></p>
+<p>A dictionary of valid parameter ranges.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_RAGES</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_lower_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_upper_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_lower_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_upper_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;centroid_mz_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms1_abs_int_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_abs_int_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e10</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_rel_int_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;precursor_mz_offset&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_ms1&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_ms2&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;feature_gap_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;scan_scan_cor_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_alignment&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_alignment&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;scan_number_cutoff&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;detection_rate_cutoff&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_merge_features&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_merge_features&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_sim_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>default parameters<span class="absolute -mt-20" id="default-parameters"></span>
+    <a href="#default-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>PARAMETER_DEFAULT</code></p>
+<p>A dictionary of default parameters.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_DEFAULT</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_lower_limit&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_upper_limit&#34;</span><span class="p">:</span> <span class="mf">100000.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_lower_limit&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_upper_limit&#34;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;centroid_mz_tol&#34;</span><span class="p">:</span> <span class="mf">0.005</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms1_abs_int_tol&#34;</span><span class="p">:</span> <span class="mf">1000.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_abs_int_tol&#34;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_rel_int_tol&#34;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;precursor_mz_offset&#34;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_ms1&#34;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_ms2&#34;</span><span class="p">:</span> <span class="mf">0.015</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;feature_gap_tol&#34;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;scan_scan_cor_tol&#34;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_alignment&#34;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_alignment&#34;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;scan_number_cutoff&#34;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;detection_rate_cutoff&#34;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_merge_features&#34;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_merge_features&#34;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_sim_tol&#34;</span><span class="p">:</span> <span class="mf">0.7</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
 
         </div>
         <div class="mt-16"></div>

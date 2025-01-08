@@ -12,8 +12,9 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>feature_grouping – MassCube</title>
-  <meta name="description" content="This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.
-Overview Isotope Annotation: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound. Adduct Annotation: Detects and annotates different adducts of a compound, which can appear due to various ionization processes." />
+  <meta name="description" content="Overview The feature_grouping module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.
+Functions group_features_after_alignment group_features_after_alignment(features, params: Params)
+Groups features after alignment based on the reference file." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/feature_grouping/" itemprop="url" />
@@ -22,21 +23,24 @@ Overview Isotope Annotation: Identifies isotopic patterns within the data and an
   
 
 <meta property="og:title" content="feature_grouping" />
-<meta property="og:description" content="This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.
-Overview Isotope Annotation: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound. Adduct Annotation: Detects and annotates different adducts of a compound, which can appear due to various ionization processes." />
+<meta property="og:description" content="Overview The feature_grouping module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.
+Functions group_features_after_alignment group_features_after_alignment(features, params: Params)
+Groups features after alignment based on the reference file." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/feature_grouping/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="feature_grouping">
-<meta itemprop="description" content="This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.
-Overview Isotope Annotation: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound. Adduct Annotation: Detects and annotates different adducts of a compound, which can appear due to various ionization processes.">
+<meta itemprop="description" content="Overview The feature_grouping module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.
+Functions group_features_after_alignment group_features_after_alignment(features, params: Params)
+Groups features after alignment based on the reference file.">
 
-<meta itemprop="wordCount" content="489">
+<meta itemprop="wordCount" content="487">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="feature_grouping"/>
-<meta name="twitter:description" content="This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.
-Overview Isotope Annotation: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound. Adduct Annotation: Detects and annotates different adducts of a compound, which can appear due to various ionization processes."/>
+<meta name="twitter:description" content="Overview The feature_grouping module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.
+Functions group_features_after_alignment group_features_after_alignment(features, params: Params)
+Groups features after alignment based on the reference file."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -345,12 +349,6 @@ Overview Isotope Annotation: Identifies isotopic patterns within the data and an
                 href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Functions</a>
-            </li>
-          <li>
-              <a
-                href="#usage"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Usage</a>
             </li>
           <li>
               <a
@@ -692,19 +690,27 @@ Overview Isotope Annotation: Identifies isotopic patterns within the data and an
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#annotate_isotope">annotate_isotope
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#group_features_after_alignment">group_features_after_alignment
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#annotate_in_source_fragment">annotate_in_source_fragment
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#group_features_single_file">group_features_single_file
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#annotate_adductd-mz_tol001-rt_tol005">annotate_adduct(d, mz_tol=0.01, rt_tol=0.05)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#generate_search_dict">generate_search_dict
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#peak_peak_correlation">peak_peak_correlation
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_isotope_signals">find_isotope_signals
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#scan_to_scan_cor_intensity">scan_to_scan_cor_intensity
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#scan_to_scan_correlation">scan_to_scan_correlation
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -712,31 +718,15 @@ Overview Isotope Annotation: Identifies isotopic patterns within the data and an
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#usage">Usage
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#isotope-annotation">Isotope Annotation
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#in-source-fragment-annotation">In-Source Fragment Annotation
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#adduct-annotation">Adduct Annotation
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#constants">Constants
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_adduct_mass_difference_pos_against_h">_ADDUCT_MASS_DIFFERENCE_POS_AGAINST_H
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#adduct_pos">ADDUCT_POS
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_adduct_mass_difference_neg_against_h">_ADDUCT_MASS_DIFFERENCE_NEG_AGAINST_H
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#adduct_neg">ADDUCT_NEG
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -764,122 +754,93 @@ Overview Isotope Annotation: Identifies isotopic patterns within the data and an
 
         <div class="content">
           <h1>feature_grouping</h1>
-          <p>This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><strong>Isotope Annotation</strong>: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound.</li>
-<li><strong>Adduct Annotation</strong>: Detects and annotates different adducts of a compound, which can appear due to various ionization processes.</li>
-<li><strong>In-Source Fragment Annotation</strong>: Identifies and annotates fragments that may form in the ion source, ensuring they are correctly associated with their parent compounds.</li>
-</ul>
-<hr>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>feature_grouping</code> module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.</p>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>annotate_isotope<span class="absolute -mt-20" id="annotate_isotope"></span>
-    <a href="#annotate_isotope" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>annotate_isotope(d, mz_tol=0.015, rt_tol=0.1, valid_intensity_ratio_range=[0.001, 1.2], charge_state_range=[1, 2])</code></p>
-<p>Annotates isotopes in the MS data by comparing m/z and retention time values.</p>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>group_features_after_alignment<span class="absolute -mt-20" id="group_features_after_alignment"></span>
+    <a href="#group_features_after_alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>group_features_after_alignment(features, params: Params)</code></p>
+<p>Groups features after alignment based on the reference file. This function requires reloading the raw data to examine the scan-to-scan correlation between features. The annotated feature groups are stored in the <code>feature_group_id</code> attribute of the AlignedFeature objects.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>d</code> (MSData object): An MSData object containing the detected regions of interest (ROIs).</li>
-<li><code>mz_tol</code> (float): m/z tolerance for identifying isotopes (default 0.015).</li>
-<li><code>rt_tol</code> (float): Retention time tolerance for identifying isotopes (default 0.1).</li>
-<li><code>valid_intensity_ratio_range</code> (list): Valid intensity ratio range between isotopes (default [0.001, 1.2]).</li>
-<li><code>charge_state_range</code> (list): The range of charge states to consider for isotopes (default [1, 2]).</li>
+<li><code>features</code> (list): A list of AlignedFeature objects.</li>
+<li><code>params</code> (Params object): A Params object that contains the parameters for feature grouping.</li>
+</ul>
+<h3>group_features_single_file<span class="absolute -mt-20" id="group_features_single_file"></span>
+    <a href="#group_features_single_file" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>group_features_single_file(d)</code></p>
+<p>Groups features from a single file based on the m/z, retention time, MS2, and scan-to-scan correlation. The annotated feature groups are stored in the <code>feature_group_id</code> attribute of the Feature objects.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>d</code> (MSData object): An MSData object containing the detected ROIs to be grouped.</li>
+</ul>
+<h3>generate_search_dict<span class="absolute -mt-20" id="generate_search_dict"></span>
+    <a href="#generate_search_dict" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>generate_search_dict(feature, adduct_form, ion_mode)</code></p>
+<p>Generates a search dictionary for feature grouping based on the adduct form and ionization mode.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>feature</code> (Feature object): The feature object to be grouped.</li>
+<li><code>adduct_form</code> (str): The adduct form of the feature.</li>
+<li><code>ion_mode</code> (str): The ionization mode, either &ldquo;positive&rdquo; or &ldquo;negative&rdquo;.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li>None. The function directly annotates the <code>d.rois</code> list with isotope information.</li>
+<li><code>dict</code>: A dictionary containing the possible adducts and in-source fragments.</li>
 </ul>
-<h3>annotate_in_source_fragment<span class="absolute -mt-20" id="annotate_in_source_fragment"></span>
-    <a href="#annotate_in_source_fragment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>annotate_in_source_fragment(d, mz_tol=0.01, rt_tol=0.05)</code></p>
-<p>Annotates in-source fragments by analyzing the MS data, focusing on peaks that may represent fragments of parent compounds.</p>
+<h3>find_isotope_signals<span class="absolute -mt-20" id="find_isotope_signals"></span>
+    <a href="#find_isotope_signals" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_isotope_signals(mz, signals, mz_tol=0.015, charge_state=1, num=5)</code></p>
+<p>Finds isotope patterns from the MS1 signals based on the m/z value and intensity.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>d</code> (MSData object): An MSData object containing the detected ROIs.</li>
-<li><code>mz_tol</code> (float): m/z tolerance for identifying in-source fragments (default 0.01).</li>
-<li><code>rt_tol</code> (float): Retention time tolerance for identifying in-source fragments (default 0.05).</li>
+<li><code>mz</code> (float): The m/z value of the feature.</li>
+<li><code>signals</code> (np.array): The MS1 signals as [[m/z, intensity], &hellip;].</li>
+<li><code>mz_tol</code> (float): The m/z tolerance to find isotopes (default 0.015 Da).</li>
+<li><code>charge_state</code> (int): The charge state of the feature (default 1).</li>
+<li><code>num</code> (int): The maximum number of isotopes to be found (default 5).</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li>None. The function annotates the <code>d.rois</code> list with in-source fragment information.</li>
+<li><code>numpy.array</code>: The m/z and intensity of the isotopes.</li>
 </ul>
-<h3><code>annotate_adduct(d, mz_tol=0.01, rt_tol=0.05)</code><span class="absolute -mt-20" id="annotate_adductd-mz_tol001-rt_tol005"></span>
-    <a href="#annotate_adductd-mz_tol001-rt_tol005" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Annotates adducts within the MS data by comparing m/z values and retention times, assuming different adducts of the same compound.</p>
+<h3>scan_to_scan_cor_intensity<span class="absolute -mt-20" id="scan_to_scan_cor_intensity"></span>
+    <a href="#scan_to_scan_cor_intensity" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>scan_to_scan_cor_intensity(a, b)</code></p>
+<p>Calculates the scan-to-scan correlation between two features using Pearson correlation based on their intensity profiles.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>d</code> (MSData object): An MSData object containing the detected ROIs.</li>
-<li><code>mz_tol</code> (float): m/z tolerance for identifying adducts (default 0.01).</li>
-<li><code>rt_tol</code> (float): Retention time tolerance for identifying adducts (default 0.05).</li>
+<li><code>a</code> (np.array): Intensity array of the first m/z.</li>
+<li><code>b</code> (np.array): Intensity array of the second m/z.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li>None. The function annotates the <code>d.rois</code> list with adduct information.</li>
+<li><code>float</code>: The scan-to-scan correlation between the two features.</li>
 </ul>
-<h3>peak_peak_correlation<span class="absolute -mt-20" id="peak_peak_correlation"></span>
-    <a href="#peak_peak_correlation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>peak_peak_correlation(roi1, roi2)</code></p>
-<p>Calculates the peak-peak correlation between two ROIs based on their intensity profiles.</p>
+<h3>scan_to_scan_correlation<span class="absolute -mt-20" id="scan_to_scan_correlation"></span>
+    <a href="#scan_to_scan_correlation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>scan_to_scan_correlation(feature_a, feature_b)</code></p>
+<p>Calculates the scan-to-scan correlation between two features using Pearson correlation based on their intensity profiles.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>roi1</code> (ROI object): The first ROI to compare.</li>
-<li><code>roi2</code> (ROI object): The second ROI to compare.</li>
+<li><code>feature_a</code> (Feature object): The first feature object.</li>
+<li><code>feature_b</code> (Feature object): The second feature object.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>pp_cor</code> (float): The peak-peak correlation value, where values close to 1 indicate strong correlation.</li>
+<li><code>float</code>: The scan-to-scan correlation between the two features.</li>
 </ul>
 <h3>get_charge_state<span class="absolute -mt-20" id="get_charge_state"></span>
-    <a href="#get_charge_state" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>get_charge_state(mz_seq)</code></p>
-<p>Determines the charge state of a compound based on the difference between m/z values in its isotope series.</p>
+    <a href="#get_charge_state" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>get_charge_state(mz_seq, valid_charge_states=[1,2])</code></p>
+<p>Determines the charge state of the isotopes based on the m/z sequence.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>mz_seq</code> (list of floats): A list of m/z values representing the isotope series.</li>
+<li><code>mz_seq</code> (list): A list of m/z values of isotopes.</li>
+<li><code>valid_charge_states</code> (list): A list of valid charge states (default [1,2]).</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>charge_state</code> (int): The inferred charge state, either 1 or 2.</li>
+<li><code>int</code>: The charge state of the isotopes.</li>
 </ul>
-<hr>
-<h2>Usage<span class="absolute -mt-20" id="usage"></span>
-    <a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Isotope Annotation<span class="absolute -mt-20" id="isotope-annotation"></span>
-    <a href="#isotope-annotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To annotate isotopes in your mass spectrometry data:</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">annotate_isotope</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">mz_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">rt_tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
-<h3>In-Source Fragment Annotation<span class="absolute -mt-20" id="in-source-fragment-annotation"></span>
-    <a href="#in-source-fragment-annotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To annotate in-source fragments:</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">annotate_in_source_fragment</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">mz_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">rt_tol</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
-<h3>Adduct Annotation<span class="absolute -mt-20" id="adduct-annotation"></span>
-    <a href="#adduct-annotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To annotate adducts in the MS data:</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">annotate_adduct</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">mz_tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">rt_tol</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
-<hr>
 <h2>Constants<span class="absolute -mt-20" id="constants"></span>
-    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>_ADDUCT_MASS_DIFFERENCE_POS_AGAINST_H</code><span class="absolute -mt-20" id="_adduct_mass_difference_pos_against_h"></span>
-    <a href="#_adduct_mass_difference_pos_against_h" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary containing the mass differences for common adducts in positive ion mode, relative to the proton adduct <code>[M+H]+</code>.</p>
-<h3><code>_ADDUCT_MASS_DIFFERENCE_NEG_AGAINST_H</code><span class="absolute -mt-20" id="_adduct_mass_difference_neg_against_h"></span>
-    <a href="#_adduct_mass_difference_neg_against_h" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary containing the mass differences for common adducts in negative ion mode, relative to the deprotonated molecule <code>[M-H]-</code>.</p>
+    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>ADDUCT_POS</code><span class="absolute -mt-20" id="adduct_pos"></span>
+    <a href="#adduct_pos" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary of positive adducts with the adduct form as the key and the m/z shift, charge state, and multiplier as the values.</p>
+<h3><code>ADDUCT_NEG</code><span class="absolute -mt-20" id="adduct_neg"></span>
+    <a href="#adduct_neg" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A dictionary of negative adducts with the adduct form as the key and the m/z shift, charge state, and multiplier as the values.</p>
 
         </div>
         <div class="mt-16"></div>

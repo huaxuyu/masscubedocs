@@ -3,54 +3,146 @@ title: "utils_functions"
 weight: 1
 ---
 
-This module provides utility functions for metabolomics data processing, including generating sample tables, obtaining timestamps from files, calculating ion masses, and estimating isotope distributions.
+## Overview
+
+The `utils_functions` module contains utility functions that are commonly used in the data processing and analysis of mass spectrometry data. The module includes functions for generating a sample table, getting timestamps for individual files, converting chemical formulas to m/z values, extracting signals from MS2 spectrum in string format, and converting signals to string format.
+
+## Functions
 
 ### generate_sample_table
 
 `generate_sample_table(path=None, output=True)`
 
-Generates a sample table from the mzML or mzXML files in a specified directory.
+Generate a sample table from the mzML or mzXML files in the specified path. The stucture of the path should be:
+
+```
+path
+├── data
+│   ├── sample1.mzml
+│   ├── sample2.mzml
+│   └── ...
+└── ...
+```
 
 **Parameters:**
 
-- `path` (str): The path to the directory containing the 'data' subdirectory with mzML or mzXML files. If not specified, the current working directory is used.
-- `output` (bool): If `True`, outputs the sample table to a CSV file.
+- `path` : str
+  Path to the main directory that contains a subdirectory 'data' with mzML or mzXML files.
+- `output` : bool
+  If True, output the sample table to a csv file.
 
-**Returns:**
+**Return:**
 
-- `pandas DataFrame` (if `output=False`): The sample table containing two columns: 'Sample' and 'Groups'.
+- `sample_table` : pandas DataFrame
+  A DataFrame with two columns: 'Sample' and 'Groups'.
 
-**Outputs:**
+**Output:**
 
-- `sample_table.csv` (if `output=True`): A CSV file with the sample table.
-
-**Usage:**
-
-```python
-sample_table = generate_sample_table("/path/to/project", output=True)
-```
+- `sample_table.csv` : csv file
+  A csv file with two columns: 'Sample' and 'Groups' in the specified path.
 
 ### get_timestamps
 
-`get_timestamps(path, output=True)`
+`get_timestamps(path=None, output=True)`
 
-Obtains timestamps for individual mzML or mzXML files and sorts the files by acquisition time.
+Get timestamps for individual files and sort the files by time. The stucture of the path should be:
+
+```
+path
+├── data
+│   ├── sample1.mzml
+│   ├── sample2.mzml
+│   └── ...
+└── ...
+```
 
 **Parameters:**
 
-- `path` (str): The path to the directory containing the 'data' subdirectory with mzML or mzXML files.
-- `output` (bool): If `True`, outputs the timestamps to a TXT file.
+- `path` : str
+  Path to the main directory that contains a subdirectory 'data' with mzML or mzXML files.
+- `output` : bool
+  If True, output the timestamps to a txt file with two columns: 'file_name' and 'aquisition_time'.
+
+**Return:**
+
+- `file_times` : list
+  A list of tuples with two elements: 'file_name' and 'aquisition_time'.
+
+**Output:**
+
+- `timestamps.txt` : txt file
+  A txt file with two columns: 'file_name' and 'aquisition_time' in the specified path.
+
+### formula_to_mz
+
+`formula_to_mz(formula, adduct, charge)`
+
+Calculate the m/z value of a molecule given its chemical formula, adduct and charge.
+
+**Parameters:**
+
+- `formula` : str
+  Chemical formula of the molecule.
+- `adduct` : str
+  Adduct of the molecule. The first character should be '+' or '-'. In particular,
+  for adduct like [M-H-H2O]-, use '-H3O' or '-H2OH'.
+- `charge` : int
+  Charge of the molecule. Positive for cations and negative for anions.
 
 **Returns:**
 
-- `list` or `pandas DataFrame` (if `output=False`): A list or DataFrame of tuples containing 'file_name' and 'acquisition_time'.
+- `mz` : float
+  The m/z value of the molecule.
 
-**Outputs:**
-
-- `timestamps.txt` (if `output=True`): A TXT file with the timestamps.
-
-**Usage:**
+**Examples:**
 
 ```python
-timestamps = get_timestamps("/path/to/project", output=True)
+formula_to_mz("C6H12O6", "+H", 1)
+# 181.070665
+
+formula_to_mz("C9H14N3O8P", "-H2OH", -1)
+# 304.034010
 ```
+
+### get_start_time
+
+`get_start_time(file_name)`
+
+Function to get the start time of the raw data.
+
+**Parameters:**
+
+- `file_name` : str
+  Absolute path of the raw data.
+
+### extract_signals_from_string
+
+`extract_signals_from_string(ms2)`
+
+Extract signals from MS2 spectrum in string format.
+
+**Parameters:**
+
+- `ms2` : str
+  MS2 spectrum in string format. Format: "mz1;intensity1|mz2;intensity2|..."
+
+**Returns:**
+
+- `peaks` : numpy.array
+  Peaks in numpy array format: [[mz1, intensity1], [mz2, intensity2], ...]
+
+### convert_signals_to_string
+
+`convert_signals_to_string(signals)`
+
+Convert peaks to string format.
+
+**Parameters:**
+
+- `signals` : numpy.array
+  MS2 signals organized as [[mz1, intensity1], [mz2, intensity2], ...]
+
+**Returns:**
+
+- `string` : str
+  Converted signals in string format. Format: "mz1;intensity1|mz2;intensity2|..."

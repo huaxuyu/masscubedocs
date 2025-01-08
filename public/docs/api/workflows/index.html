@@ -12,8 +12,11 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>workflows – MassCube</title>
-  <meta name="description" content="This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.
-feature_detection feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)" />
+  <meta name="description" content="Overview This module provides premade data processing workflows for untargeted metabolomics analysis. The workflows include feature detection, alignment, annotation, normalization, and statistical analysis. The module also includes functions for batch file processing and evaluating the data quality of raw files.
+Functions process_single_file process_single_file(file_name, params=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=False, ms2_library_path=None, output_dir=None)
+Performs untargeted feature detection for a single file.
+Parameters:
+file_name (str): Path to the raw file. params (Params object, optional): Parameters for feature detection." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/workflows/" itemprop="url" />
@@ -22,21 +25,30 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
   
 
 <meta property="og:title" content="workflows" />
-<meta property="og:description" content="This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.
-feature_detection feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)" />
+<meta property="og:description" content="Overview This module provides premade data processing workflows for untargeted metabolomics analysis. The workflows include feature detection, alignment, annotation, normalization, and statistical analysis. The module also includes functions for batch file processing and evaluating the data quality of raw files.
+Functions process_single_file process_single_file(file_name, params=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=False, ms2_library_path=None, output_dir=None)
+Performs untargeted feature detection for a single file.
+Parameters:
+file_name (str): Path to the raw file. params (Params object, optional): Parameters for feature detection." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/workflows/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="workflows">
-<meta itemprop="description" content="This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.
-feature_detection feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)">
+<meta itemprop="description" content="Overview This module provides premade data processing workflows for untargeted metabolomics analysis. The workflows include feature detection, alignment, annotation, normalization, and statistical analysis. The module also includes functions for batch file processing and evaluating the data quality of raw files.
+Functions process_single_file process_single_file(file_name, params=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=False, ms2_library_path=None, output_dir=None)
+Performs untargeted feature detection for a single file.
+Parameters:
+file_name (str): Path to the raw file. params (Params object, optional): Parameters for feature detection.">
 
-<meta itemprop="wordCount" content="393">
+<meta itemprop="wordCount" content="483">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="workflows"/>
-<meta name="twitter:description" content="This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.
-feature_detection feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)"/>
+<meta name="twitter:description" content="Overview This module provides premade data processing workflows for untargeted metabolomics analysis. The workflows include feature detection, alignment, annotation, normalization, and statistical analysis. The module also includes functions for batch file processing and evaluating the data quality of raw files.
+Functions process_single_file process_single_file(file_name, params=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=False, ms2_library_path=None, output_dir=None)
+Performs untargeted feature detection for a single file.
+Parameters:
+file_name (str): Path to the raw file. params (Params object, optional): Parameters for feature detection."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -392,9 +404,15 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
   
     <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
               <a
-                href="#"
+                href="#overview"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              ></a>
+              >Overview</a>
+            </li>
+          <li>
+              <a
+                href="#functions"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Functions</a>
             </li>
           </ul>
   
@@ -666,7 +684,15 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
     <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature_detection">feature_detection
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#overview">Overview
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#process_single_file">process_single_file
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -678,7 +704,7 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#dependencies">Dependencies
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#run_evaluation">run_evaluation
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -706,28 +732,30 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
 
         <div class="content">
           <h1>workflows</h1>
-          <p>This module summarizes several workflows and utilities for processing untargeted metabolomics data using various tools and packages. It provides comprehensive methods for feature detection, feature alignment, annotation, normalization, statistical analysis, and quality control. The workflows are designed to be flexible, allowing for parallel processing, and they include detailed steps for handling data from raw files to final feature tables.</p>
-<h3>feature_detection<span class="absolute -mt-20" id="feature_detection"></span>
-    <a href="#feature_detection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>feature_detection(file_name, params=None, cal_g_score=True, cal_a_score=True, anno_isotope=True, anno_adduct=True, anno_in_source_fragment=True, annotation=False, ms2_library_path=None, output_dir=None)</code></p>
-<p>Performs untargeted feature detection from a single file (e.g., <code>.mzML</code> or <code>.mzXML</code>).</p>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This module provides premade data processing workflows for untargeted metabolomics analysis. The workflows include feature detection, alignment, annotation, normalization, and statistical analysis. The module also includes functions for batch file processing and evaluating the data quality of raw files.</p>
+<h2>Functions<span class="absolute -mt-20" id="functions"></span>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>process_single_file<span class="absolute -mt-20" id="process_single_file"></span>
+    <a href="#process_single_file" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>process_single_file(file_name, params=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=False, ms2_library_path=None, output_dir=None)</code></p>
+<p>Performs untargeted feature detection for a single file.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>file_name</code> (str): Path to the raw data file.</li>
-<li><code>params</code> (Params object, optional): Parameters for feature detection. If <code>None</code>, default parameters are used.</li>
-<li><code>cal_g_score</code> (bool, default <code>True</code>): Whether to calculate the Gaussian similarity score for each ROI.</li>
-<li><code>anno_isotope</code> (bool, default <code>True</code>): Whether to annotate isotopes.</li>
-<li><code>anno_adduct</code> (bool, default <code>True</code>): Whether to annotate adducts.</li>
-<li><code>anno_in_source_fragment</code> (bool, default <code>True</code>): Whether to annotate in-source fragments.</li>
-<li><code>annotation</code> (bool, default <code>False</code>): Whether to annotate MS2 spectra using an MS2 library.</li>
-<li><code>ms2_library_path</code> (str, optional): Path to the MS2 library file.</li>
-<li><code>output_dir</code> (str, optional): Directory to save output files. If <code>None</code>, the output is saved in a default location.</li>
+<li><code>file_name</code> (str): Path to the raw file.</li>
+<li><code>params</code> (Params object, optional): Parameters for feature detection. If <code>None</code>, the default parameters are used based on the type of mass spectrometer.</li>
+<li><code>segment_feature</code> (bool, default <code>True</code>): Whether to segment the feature to peaks for distinguishing possible isomers.</li>
+<li><code>group_features</code> (bool, default <code>False</code>): Whether to group features by isotopes, adducts, and in-source fragments.</li>
+<li><code>evaluate_peak_shape</code> (bool, default <code>True</code>): Whether to evaluate the peak shape by calculating noise score and asymmetry factor.</li>
+<li><code>annotate_ms2</code> (bool, default <code>False</code>): Whether to annotate MS2 spectra.</li>
+<li><code>ms2_library_path</code> (str, optional): Path to the MS2 library.</li>
+<li><code>output_dir</code> (str, optional): The output directory for the single file. If <code>None</code>, the output is saved to the same directory as the raw file.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>d</code> (MSData object): An MSData object containing processed data.</li>
+<li><code>d</code> (MSData object): An MSData object containing the processed data.</li>
 </ul>
 <p><strong>Usage:</strong></p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">feature_detection</span><span class="p">(</span><span class="s2">&#34;sample.mzML&#34;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">custom_params</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ms2_library_path</span><span class="o">=</span><span class="s2">&#34;library.msp&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># use default parameters for processing a single file</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">feature_detection</span><span class="p">(</span><span class="s2">&#34;sample.mzML&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -737,18 +765,23 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
     </button>
   </div>
 </div>
-<hr>
 <h3>untargeted_metabolomics_workflow<span class="absolute -mt-20" id="untargeted_metabolomics_workflow"></span>
-    <a href="#untargeted_metabolomics_workflow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>untargeted_metabolomics_workflow(path=None, batch_size=100, cpu_ratio=0.8)</code></p>
-<p>Performs the full untargeted metabolomics workflow, including feature detection, alignment, annotation, normalization, and statistical analysis.</p>
+    <a href="#untargeted_metabolomics_workflow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>untargeted_metabolomics_workflow(path=None, return_results=False, only_process_single_files=False, return_params_only=False)</code></p>
+<p>The untargeted metabolomics workflow.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>path</code> (str, optional): Path to the working directory. If <code>None</code>, the current working directory is used.</li>
-<li><code>batch_size</code> (int, default <code>100</code>): Number of files to process in each batch.</li>
-<li><code>cpu_ratio</code> (float, default <code>0.8</code>): Ratio of CPU cores to use for parallel processing.</li>
+<li><code>path</code> (str, optional): The working directory. If <code>None</code>, the current working directory is used.</li>
+<li><code>return_results</code> (bool, default <code>False</code>): Whether to return the results.</li>
+<li><code>only_process_single_files</code> (bool, default <code>False</code>): Whether to only process the single files.</li>
+<li><code>return_params_only</code> (bool, default <code>False</code>): Whether to return the parameters only.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>features</code> (list): A list of features.</li>
+<li><code>params</code> (Params object): Parameters for the workflow.</li>
 </ul>
 <p><strong>Usage:</strong></p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">untargeted_metabolomics_workflow</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cpu_ratio</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">untargeted_metabolomics_workflow</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -758,18 +791,29 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
     </button>
   </div>
 </div>
-<hr>
 <h3>batch_file_processing<span class="absolute -mt-20" id="batch_file_processing"></span>
-    <a href="#batch_file_processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>batch_file_processing(path=None, batch_size=100, cpu_ratio=0.8)</code></p>
-<p>Processes multiple files in batch mode using the untargeted metabolomics workflow.</p>
+    <a href="#batch_file_processing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>batch_file_processing(path=None, segment_feature=True, group_features=False, evaluate_peak_shape=True, annotate_ms2=True, ms2_library_path=None, cpu_ratio=0.8, batch_size=100)</code></p>
+<p>Process single files using default parameters. This function is useful for batch processing of multiple files. Files from different ion modes are allowed, but parameters cannot be specified for individual files, and default parameters are used.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>path</code> (str, optional): Path to the working directory. If <code>None</code>, the current working directory is used.</li>
-<li><code>batch_size</code> (int, default <code>100</code>): Number of files to process in each batch.</li>
-<li><code>cpu_ratio</code> (float, default <code>0.8</code>): Ratio of CPU cores to use for parallel processing.</li>
+<li><code>path</code> (str, optional): The working directory. If <code>None</code>, the current working directory is used.</li>
+<li><code>segment_feature</code> (bool, default <code>True</code>): Whether to segment the feature to peaks for distinguishing possible isomers.</li>
+<li><code>group_features</code> (bool, default <code>False</code>): Whether to group features by isotopes, adducts, and in-source fragments.</li>
+<li><code>evaluate_peak_shape</code> (bool, default <code>True</code>): Whether to evaluate the peak shape by calculating noise score and asymmetry factor.</li>
+<li><code>annotate_ms2</code> (bool, default <code>True</code>): Whether to annotate MS2 spectra.</li>
+<li><code>ms2_library_path</code> (str, optional): The path to the MS2 library.</li>
+<li><code>cpu_ratio</code> (float, default <code>0.8</code>): The percentage of CPU cores to use.</li>
+<li><code>batch_size</code> (int, default <code>100</code>): The number of files to process in each batch.</li>
 </ul>
-<p><strong>Usage:</strong></p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">batch_file_processing</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;/path/to/project&#34;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cpu_ratio</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+<h3>run_evaluation<span class="absolute -mt-20" id="run_evaluation"></span>
+    <a href="#run_evaluation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>run_evaluation(path=None, zscore_threshold=-2)</code></p>
+<p>Evaluate the run and report the problematic files. The path to the project directory should be organized as follows:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>path
+├── single_files
+│   ├── sample1.txt
+│   ├── sample2.txt
+│   └── ...
+└── ...</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -779,25 +823,12 @@ feature_detection feature_detection(file_name, params=None, cal_g_score=True, ca
     </button>
   </div>
 </div>
-<hr>
-<h3>Dependencies<span class="absolute -mt-20" id="dependencies"></span>
-    <a href="#dependencies" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ensure that the following Python packages are installed:</p>
+<p>where single_files contains the processed files in txt format.</p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><code>os</code>, <code>multiprocessing</code>, <code>pickle</code>, <code>deepcopy</code>, <code>pandas</code>, <code>numpy</code>, <code>tqdm</code>, <code>importlib.metadata</code>, <code>scipy</code>, <code>time</code>, <code>json</code></li>
+<li><code>path</code> (str, optional): Path to the project directory.</li>
+<li><code>zscore_threshold</code> (float, default <code>-2</code>): The threshold of z-score for detecting problematic files.</li>
 </ul>
-<p>The module also relies on several internal modules and functions:</p>
-<ul>
-<li><code>MSData</code>, <code>get_start_time</code> from <code>.raw_data_utils</code></li>
-<li><code>Params</code>, <code>find_ms_info</code> from <code>.params</code></li>
-<li><code>annotate_isotope</code>, <code>annotate_adduct</code>, <code>annotate_in_source_fragment</code> from <code>.feature_grouping</code></li>
-<li><code>feature_alignment</code>, <code>gap_filling</code>, <code>output_feature_table</code> from <code>.alignment</code></li>
-<li><code>feature_annotation</code>, <code>annotate_rois</code>, <code>feature_annotation_mzrt</code> from <code>.annotation</code></li>
-<li><code>sample_normalization</code> from <code>.normalization</code></li>
-<li><code>plot_ms2_matching_from_feature_table</code> from <code>.visualization</code></li>
-<li><code>statistical_analysis</code> from <code>.stats</code></li>
-<li><code>convert_features_to_df</code>, <code>output_feature_to_msp</code> from <code>.feature_table_utils</code></li>
-</ul>
-<hr>
 
         </div>
         <div class="mt-16"></div>

@@ -3,131 +3,118 @@ title: "feature_grouping"
 weight: 1
 ---
 
-This module provides functionalities to group metabolic features in mass spectrometry data based on unique compounds. The module includes methods to annotate isotopes, adducts, and in-source fragments, which are essential for accurate interpretation of mass spectrometry data.
-
 ## Overview
 
-- **Isotope Annotation**: Identifies isotopic patterns within the data and annotates features that represent different isotopes of the same compound.
-- **Adduct Annotation**: Detects and annotates different adducts of a compound, which can appear due to various ionization processes.
-- **In-Source Fragment Annotation**: Identifies and annotates fragments that may form in the ion source, ensuring they are correctly associated with their parent compounds.
-
----
+The `feature_grouping` module provides functions to group features based on their m/z values, retention times, MS2 data, and scan-to-scan correlation. The module is designed for untargeted metabolomics workflows to group features that may represent the same compound, isotopes, in-source fragments, or adducts. The functions in this module are used to group features based on the reference file or within a single file.
 
 ## Functions
 
-### annotate_isotope
+### group_features_after_alignment
 
-`annotate_isotope(d, mz_tol=0.015, rt_tol=0.1, valid_intensity_ratio_range=[0.001, 1.2], charge_state_range=[1, 2])`
+`group_features_after_alignment(features, params: Params)`
 
-Annotates isotopes in the MS data by comparing m/z and retention time values.
-
-**Parameters:**
-
-- `d` (MSData object): An MSData object containing the detected regions of interest (ROIs).
-- `mz_tol` (float): m/z tolerance for identifying isotopes (default 0.015).
-- `rt_tol` (float): Retention time tolerance for identifying isotopes (default 0.1).
-- `valid_intensity_ratio_range` (list): Valid intensity ratio range between isotopes (default [0.001, 1.2]).
-- `charge_state_range` (list): The range of charge states to consider for isotopes (default [1, 2]).
-
-**Returns:**
-
-- None. The function directly annotates the `d.rois` list with isotope information.
-
-### annotate_in_source_fragment
-
-`annotate_in_source_fragment(d, mz_tol=0.01, rt_tol=0.05)`
-
-Annotates in-source fragments by analyzing the MS data, focusing on peaks that may represent fragments of parent compounds.
+Groups features after alignment based on the reference file. This function requires reloading the raw data to examine the scan-to-scan correlation between features. The annotated feature groups are stored in the `feature_group_id` attribute of the AlignedFeature objects.
 
 **Parameters:**
 
-- `d` (MSData object): An MSData object containing the detected ROIs.
-- `mz_tol` (float): m/z tolerance for identifying in-source fragments (default 0.01).
-- `rt_tol` (float): Retention time tolerance for identifying in-source fragments (default 0.05).
+- `features` (list): A list of AlignedFeature objects.
+- `params` (Params object): A Params object that contains the parameters for feature grouping.
 
-**Returns:**
+### group_features_single_file
 
-- None. The function annotates the `d.rois` list with in-source fragment information.
+`group_features_single_file(d)`
 
-### `annotate_adduct(d, mz_tol=0.01, rt_tol=0.05)`
-
-Annotates adducts within the MS data by comparing m/z values and retention times, assuming different adducts of the same compound.
+Groups features from a single file based on the m/z, retention time, MS2, and scan-to-scan correlation. The annotated feature groups are stored in the `feature_group_id` attribute of the Feature objects.
 
 **Parameters:**
 
-- `d` (MSData object): An MSData object containing the detected ROIs.
-- `mz_tol` (float): m/z tolerance for identifying adducts (default 0.01).
-- `rt_tol` (float): Retention time tolerance for identifying adducts (default 0.05).
+- `d` (MSData object): An MSData object containing the detected ROIs to be grouped.
 
-**Returns:**
+### generate_search_dict
 
-- None. The function annotates the `d.rois` list with adduct information.
+`generate_search_dict(feature, adduct_form, ion_mode)`
 
-### peak_peak_correlation
-
-`peak_peak_correlation(roi1, roi2)`
-
-Calculates the peak-peak correlation between two ROIs based on their intensity profiles.
+Generates a search dictionary for feature grouping based on the adduct form and ionization mode.
 
 **Parameters:**
 
-- `roi1` (ROI object): The first ROI to compare.
-- `roi2` (ROI object): The second ROI to compare.
+- `feature` (Feature object): The feature object to be grouped.
+- `adduct_form` (str): The adduct form of the feature.
+- `ion_mode` (str): The ionization mode, either "positive" or "negative".
 
 **Returns:**
 
-- `pp_cor` (float): The peak-peak correlation value, where values close to 1 indicate strong correlation.
+- `dict`: A dictionary containing the possible adducts and in-source fragments.
+
+### find_isotope_signals
+
+`find_isotope_signals(mz, signals, mz_tol=0.015, charge_state=1, num=5)`
+
+Finds isotope patterns from the MS1 signals based on the m/z value and intensity.
+
+**Parameters:**
+
+- `mz` (float): The m/z value of the feature.
+- `signals` (np.array): The MS1 signals as [[m/z, intensity], ...].
+- `mz_tol` (float): The m/z tolerance to find isotopes (default 0.015 Da).
+- `charge_state` (int): The charge state of the feature (default 1).
+- `num` (int): The maximum number of isotopes to be found (default 5).
+
+**Returns:**
+
+- `numpy.array`: The m/z and intensity of the isotopes.
+
+### scan_to_scan_cor_intensity
+
+`scan_to_scan_cor_intensity(a, b)`
+
+Calculates the scan-to-scan correlation between two features using Pearson correlation based on their intensity profiles.
+
+**Parameters:**
+
+- `a` (np.array): Intensity array of the first m/z.
+- `b` (np.array): Intensity array of the second m/z.
+
+**Returns:**
+
+- `float`: The scan-to-scan correlation between the two features.
+
+### scan_to_scan_correlation
+
+`scan_to_scan_correlation(feature_a, feature_b)`
+
+Calculates the scan-to-scan correlation between two features using Pearson correlation based on their intensity profiles.
+
+**Parameters:**
+
+- `feature_a` (Feature object): The first feature object.
+- `feature_b` (Feature object): The second feature object.
+
+**Returns:**
+
+- `float`: The scan-to-scan correlation between the two features.
 
 ### get_charge_state
 
-`get_charge_state(mz_seq)`
+`get_charge_state(mz_seq, valid_charge_states=[1,2])`
 
-Determines the charge state of a compound based on the difference between m/z values in its isotope series.
+Determines the charge state of the isotopes based on the m/z sequence.
 
 **Parameters:**
 
-- `mz_seq` (list of floats): A list of m/z values representing the isotope series.
+- `mz_seq` (list): A list of m/z values of isotopes.
+- `valid_charge_states` (list): A list of valid charge states (default [1,2]).
 
 **Returns:**
 
-- `charge_state` (int): The inferred charge state, either 1 or 2.
-
----
-
-## Usage
-
-### Isotope Annotation
-
-To annotate isotopes in your mass spectrometry data:
-
-```python
-annotate_isotope(d, mz_tol=0.01, rt_tol=0.1)
-```
-
-### In-Source Fragment Annotation
-
-To annotate in-source fragments:
-
-```python
-annotate_in_source_fragment(d, mz_tol=0.01, rt_tol=0.05)
-```
-
-### Adduct Annotation
-
-To annotate adducts in the MS data:
-
-```python
-annotate_adduct(d, mz_tol=0.01, rt_tol=0.05)
-```
-
----
+- `int`: The charge state of the isotopes.
 
 ## Constants
 
-### `_ADDUCT_MASS_DIFFERENCE_POS_AGAINST_H`
+### `ADDUCT_POS`
 
-A dictionary containing the mass differences for common adducts in positive ion mode, relative to the proton adduct `[M+H]+`.
+A dictionary of positive adducts with the adduct form as the key and the m/z shift, charge state, and multiplier as the values.
 
-### `_ADDUCT_MASS_DIFFERENCE_NEG_AGAINST_H`
+### `ADDUCT_NEG`
 
-A dictionary containing the mass differences for common adducts in negative ion mode, relative to the deprotonated molecule `[M-H]-`.
+A dictionary of negative adducts with the adduct form as the key and the m/z shift, charge state, and multiplier as the values.

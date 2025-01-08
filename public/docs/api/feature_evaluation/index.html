@@ -12,8 +12,11 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>feature_evaluation – MassCube</title>
-  <meta name="description" content="This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.
-Overview Gaussian Similarity Calculation: Estimates how closely the shape of a peak matches a Gaussian distribution. Noise Level Calculation: Measures the level of noise in the peak, which can indicate the reliability of the peak detection." />
+  <meta name="description" content="Overview This module provides tools for evaluating the quality of detected features in untargeted metabolomics data. The quality metrics include Gaussian similarity, noise level, and asymmetry factor, which can help assess the reliability and robustness of detected peaks.
+Functions calculate_gaussian_similarity calculate_gaussian_similarity(x, y)
+Calculates the Gaussian similarity of a peak by comparing its shape to a Gaussian distribution (Pearson product-moment correlation coefficients).
+Parameters:
+x (numpy array): Retention time values of the peak." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/feature_evaluation/" itemprop="url" />
@@ -22,21 +25,30 @@ Overview Gaussian Similarity Calculation: Estimates how closely the shape of a p
   
 
 <meta property="og:title" content="feature_evaluation" />
-<meta property="og:description" content="This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.
-Overview Gaussian Similarity Calculation: Estimates how closely the shape of a peak matches a Gaussian distribution. Noise Level Calculation: Measures the level of noise in the peak, which can indicate the reliability of the peak detection." />
+<meta property="og:description" content="Overview This module provides tools for evaluating the quality of detected features in untargeted metabolomics data. The quality metrics include Gaussian similarity, noise level, and asymmetry factor, which can help assess the reliability and robustness of detected peaks.
+Functions calculate_gaussian_similarity calculate_gaussian_similarity(x, y)
+Calculates the Gaussian similarity of a peak by comparing its shape to a Gaussian distribution (Pearson product-moment correlation coefficients).
+Parameters:
+x (numpy array): Retention time values of the peak." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/feature_evaluation/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="feature_evaluation">
-<meta itemprop="description" content="This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.
-Overview Gaussian Similarity Calculation: Estimates how closely the shape of a peak matches a Gaussian distribution. Noise Level Calculation: Measures the level of noise in the peak, which can indicate the reliability of the peak detection.">
+<meta itemprop="description" content="Overview This module provides tools for evaluating the quality of detected features in untargeted metabolomics data. The quality metrics include Gaussian similarity, noise level, and asymmetry factor, which can help assess the reliability and robustness of detected peaks.
+Functions calculate_gaussian_similarity calculate_gaussian_similarity(x, y)
+Calculates the Gaussian similarity of a peak by comparing its shape to a Gaussian distribution (Pearson product-moment correlation coefficients).
+Parameters:
+x (numpy array): Retention time values of the peak.">
 
-<meta itemprop="wordCount" content="411">
+<meta itemprop="wordCount" content="174">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="feature_evaluation"/>
-<meta name="twitter:description" content="This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.
-Overview Gaussian Similarity Calculation: Estimates how closely the shape of a peak matches a Gaussian distribution. Noise Level Calculation: Measures the level of noise in the peak, which can indicate the reliability of the peak detection."/>
+<meta name="twitter:description" content="Overview This module provides tools for evaluating the quality of detected features in untargeted metabolomics data. The quality metrics include Gaussian similarity, noise level, and asymmetry factor, which can help assess the reliability and robustness of detected peaks.
+Functions calculate_gaussian_similarity calculate_gaussian_similarity(x, y)
+Calculates the Gaussian similarity of a peak by comparing its shape to a Gaussian distribution (Pearson product-moment correlation coefficients).
+Parameters:
+x (numpy array): Retention time values of the peak."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -337,12 +349,6 @@ Overview Gaussian Similarity Calculation: Estimates how closely the shape of a p
                 href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Functions</a>
-            </li>
-          <li>
-              <a
-                href="#usage"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Usage</a>
             </li>
           </ul>
   
@@ -696,22 +702,6 @@ Overview Gaussian Similarity Calculation: Estimates how closely the shape of a p
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#calculate_asymmetry_factor">calculate_asymmetry_factor
         </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#usage">Usage
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#gaussian-similarity-calculation">Gaussian Similarity Calculation
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#noise-level-calculation">Noise Level Calculation
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#asymmetry-factor-calculation">Asymmetry Factor Calculation
-        </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
@@ -738,38 +728,32 @@ Overview Gaussian Similarity Calculation: Estimates how closely the shape of a p
 
         <div class="content">
           <h1>feature_evaluation</h1>
-          <p>This module provides tools for predicting the quality of mass spectrometry features based on their peak shape. It includes functions for calculating Gaussian similarity, noise level, and asymmetry factor, which are key indicators of peak quality.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><strong>Gaussian Similarity Calculation</strong>: Estimates how closely the shape of a peak matches a Gaussian distribution.</li>
-<li><strong>Noise Level Calculation</strong>: Measures the level of noise in the peak, which can indicate the reliability of the peak detection.</li>
-<li><strong>Asymmetry Factor Calculation</strong>: Evaluates the symmetry of a peak, with ideal peaks being more symmetrical.</li>
-</ul>
-<hr>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This module provides tools for evaluating the quality of detected features in untargeted metabolomics data. The quality metrics include Gaussian similarity, noise level, and asymmetry factor, which can help assess the reliability and robustness of detected peaks.</p>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
     <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>calculate_gaussian_similarity<span class="absolute -mt-20" id="calculate_gaussian_similarity"></span>
     <a href="#calculate_gaussian_similarity" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>calculate_gaussian_similarity(x, y)</code></p>
-<p>Calculates the similarity between the observed peak shape and a Gaussian shape using a dot product.</p>
+<p>Calculates the Gaussian similarity of a peak by comparing its shape to a Gaussian distribution (Pearson product-moment correlation coefficients).</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>x</code> (numpy array): Retention time values.</li>
-<li><code>y</code> (numpy array): Intensity values corresponding to the retention times.</li>
+<li><code>x</code> (numpy array): Retention time values of the peak.</li>
+<li><code>y</code> (numpy array): Intensity values of the peak.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>similarity</code> (float): Similarity score, where 1 indicates a perfect Gaussian shape and values closer to 0 indicate less similarity.</li>
+<li><code>similarity</code> (float): Gaussian similarity score, where higher values indicate better similarity to a Gaussian distribution.</li>
 </ul>
 <h3>calculate_noise_level<span class="absolute -mt-20" id="calculate_noise_level"></span>
-    <a href="#calculate_noise_level" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>calculate_noise_level(y, intensity_threshold=0.1)</code></p>
-<p>Calculates the noise level of a peak by analyzing intensity fluctuations.</p>
+    <a href="#calculate_noise_level" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>calculate_noise_level(y, rel_int_tol=0.05)</code></p>
+<p>Calculates the noise level of a peak by observing the intensity fluctuations in the peak.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>y</code> (numpy array): Intensity values of the peak.</li>
-<li><code>intensity_threshold</code> (float): Threshold relative to the maximum intensity for considering points in noise calculation (default 0.1).</li>
+<li><code>rel_int_tol</code> (float): Relative intensity tolerance to the base peak.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>noise_level</code> (float): Noise level of the peak, with higher values indicating more noise.</li>
+<li><code>noise_level</code> (float): Noise level, reflecting the signal fluctuation.</li>
 </ul>
 <h3>calculate_asymmetry_factor<span class="absolute -mt-20" id="calculate_asymmetry_factor"></span>
     <a href="#calculate_asymmetry_factor" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>calculate_asymmetry_factor(y)</code></p>
@@ -780,56 +764,8 @@ Overview Gaussian Similarity Calculation: Estimates how closely the shape of a p
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>asymmetry_factor</code> (float): Asymmetry factor, where values closer to 1 indicate more symmetrical peaks, and values deviating significantly from 1 indicate asymmetry.</li>
+<li><code>asymmetry_factor</code> (float): Asymmetry factor, indicating the peak shape asymmetry.</li>
 </ul>
-<hr>
-<h2>Usage<span class="absolute -mt-20" id="usage"></span>
-    <a href="#usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Gaussian Similarity Calculation<span class="absolute -mt-20" id="gaussian-similarity-calculation"></span>
-    <a href="#gaussian-similarity-calculation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Gaussian similarity is a measure of how closely a detected peak&rsquo;s shape matches a Gaussian distribution. This is useful for assessing the quality of the peak, as Gaussian-shaped peaks are often indicative of well-resolved features in chromatography.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">similarity</span> <span class="o">=</span> <span class="n">calculate_gaussian_similarity</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Gaussian Similarity: </span><span class="si">{</span><span class="n">similarity</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
-<h3>Noise Level Calculation<span class="absolute -mt-20" id="noise-level-calculation"></span>
-    <a href="#noise-level-calculation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The noise level is calculated by observing the intensity fluctuations in the peak. Peaks with higher noise levels may be less reliable and indicative of poor detection or background noise.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">noise_level</span> <span class="o">=</span> <span class="n">calculate_noise_level</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Noise Level: </span><span class="si">{</span><span class="n">noise_level</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
-<h3>Asymmetry Factor Calculation<span class="absolute -mt-20" id="asymmetry-factor-calculation"></span>
-    <a href="#asymmetry-factor-calculation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The asymmetry factor provides insight into the symmetry of the peak, which is another important characteristic of high-quality peaks. Ideal peaks should be symmetrical.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">asymmetry_factor</span> <span class="o">=</span> <span class="n">calculate_asymmetry_factor</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Asymmetry Factor: </span><span class="si">{</span><span class="n">asymmetry_factor</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
-    <button
-      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
-      title="Copy code"
-    >
-      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
-      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
-    </button>
-  </div>
-</div>
 
         </div>
         <div class="mt-16"></div>

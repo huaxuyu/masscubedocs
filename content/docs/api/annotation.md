@@ -7,15 +7,13 @@ weight: 1
 
 This module is designed for annotating metabolites based on their m/z, retention time, and MS/MS spectra.
 
----
-
 ## Functions
 
 ### load_ms2_db
 
 `load_ms2_db(path)`
 
-Load MS2 database in `pickle`, `json`, or `msp` format.
+Load MS2 database in pickle, msp, or json format.
 
 **Parameters:**
 

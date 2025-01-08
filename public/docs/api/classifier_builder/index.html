@@ -12,8 +12,10 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>classifier_builder – MassCube</title>
-  <meta name="description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
-Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction." />
+  <meta name="description" content="Overview This module provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data.
+Functions feature_selection feature_selection(X, y, k=None)
+Parameters:
+X (numpy.ndarray): The feature matrix. y (numpy.ndarray): The target variable. k (int): The number of features to select. By default, it is set to the number of samples divided by 10 (1/10 rule) and rounded up." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/classifier_builder/" itemprop="url" />
@@ -22,21 +24,27 @@ Overview This module is designed to help users build and use a random forest cla
   
 
 <meta property="og:title" content="classifier_builder" />
-<meta property="og:description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
-Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction." />
+<meta property="og:description" content="Overview This module provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data.
+Functions feature_selection feature_selection(X, y, k=None)
+Parameters:
+X (numpy.ndarray): The feature matrix. y (numpy.ndarray): The target variable. k (int): The number of features to select. By default, it is set to the number of samples divided by 10 (1/10 rule) and rounded up." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/classifier_builder/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="classifier_builder">
-<meta itemprop="description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
-Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction.">
+<meta itemprop="description" content="Overview This module provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data.
+Functions feature_selection feature_selection(X, y, k=None)
+Parameters:
+X (numpy.ndarray): The feature matrix. y (numpy.ndarray): The target variable. k (int): The number of features to select. By default, it is set to the number of samples divided by 10 (1/10 rule) and rounded up.">
 
-<meta itemprop="wordCount" content="348">
+<meta itemprop="wordCount" content="396">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="classifier_builder"/>
-<meta name="twitter:description" content="This module, classifier_builder.py, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.
-Overview This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction."/>
+<meta name="twitter:description" content="Overview This module provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data.
+Functions feature_selection feature_selection(X, y, k=None)
+Parameters:
+X (numpy.ndarray): The feature matrix. y (numpy.ndarray): The target variable. k (int): The number of features to select. By default, it is set to the number of samples divided by 10 (1/10 rule) and rounded up."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -732,110 +740,108 @@ Overview This module is designed to help users build and use a random forest cla
 
         <div class="content">
           <h1>classifier_builder</h1>
-          <p>This module, <code>classifier_builder.py</code>, provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data. Below is a detailed breakdown of the functionality provided.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This module is designed to help users build and use a random forest classification model from metabolomics data. It integrates data processing, feature selection, model training, cross-validation, and prediction. The module supports various steps, including untargeted metabolomics workflows and utility functions for managing data.</p>
-<hr>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This module provides a set of tools for building and using a random forest classifier for metabolomics data analysis. It supports feature selection, model training, cross-validation, and prediction on new data.</p>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
     <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>feature_selection<span class="absolute -mt-20" id="feature_selection"></span>
     <a href="#feature_selection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>feature_selection(X, y, k=None)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Selects the top <code>k</code> features based on statistical tests.</li>
-<li><strong>Parameters:</strong>
+<li><code>X</code> (numpy.ndarray): The feature matrix.</li>
+<li><code>y</code> (numpy.ndarray): The target variable.</li>
+<li><code>k</code> (int): The number of features to select. By default, it is set to the number of samples divided by 10 (1/10 rule) and rounded up.</li>
+</ul>
+<p><strong>Returns:</strong></p>
 <ul>
-<li><code>X</code>: Feature matrix.</li>
-<li><code>y</code>: Target variable.</li>
-<li><code>k</code>: Number of features to select.</li>
+<li><code>X_new</code> (numpy.ndarray): The selected features.</li>
+<li><code>selected_features</code> (numpy.ndarray): The indices of the selected features.</li>
 </ul>
-</li>
-<li><strong>Returns:</strong> Selected features and their indices.</li>
-</ul>
-<hr>
+<p>def feature_selection(X, y, k=None):
+&quot;&quot;&quot;
+Select features for the classification model.</p>
+<pre><code>Parameters
+----------
+X : two-dimensional numpy array
+    The feature matrix.
+y : one-dimensional numpy array
+    The target variable.
+k : int
+    The number of features to select. By default, it
+    is set to the number of samples divided by 10 (1/10 rule)
+    and rounded up.
+
+Returns
+-------
+X_new : two-dimensional numpy array
+    The fit-transformed feature matrix.
+selected_features : one-dimensional numpy array
+    The indices of the selected features.
+&quot;&quot;&quot;
+</code></pre>
 <h3>train_rdf_model<span class="absolute -mt-20" id="train_rdf_model"></span>
-    <a href="#train_rdf_model" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>train_rdf_model(X_train, y_train)</code>**</p>
+    <a href="#train_rdf_model" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>train_rdf_model(X_train, y_train)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Trains a random forest classifier.</li>
-<li><strong>Parameters:</strong>
+<li><code>X_train</code> (numpy.ndarray): The feature matrix for training.</li>
+<li><code>y_train</code> (numpy.ndarray): The target variable for training.</li>
+</ul>
+<p><strong>Returns:</strong></p>
 <ul>
-<li><code>X_train</code>: Training feature matrix.</li>
-<li><code>y_train</code>: Training target variable.</li>
+<li><code>model</code> (RandomForestClassifier): The trained random forest model.</li>
 </ul>
-</li>
-<li><strong>Returns:</strong> Trained random forest model.</li>
-</ul>
-<hr>
 <h3>cross_validate_model<span class="absolute -mt-20" id="cross_validate_model"></span>
     <a href="#cross_validate_model" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>cross_validate_model(X, y, model, k=5, random_state=0)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Performs k-fold cross-validation on the model.</li>
-<li><strong>Parameters:</strong>
+<li><code>X</code> (numpy.ndarray): The feature matrix.</li>
+<li><code>y</code> (numpy.ndarray): The target variable.</li>
+<li><code>model</code> (RandomForestClassifier): The trained random forest model.</li>
+<li><code>k</code> (int): The number of folds for cross-validation.</li>
+<li><code>random_state</code> (int): The random state for the shuffle in KFold.</li>
+</ul>
+<p><strong>Returns:</strong></p>
 <ul>
-<li><code>X</code>: Feature matrix.</li>
-<li><code>y</code>: Target variable.</li>
-<li><code>model</code>: Trained random forest model.</li>
-<li><code>k</code>: Number of folds.</li>
-<li><code>random_state</code>: Random state for reproducibility.</li>
+<li><code>scores</code> (list): The accuracy scores for each fold.</li>
 </ul>
-</li>
-<li><strong>Returns:</strong> List of accuracy scores for each fold.</li>
-</ul>
-<hr>
 <h3>predict<span class="absolute -mt-20" id="predict"></span>
     <a href="#predict" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>predict(model, X_test)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Predicts the class labels for test data.</li>
-<li><strong>Parameters:</strong>
+<li><code>model</code> (RandomForestClassifier): The trained random forest model.</li>
+<li><code>X_test</code> (numpy.ndarray): The feature matrix for testing.</li>
+</ul>
+<p><strong>Returns:</strong></p>
 <ul>
-<li><code>model</code>: Trained random forest model.</li>
-<li><code>X_test</code>: Test feature matrix.</li>
+<li><code>predictions</code> (numpy.ndarray): The predicted classes.</li>
 </ul>
-</li>
-<li><strong>Returns:</strong> Predicted class labels.</li>
-</ul>
-<hr>
 <h3>evaluate_model<span class="absolute -mt-20" id="evaluate_model"></span>
     <a href="#evaluate_model" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>evaluate_model(predictions, y_test)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Evaluates the model&rsquo;s performance using accuracy.</li>
-<li><strong>Parameters:</strong>
+<li><code>predictions</code> (numpy.ndarray): The predicted classes.</li>
+<li><code>y_test</code> (numpy.ndarray): The true classes.</li>
+</ul>
+<p><strong>Returns:</strong></p>
 <ul>
-<li><code>predictions</code>: Predicted class labels.</li>
-<li><code>y_test</code>: True class labels.</li>
+<li><code>accuracy</code> (float): The accuracy of the model.</li>
 </ul>
-</li>
-<li><strong>Returns:</strong> Accuracy score.</li>
-</ul>
-<hr>
 <h3>build_classifier<span class="absolute -mt-20" id="build_classifier"></span>
-    <a href="#build_classifier" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>build_classifier(path=None, feature_num=None, gaussian_cutoff=0.6, fill_percentage_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5, data_processed=False)</code></p>
+    <a href="#build_classifier" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>build_classifier(path=None, by_group=None, feature_num=None, gaussian_cutoff=0.6, detection_rate_cutoff=0.9, fill_ratio=0.5, cross_validation_k=5)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Builds a random forest classifier from raw or processed data.</li>
-<li><strong>Parameters:</strong>
-<ul>
-<li><code>path</code>: Project path.</li>
-<li><code>feature_num</code>: Number of features to select.</li>
-<li><code>gaussian_cutoff</code>: Cutoff for Gaussian similarity.</li>
-<li><code>fill_percentage_cutoff</code>: Minimum percentage of non-zero values to retain a feature.</li>
-<li><code>fill_ratio</code>: Ratio to replace zero values in the data.</li>
-<li><code>cross_validation_k</code>: Number of folds for cross-validation.</li>
-<li><code>data_processed</code>: Flag to indicate if the data is already processed.</li>
+<li><code>path</code> (str): Path to the project file.</li>
+<li><code>feature_num</code> (int): The number of features to select for building the model.</li>
+<li><code>gaussian_cutoff</code> (float): The Gaussian similarity cutoff. Default is 0.6.</li>
+<li><code>fill_ratio</code> (float): The zero values will be replaced by the minimum value in the feature matrix times fill_ratio. Default is 0.5.</li>
+<li><code>cross_validation_k</code> (int): The number of folds for cross-validation. Default is 5.</li>
 </ul>
-</li>
-<li><strong>Outputs:</strong> Saves the trained model, selected features, and evaluation metrics.</li>
-</ul>
-<hr>
 <h3>predict_samples<span class="absolute -mt-20" id="predict_samples"></span>
     <a href="#predict_samples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>predict_samples(path, mz_tol=0.01, rt_tol=0.3)</code></p>
+<p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Purpose:</strong> Predicts sample classes using the trained model.</li>
-<li><strong>Parameters:</strong>
-<ul>
-<li><code>path</code>: Project path.</li>
-<li><code>mz_tol</code>: m/z tolerance for matching features.</li>
-<li><code>rt_tol</code>: Retention time tolerance for matching features.</li>
-</ul>
-</li>
-<li><strong>Outputs:</strong> Saves predictions in the specified project path.</li>
+<li><code>path</code> (str): Path to the project file.</li>
+<li><code>mz_tol</code> (float): The m/z tolerance for matching the features. Default is 0.01.</li>
+<li><code>rt_tol</code> (float): The retention time tolerance for matching the features. Default is 0.3.</li>
 </ul>
 
         </div>

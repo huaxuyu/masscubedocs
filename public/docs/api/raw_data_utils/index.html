@@ -12,9 +12,8 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>raw_data_utils – MassCube</title>
-  <meta name="description" content="This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.
-Overview The main components of this module include:
-MSData Class: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data. Scan Class: A class that represents individual MS scans, including both MS1 and MS2 levels." />
+  <meta name="description" content="Overview The raw_data_utils module provides classes and functions for reading and processing raw mass spectrometry (MS) data files. The module supports reading mzML, mzXML, mzjson, and compressed mzjson files. The main class in this module is MSData, which models a single MS file and processes the raw data. The module also includes helper functions for cleaning MS/MS spectra, centroiding m/z and intensity sequences, and extracting EIC data.
+Classes MSData A class that models a single raw MS data file and processes the raw data." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/raw_data_utils/" itemprop="url" />
@@ -23,24 +22,21 @@ MSData Class: A class that models a single MS data file, allowing for the extrac
   
 
 <meta property="og:title" content="raw_data_utils" />
-<meta property="og:description" content="This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.
-Overview The main components of this module include:
-MSData Class: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data. Scan Class: A class that represents individual MS scans, including both MS1 and MS2 levels." />
+<meta property="og:description" content="Overview The raw_data_utils module provides classes and functions for reading and processing raw mass spectrometry (MS) data files. The module supports reading mzML, mzXML, mzjson, and compressed mzjson files. The main class in this module is MSData, which models a single MS file and processes the raw data. The module also includes helper functions for cleaning MS/MS spectra, centroiding m/z and intensity sequences, and extracting EIC data.
+Classes MSData A class that models a single raw MS data file and processes the raw data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/raw_data_utils/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="raw_data_utils">
-<meta itemprop="description" content="This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.
-Overview The main components of this module include:
-MSData Class: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data. Scan Class: A class that represents individual MS scans, including both MS1 and MS2 levels.">
+<meta itemprop="description" content="Overview The raw_data_utils module provides classes and functions for reading and processing raw mass spectrometry (MS) data files. The module supports reading mzML, mzXML, mzjson, and compressed mzjson files. The main class in this module is MSData, which models a single MS file and processes the raw data. The module also includes helper functions for cleaning MS/MS spectra, centroiding m/z and intensity sequences, and extracting EIC data.
+Classes MSData A class that models a single raw MS data file and processes the raw data.">
 
-<meta itemprop="wordCount" content="746">
+<meta itemprop="wordCount" content="534">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="raw_data_utils"/>
-<meta name="twitter:description" content="This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.
-Overview The main components of this module include:
-MSData Class: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data. Scan Class: A class that represents individual MS scans, including both MS1 and MS2 levels."/>
+<meta name="twitter:description" content="Overview The raw_data_utils module provides classes and functions for reading and processing raw mass spectrometry (MS) data files. The module supports reading mzML, mzXML, mzjson, and compressed mzjson files. The main class in this module is MSData, which models a single MS file and processes the raw data. The module also includes helper functions for cleaning MS/MS spectra, centroiding m/z and intensity sequences, and extracting EIC data.
+Classes MSData A class that models a single raw MS data file and processes the raw data."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -376,9 +372,9 @@ MSData Class: A class that models a single MS data file, allowing for the extrac
             </li>
           <li>
               <a
-                href="#helper-functions"
+                href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Helper Functions</a>
+              >Functions</a>
             </li>
           </ul>
   
@@ -698,27 +694,27 @@ MSData Class: A class that models a single MS data file, allowing for the extrac
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#helper-functions">Helper Functions
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_clean_ms2ms2-offset2-int_drop_ratio001">_clean_ms2(ms2, offset=2, int_drop_ratio=0.01)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#clean_signals">clean_signals
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_centroidmz_seq-int_seq-mz_tol0005">_centroid(mz_seq, int_seq, mz_tol=0.005)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#centroid_signals">centroid_signals
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#read_raw_file_to_objfile_name-paramsnone-int_tol1000-centroidtrue-read_ms2true-clean_ms2false-print_summaryfalse">read_raw_file_to_obj(file_name, params=None, int_tol=1000, centroid=True, read_ms2=True, clean_ms2=False, print_summary=False)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#segment_feature">segment_feature
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_best_ms2ms2_seq">find_best_ms2(ms2_seq)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#detect_features">detect_features
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#get_start_timefile_name">get_start_time(file_name)
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_best_ms2">find_best_ms2
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -746,125 +742,116 @@ MSData Class: A class that models a single MS data file, allowing for the extrac
 
         <div class="content">
           <h1>raw_data_utils</h1>
-          <p>This module provides tools for reading and processing raw mass spectrometry (MS) data, specifically in mzML or mzXML format. It includes a class to handle the data, providing functionalities for extracting scans, finding regions of interest (ROIs), generating chromatograms, and more.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The main components of this module include:</p>
-<ul>
-<li><strong>MSData Class</strong>: A class that models a single MS data file, allowing for the extraction, processing, and visualization of MS data.</li>
-<li><strong>Scan Class</strong>: A class that represents individual MS scans, including both MS1 and MS2 levels.</li>
-<li><strong>Helper Functions</strong>: Various utility functions to assist in data processing, such as reading files, centroiding data, and finding the best MS2 spectrum.</li>
-</ul>
-<hr>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>raw_data_utils</code> module provides classes and functions for reading and processing raw mass spectrometry (MS) data files. The module supports reading mzML, mzXML, mzjson, and compressed mzjson files. The main class in this module is <code>MSData</code>, which models a single MS file and processes the raw data. The module also includes helper functions for cleaning MS/MS spectra, centroiding m/z and intensity sequences, and extracting EIC data.</p>
 <h2>Classes<span class="absolute -mt-20" id="classes"></span>
     <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>MSData</code><span class="absolute -mt-20" id="msdata"></span>
-    <a href="#msdata" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class that models a single MS file (mzML or mzXML) and processes the raw data.</p>
+    <a href="#msdata" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class that models a single raw MS data file and processes the raw data.</p>
 <p><strong>Attributes:</strong></p>
 <ul>
-<li><code>file_name</code> (str): Name of the raw data file without extension.</li>
-<li><code>start_time</code> (datetime): Start acquisition time of the raw data.</li>
-<li><code>params</code> (Params object): Contains the parameters used for processing.</li>
-<li><code>scans</code> (list): A list of <code>Scan</code> objects representing each scan in the data.</li>
-<li><code>ms1_rt_seq</code> (numpy array): Retention times of all MS1 scans.</li>
-<li><code>bpc_int</code> (numpy array): Intensity of the Base Peak Chromatogram (BPC).</li>
-<li><code>rois</code> (list): A list of ROI objects.</li>
-<li><code>roi_mz_seq</code> (numpy array): m/z values of all ROIs.</li>
-<li><code>roi_rt_seq</code> (numpy array): Retention time of all ROIs.</li>
+<li><code>scans</code> (list): A list of <code>Scan</code> objects for mass spectra.</li>
+<li><code>ms1_idx</code> (list): Scan indexes of MS1 spectra.</li>
+<li><code>ms1_time_arr</code> (list): Time of MS1 scans.</li>
+<li><code>ms2_idx</code> (list): Scan indexes of MS2 spectra.</li>
+<li><code>params</code> (Params object): A <code>Params</code> object that contains all parameters.</li>
+<li><code>base_peak_arr</code> (list): Base peak chromatogram, <code>[[m/z, intensity], ...]</code>.</li>
+<li><code>features</code> (list): A list of features.</li>
+<li><code>feature_mz_arr</code> (numpy array): m/z of all ROIs.</li>
 </ul>
 <p><strong>Methods:</strong></p>
 <ul>
-<li><code>__init__(self)</code>: Initializes the <code>MSData</code> object.</li>
-<li><code>read_raw_data(self, file_name, params, read_ms2=True, clean_ms2=False, centroid=True)</code>: Reads raw MS data and extracts MS1 and MS2 scans.</li>
-<li><code>extract_scan_mzml(self, spectra, int_tol=0, read_ms2=True, clean_ms2=False, centroid=True)</code>: Extracts scans from an mzML file.</li>
-<li><code>extract_scan_mzxml(self, spectra, int_tol, read_ms2=True, clean_ms2=False, centroid=True)</code>: Extracts scans from an mzXML file.</li>
-<li><code>drop_ion_by_int(self)</code>: Drops ions by intensity.</li>
-<li><code>find_rois(self)</code>: Identifies ROIs in MS1 scans.</li>
-<li><code>cut_rois(self)</code>: Splits ROIs into smaller pieces.</li>
-<li><code>summarize_roi(self, cal_g_score=True, cal_a_score=True)</code>: Processes ROIs and assigns MS2 spectra.</li>
-<li><code>allocate_ms2_to_rois(self)</code>: Allocates MS2 spectra to ROIs.</li>
-<li><code>drop_rois_without_ms2(self)</code>: Removes ROIs without MS2 spectra.</li>
-<li><code>drop_rois_by_length(self, length=5)</code>: Removes ROIs shorter than a specified length.</li>
-<li><code>plot_bpc(self, rt_range=None, label_name=False, output_dir=None)</code>: Plots the Base Peak Chromatogram (BPC).</li>
-<li><code>output_single_file(self, user_defined_output_path=None)</code>: Generates a CSV report of ROIs.</li>
-<li><code>get_eic_data(self, target_mz, target_rt=None, mz_tol=0.005, rt_tol=0.3, rt_range=None)</code>: Extracts Extracted Ion Chromatogram (EIC) data for a target m/z.</li>
-<li><code>plot_eics(self, target_mz_seq, target_rt=None, mz_tol=0.005, rt_tol=0.3, output=None, show_rt_line=True, ylim=None, return_eic_data=False)</code>: Plots EICs for multiple target m/z values.</li>
-<li><code>plot_eic(self, target_mz, target_rt=None, mz_tol=0.005, rt_tol=0.3, output=None, show_rt_line=True, ylim=None, return_eic_data=False)</code>: Plots the EIC for a single target m/z.</li>
-<li><code>find_ms2_by_mzrt(self, mz_target, rt_target, mz_tol=0.01, rt_tol=0.3, return_best=False)</code>: Finds MS2 scans by precursor m/z and retention time.</li>
-<li><code>find_roi_by_mzrt(self, mz_target, rt_target=None, mz_tol=0.01, rt_tol=0.3)</code>: Finds ROIs by m/z and retention time.</li>
-<li><code>find_ms1_scan_by_rt(self, rt_target)</code>: Finds an MS1 scan by retention time.</li>
-<li><code>correct_retention_time(self, f)</code>: Corrects retention times based on a provided function.</li>
-<li><code>plot_roi(self, roi_idx, mz_tol=0.005, rt_range=[0, np.inf], rt_window=None, output=False)</code>: Plots the EIC for a specific ROI.</li>
-<li><code>plot_all_rois(self, output_path, mz_tol=0.01, rt_range=[0, np.inf], rt_window=None)</code>: Plots the EICs for all ROIs.</li>
+<li><code>read_raw_data(self, file_name, params=None, scan_levels=[1,2], centroid_mz_tol=0.005, ms1_abs_int_tol=None, ms2_abs_int_tol=None, ms2_rel_int_tol=0.01, precursor_mz_offset=2)</code>: Reads raw data from an MS file.</li>
+<li><code>extract_scan_mzml(self, scans)</code>: Extracts all scans from an mzML file.</li>
+<li><code>extract_scan_mzxml(self, scans)</code>: Extracts all scans from an mzXML file.</li>
+<li><code>drop_ms1_ions_by_intensity(self, int_tol)</code>: Drops ions in all MS1 scans by intensity threshold.</li>
+<li><code>detect_features(self)</code>: Runs feature detection.</li>
+<li><code>segment_features(self, iteration=2)</code>: Segments features by edge detection.</li>
+<li><code>summarize_features(self, cal_g_score=True, cal_a_score=True)</code>: Processes features to calculate summary statistics.</li>
+<li><code>allocate_ms2_to_features(self, mz_tol=0.015)</code>: Allocates MS2 scans to ROIs.</li>
+<li><code>drop_features_without_ms2(self)</code>: Drops features without MS2 scans.</li>
+<li><code>drop_features_by_length(self, length=5)</code>: Drops features by length.</li>
+<li><code>drop_isotope_features(self)</code>: Drops features annotated as isotopes.</li>
+<li><code>drop_in_source_fragment_features(self)</code>: Discards in-source fragments.</li>
+<li><code>plot_bpc(self, time_range=None, label_name=True, output_dir=None)</code>: Plots the base peak chromatogram.</li>
+<li><code>output_single_file(self, output_path=None)</code>: Generates a report for features in csv format.</li>
+<li><code>get_eic_data(self, target_mz, target_rt=None, mz_tol=0.005, rt_tol=0.3, rt_range=None)</code>: Gets the EIC data of a target m/z.</li>
+<li><code>plot_eics(self, target_mz_arr, target_rt=None, mz_tol=0.005, rt_tol=0.3, rt_range=None, output_file_name=None, show_target_rt=True, ylim: list=None, return_eic_data=False)</code>: Plots multiple EICs in a single plot.</li>
+<li><code>find_ms2_by_mzrt(self, mz_target, rt_target, mz_tol=0.01, rt_tol=0.3, return_best=False)</code>: Finds MS2 scan by precursor m/z and retention time.</li>
+<li><code>find_feature_by_mzrt(self, mz_target, rt_target=None, mz_tol=0.01, rt_tol=0.3)</code>: Finds feature by precursor m/z and retention time.</li>
+<li><code>find_ms1_scan_by_rt(self, rt_target)</code>: Finds the nearest n MS1 scan by retention time.</li>
+<li><code>correct_retention_time(self, f)</code>: Corrects retention time.</li>
+<li><code>plot_feature(self, feature_idx, mz_tol=0.005, rt_range=[0, np.inf], rt_window=None, output=False)</code>: Plots EIC of a ROI.</li>
 </ul>
 <h3><code>Scan</code><span class="absolute -mt-20" id="scan"></span>
-    <a href="#scan" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class that represents an individual MS scan, either MS1 or MS2.</p>
+    <a href="#scan" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class that models a single mass spectrum scan.</p>
 <p><strong>Attributes:</strong></p>
 <ul>
-<li><code>level</code> (int): The MS level of the scan (1 or 2).</li>
-<li><code>scan</code> (int): Scan number.</li>
-<li><code>rt</code> (float): Retention time.</li>
-<li><code>mz_seq</code> (numpy array): m/z sequence (for MS1).</li>
-<li><code>int_seq</code> (numpy array): Intensity sequence (for MS1).</li>
-<li><code>precursor_mz</code> (float): Precursor m/z (for MS2).</li>
-<li><code>peaks</code> (numpy array): Product m/z and intensity pairs (for MS2).</li>
+<li><code>level</code> (int): Level of mass spectrum.</li>
+<li><code>id</code> (int): Scan ID.</li>
+<li><code>scan_time</code> (float): Scan time.</li>
+<li><code>signals</code> (numpy array): m/z and intensity signals.</li>
+<li><code>precursor_mz</code> (float): Precursor m/z.</li>
 </ul>
-<p><strong>Methods:</strong></p>
-<ul>
-<li><code>__init__(self, level=None, scan=None, rt=None)</code>: Initializes the <code>Scan</code> object.</li>
-<li><code>add_info_by_level(self, **kwargs)</code>: Adds scan information depending on the MS level.</li>
-<li><code>show_scan_info(self)</code>: Prints the scan&rsquo;s information.</li>
-<li><code>plot_scan(self, mz_range=None, return_data=False)</code>: Plots the scan data.</li>
-</ul>
-<hr>
-<h2>Helper Functions<span class="absolute -mt-20" id="helper-functions"></span>
-    <a href="#helper-functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>_clean_ms2(ms2, offset=2, int_drop_ratio=0.01)</code><span class="absolute -mt-20" id="_clean_ms2ms2-offset2-int_drop_ratio001"></span>
-    <a href="#_clean_ms2ms2-offset2-int_drop_ratio001" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Cleans MS/MS spectra by removing ions with m/z greater than a specified offset and by removing ions with low intensity.</p>
+<h2>Functions<span class="absolute -mt-20" id="functions"></span>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>clean_signals<span class="absolute -mt-20" id="clean_signals"></span>
+    <a href="#clean_signals" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>clean_signals(signals, mz_range=None, intensity_range=None)</code></p>
+<p>Cleans signals by removing ions outside specified m/z and intensity ranges.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>ms2</code> (Scan object): The MS2 scan to clean.</li>
-<li><code>offset</code> (float): m/z offset for dropping ions.</li>
-<li><code>int_drop_ratio</code> (float): Ratio of the base peak intensity below which ions will be dropped.</li>
-</ul>
-<h3><code>_centroid(mz_seq, int_seq, mz_tol=0.005)</code><span class="absolute -mt-20" id="_centroidmz_seq-int_seq-mz_tol0005"></span>
-    <a href="#_centroidmz_seq-int_seq-mz_tol0005" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Centroids m/z and intensity sequences.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>mz_seq</code> (numpy array): m/z sequence.</li>
-<li><code>int_seq</code> (numpy array): Intensity sequence.</li>
-<li><code>mz_tol</code> (float): m/z tolerance for centroiding.</li>
-</ul>
-<h3><code>read_raw_file_to_obj(file_name, params=None, int_tol=1000, centroid=True, read_ms2=True, clean_ms2=False, print_summary=False)</code><span class="absolute -mt-20" id="read_raw_file_to_objfile_name-paramsnone-int_tol1000-centroidtrue-read_ms2true-clean_ms2false-print_summaryfalse"></span>
-    <a href="#read_raw_file_to_objfile_name-paramsnone-int_tol1000-centroidtrue-read_ms2true-clean_ms2false-print_summaryfalse" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Reads a raw MS file into an <code>MSData</code> object.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>file_name</code> (str): Name of the raw MS data file.</li>
-<li><code>params</code> (Params object): Parameters for processing.</li>
-<li><code>int_tol</code> (float): Intensity tolerance for ion filtering.</li>
-<li><code>centroid</code> (bool): Whether to centroid the raw data.</li>
-<li><code>print_summary</code> (bool): Whether to print a summary of the data.</li>
+<li><code>signals</code> (numpy array): m/z and intensity signals.</li>
+<li><code>mz_range</code> (list): m/z range [start, end].</li>
+<li><code>intensity_range</code> (list): Intensity range [min, max].</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>d</code> (MSData object): The processed MSData object.</li>
+<li><code>cleaned_signals</code> (numpy array): Cleaned m/z and intensity signals.</li>
 </ul>
-<h3><code>find_best_ms2(ms2_seq)</code><span class="absolute -mt-20" id="find_best_ms2ms2_seq"></span>
-    <a href="#find_best_ms2ms2_seq" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Finds the best MS2 spectrum from a list of MS2 spectra based on intensity.</p>
+<h3>centroid_signals<span class="absolute -mt-20" id="centroid_signals"></span>
+    <a href="#centroid_signals" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>centroid_signals(signals, mz_tol)</code></p>
+<p>Centroids m/z and intensity signals.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>ms2_seq</code> (list): List of MS2 spectra.</li>
+<li><code>signals</code> (numpy array): m/z and intensity signals.</li>
+<li><code>mz_tol</code> (float): m/z tolerance.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>best_ms2</code> (Scan object): The MS2 scan with the highest intensity.</li>
+<li><code>centroided_signals</code> (numpy array): Centroided m/z and intensity signals.</li>
 </ul>
-<h3><code>get_start_time(file_name)</code><span class="absolute -mt-20" id="get_start_timefile_name"></span>
-    <a href="#get_start_timefile_name" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Extracts the start time of the raw data from the file.</p>
+<h3>segment_feature<span class="absolute -mt-20" id="segment_feature"></span>
+    <a href="#segment_feature" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>segment_feature(feature, peak_height_tol, distance)</code></p>
+<p>Segments a feature by edge detection.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>file_name</code> (str): Absolute path to the raw data file.</li>
+<li><code>feature</code> (Feature object): A feature.</li>
+<li><code>peak_height_tol</code> (int): Peak height tolerance.</li>
+<li><code>distance</code> (int): Distance.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>start_time</code> (datetime): The start acquisition time of the raw data.</li>
+<li><code>segmented_features</code> (list): Segmented features.</li>
+</ul>
+<h3>detect_features<span class="absolute -mt-20" id="detect_features"></span>
+    <a href="#detect_features" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>detect_features(ms_data)</code></p>
+<p>Detects features in MS data.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ms_data</code> (MSData object): An MSData object.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>features</code> (list): Detected features.</li>
+</ul>
+<h3>find_best_ms2<span class="absolute -mt-20" id="find_best_ms2"></span>
+    <a href="#find_best_ms2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_best_ms2(ms2_seq)</code></p>
+<p>Finds the best MS2 scan with the highest total intensity.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>ms2_seq</code> (list): A list of MS2 scans.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>best_ms2</code> (Scan object): The best MS2 scan.</li>
 </ul>
 
         </div>

@@ -12,8 +12,16 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>feature_detection – MassCube</title>
-  <meta name="description" content="This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.
-Overview ROI Detection: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics. ROI Processing: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality. Utilities: Helper functions to support the detection and processing of ROIs." />
+  <meta name="description" content="Overview Untargeted feature detection.
+Classes Feature A class to store a feature characterized by a unique pair of m/z and retention time.
+Attributes:
+rt_seq (list of float): Retention time sequence.
+signals (list): Signal sequence organized as [[m/z, intensity], …].
+scan_idx_seq (list of int): Scan index sequence.
+ms2_seq (list): MS2 spectra.
+gap_counter (int): Counter for the number of consecutive zeros in the peak tail.
+id (int): Feature ID.
+feature_group_id (int): Peak group ID." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/feature_detection/" itemprop="url" />
@@ -22,21 +30,45 @@ Overview ROI Detection: Identifies regions of interest in the MS data, capturing
   
 
 <meta property="og:title" content="feature_detection" />
-<meta property="og:description" content="This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.
-Overview ROI Detection: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics. ROI Processing: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality. Utilities: Helper functions to support the detection and processing of ROIs." />
+<meta property="og:description" content="Overview Untargeted feature detection.
+Classes Feature A class to store a feature characterized by a unique pair of m/z and retention time.
+Attributes:
+rt_seq (list of float): Retention time sequence.
+signals (list): Signal sequence organized as [[m/z, intensity], &hellip;].
+scan_idx_seq (list of int): Scan index sequence.
+ms2_seq (list): MS2 spectra.
+gap_counter (int): Counter for the number of consecutive zeros in the peak tail.
+id (int): Feature ID.
+feature_group_id (int): Peak group ID." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/feature_detection/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="feature_detection">
-<meta itemprop="description" content="This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.
-Overview ROI Detection: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics. ROI Processing: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality. Utilities: Helper functions to support the detection and processing of ROIs.">
+<meta itemprop="description" content="Overview Untargeted feature detection.
+Classes Feature A class to store a feature characterized by a unique pair of m/z and retention time.
+Attributes:
+rt_seq (list of float): Retention time sequence.
+signals (list): Signal sequence organized as [[m/z, intensity], &hellip;].
+scan_idx_seq (list of int): Scan index sequence.
+ms2_seq (list): MS2 spectra.
+gap_counter (int): Counter for the number of consecutive zeros in the peak tail.
+id (int): Feature ID.
+feature_group_id (int): Peak group ID.">
 
-<meta itemprop="wordCount" content="693">
+<meta itemprop="wordCount" content="442">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="feature_detection"/>
-<meta name="twitter:description" content="This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.
-Overview ROI Detection: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics. ROI Processing: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality. Utilities: Helper functions to support the detection and processing of ROIs."/>
+<meta name="twitter:description" content="Overview Untargeted feature detection.
+Classes Feature A class to store a feature characterized by a unique pair of m/z and retention time.
+Attributes:
+rt_seq (list of float): Retention time sequence.
+signals (list): Signal sequence organized as [[m/z, intensity], &hellip;].
+scan_idx_seq (list of int): Scan index sequence.
+ms2_seq (list): MS2 spectra.
+gap_counter (int): Counter for the number of consecutive zeros in the peak tail.
+id (int): Feature ID.
+feature_group_id (int): Peak group ID."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -326,15 +358,15 @@ Overview ROI Detection: Identifies regions of interest in the MS data, capturing
             </li>
           <li>
               <a
-                href="#functions"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Functions</a>
-            </li>
-          <li>
-              <a
                 href="#classes"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Classes</a>
+            </li>
+          <li>
+              <a
+                href="#functions"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Functions</a>
             </li>
           </ul>
   
@@ -682,23 +714,23 @@ Overview ROI Detection: Identifies regions of interest in the MS data, capturing
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_rois">find_rois
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#cut_roi">cut_roi
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#classes">Classes
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#roi">Roi
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature">Feature
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#detect_features">detect_features
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#segment_feature">segment_feature
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -726,107 +758,160 @@ Overview ROI Detection: Identifies regions of interest in the MS data, capturing
 
         <div class="content">
           <h1>feature_detection</h1>
-          <p>This module provides tools for detecting features or peaks in mass spectrometry (MS) data. The main functionalities include finding regions of interest (ROIs), cutting ROIs based on intensity thresholds, and calculating various metrics related to the peaks.</p>
-<h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><strong>ROI Detection</strong>: Identifies regions of interest in the MS data, capturing significant peaks and their characteristics.</li>
-<li><strong>ROI Processing</strong>: Provides tools to refine and cut ROIs, calculate peak areas, and evaluate peak quality.</li>
-<li><strong>Utilities</strong>: Helper functions to support the detection and processing of ROIs.</li>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Untargeted feature detection.</p>
+<h2>Classes<span class="absolute -mt-20" id="classes"></span>
+    <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>Feature</code><span class="absolute -mt-20" id="feature"></span>
+    <a href="#feature" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to store a feature characterized by a unique pair of m/z and retention time.</p>
+<p><strong>Attributes:</strong></p>
+<ul>
+<li>
+<p><code>rt_seq</code> (list of float): Retention time sequence.</p>
+</li>
+<li>
+<p><code>signals</code> (list): Signal sequence organized as [[m/z, intensity], &hellip;].</p>
+</li>
+<li>
+<p><code>scan_idx_seq</code> (list of int): Scan index sequence.</p>
+</li>
+<li>
+<p><code>ms2_seq</code> (list): MS2 spectra.</p>
+</li>
+<li>
+<p><code>gap_counter</code> (int): Counter for the number of consecutive zeros in the peak tail.</p>
+</li>
+<li>
+<p><code>id</code> (int): Feature ID.</p>
+</li>
+<li>
+<p><code>feature_group_id</code> (int): Peak group ID.</p>
+</li>
+<li>
+<p><code>mz</code> (float): m/z value.</p>
+</li>
+<li>
+<p><code>rt</code> (float): Retention time.</p>
+</li>
+<li>
+<p><code>scan_idx</code> (int): Scan index of the peak apex.</p>
+</li>
+<li>
+<p><code>peak_height</code> (float): Peak height.</p>
+</li>
+<li>
+<p><code>peak_area</code> (float): Peak area.</p>
+</li>
+<li>
+<p><code>top_average</code> (float): Average of the highest three intensities.</p>
+</li>
+<li>
+<p><code>ms2</code> (object): Representative MS2 spectrum.</p>
+</li>
+<li>
+<p><code>length</code> (int): Number of valid scans in the feature.</p>
+</li>
+<li>
+<p><code>gaussian_similarity</code> (float): Gaussian similarity.</p>
+</li>
+<li>
+<p><code>noise_score</code> (float): Noise score.</p>
+</li>
+<li>
+<p><code>asymmetry_factor</code> (float): Asymmetry factor.</p>
+</li>
+<li>
+<p><code>sse</code> (float): Squared error to the smoothed curve.</p>
+</li>
+<li>
+<p><code>is_segmented</code> (bool): Indicates if the feature is segmented.</p>
+</li>
+<li>
+<p><code>is_isotope</code> (bool): Indicates if the feature is an isotope.</p>
+</li>
+<li>
+<p><code>charge_state</code> (int): Charge state of the feature.</p>
+</li>
+<li>
+<p><code>isotope_signals</code> (list): Isotope signals [[m/z, intensity], &hellip;].</p>
+</li>
+<li>
+<p><code>is_in_source_fragment</code> (bool): Indicates if the feature is an in-source fragment.</p>
+</li>
+<li>
+<p><code>adduct_type</code> (str): Adduct type.</p>
+</li>
+<li>
+<p><code>annotation_algorithm</code> (str): Annotation algorithm.</p>
+</li>
+<li>
+<p><code>search_mode</code> (str): Search mode (&lsquo;identity search&rsquo;, &lsquo;fuzzy search&rsquo;, or &lsquo;mzrt_search&rsquo;).</p>
+</li>
+<li>
+<p><code>similarity</code> (float): Similarity score (0-1).</p>
+</li>
+<li>
+<p><code>annotation</code> (str): Name of annotated compound.</p>
+</li>
+<li>
+<p><code>formula</code> (str): Molecular formula.</p>
+</li>
+<li>
+<p><code>matched_peak_number</code> (int): Number of matched peaks.</p>
+</li>
+<li>
+<p><code>smiles</code> (str): SMILES notation.</p>
+</li>
+<li>
+<p><code>inchikey</code> (str): InChIKey notation.</p>
+</li>
+<li>
+<p><code>matched_precursor_mz</code> (float): Matched precursor m/z.</p>
+</li>
+<li>
+<p><code>matched_ms2</code> (object): Matched MS2 spectra.</p>
+</li>
+<li>
+<p><code>matched_adduct_type</code> (str): Matched adduct type.</p>
+</li>
 </ul>
-<hr>
+<p><strong>Methods:</strong></p>
+<ul>
+<li><code>extend(self, rt, signal, scan_idx)</code>: Extends the chromatographic peak with new data points.</li>
+<li><code>get_mz_error(self)</code>: Calculates the 3*sigma error of the feature&rsquo;s m/z.</li>
+<li><code>get_rt_error(self)</code>: Calculates the 3*sigma error of the feature&rsquo;s retention time.</li>
+<li><code>summarize(self, ph=True, pa=True, ta=True, g_score=True, n_score=True, a_score=True)</code>: Summarizes the feature by calculating summary statistics.</li>
+<li><code>subset(self, start, end, summarize=True)</code>: Keeps a subset of the feature based on start and end positions.</li>
+</ul>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>find_rois<span class="absolute -mt-20" id="find_rois"></span>
-    <a href="#find_rois" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_rois(d)</code></p>
-<p>Identifies regions of interest (ROIs) in the MS data.</p>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>detect_features</code><span class="absolute -mt-20" id="detect_features"></span>
+    <a href="#detect_features" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>detect_features(d)</code></p>
+<p>Detects features in the MS data.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>d</code> (MSData object): An object that contains the MS data.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>final_rois</code> (list of <code>Roi</code> objects): A list of detected ROIs.</li>
+<li><code>final_features</code> (list of <code>Feature</code> objects): A list of detected features.</li>
 </ul>
-<h3>cut_roi<span class="absolute -mt-20" id="cut_roi"></span>
-    <a href="#cut_roi" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>cut_roi(r, int_tol=1000, sigma=1.2, prominence_ratio=0.1, distance=5)</code></p>
-<p>Cuts a region of interest (ROI) into smaller segments based on intensity and peak prominence.</p>
+<h3><code>segment_feature</code><span class="absolute -mt-20" id="segment_feature"></span>
+    <a href="#segment_feature" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>segment_feature(feature, sigma=1.2, prominence_ratio=0.05, distance=10, peak_height_tol=1000, length_tol=5, sse_tol=0.5)</code></p>
+<p>Segments a feature into multiple features based on edge detection.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>r</code> (Roi object): The ROI object to be cut.</li>
-<li><code>int_tol</code> (int): Intensity tolerance for cutting (default 1000).</li>
-<li><code>sigma</code> (float): Sigma value for Gaussian filtering (default 1.2).</li>
-<li><code>prominence_ratio</code> (float): Ratio of prominence used for finding peaks (default 0.1).</li>
-<li><code>distance</code> (int): Minimum distance between peaks (default 5).</li>
+<li><code>feature</code> (<code>Feature</code> object): The feature to segment.</li>
+<li><code>sigma</code> (float): The sigma value for the Gaussian filter. DFault is 1.2.</li>
+<li><code>prominence_ratio</code> (float): The prominence ratio for finding peaks. Default is 0.05.</li>
+<li><code>distance</code> (int): The minimum distance between peaks. Default is 10.</li>
+<li><code>peak_height_tol</code> (float): The peak height tolerance for segmentation.</li>
+<li><code>length_tol</code> (int): The length tolerance for segmentation. Default is 5.</li>
+<li><code>sse_tol</code> (float): The squared error tolerance for segmentation. Default is 0.5.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>cut_rois</code> (list of <code>Roi</code> objects): A list of cut ROIs.</li>
+<li><code>segmented_features</code> (list of <code>Feature</code> objects): A list of segmented features.</li>
 </ul>
-<p><code>find_closest_index_ordered(array, target, tol=0.01)</code></p>
-<p>Finds the index of the closest value in an ordered array.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>array</code> (list or numpy array): The ordered array to search.</li>
-<li><code>target</code> (float): The target value to find.</li>
-<li><code>tol</code> (float): Tolerance for considering a match (default 0.01).</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>idx</code> (int or None): The index of the closest value, or <code>None</code> if no suitable match is found.</li>
-</ul>
-<hr>
-<h2>Classes<span class="absolute -mt-20" id="classes"></span>
-    <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>Roi</code><span class="absolute -mt-20" id="roi"></span>
-    <a href="#roi" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to represent a region of interest (ROI) in mass spectrometry data. An ROI typically corresponds to a peak or a group of peaks in a chromatogram.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><code>id</code> (int): Identifier for the ROI.</li>
-<li><code>scan_idx_seq</code> (list of int): List of scan indices.</li>
-<li><code>rt_seq</code> (list of float): List of retention times.</li>
-<li><code>mz_seq</code> (list of float): List of m/z values.</li>
-<li><code>int_seq</code> (list of int): List of intensity values.</li>
-<li><code>ms2_seq</code> (list): List of associated MS2 spectra.</li>
-<li><code>gap_counter</code> (int): Counter for the number of gaps in the ROI&rsquo;s tail.</li>
-<li><code>mz</code> (float): m/z value of the ROI peak.</li>
-<li><code>rt</code> (float): Retention time of the ROI peak.</li>
-<li><code>scan_number</code> (int): Number of scans in the ROI.</li>
-<li><code>peak_area</code> (float): Area under the peak.</li>
-<li><code>peak_height</code> (float): Height of the peak.</li>
-<li><code>best_ms2</code> (MS2 object): The best associated MS2 spectrum.</li>
-<li><code>length</code> (int): Length of the ROI in terms of the number of scans.</li>
-<li><code>merged</code> (bool): Indicates if the ROI has been merged with others.</li>
-<li><code>gaussian_similarity</code> (float): Gaussian similarity score of the peak shape.</li>
-<li><code>noise_level</code> (float): Estimated noise level in the ROI.</li>
-<li><code>asymmetry_factor</code> (float): Asymmetry factor of the peak.</li>
-<li><code>cut</code> (bool): Indicates if the ROI has been cut into smaller segments.</li>
-<li><code>charge_state</code> (int): Charge state of the ROI (default 1).</li>
-<li><code>is_isotope</code> (bool): Indicates if the ROI represents an isotope.</li>
-<li><code>isotope_mz_seq</code> (list of float): List of m/z values for isotopes.</li>
-<li><code>isotope_int_seq</code> (list of int): List of intensities for isotopes.</li>
-<li><code>isotope_id_seq</code> (list of int): List of identifiers for isotopes.</li>
-<li><code>is_in_source_fragment</code> (bool): Indicates if the ROI is an in-source fragment.</li>
-<li><code>isf_child_roi_id</code> (list of int): List of child ROI IDs if the ROI is an in-source fragment.</li>
-<li><code>isf_parent_roi_id</code> (int): Parent ROI ID if the ROI is an in-source fragment.</li>
-<li><code>adduct_type</code> (str): Type of adduct, if applicable.</li>
-<li><code>adduct_parent_roi_id</code> (int): Parent ROI ID for the adduct.</li>
-<li><code>adduct_child_roi_id</code> (list of int): List of child ROI IDs for the adduct.</li>
-<li><code>annotation</code> (str): Annotation of the ROI.</li>
-<li><code>formula</code> (str): Molecular formula associated with the ROI.</li>
-<li><code>similarity</code> (float): Similarity score for annotation.</li>
-<li><code>matched_peak_number</code> (int): Number of matched peaks in the ROI.</li>
-<li><code>smiles</code> (str): SMILES notation of the associated molecule.</li>
-<li><code>inchikey</code> (str): InChIKey notation of the associated molecule.</li>
-</ul>
-<p><strong>Methods:</strong></p>
-<ul>
-<li><code>__init__(self, scan_idx, rt, mz, intensity)</code>: Initializes an ROI with scan index, retention time, m/z, and intensity.</li>
-<li><code>extend_roi(self, scan_idx, rt, mz, intensity)</code>: Extends an ROI with new data points.</li>
-<li><code>show_roi_info(self, show_annotation=False)</code>: Prints information about the ROI.</li>
-<li><code>get_mz_error(self)</code>: Calculates the m/z error (maximum - minimum) of the ROI.</li>
-<li><code>find_rt_ph_pa(self)</code>: Calculates the peak area and height using the trapezoidal rule.</li>
-<li><code>find_top_average(self, num=3)</code>: Finds the peak height by averaging the top three intensities.</li>
-<li><code>sum_roi(self, cal_g_score=True, cal_a_score=True)</code>: Summarizes the ROI, calculating key attributes.</li>
-<li><code>subset_roi(self, start, end)</code>: Subsets the ROI based on provided start and end positions.</li>
-</ul>
+<p>Please see the source code for more internal functions.</p>
 
         </div>
         <div class="mt-16"></div>

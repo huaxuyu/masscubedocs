@@ -12,11 +12,11 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>normalization – MassCube</title>
-  <meta name="description" content="This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: Sample Normalization and Signal Normalization. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.
-Sample Normalization These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.
-find_normalization_factors find_normalization_factors(array, method=&#39;pqn&#39;)
-Finds normalization factors for a dataset based on the specified method.
-Parameters:" />
+  <meta name="description" content="Overview This module provides functions for normalizing data, particularly in the context of mass spectrometry. There are two types of normalization including
+Sample normalization - to normalize samples with different total amounts/concentrations. Signal normalization - to address the signal drifts in the mass spectrometry data. Functions sample_normalization sample_normalization(feature_table, sample_metadata=None, method=&#39;pqn&#39;, feature_selection=True)
+Normalizes samples using a feature list, typically excluding blank samples.
+Parameters:
+feature_table (pandas DataFrame): The feature table. sample_metadata (pd.DataFrame): DataFrame containing sample metadata." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/normalization/" itemprop="url" />
@@ -25,30 +25,30 @@ Parameters:" />
   
 
 <meta property="og:title" content="normalization" />
-<meta property="og:description" content="This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: Sample Normalization and Signal Normalization. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.
-Sample Normalization These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.
-find_normalization_factors find_normalization_factors(array, method=&#39;pqn&#39;)
-Finds normalization factors for a dataset based on the specified method.
-Parameters:" />
+<meta property="og:description" content="Overview This module provides functions for normalizing data, particularly in the context of mass spectrometry. There are two types of normalization including
+Sample normalization - to normalize samples with different total amounts/concentrations. Signal normalization - to address the signal drifts in the mass spectrometry data. Functions sample_normalization sample_normalization(feature_table, sample_metadata=None, method=&#39;pqn&#39;, feature_selection=True)
+Normalizes samples using a feature list, typically excluding blank samples.
+Parameters:
+feature_table (pandas DataFrame): The feature table. sample_metadata (pd.DataFrame): DataFrame containing sample metadata." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/normalization/" /><meta property="article:section" content="docs" />
 
 
 
   <meta itemprop="name" content="normalization">
-<meta itemprop="description" content="This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: Sample Normalization and Signal Normalization. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.
-Sample Normalization These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.
-find_normalization_factors find_normalization_factors(array, method=&#39;pqn&#39;)
-Finds normalization factors for a dataset based on the specified method.
-Parameters:">
+<meta itemprop="description" content="Overview This module provides functions for normalizing data, particularly in the context of mass spectrometry. There are two types of normalization including
+Sample normalization - to normalize samples with different total amounts/concentrations. Signal normalization - to address the signal drifts in the mass spectrometry data. Functions sample_normalization sample_normalization(feature_table, sample_metadata=None, method=&#39;pqn&#39;, feature_selection=True)
+Normalizes samples using a feature list, typically excluding blank samples.
+Parameters:
+feature_table (pandas DataFrame): The feature table. sample_metadata (pd.DataFrame): DataFrame containing sample metadata.">
 
-<meta itemprop="wordCount" content="355">
+<meta itemprop="wordCount" content="555">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="normalization"/>
-<meta name="twitter:description" content="This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: Sample Normalization and Signal Normalization. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.
-Sample Normalization These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.
-find_normalization_factors find_normalization_factors(array, method=&#39;pqn&#39;)
-Finds normalization factors for a dataset based on the specified method.
-Parameters:"/>
+<meta name="twitter:description" content="Overview This module provides functions for normalizing data, particularly in the context of mass spectrometry. There are two types of normalization including
+Sample normalization - to normalize samples with different total amounts/concentrations. Signal normalization - to address the signal drifts in the mass spectrometry data. Functions sample_normalization sample_normalization(feature_table, sample_metadata=None, method=&#39;pqn&#39;, feature_selection=True)
+Normalizes samples using a feature list, typically excluding blank samples.
+Parameters:
+feature_table (pandas DataFrame): The feature table. sample_metadata (pd.DataFrame): DataFrame containing sample metadata."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -356,15 +356,15 @@ Parameters:"/>
   
     <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
               <a
-                href="#sample-normalization"
+                href="#overview"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Sample Normalization</a>
+              >Overview</a>
             </li>
           <li>
               <a
-                href="#signal-normalization"
+                href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Signal Normalization</a>
+              >Functions</a>
             </li>
           </ul>
   
@@ -684,7 +684,15 @@ Parameters:"/>
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
     <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#sample-normalization">Sample Normalization
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#overview">Overview
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#sample_normalization">sample_normalization
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -700,15 +708,15 @@ Parameters:"/>
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#sample_normalization">sample_normalization
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#high_quality_feature_selection">high_quality_feature_selection
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#signal-normalization">Signal Normalization
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#signal_normalization">signal_normalization
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#qc_normalization">qc_normalization
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#lowess_normalization">lowess_normalization
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -736,12 +744,34 @@ Parameters:"/>
 
         <div class="content">
           <h1>normalization</h1>
-          <p>This module provides functions for normalizing metabolomics data, focusing on two main types of normalization: <strong>Sample Normalization</strong> and <strong>Signal Normalization</strong>. These methods help address issues like varying sample concentrations and signal drift in mass spectrometry data.</p>
-<h2>Sample Normalization<span class="absolute -mt-20" id="sample-normalization"></span>
-    <a href="#sample-normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>These functions focus on normalizing samples to account for differences in total amounts or concentrations between samples.</p>
+          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This module provides functions for normalizing data, particularly in the context of mass spectrometry. There are two types of normalization including</p>
+<ol>
+<li>Sample normalization - to normalize samples with different total amounts/concentrations.</li>
+<li>Signal normalization - to address the signal drifts in the mass spectrometry data.</li>
+</ol>
+<h2>Functions<span class="absolute -mt-20" id="functions"></span>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>sample_normalization<span class="absolute -mt-20" id="sample_normalization"></span>
+    <a href="#sample_normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>sample_normalization(feature_table, sample_metadata=None, method='pqn', feature_selection=True)</code></p>
+<p>Normalizes samples using a feature list, typically excluding blank samples.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>feature_table</code> (pandas DataFrame): The feature table.</li>
+<li><code>sample_metadata</code> (pd.DataFrame): DataFrame containing sample metadata. See params module for details.</li>
+<li><code>method</code> (str): The method to find the normalization factors. Options:
+<ul>
+<li><code>'pqn'</code>: Probabilistic Quotient Normalization.</li>
+</ul>
+</li>
+<li><code>feature_selection</code> (bool): Whether to select high-quality features for normalization. High-quality features have relative standard deviation (RSD) less than 25% in QC samples and average intensity in QC+biological samples greater than 2 fold of the average intensity in blank samples.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>pandas DataFrame</code>: The normalized feature table.</li>
+</ul>
 <h3>find_normalization_factors<span class="absolute -mt-20" id="find_normalization_factors"></span>
     <a href="#find_normalization_factors" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_normalization_factors(array, method='pqn')</code></p>
-<p>Finds normalization factors for a dataset based on the specified method.</p>
+<p>Finds the normalization factors for a data frame.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>array</code> (numpy array): The data to be normalized.</li>
@@ -753,15 +783,15 @@ Parameters:"/>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>numpy array</code>: Normalization factors.</li>
+<li><code>numpy array</code>: The normalization factors.</li>
 </ul>
 <h3>sample_normalization_by_factors<span class="absolute -mt-20" id="sample_normalization_by_factors"></span>
     <a href="#sample_normalization_by_factors" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>sample_normalization_by_factors(array, v)</code></p>
-<p>Normalizes the data based on the provided normalization factors.</p>
+<p>Normalizes a data frame by a vector.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>array</code> (numpy array): The data to be normalized.</li>
-<li><code>v</code> (numpy array): The normalization factors.</li>
+<li><code>v</code> (numpy array): The normalization factor.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
@@ -775,9 +805,9 @@ Parameters:"/>
 <li><code>array</code> (numpy array): The data to be normalized.</li>
 <li><code>method</code> (str): The method to find the reference sample. Options:
 <ul>
-<li><code>'number'</code>: The sample with the most detected features.</li>
-<li><code>'total_intensity'</code>: The sample with the highest total intensity.</li>
-<li><code>'median_intensity'</code>: The sample with the highest median intensity.</li>
+<li><code>'number'</code>: The reference sample has the most detected features.</li>
+<li><code>'total_intensity'</code>: The reference sample has the highest total intensity.</li>
+<li><code>'median_intensity'</code>: The reference sample has the highest median intensity.</li>
 </ul>
 </li>
 </ul>
@@ -785,43 +815,53 @@ Parameters:"/>
 <ul>
 <li><code>int</code>: The index of the reference sample.</li>
 </ul>
-<h3>sample_normalization<span class="absolute -mt-20" id="sample_normalization"></span>
-    <a href="#sample_normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>sample_normalization(feature_table, individual_sample_groups, method='pqn')</code></p>
-<p>Normalizes samples using a feature list, typically excluding blank samples.</p>
+<h3>high_quality_feature_selection<span class="absolute -mt-20" id="high_quality_feature_selection"></span>
+    <a href="#high_quality_feature_selection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>high_quality_feature_selection(array, is_qc=None, is_blank=None, blank_ratio_tol=0.5, qc_rsd_tol=0.25)</code></p>
+<p>Selects high-quality features based on provided criteria for normalization.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>array</code> (numpy array): The data to be normalized. Samples are in columns and features are in rows.</li>
+<li><code>is_qc</code> (numpy array): Boolean array indicating whether a sample is a quality control sample.</li>
+<li><code>is_blank</code> (numpy array): Boolean array indicating whether a sample is a blank sample.</li>
+<li><code>blank_ratio_tol</code> (float): The tolerance of the ratio of the average intensity in blank samples to the average intensity in QC and biological samples.</li>
+<li><code>qc_rsd_tol</code> (float): The tolerance of the relative standard deviation (RSD) in QC samples.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>numpy array</code>: High-quality features. Features are in rows and samples are in columns.</li>
+<li><code>numpy array</code>: The index of the selected features.</li>
+</ul>
+<h3>signal_normalization<span class="absolute -mt-20" id="signal_normalization"></span>
+    <a href="#signal_normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>signal_normalization(feature_table, sample_metadata, method='lowess', output_plot_path=None)</code></p>
+<p>Normalizes MS signal drifts based on analytical order.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>feature_table</code> (pandas DataFrame): The feature table.</li>
-<li><code>individual_sample_groups</code> (list): List of groups for individual samples. Blank samples will be skipped.</li>
+<li><code>sample_metadata</code> (pd.DataFrame): DataFrame containing sample metadata. See params module for details.</li>
 <li><code>method</code> (str): The method to find the normalization factors. Options:
 <ul>
-<li><code>'pqn'</code>: Probabilistic Quotient Normalization.</li>
+<li><code>'lowess'</code>: Locally Weighted Scatterplot Smoothing.</li>
 </ul>
 </li>
+<li><code>output_plot_path</code> (str): The path to save the normalization plot. If none, no visualization will be generated.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
 <li><code>pandas DataFrame</code>: The normalized feature table.</li>
 </ul>
-<h2>Signal Normalization<span class="absolute -mt-20" id="signal-normalization"></span>
-    <a href="#signal-normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>These functions focus on correcting signal drift in the data, particularly important in mass spectrometry.</p>
-<h3>qc_normalization<span class="absolute -mt-20" id="qc_normalization"></span>
-    <a href="#qc_normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>qc_normalization(array, order, qc_idx, batch_idx=None, method='lowess')</code></p>
-<p>Normalizes samples using quality control (QC) samples to correct for signal drift.</p>
+<h3>lowess_normalization<span class="absolute -mt-20" id="lowess_normalization"></span>
+    <a href="#lowess_normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>lowess_normalization(array, qc_idx, frac=0.07, it=3)</code></p>
+<p>Normalizes samples using quality control samples.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>array</code> (numpy array): The data to be normalized. Samples are in columns, and features are in rows.</li>
-<li><code>order</code> (list): The order of the samples. It should have the same length as the number of samples.</li>
-<li><code>qc_idx</code> (list): The index of the quality control samples.</li>
-<li><code>batch_idx</code> (list): The index of the batches. Not used currently.</li>
-<li><code>method</code> (str): The method to normalize the data. Options:
-<ul>
-<li><code>'lowess'</code>: Locally Weighted Scatterplot Smoothing.</li>
-</ul>
-</li>
+<li><code>array</code> (numpy array): The data to be normalized.</li>
+<li><code>qc_idx</code> (numpy array of bool): Boolean array indicating whether a sample is a quality control sample. It&rsquo;s length should be the same as the length of array.</li>
+<li><code>frac</code> (float): The fraction of the data used when estimating each y-value (used in lowess).</li>
+<li><code>it</code> (int): The number of residual-based reweightings to perform (used in lowess).</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
-<li><code>numpy array</code>: The normalized data.</li>
+<li>&lsquo;dict&rsquo;: A dictionary containing the lowess model, the fit curve, and the normalized array: {&lsquo;model&rsquo;: model, &lsquo;fit_curve&rsquo;: y, &rsquo;normed_arr&rsquo;: int_arr_corr}</li>
 </ul>
 
         </div>

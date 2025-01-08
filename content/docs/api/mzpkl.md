@@ -19,8 +19,6 @@ for faster reloading. The `mzpkl` file format is a pickle file that is organized
 }
 ```
 
----
-
 ## Functions
 
 ### Convert MS Data object to mzpkl

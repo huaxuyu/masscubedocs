@@ -33,7 +33,7 @@ Feature alignment: Align features across different samples, considering paramete
 <meta itemprop="description" content="Overview This module provides functionality for aligning metabolic features from different samples in mass spectrometry data.
 Feature alignment: Align features across different samples, considering parameters like m/z tolerance and retention time tolerance. Gap filling: Fill in missing features across aligned samples using various strategies. Merge features: Clean feature table by merging features with almost the same m/z and retention time. Retention time correction: Correct retention times to align features more accurately.">
 
-<meta itemprop="wordCount" content="878">
+<meta itemprop="wordCount" content="855">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="alignment"/>
 <meta name="twitter:description" content="Overview This module provides functionality for aligning metabolic features from different samples in mass spectrometry data.
 Feature alignment: Align features across different samples, considering parameters like m/z tolerance and retention time tolerance. Gap filling: Fill in missing features across aligned samples using various strategies. Merge features: Clean feature table by merging features with almost the same m/z and retention time. Retention time correction: Correct retention times to align features more accurately."/>
@@ -302,15 +302,15 @@ Feature alignment: Align features across different samples, considering paramete
             </li>
           <li>
               <a
-                href="#functions"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Functions</a>
-            </li>
-          <li>
-              <a
                 href="#classes"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Classes</a>
+            </li>
+          <li>
+              <a
+                href="#functions"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Functions</a>
             </li>
           </ul>
   
@@ -682,6 +682,14 @@ Feature alignment: Align features across different samples, considering paramete
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#classes">Classes
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#alignedfeature">AlignedFeature
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#functions">Functions
         </a>
       </li>
@@ -698,6 +706,14 @@ Feature alignment: Align features across different samples, considering paramete
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#convert_features_to_df">convert_features_to_df
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#output_feature_to_msp">output_feature_to_msp
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#output_feature_table">output_feature_table
         </a>
       </li>
@@ -707,18 +723,6 @@ Feature alignment: Align features across different samples, considering paramete
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#rt_anchor_selection">rt_anchor_selection
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#split_to_train_test">split_to_train_test
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#classes">Classes
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#alignedfeature">AlignedFeature
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -755,109 +759,6 @@ Feature alignment: Align features across different samples, considering paramete
 <li><strong>Retention time correction</strong>: Correct retention times to align features more accurately.</li>
 <li><strong>Output feature table</strong>: Save the aligned features to a file.</li>
 </ul>
-<hr>
-<h2>Functions<span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>feature_alignment<span class="absolute -mt-20" id="feature_alignment"></span>
-    <a href="#feature_alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>feature_alignment(path: str, params: Params)</code></p>
-<p>Align the features from multiple processed single files as .txt format.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>path</code> (str): The path to the feature tables of individual files.</li>
-<li><code>params</code> (Params object): The parameters for alignment including sample names and sample groups.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>features</code> (list of AlignedFeature objects)</li>
-</ul>
-<hr>
-<h3>gap_filling<span class="absolute -mt-20" id="gap_filling"></span>
-    <a href="#gap_filling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>gap_filling(features, params: Params)</code></p>
-<p>Fill the gaps for aligned features.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>features</code> (list of AlignedFeature objects): The aligned features.</li>
-<li><code>parameters</code> (Params object): The parameters used for gap filling.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>features</code> (list of AlignedFeature objects).</li>
-</ul>
-<hr>
-<h3>merge_features<span class="absolute -mt-20" id="merge_features"></span>
-    <a href="#merge_features" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>merge_features(features: list, params: Params)</code></p>
-<p>Clean features by merging features with almost the same m/z and retention time.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>features</code> (list of AlignedFeature objects): The aligned features.</li>
-<li><code>params</code> (Params object): The parameters used for merging features.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>features (list of AlignedFeature objects).</p>
-<hr>
-<h3>output_feature_table<span class="absolute -mt-20" id="output_feature_table"></span>
-    <a href="#output_feature_table" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>output_feature_table(feature_table, output_path)</code></p>
-<p>Outputs the aligned feature table.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>feature_table</code> (DataFrame): The aligned feature table.</li>
-<li><code>output_path</code> (str): The path where the aligned feature table will be saved.</li>
-</ul>
-<hr>
-<h3>retention_time_correction<span class="absolute -mt-20" id="retention_time_correction"></span>
-    <a href="#retention_time_correction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, mz_tol=0.01, rt_tol=2.0, mode='linear_interpolation', rt_max=None)</code></p>
-<p>To correct retention times for feature alignment.</p>
-<p>There are three steps:</p>
-<ol>
-<li>Find the selected anchors in the given data.</li>
-<li>Create a model to correct retention times.</li>
-<li>Correct retention times.</li>
-</ol>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>mz_ref</code> (np.array): The m/z values of the selected anchors from another reference file.</li>
-<li><code>rt_ref</code> (np.array): The retention times of the selected anchors from another reference file.</li>
-<li><code>mz_arr</code> (np.array): Feature m/z values in the current file.</li>
-<li><code>rt_arr</code> (np.array): Feature retention times in the current file.</li>
-<li><code>mz_tol</code> (float): The m/z tolerance for selecting anchors.</li>
-<li><code>rt_tol</code> (float): The retention time tolerance for selecting anchors.</li>
-<li><code>mode</code> (str): The mode for retention time correction. Not used now.</li>
-<li><code>rt_max</code> (float): End of the retention time range.</li>
-<li><code>return_model</code> (bool): Whether to return the model for retention time correction.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>rt_arr</code> (np.array): The corrected retention times.</li>
-<li><code>f</code> (interp1d): The model for retention time correction.</li>
-</ul>
-<hr>
-<h3>rt_anchor_selection<span class="absolute -mt-20" id="rt_anchor_selection"></span>
-    <a href="#rt_anchor_selection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>rt_anchor_selection(data_path, num=50, noise_score_tol=0.1, mz_tol=0.01)</code></p>
-<p>Retention time anchors have unique m/z values and low noise scores. From all candidate features, the top <em>num</em> features with the highest peak heights are selected as anchors.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>data_path</code> (str): The absolute directory to the feature tables.</li>
-<li><code>num</code> (int): The number of anchors to be selected.</li>
-<li><code>noise_score_tol</code> (float): The noise level for the anchors. Suggestions: 0.3 or lower.</li>
-<li><code>mz_tol</code> (float): The m/z tolerance for selecting anchors.</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>anchors</code> (list): A list of anchors (dict) for retention time correction.</li>
-</ul>
-<h3>split_to_train_test<span class="absolute -mt-20" id="split_to_train_test"></span>
-    <a href="#split_to_train_test" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>split_to_train_test(array, interval=0.1)</code></p>
-<p>Split the selected anchors into training and testing sets. Not used in the current version.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>array</code> (numpy.ndarray): The retention times of the selected anchors.</li>
-<li><code>interval</code> (float): The time interval for splitting the anchors (default 0.1).</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>train_idx</code> (list): Indices of the training set.</li>
-<li><code>test_idx</code> (list): Indices of the testing set.</li>
-</ul>
-<hr>
 <h2>Classes<span class="absolute -mt-20" id="classes"></span>
     <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>AlignedFeature</code><span class="absolute -mt-20" id="alignedfeature"></span>
     <a href="#alignedfeature" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to model a feature in mass spectrometry data. Generally, a feature is defined as a unique pair of m/z and retention time.</p>
@@ -884,7 +785,7 @@ Feature alignment: Align features across different samples, considering paramete
 <li><code>reference_file</code> (str): The reference file with the highest peak height.</li>
 <li><code>reference_scan_idx</code> (int): The scan index of the peak apex from the reference file.</li>
 <li><code>highest_intensity</code> (float): The highest peak height from individual files (which is the reference file).</li>
-<li><code>ms2</code> (list): Representative MS2 spectrum.</li>
+<li><code>ms2</code> (str): Representative MS2 spectrum.</li>
 <li><code>ms2_reference_file</code> (str): The reference file for the representative MS2 spectrum.</li>
 <li><code>gaussian_similarity</code> (float): Gaussian similarity from the reference file.</li>
 <li><code>noise_score</code> (float): Noise level from the reference file.</li>
@@ -906,10 +807,105 @@ Feature alignment: Align features across different samples, considering paramete
 <li><code>inchikey</code> (str): InChIKey.</li>
 <li><code>matched_precursor_mz</code> (float): Matched precursor m/z.</li>
 <li><code>matched_adduct_type</code> (str): Matched adduct type.</li>
-<li><code>matched_ms2</code> (list): Matched ms2 spectra.</li>
+<li><code>matched_ms2</code> (str): Matched ms2 spectra.</li>
 </ul>
-<hr>
-<p>This documentation should serve as a comprehensive guide for understanding and using the code. You can further enhance it by adding specific examples, diagrams, or more in-depth explanations if needed.</p>
+<h2>Functions<span class="absolute -mt-20" id="functions"></span>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>feature_alignment<span class="absolute -mt-20" id="feature_alignment"></span>
+    <a href="#feature_alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>feature_alignment(path: str, params: Params)</code></p>
+<p>Align the features from multiple processed single files as .txt format.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>path</code> (str): The path to the feature tables of individual files.</li>
+<li><code>params</code> (Params object): The parameters for alignment including sample names and sample groups.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>features</code> (list of AlignedFeature objects)</li>
+</ul>
+<h3>gap_filling<span class="absolute -mt-20" id="gap_filling"></span>
+    <a href="#gap_filling" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>gap_filling(features, params: Params)</code></p>
+<p>Fill the gaps for aligned features.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>features</code> (list of AlignedFeature objects): The aligned features.</li>
+<li><code>parameters</code> (Params object): The parameters used for gap filling.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>features</code> (list of AlignedFeature objects).</li>
+</ul>
+<h3>merge_features<span class="absolute -mt-20" id="merge_features"></span>
+    <a href="#merge_features" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>merge_features(features: list, params: Params)</code></p>
+<p>Clean features by merging features with almost the same m/z and retention time.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>features</code> (list of AlignedFeature objects): The aligned features.</li>
+<li><code>params</code> (Params object): The parameters used for merging features.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>features (list of AlignedFeature objects).</p>
+<h3>convert_features_to_df<span class="absolute -mt-20" id="convert_features_to_df"></span>
+    <a href="#convert_features_to_df" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>convert_features_to_df(features, sample_names, quant_method=&quot;peak_height&quot;)</code></p>
+<p>Convert the aligned features to a DataFrame.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>features</code> (list of AlignedFeature objects): The aligned features.</li>
+<li><code>sample_names</code> (list): The sample names.</li>
+<li><code>quant_method</code> (str): The quantification method, &ldquo;peak_height&rdquo;, &ldquo;peak_area&rdquo; or &ldquo;top_average&rdquo;.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>feature_table</code> (pd.DataFrame): The feature DataFrame.</li>
+</ul>
+<h3>output_feature_to_msp<span class="absolute -mt-20" id="output_feature_to_msp"></span>
+    <a href="#output_feature_to_msp" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>output_feature_to_msp(feature_table, output_path)</code></p>
+<p>Output MS2 spectra to MSP format.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>feature_table</code> (pd.DataFrame): The feature table.</li>
+<li><code>output_path</code> (str): The path to the output MSP file.</li>
+</ul>
+<h3>output_feature_table<span class="absolute -mt-20" id="output_feature_table"></span>
+    <a href="#output_feature_table" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>output_feature_table(feature_table, output_path)</code></p>
+<p>Output the aligned feature table.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>feature_table</code> (pd.DataFrame): The aligned feature table.</li>
+<li><code>output_path</code> (str): The path to save the aligned feature table.</li>
+</ul>
+<h3>retention_time_correction<span class="absolute -mt-20" id="retention_time_correction"></span>
+    <a href="#retention_time_correction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>retention_time_correction(mz_ref, rt_ref, mz_arr, rt_arr, mz_tol=0.01, rt_tol=2.0, mode='linear_interpolation', rt_max=None)</code></p>
+<p>Correct retention times for feature alignment. There are three steps including (1) finding the selected anchors in the given data, (2) creating a model to correct retention times, and (3) correcting retention times.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>mz_ref</code> (np.array): The m/z values of the selected anchors from another reference file.</li>
+<li><code>rt_ref</code> (np.array): The retention times of the selected anchors from another reference file.</li>
+<li><code>mz_arr</code> (np.array): Feature m/z values in the current file.</li>
+<li><code>rt_arr</code> (np.array): Feature retention times in the current file.</li>
+<li><code>mz_tol</code> (float): The m/z tolerance for selecting anchors.</li>
+<li><code>rt_tol</code> (float): The retention time tolerance for selecting anchors.</li>
+<li><code>mode</code> (str): The mode for retention time correction. Only &rsquo;linear_interpolation&rsquo; is available now.</li>
+<li><code>rt_max</code> (float): End of the retention time range.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>rt_arr</code> (np.array): The corrected retention times.</li>
+<li><code>f</code> (interp1d): The model for retention time correction.</li>
+</ul>
+<h3>rt_anchor_selection<span class="absolute -mt-20" id="rt_anchor_selection"></span>
+    <a href="#rt_anchor_selection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>rt_anchor_selection(data_path, num=50, noise_score_tol=0.1, mz_tol=0.01)</code></p>
+<p>Select retention time anchors from the feature tables. Retention time anchors have unique m/z values and low noise scores. From all candidate features, the top <em>num</em> features with the highest peak heights are selected as anchors.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>data_path</code> (str): The absolute directory to the feature tables.</li>
+<li><code>num</code> (int): The number of anchors to be selected.</li>
+<li><code>noise_score_tol</code> (float): The noise level for the anchors.</li>
+<li><code>mz_tol</code> (float): The m/z tolerance for selecting anchors.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>anchors</code> (list): A list of anchors (dict) for retention time correction.</li>
+</ul>
 
         </div>
         <div class="mt-16"></div>
