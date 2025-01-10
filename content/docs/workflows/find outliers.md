@@ -1,7 +1,7 @@
 ---
 linkTitle: "Outlier detection"
 title: Find outliers
-weight: 5
+weight: 6
 ---
 
 ## Introduction

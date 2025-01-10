@@ -1,7 +1,7 @@
 ---
 linkTitle: "Batch processing"
 title: Single file processing by applying default parameters depending on the data
-weight: 4
+weight: 5
 ---
 
 ## Introduction

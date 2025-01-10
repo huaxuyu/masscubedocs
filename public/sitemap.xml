@@ -40,15 +40,17 @@
   </url><url>
     <loc>https://example.org/docs/quickstart/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/untargeted_metabolomics/</loc>
+    <loc>https://example.org/docs/workflows/database/</loc>
   </url><url>
     <loc>https://example.org/docs/workflows/</loc>
   </url><url>
     <loc>https://example.org/docs/algorithms/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/batch_processing/</loc>
+    <loc>https://example.org/docs/workflows/untargeted_metabolomics/</loc>
   </url><url>
     <loc>https://example.org/docs/api/</loc>
+  </url><url>
+    <loc>https://example.org/docs/workflows/batch_processing/</loc>
   </url><url>
     <loc>https://example.org/docs/workflows/find-outliers/</loc>
   </url><url>

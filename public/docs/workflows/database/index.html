@@ -11,24 +11,32 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>Workflows – MassCube</title>
-  <meta name="description" content="Mass spectrometry data processing is highly application-focused, and MassCube is designed to support this by integrating individual functions and modules into workflows. These pre-defined workflows simplify and accelerate data processing and analysis for specific applications.
-Wondering how to contribute to the workflows? Please refer to the contribution guide." />
+  <title>Prepare a database – MassCube</title>
+  <meta name="description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
+Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ." />
   
   
-    <link rel="canonical" href="https://example.org/docs/workflows/" itemprop="url" />
-  
-
+    <link rel="canonical" href="https://example.org/docs/workflows/database/" itemprop="url" />
   
 
-<meta property="og:title" content="Workflows" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://example.org/docs/workflows/" />
+  
 
-  <meta itemprop="name" content="Workflows">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Workflows"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="Prepare a database" />
+<meta property="og:description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
+Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/docs/workflows/database/" /><meta property="article:section" content="docs" />
+
+
+
+  <meta itemprop="name" content="Prepare a database">
+<meta itemprop="description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
+Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the .">
+
+<meta itemprop="wordCount" content="450">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Prepare a database"/>
+<meta name="twitter:description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
+Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -204,13 +212,12 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
               
             </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/workflows/"
     
   >Workflows
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
     </a>
-  
               <div class="ltr:pr-0 overflow-hidden">
         <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -228,13 +235,34 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
   >Parameters
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
     href="/docs/workflows/database/"
     
   >Database
     </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#introduction"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Introduction</a>
+            </li>
+          <li>
+              <a
+                href="#download-a-database"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Download a database</a>
+            </li>
+          <li>
+              <a
+                href="#prepare-a-database-for-advanced-users"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Prepare a database (for advanced users)</a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -439,7 +467,7 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
     </a></li>
           <li class="open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/workflows/"
     
   >Workflows
@@ -461,9 +489,9 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
   >Parameters
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
     href="/docs/workflows/database/"
     
   >Database
@@ -664,8 +692,32 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
 </div></div></aside>
     
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4">
-      <div class=" sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#introduction">Introduction
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#download-a-database">Download a database
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#prepare-a-database-for-advanced-users">Prepare a database (for advanced users)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#msp-format">MSP format
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#pickle-format">Pickle format
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#json-format">JSON format
+        </a>
+      </li></ul>
+      <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline ml-1 h-3.5 w-3.5 border rounded-full border-gray-500 hover:border-gray-900 dark:border-gray-400 dark:hover:border-gray-100 contrast-more:border-gray-800 contrast-more:dark:border-gray-50">
@@ -682,17 +734,123 @@ Wondering how to contribute to the workflows? Please refer to the contribution g
         <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400 contrast-more:text-current">
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://example.org/docs/">Documentation</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">Workflows</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://example.org/docs/workflows/">Workflows</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">Database</div>
 </div>
 
         <div class="content">
-          <h1>Workflows</h1>
-          <p>Mass spectrometry data processing is highly application-focused, and MassCube is designed to support this by integrating individual functions and modules into workflows. These pre-defined workflows simplify and accelerate data processing and analysis for specific applications.</p>
-<p>Wondering how to contribute to the workflows? Please refer to the <a href="masscubedocs/contribute" >contribution guide</a>.</p>
+          <h1>Prepare a database</h1>
+          <h2>Introduction<span class="absolute -mt-20" id="introduction"></span>
+    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for <em>masscube</em>.</p>
+<h2>Download a database<span class="absolute -mt-20" id="download-a-database"></span>
+    <a href="#download-a-database" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For users without programming experience or just want to use a database directly, you can download a database from the <a href="https://zenodo.org/records/11363475" target="_blank" rel="noopener">here</a>. For faster database loading, please download and use the .pkl format.</p>
+<h2>Prepare a database (for advanced users)<span class="absolute -mt-20" id="prepare-a-database-for-advanced-users"></span>
+    <a href="#prepare-a-database-for-advanced-users" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Three formats are supported for the database: pickle, msp, and json. The pickle format is recommended for faster loading. The msp format is recommended for compatibility with other software. The json format is another human-readable format commonly used in Python.</p>
+<h3>MSP format<span class="absolute -mt-20" id="msp-format"></span>
+    <a href="#msp-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An MSP database is a text file that contains the MS2 database. Each block contains the information of a compound. IMPORTANT: make sure the keys are consistent with the example below.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME: L-PHENYLALANINE
+</span></span><span class="line"><span class="cl">PRECURSORMZ: 166.086013793945
+</span></span><span class="line"><span class="cl">PRECURSORTYPE: [M+H]+
+</span></span><span class="line"><span class="cl">IONMODE: Positive
+</span></span><span class="line"><span class="cl">RETENTIONTIME: 3.30520009994507
+</span></span><span class="line"><span class="cl">CCS: 136.819671630859
+</span></span><span class="line"><span class="cl">FORMULA: C9H11NO2
+</span></span><span class="line"><span class="cl">ONTOLOGY: Phenylalanine and derivatives
+</span></span><span class="line"><span class="cl">SMILES: C1=CC=C(C=C1)C[C@@H](C(=O)O)N
+</span></span><span class="line"><span class="cl">INCHIKEY: COLNVLDHVKWLRT-QMMMGPOBSA-N
+</span></span><span class="line"><span class="cl">INSTRUMENTTYPE: LC-ESI-QFT
+</span></span><span class="line"><span class="cl">COLLISIONENERGY: 35.0 eV
+</span></span><span class="line"><span class="cl">COMMENT: DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library
+</span></span><span class="line"><span class="cl">Num Peaks: 7
+</span></span><span class="line"><span class="cl">103.054	15
+</span></span><span class="line"><span class="cl">107.049	14
+</span></span><span class="line"><span class="cl">120.081	1000
+</span></span><span class="line"><span class="cl">121.084	16
+</span></span><span class="line"><span class="cl">131.049	41
+</span></span><span class="line"><span class="cl">149.059	16
+</span></span><span class="line"><span class="cl">166.086	56</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Here, NAME, PRECURSORMZ and PRECURSORTYPE is mandatory. In particular,</p>
+<ol>
+<li>if RETENTIONTIME is not provided, level 1 annotation (i.e. retention time and MS2 matching) will not be performed.</li>
+<li>if any of FORMULA, SMILES or INCHIKEY is not provided, they will be missing in the output.</li>
+<li>if MS2 spectra (lines below Num Peaks) are not provided but retention time is provided, mzrt matching will be performed. In this case, no similarity score will be calculated. But you can compare the experimental and matched retention time to see if they are close.</li>
+</ol>
+<h3>Pickle format<span class="absolute -mt-20" id="pickle-format"></span>
+    <a href="#pickle-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A .pkl database is a FlashEntropySearch object that contains the MS2 database. ms_entropy version 1.2.2 is highly recommended to generate this object (other versions may not work). Here is an example of how to generate a .pkl database from a msp file:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">masscube.annotation</span> <span class="kn">import</span> <span class="n">index_msp_to_pkl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># it will output a database.pkl file in the same folder</span>
+</span></span><span class="line"><span class="cl"><span class="n">index_msp_to_pkl</span><span class="p">(</span><span class="s1">&#39;database.msp&#39;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Check the source code of <code>index_.msp_to_pkl</code> for more details.</p>
+<h3>JSON format<span class="absolute -mt-20" id="json-format"></span>
+    <a href="#json-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A JSON database is a list of dictionaries, each dictionary contains</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;L-PHENYLALANINE&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;precursor_mz&#34;</span><span class="p">:</span> <span class="mf">166.086013793945</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;precursor_type&#34;</span><span class="p">:</span> <span class="s2">&#34;[M+H]+&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ionmode&#34;</span><span class="p">:</span> <span class="s2">&#34;Positive&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;retentiontime&#34;</span><span class="p">:</span> <span class="s2">&#34;3.30520009994507&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ccs&#34;</span><span class="p">:</span> <span class="s2">&#34;136.819671630859&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;formula&#34;</span><span class="p">:</span> <span class="s2">&#34;C9H11NO2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ontology&#34;</span><span class="p">:</span> <span class="s2">&#34;Phenylalanine and derivatives&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;smiles&#34;</span><span class="p">:</span> <span class="s2">&#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;inchikey&#34;</span><span class="p">:</span> <span class="s2">&#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;instrumenttype&#34;</span><span class="p">:</span> <span class="s2">&#34;LC-ESI-QFT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;collisionenergy&#34;</span><span class="p">:</span> <span class="s2">&#34;35.0 eV&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;comment&#34;</span><span class="p">:</span> <span class="s2">&#34;DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;num peaks&#34;</span><span class="p">:</span> <span class="s2">&#34;7&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;peaks&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;103.054&#34;</span><span class="p">,</span> <span class="s2">&#34;15&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;107.049&#34;</span><span class="p">,</span> <span class="s2">&#34;14&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;120.081&#34;</span><span class="p">,</span> <span class="s2">&#34;1000&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;121.084&#34;</span><span class="p">,</span> <span class="s2">&#34;16&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;131.049&#34;</span><span class="p">,</span> <span class="s2">&#34;41&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;149.059&#34;</span><span class="p">,</span> <span class="s2">&#34;16&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;166.086&#34;</span><span class="p">,</span> <span class="s2">&#34;56&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Please see explanations of the keys in the MSP format.</p>
 
         </div>
         <div class="mt-16"></div>
-        
+        <div class="mb-8 flex items-center border-t pt-8 dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400 print:hidden"><a
+        href="/docs/workflows/parameters/"
+        title="Parameters"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:pr-4 rtl:pl-4"
+      ><svg class="inline h-5 shrink-0 ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Parameters</a><a
+        href="/docs/workflows/untargeted_metabolomics/"
+        title="Untargeted metabolomics"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:ml-auto ltr:pl-4 ltr:text-right rtl:mr-auto rtl:pr-4 rtl:text-left"
+      >Untargeted metabolomics<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
