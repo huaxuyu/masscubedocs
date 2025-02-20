@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/api/alignment/</loc>
+    <loc>https://example.org/docs/api/alignment/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/annotation/</loc>
+    <loc>https://example.org/docs/api/annotation/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/classifier_builder/</loc>
+    <loc>https://example.org/docs/api/classifier_builder/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/data_preparation/</loc>
+    <loc>https://example.org/docs/workflows/data_preparation/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/feature_detection/</loc>
+    <loc>https://example.org/docs/api/feature_detection/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/feature_evaluation/</loc>
+    <loc>https://example.org/docs/api/feature_evaluation/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/feature_grouping/</loc>
+    <loc>https://example.org/docs/api/feature_grouping/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/installation/</loc>
+    <loc>https://example.org/docs/installation/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/normalization/</loc>
+    <loc>https://example.org/docs/api/normalization/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/params/</loc>
+    <loc>https://example.org/docs/api/params/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/raw_data_utils/</loc>
+    <loc>https://example.org/docs/api/raw_data_utils/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/stats/</loc>
+    <loc>https://example.org/docs/api/stats/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/utils_functions/</loc>
+    <loc>https://example.org/docs/api/utils_functions/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/visualization/</loc>
+    <loc>https://example.org/docs/api/visualization/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/workflows/</loc>
+    <loc>https://example.org/docs/api/workflows/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/mzpkl/</loc>
+    <loc>https://example.org/docs/api/mzpkl/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/network/</loc>
+    <loc>https://example.org/docs/api/network/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/parameters/</loc>
+    <loc>https://example.org/docs/workflows/parameters/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/quickstart/</loc>
+    <loc>https://example.org/docs/quickstart/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/database/</loc>
+    <loc>https://example.org/docs/workflows/database/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/</loc>
+    <loc>https://example.org/docs/workflows/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/algorithms/</loc>
+    <loc>https://example.org/docs/algorithms/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/untargeted_metabolomics/</loc>
+    <loc>https://example.org/docs/workflows/untargeted_metabolomics/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/api/</loc>
+    <loc>https://example.org/docs/api/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/batch_processing/</loc>
+    <loc>https://example.org/docs/workflows/batch_processing/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/find-outliers/</loc>
+    <loc>https://example.org/docs/workflows/find-outliers/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/plans/</loc>
+    <loc>https://example.org/docs/plans/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/workflows/targeted_metabolomics/</loc>
+    <loc>https://example.org/docs/workflows/targeted_metabolomics/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://example.org/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/contribute/</loc>
+    <loc>https://example.org/contribute/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>https://example.org/docs/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>
