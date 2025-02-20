@@ -46,6 +46,7 @@ my_project
 
 {{< cards >}}
 {{< card link="../workflows/data_preparation" title="Data Preparation" icon="play">}}
+{{< card link="https://zenodo.org/records/14869318" title="Demo data" icon="database">}}
 {{< /cards >}}
 
 ### Processing

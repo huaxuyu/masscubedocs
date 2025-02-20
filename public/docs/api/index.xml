@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – APIs reference</title>
-    <link>https://example.org/docs/api/</link>
+    <link>http://localhost:1313/docs/api/</link>
     <description>Recent content in APIs reference on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://example.org/docs/api/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/docs/api/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>alignment</title>
-      <link>https://example.org/docs/api/alignment/</link>
+      <link>http://localhost:1313/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/alignment/</guid>
+      <guid>http://localhost:1313/docs/api/alignment/</guid>
       <description>
         
         
@@ -185,10 +185,10 @@
     
     <item>
       <title>annotation</title>
-      <link>https://example.org/docs/api/annotation/</link>
+      <link>http://localhost:1313/docs/api/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/annotation/</guid>
+      <guid>http://localhost:1313/docs/api/annotation/</guid>
       <description>
         
         
@@ -296,10 +296,10 @@
     
     <item>
       <title>classifier_builder</title>
-      <link>https://example.org/docs/api/classifier_builder/</link>
+      <link>http://localhost:1313/docs/api/classifier_builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/classifier_builder/</guid>
+      <guid>http://localhost:1313/docs/api/classifier_builder/</guid>
       <description>
         
         
@@ -412,10 +412,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_detection</title>
-      <link>https://example.org/docs/api/feature_detection/</link>
+      <link>http://localhost:1313/docs/api/feature_detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_detection/</guid>
+      <guid>http://localhost:1313/docs/api/feature_detection/</guid>
       <description>
         
         
@@ -579,10 +579,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_evaluation</title>
-      <link>https://example.org/docs/api/feature_evaluation/</link>
+      <link>http://localhost:1313/docs/api/feature_evaluation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_evaluation/</guid>
+      <guid>http://localhost:1313/docs/api/feature_evaluation/</guid>
       <description>
         
         
@@ -630,10 +630,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_grouping</title>
-      <link>https://example.org/docs/api/feature_grouping/</link>
+      <link>http://localhost:1313/docs/api/feature_grouping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_grouping/</guid>
+      <guid>http://localhost:1313/docs/api/feature_grouping/</guid>
       <description>
         
         
@@ -730,10 +730,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>normalization</title>
-      <link>https://example.org/docs/api/normalization/</link>
+      <link>http://localhost:1313/docs/api/normalization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/normalization/</guid>
+      <guid>http://localhost:1313/docs/api/normalization/</guid>
       <description>
         
         
@@ -862,10 +862,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>params</title>
-      <link>https://example.org/docs/api/params/</link>
+      <link>http://localhost:1313/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/params/</guid>
+      <guid>http://localhost:1313/docs/api/params/</guid>
       <description>
         
         
@@ -1100,10 +1100,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>raw_data_utils</title>
-      <link>https://example.org/docs/api/raw_data_utils/</link>
+      <link>http://localhost:1313/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/raw_data_utils/</guid>
+      <guid>http://localhost:1313/docs/api/raw_data_utils/</guid>
       <description>
         
         
@@ -1224,10 +1224,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>stats</title>
-      <link>https://example.org/docs/api/stats/</link>
+      <link>http://localhost:1313/docs/api/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/stats/</guid>
+      <guid>http://localhost:1313/docs/api/stats/</guid>
       <description>
         
         
@@ -1238,10 +1238,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>utils_functions</title>
-      <link>https://example.org/docs/api/utils_functions/</link>
+      <link>http://localhost:1313/docs/api/utils_functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/utils_functions/</guid>
+      <guid>http://localhost:1313/docs/api/utils_functions/</guid>
       <description>
         
         
@@ -1391,10 +1391,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>visualization</title>
-      <link>https://example.org/docs/api/visualization/</link>
+      <link>http://localhost:1313/docs/api/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/visualization/</guid>
+      <guid>http://localhost:1313/docs/api/visualization/</guid>
       <description>
         
         
@@ -1405,10 +1405,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>workflows</title>
-      <link>https://example.org/docs/api/workflows/</link>
+      <link>http://localhost:1313/docs/api/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/workflows/</guid>
+      <guid>http://localhost:1313/docs/api/workflows/</guid>
       <description>
         
         
@@ -1515,10 +1515,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>mzpkl</title>
-      <link>https://example.org/docs/api/mzpkl/</link>
+      <link>http://localhost:1313/docs/api/mzpkl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/mzpkl/</guid>
+      <guid>http://localhost:1313/docs/api/mzpkl/</guid>
       <description>
         
         
@@ -1570,10 +1570,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>network</title>
-      <link>https://example.org/docs/api/network/</link>
+      <link>http://localhost:1313/docs/api/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/network/</guid>
+      <guid>http://localhost:1313/docs/api/network/</guid>
       <description>
         
         

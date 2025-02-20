@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MassCube – MassCube Documentation</title>
-    <link>https://example.org/docs/</link>
+    <link>http://localhost:1313/docs/</link>
     <description>Recent content in MassCube Documentation on MassCube</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>alignment</title>
-      <link>https://example.org/docs/api/alignment/</link>
+      <link>http://localhost:1313/docs/api/alignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/alignment/</guid>
+      <guid>http://localhost:1313/docs/api/alignment/</guid>
       <description>
         
         
@@ -185,10 +185,10 @@
     
     <item>
       <title>annotation</title>
-      <link>https://example.org/docs/api/annotation/</link>
+      <link>http://localhost:1313/docs/api/annotation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/annotation/</guid>
+      <guid>http://localhost:1313/docs/api/annotation/</guid>
       <description>
         
         
@@ -296,10 +296,10 @@
     
     <item>
       <title>classifier_builder</title>
-      <link>https://example.org/docs/api/classifier_builder/</link>
+      <link>http://localhost:1313/docs/api/classifier_builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/classifier_builder/</guid>
+      <guid>http://localhost:1313/docs/api/classifier_builder/</guid>
       <description>
         
         
@@ -412,10 +412,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>Data preparation</title>
-      <link>https://example.org/docs/workflows/data_preparation/</link>
+      <link>http://localhost:1313/docs/workflows/data_preparation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/data_preparation/</guid>
+      <guid>http://localhost:1313/docs/workflows/data_preparation/</guid>
       <description>
         
         
@@ -553,10 +553,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_detection</title>
-      <link>https://example.org/docs/api/feature_detection/</link>
+      <link>http://localhost:1313/docs/api/feature_detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_detection/</guid>
+      <guid>http://localhost:1313/docs/api/feature_detection/</guid>
       <description>
         
         
@@ -720,10 +720,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_evaluation</title>
-      <link>https://example.org/docs/api/feature_evaluation/</link>
+      <link>http://localhost:1313/docs/api/feature_evaluation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_evaluation/</guid>
+      <guid>http://localhost:1313/docs/api/feature_evaluation/</guid>
       <description>
         
         
@@ -771,10 +771,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>feature_grouping</title>
-      <link>https://example.org/docs/api/feature_grouping/</link>
+      <link>http://localhost:1313/docs/api/feature_grouping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/feature_grouping/</guid>
+      <guid>http://localhost:1313/docs/api/feature_grouping/</guid>
       <description>
         
         
@@ -871,10 +871,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>Installation</title>
-      <link>https://example.org/docs/installation/</link>
+      <link>http://localhost:1313/docs/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/installation/</guid>
+      <guid>http://localhost:1313/docs/installation/</guid>
       <description>
         
         
@@ -989,10 +989,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>normalization</title>
-      <link>https://example.org/docs/api/normalization/</link>
+      <link>http://localhost:1313/docs/api/normalization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/normalization/</guid>
+      <guid>http://localhost:1313/docs/api/normalization/</guid>
       <description>
         
         
@@ -1121,10 +1121,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>params</title>
-      <link>https://example.org/docs/api/params/</link>
+      <link>http://localhost:1313/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/params/</guid>
+      <guid>http://localhost:1313/docs/api/params/</guid>
       <description>
         
         
@@ -1359,10 +1359,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>raw_data_utils</title>
-      <link>https://example.org/docs/api/raw_data_utils/</link>
+      <link>http://localhost:1313/docs/api/raw_data_utils/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/raw_data_utils/</guid>
+      <guid>http://localhost:1313/docs/api/raw_data_utils/</guid>
       <description>
         
         
@@ -1483,10 +1483,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>stats</title>
-      <link>https://example.org/docs/api/stats/</link>
+      <link>http://localhost:1313/docs/api/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/stats/</guid>
+      <guid>http://localhost:1313/docs/api/stats/</guid>
       <description>
         
         
@@ -1497,10 +1497,10 @@ selected_features : one-dimensional numpy array
     
     <item>
       <title>utils_functions</title>
-      <link>https://example.org/docs/api/utils_functions/</link>
+      <link>http://localhost:1313/docs/api/utils_functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/utils_functions/</guid>
+      <guid>http://localhost:1313/docs/api/utils_functions/</guid>
       <description>
         
         
@@ -1650,10 +1650,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>visualization</title>
-      <link>https://example.org/docs/api/visualization/</link>
+      <link>http://localhost:1313/docs/api/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/visualization/</guid>
+      <guid>http://localhost:1313/docs/api/visualization/</guid>
       <description>
         
         
@@ -1664,10 +1664,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>workflows</title>
-      <link>https://example.org/docs/api/workflows/</link>
+      <link>http://localhost:1313/docs/api/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/workflows/</guid>
+      <guid>http://localhost:1313/docs/api/workflows/</guid>
       <description>
         
         
@@ -1774,10 +1774,10 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     
     <item>
       <title>mzpkl</title>
-      <link>https://example.org/docs/api/mzpkl/</link>
+      <link>http://localhost:1313/docs/api/mzpkl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/mzpkl/</guid>
+      <guid>http://localhost:1313/docs/api/mzpkl/</guid>
       <description>
         
         
@@ -1829,10 +1829,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>network</title>
-      <link>https://example.org/docs/api/network/</link>
+      <link>http://localhost:1313/docs/api/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/api/network/</guid>
+      <guid>http://localhost:1313/docs/api/network/</guid>
       <description>
         
         
@@ -1843,10 +1843,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Parameters</title>
-      <link>https://example.org/docs/workflows/parameters/</link>
+      <link>http://localhost:1313/docs/workflows/parameters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/parameters/</guid>
+      <guid>http://localhost:1313/docs/workflows/parameters/</guid>
       <description>
         
         
@@ -2008,17 +2008,17 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Much more parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;https://example.org/masscubedocs/docs/api&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Much more parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;http://localhost:1313/masscubedocs/docs/api&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Quick Start</title>
-      <link>https://example.org/docs/quickstart/</link>
+      <link>http://localhost:1313/docs/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/quickstart/</guid>
+      <guid>http://localhost:1313/docs/quickstart/</guid>
       <description>
         
         
@@ -2072,6 +2072,8 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;div class=&#34;hextra-cards mt-4 gap-4 grid not-prose&#34; style=&#34;--rows: 3;&#34;&gt;
 &lt;a
   class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;../workflows/data_preparation&#34; &gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z&#34;/&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Data Preparation&lt;/span&gt;&lt;/a&gt;
+&lt;a
+  class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;https://zenodo.org/records/14869318&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4&#34;/&gt;&lt;/svg&gt;Demo data&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the project folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
@@ -2149,10 +2151,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Prepare a database</title>
-      <link>https://example.org/docs/workflows/database/</link>
+      <link>http://localhost:1313/docs/workflows/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/database/</guid>
+      <guid>http://localhost:1313/docs/workflows/database/</guid>
       <description>
         
         
@@ -2259,10 +2261,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Untargeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/untargeted_metabolomics/</link>
+      <link>http://localhost:1313/docs/workflows/untargeted_metabolomics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/untargeted_metabolomics/</guid>
+      <guid>http://localhost:1313/docs/workflows/untargeted_metabolomics/</guid>
       <description>
         
         
@@ -2270,7 +2272,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Data processing is critical for metabolomics studies. A series of steps are required to process the raw data to generate biological hypothesis that can be further validated.&lt;/p&gt;
 &lt;p&gt;The MassCube untargeted metabolomics workflow aims to address the burdens in mass spectrometry-based metabolomics data processing. It integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data.&lt;/p&gt;
 &lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Please refer to the &lt;a href=&#34;https://example.org/docs/quickstart&#34; &gt;quick start guide&lt;/a&gt;.&lt;/p&gt;
+    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Please refer to the &lt;a href=&#34;http://localhost:1313/docs/quickstart&#34; &gt;quick start guide&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Explainations of the workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;explainations-of-the-workflow&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#explainations-of-the-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2363,10 +2365,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Single file processing by applying default parameters depending on the data</title>
-      <link>https://example.org/docs/workflows/batch_processing/</link>
+      <link>http://localhost:1313/docs/workflows/batch_processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/batch_processing/</guid>
+      <guid>http://localhost:1313/docs/workflows/batch_processing/</guid>
       <description>
         
         
@@ -2511,10 +2513,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Find outliers</title>
-      <link>https://example.org/docs/workflows/find-outliers/</link>
+      <link>http://localhost:1313/docs/workflows/find-outliers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/find-outliers/</guid>
+      <guid>http://localhost:1313/docs/workflows/find-outliers/</guid>
       <description>
         
         
@@ -2624,10 +2626,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     
     <item>
       <title>Targeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/targeted_metabolomics/</link>
+      <link>http://localhost:1313/docs/workflows/targeted_metabolomics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/targeted_metabolomics/</guid>
+      <guid>http://localhost:1313/docs/workflows/targeted_metabolomics/</guid>
       <description>
         
         
