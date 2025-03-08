@@ -2065,6 +2065,15 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;p&gt;&lt;strong&gt;MS2 database&lt;/strong&gt;: To annotate MS/MS spectra, you need to download a MS/MS library from &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For faster database loading, please download and use the .pkl format.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;
+  &lt;summary class=&#34;flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[&#39;&#39;] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90&#34;&gt;
+    &lt;strong class=&#34;text-lg&#34;&gt;Choose the right MS/MS database version&lt;/strong&gt;
+  &lt;/summary&gt;
+  &lt;div class=&#34;p-2 overflow-hidden&#34;&gt;
+    For MassCube version 1.2.0 or later, please use &lt;a href=&#34;https://zenodo.org/records/14991522&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New MS/MS Databases&lt;/a&gt;
+For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Old MS/MS Databases&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
 &lt;p&gt;&lt;strong&gt;Extra component for annotation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;mzrt_list.csv&lt;/code&gt; file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate features using retention time (e.g. internal standards). A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. It&amp;rsquo;s &lt;strong&gt;optional&lt;/strong&gt;.&lt;/li&gt;

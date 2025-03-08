@@ -36,7 +36,7 @@ The MassCube untargeted metabolomics workflow The workflow integrates metadata c
 If you haven’t installed MassCube yet, be sure to follow the installation guide before proceeding.
 The MassCube untargeted metabolomics workflow The workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (Fig. 1).">
 
-<meta itemprop="wordCount" content="536">
+<meta itemprop="wordCount" content="562">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Quick Start"/>
 <meta name="twitter:description" content="Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.
 If you haven’t installed MassCube yet, be sure to follow the installation guide before proceeding.
@@ -766,6 +766,15 @@ The MassCube untargeted metabolomics workflow The workflow integrates metadata c
 <p><strong>MS2 database</strong>: To annotate MS/MS spectra, you need to download a MS/MS library from <a href="https://zenodo.org/records/11363475" target="_blank" rel="noopener">here</a>. For faster database loading, please download and use the .pkl format.</p>
 </li>
 </ol>
+<details class="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group" >
+  <summary class="flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[''] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90">
+    <strong class="text-lg">Choose the right MS/MS database version</strong>
+  </summary>
+  <div class="p-2 overflow-hidden">
+    For MassCube version 1.2.0 or later, please use <a href="https://zenodo.org/records/14991522" target="_blank" rel="noopener">New MS/MS Databases</a>
+For the earlier version, please use <a href="https://zenodo.org/records/11363475" target="_blank" rel="noopener">Old MS/MS Databases</a>
+  </div>
+</details>
 <p><strong>Extra component for annotation:</strong></p>
 <ol>
 <li><code>mzrt_list.csv</code> file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate features using retention time (e.g. internal standards). A template can be downloaded from <a href="https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv" target="_blank" rel="noopener">here</a>. It&rsquo;s <strong>optional</strong>.</li>
