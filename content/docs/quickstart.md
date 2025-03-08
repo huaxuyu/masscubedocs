@@ -40,6 +40,11 @@ my_project
 
 4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/11363475). For faster database loading, please download and use the .pkl format.
 
+{{< details title="Choose the right MS/MS database version" closed="true" >}}
+For MassCube version 1.2.0 or later, please use [New MS/MS Databases](https://zenodo.org/records/14991522)
+For the earlier version, please use [Old MS/MS Databases](https://zenodo.org/records/11363475)
+{{< /details >}}
+
 **Extra component for annotation:**
 
 1. `mzrt_list.csv` file: a csv file to provide the m/z and retention time for feature annotation. It was designed to annotate features using retention time (e.g. internal standards). A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/mzrt_list.csv). It's **optional**.

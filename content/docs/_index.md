@@ -5,7 +5,7 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2025-02-19 **Version**: 1.1.15
+**Date**: 2025-03-07 **Version**: 1.2.1
 
 <!--more-->
 
@@ -33,3 +33,11 @@ MassCube is an open-source computing library and framework for MS data processin
 {{< card link="../docs/installation" title="Installation" icon="play">}}
 {{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
 {{< /cards >}}
+
+## Release Notes for v1.2.1
+
+- MassCube now annoatate MS/MS spectra using unweighted entropy similarity based on the ms_entropy Python package ver. 1.3.4. Please make sure you use the latest version of the MS/MS library. Check quick start for more details.
+
+- Now you can plot signal normalization results by setting plot_normalization to True in the parameters.csv file.
+
+- Bug fixes and performance improvements.
