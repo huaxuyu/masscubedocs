@@ -38,7 +38,7 @@ my_project
 
 3. `parameters.csv` file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from [here](https://huaxuyu.github.io/masscube_parameters/) or download a template [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). If not provided, the [default parameters](../parameter) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
 
-4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/11363475). For faster database loading, please download and use the .pkl format.
+4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/14991522). For faster database loading, please download and use the .pkl format.
 
 {{< details title="Choose the right MS/MS database version" closed="true" >}}
 For MassCube version 1.2.0 or later, please use [New MS/MS Databases](https://zenodo.org/records/14991522)
@@ -62,7 +62,7 @@ For the earlier version, please use [Old MS/MS Databases](https://zenodo.org/rec
 untargeted-metabolomics
 ```
 
-{{< details title="How to open the terminal" closed="true" >}}
+{{< details title="How to open a terminal" closed="true" >}}
 Make sure the terminal directory is set to the project folder. For [Windows user](https://johnwargo.com/posts/2024/launch-windows-terminal/) and [MacOS user](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac#:~:text=Terminal%20for%20me-,Open%20Terminal,%2C%20then%20double%2Dclick%20Terminal.)
 {{< /details >}}
 
