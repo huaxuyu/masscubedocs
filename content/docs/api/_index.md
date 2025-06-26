@@ -1,7 +1,7 @@
 ---
 linkTitle: "APIs"
 title: APIs reference
-weight: 5
+weight: 6
 ---
 
 All functions and objects in MassCube are documented in the API reference. Version 1.1 of MassCube includes 16 modules designed to manage a variety of data processing tasks, featuring core objects specifically tailored for MS data, particularly data generated from LC-MS experiments.

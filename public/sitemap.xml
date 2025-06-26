@@ -18,6 +18,8 @@
   </url><url>
     <loc>https://example.org/docs/installation/</loc>
   </url><url>
+    <loc>https://example.org/docs/visualization/ms2/</loc>
+  </url><url>
     <loc>https://example.org/docs/api/normalization/</loc>
   </url><url>
     <loc>https://example.org/docs/api/params/</loc>
@@ -44,13 +46,15 @@
   </url><url>
     <loc>https://example.org/docs/workflows/</loc>
   </url><url>
-    <loc>https://example.org/docs/algorithms/</loc>
-  </url><url>
     <loc>https://example.org/docs/workflows/untargeted_metabolomics/</loc>
   </url><url>
-    <loc>https://example.org/docs/api/</loc>
+    <loc>https://example.org/docs/visualization/</loc>
+  </url><url>
+    <loc>https://example.org/docs/algorithms/</loc>
   </url><url>
     <loc>https://example.org/docs/workflows/batch_processing/</loc>
+  </url><url>
+    <loc>https://example.org/docs/api/</loc>
   </url><url>
     <loc>https://example.org/docs/workflows/find-outliers/</loc>
   </url><url>

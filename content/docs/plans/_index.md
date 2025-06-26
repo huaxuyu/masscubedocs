@@ -1,7 +1,7 @@
 ---
 linkTitle: "Plans for development"
 title: Plans for development
-weight: 6
+weight: 7
 ---
 
 We are working on the following features and improvements and welcome contributions from the community.

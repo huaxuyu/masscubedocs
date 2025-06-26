@@ -1,7 +1,7 @@
 ---
 linkTitle: "Algorithms"
 title: Algorithms
-weight: 4
+weight: 5
 ---
 
 We are preparing figures to explain the algorithms used in _masscube_.
