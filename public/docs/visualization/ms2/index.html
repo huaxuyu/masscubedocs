@@ -13,7 +13,7 @@
 
   <title>MS/MS spectra visualization – MassCube</title>
   <meta name="description" content="Mirror plot Compare a pair of MS/MS spectra using a mirror plot:
-from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precusor_1 = 260.056 precusor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) signals2 = extract_signals_from_string(ms2_2) annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precusor_1, precusor_2, signals1, signals2, annotation=annotation, score=similarity) You expect to see a plot like this:" />
+from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precursor_1 = 260.056 precursor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) # convert string to 2D numpy array signals2 = extract_signals_from_string(ms2_2) # convert string to 2D numpy array annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precursor_1, precursor_1, signals1, signals2, annotation=annotation, score=similarity) ms2_1 and ms2_2 are MS/MS spectra in the format “m/z;intensity” pairs separated by “|”." />
   
   
     <link rel="canonical" href="https://example.org/docs/visualization/ms2/" itemprop="url" />
@@ -23,7 +23,7 @@ from masscube.annotation import extract_signals_from_string from masscube.visual
 
 <meta property="og:title" content="MS/MS spectra visualization" />
 <meta property="og:description" content="Mirror plot Compare a pair of MS/MS spectra using a mirror plot:
-from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precusor_1 = 260.056 precusor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) signals2 = extract_signals_from_string(ms2_2) annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precusor_1, precusor_2, signals1, signals2, annotation=annotation, score=similarity) You expect to see a plot like this:" />
+from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precursor_1 = 260.056 precursor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) # convert string to 2D numpy array signals2 = extract_signals_from_string(ms2_2) # convert string to 2D numpy array annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precursor_1, precursor_1, signals1, signals2, annotation=annotation, score=similarity) ms2_1 and ms2_2 are MS/MS spectra in the format &ldquo;m/z;intensity&rdquo; pairs separated by &ldquo;|&rdquo;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/visualization/ms2/" /><meta property="article:section" content="docs" />
 
@@ -31,12 +31,12 @@ from masscube.annotation import extract_signals_from_string from masscube.visual
 
   <meta itemprop="name" content="MS/MS spectra visualization">
 <meta itemprop="description" content="Mirror plot Compare a pair of MS/MS spectra using a mirror plot:
-from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precusor_1 = 260.056 precusor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) signals2 = extract_signals_from_string(ms2_2) annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precusor_1, precusor_2, signals1, signals2, annotation=annotation, score=similarity) You expect to see a plot like this:">
+from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precursor_1 = 260.056 precursor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) # convert string to 2D numpy array signals2 = extract_signals_from_string(ms2_2) # convert string to 2D numpy array annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precursor_1, precursor_1, signals1, signals2, annotation=annotation, score=similarity) ms2_1 and ms2_2 are MS/MS spectra in the format &ldquo;m/z;intensity&rdquo; pairs separated by &ldquo;|&rdquo;.">
 
-<meta itemprop="wordCount" content="58">
+<meta itemprop="wordCount" content="103">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="MS/MS spectra visualization"/>
 <meta name="twitter:description" content="Mirror plot Compare a pair of MS/MS spectra using a mirror plot:
-from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precusor_1 = 260.056 precusor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) signals2 = extract_signals_from_string(ms2_2) annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precusor_1, precusor_2, signals1, signals2, annotation=annotation, score=similarity) You expect to see a plot like this:"/>
+from masscube.annotation import extract_signals_from_string from masscube.visualization import mirror_ms2 precursor_1 = 260.056 precursor_2 = 180.1019 ms2_1 = &#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34; ms2_2 = &#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34; signals1 = extract_signals_from_string(ms2_1) # convert string to 2D numpy array signals2 = extract_signals_from_string(ms2_2) # convert string to 2D numpy array annotation = &#34;Salsolinol&#34; similarity = 0.84 mirror_ms2(precursor_1, precursor_1, signals1, signals2, annotation=annotation, score=similarity) ms2_1 and ms2_2 are MS/MS spectra in the format &ldquo;m/z;intensity&rdquo; pairs separated by &ldquo;|&rdquo;."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -721,6 +721,10 @@ from masscube.annotation import extract_signals_from_string from masscube.visual
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#mirror-plot">Mirror plot
         </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#example-output">example output
+        </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
@@ -752,15 +756,17 @@ from masscube.annotation import extract_signals_from_string from masscube.visual
 <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">masscube.annotation</span> <span class="kn">import</span> <span class="n">extract_signals_from_string</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">masscube.visualization</span> <span class="kn">import</span> <span class="n">mirror_ms2</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">precusor_1</span> <span class="o">=</span> <span class="mf">260.056</span>
-</span></span><span class="line"><span class="cl"><span class="n">precusor_2</span> <span class="o">=</span> <span class="mf">180.1019</span>
+</span></span><span class="line"><span class="cl"><span class="n">precursor_1</span> <span class="o">=</span> <span class="mf">260.056</span>
+</span></span><span class="line"><span class="cl"><span class="n">precursor_2</span> <span class="o">=</span> <span class="mf">180.1019</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">ms2_1</span> <span class="o">=</span> <span class="s2">&#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">ms2_2</span> <span class="o">=</span> <span class="s2">&#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">signals1</span> <span class="o">=</span> <span class="n">extract_signals_from_string</span><span class="p">(</span><span class="n">ms2_1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">signals2</span> <span class="o">=</span> <span class="n">extract_signals_from_string</span><span class="p">(</span><span class="n">ms2_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">signals1</span> <span class="o">=</span> <span class="n">extract_signals_from_string</span><span class="p">(</span><span class="n">ms2_1</span><span class="p">)</span>   <span class="c1"># convert string to 2D numpy array</span>
+</span></span><span class="line"><span class="cl"><span class="n">signals2</span> <span class="o">=</span> <span class="n">extract_signals_from_string</span><span class="p">(</span><span class="n">ms2_2</span><span class="p">)</span>   <span class="c1"># convert string to 2D numpy array</span>
 </span></span><span class="line"><span class="cl"><span class="n">annotation</span> <span class="o">=</span> <span class="s2">&#34;Salsolinol&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">similarity</span> <span class="o">=</span> <span class="mf">0.84</span>
-</span></span><span class="line"><span class="cl"><span class="n">mirror_ms2</span><span class="p">(</span><span class="n">precusor_1</span><span class="p">,</span> <span class="n">precusor_2</span><span class="p">,</span> <span class="n">signals1</span><span class="p">,</span> <span class="n">signals2</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="n">annotation</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="n">similarity</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+</span></span><span class="line"><span class="cl"><span class="n">mirror_ms2</span><span class="p">(</span><span class="n">precursor_1</span><span class="p">,</span> <span class="n">precursor_1</span><span class="p">,</span> <span class="n">signals1</span><span class="p">,</span> <span class="n">signals2</span><span class="p">,</span> <span class="n">annotation</span><span class="o">=</span><span class="n">annotation</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="n">similarity</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -770,8 +776,9 @@ from masscube.annotation import extract_signals_from_string from masscube.visual
     </button>
   </div>
 </div>
-<p>You expect to see a plot like this:</p>
-<p>
+<p>ms2_1 and ms2_2 are MS/MS spectra in the format &ldquo;m/z;intensity&rdquo; pairs separated by &ldquo;|&rdquo;. You can copy them directly from the <strong>MS2</strong> (experimental MS/MS) and <strong>matched_MS2</strong> (database MS/MS) columns in the aligned_feature_table generated by the <strong>untargeted-metabolomics</strong> command.</p>
+<h3>example output<span class="absolute -mt-20" id="example-output"></span>
+    <a href="#example-output" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>
     <img src="../salsolinol_sulfate.png" alt="Mirror plot" loading="lazy" /></p>
 
         </div>
