@@ -11,9 +11,10 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>Prepare a database – MassCube</title>
-  <meta name="description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
-Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ." />
+  <title>MS/MS database – MassCube</title>
+  <meta name="description" content="Introduction A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either download a MS/MS database or prepare your own database.
+MassCube uses unweighted entropy similarity for spectral matching based on the ms_entropy Python package.
+Download a MS/MS database You can download a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in ." />
   
   
     <link rel="canonical" href="https://example.org/docs/workflows/database/" itemprop="url" />
@@ -21,22 +22,25 @@ Download a database For users without programming experience or just want to use
 
   
 
-<meta property="og:title" content="Prepare a database" />
-<meta property="og:description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
-Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ." />
+<meta property="og:title" content="MS/MS database" />
+<meta property="og:description" content="Introduction A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either download a MS/MS database or prepare your own database.
+MassCube uses unweighted entropy similarity for spectral matching based on the ms_entropy Python package.
+Download a MS/MS database You can download a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/workflows/database/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="Prepare a database">
-<meta itemprop="description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
-Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the .">
+  <meta itemprop="name" content="MS/MS database">
+<meta itemprop="description" content="Introduction A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either download a MS/MS database or prepare your own database.
+MassCube uses unweighted entropy similarity for spectral matching based on the ms_entropy Python package.
+Download a MS/MS database You can download a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in .">
 
-<meta itemprop="wordCount" content="450">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Prepare a database"/>
-<meta name="twitter:description" content="Introduction A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for masscube.
-Download a database For users without programming experience or just want to use a database directly, you can download a database from the here. For faster database loading, please download and use the ."/>
+<meta itemprop="wordCount" content="440">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="MS/MS database"/>
+<meta name="twitter:description" content="Introduction A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either download a MS/MS database or prepare your own database.
+MassCube uses unweighted entropy similarity for spectral matching based on the ms_entropy Python package.
+Download a MS/MS database You can download a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in ."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -251,9 +255,9 @@ Download a database For users without programming experience or just want to use
             </li>
           <li>
               <a
-                href="#download-a-database"
+                href="#download-a-msms-database"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Download a database</a>
+              >Download a MS/MS database</a>
             </li>
           <li>
               <a
@@ -735,7 +739,7 @@ Download a database For users without programming experience or just want to use
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#download-a-database">Download a database
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#download-a-msms-database">Download a MS/MS database
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -778,36 +782,93 @@ Download a database For users without programming experience or just want to use
 </div>
 
         <div class="content">
-          <h1>Prepare a database</h1>
+          <h1>MS/MS database</h1>
           <h2>Introduction<span class="absolute -mt-20" id="introduction"></span>
-    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for <em>masscube</em>.</p>
-<h2>Download a database<span class="absolute -mt-20" id="download-a-database"></span>
-    <a href="#download-a-database" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For users without programming experience or just want to use a database directly, you can download a database from the <a href="https://zenodo.org/records/11363475" target="_blank" rel="noopener">here</a>. For faster database loading, please download and use the .pkl format.</p>
+    <a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either <u>download a MS/MS database</u> or <u>prepare your own database</u>.</p>
+<p>MassCube uses unweighted entropy similarity for spectral matching based on the <a href="https://msentropy.readthedocs.io/en/latest/" target="_blank" rel="noopener">ms_entropy</a> Python package.</p>
+<h2>Download a MS/MS database<span class="absolute -mt-20" id="download-a-msms-database"></span>
+    <a href="#download-a-msms-database" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You can <a href="https://zenodo.org/records/15740986" target="_blank" rel="noopener">download</a> a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in .pkl format for faster loading speed in <code>masscube</code>.</p>
 <h2>Prepare a database (for advanced users)<span class="absolute -mt-20" id="prepare-a-database-for-advanced-users"></span>
-    <a href="#prepare-a-database-for-advanced-users" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Three formats are supported for the database: pickle, msp, and json. The pickle format is recommended for faster loading. The msp format is recommended for compatibility with other software. The json format is another human-readable format commonly used in Python.</p>
+    <a href="#prepare-a-database-for-advanced-users" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Three formats are supported for the database: pickle, msp, and json.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        🌐
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      We highly recommend generating the pickle (.pkl) format MS/MS database.
+    </div>
+  </div>
+</div>
+
 <h3>MSP format<span class="absolute -mt-20" id="msp-format"></span>
-    <a href="#msp-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An MSP database is a text file that contains the MS2 database. Each block contains the information of a compound. IMPORTANT: make sure the keys are consistent with the example below.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME: L-PHENYLALANINE
-</span></span><span class="line"><span class="cl">PRECURSORMZ: 166.086013793945
-</span></span><span class="line"><span class="cl">PRECURSORTYPE: [M+H]+
-</span></span><span class="line"><span class="cl">IONMODE: Positive
-</span></span><span class="line"><span class="cl">RETENTIONTIME: 3.30520009994507
-</span></span><span class="line"><span class="cl">CCS: 136.819671630859
-</span></span><span class="line"><span class="cl">FORMULA: C9H11NO2
-</span></span><span class="line"><span class="cl">ONTOLOGY: Phenylalanine and derivatives
-</span></span><span class="line"><span class="cl">SMILES: C1=CC=C(C=C1)C[C@@H](C(=O)O)N
-</span></span><span class="line"><span class="cl">INCHIKEY: COLNVLDHVKWLRT-QMMMGPOBSA-N
-</span></span><span class="line"><span class="cl">INSTRUMENTTYPE: LC-ESI-QFT
-</span></span><span class="line"><span class="cl">COLLISIONENERGY: 35.0 eV
-</span></span><span class="line"><span class="cl">COMMENT: DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library
-</span></span><span class="line"><span class="cl">Num Peaks: 7
-</span></span><span class="line"><span class="cl">103.054	15
-</span></span><span class="line"><span class="cl">107.049	14
-</span></span><span class="line"><span class="cl">120.081	1000
-</span></span><span class="line"><span class="cl">121.084	16
-</span></span><span class="line"><span class="cl">131.049	41
-</span></span><span class="line"><span class="cl">149.059	16
-</span></span><span class="line"><span class="cl">166.086	56</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <a href="#msp-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the most commonly used database format. Each block is one compound separated by a blank line.</p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ℹ️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      You must provide the MSP file with the keys examplified below.
+    </div>
+  </div>
+</div>
+
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">NAME</span><span class="p">:</span> <span class="n">L</span><span class="o">-</span><span class="n">PHENYLALANINE</span>                     <span class="c1"># name</span>
+</span></span><span class="line"><span class="cl"><span class="n">PRECURSORMZ</span><span class="p">:</span> <span class="mf">166.0860</span>                     <span class="c1"># precursor m/z</span>
+</span></span><span class="line"><span class="cl"><span class="n">PRECURSORTYPE</span><span class="p">:</span> <span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="n">H</span><span class="p">]</span><span class="o">+</span>                     <span class="c1"># adduct</span>
+</span></span><span class="line"><span class="cl"><span class="n">IONMODE</span><span class="p">:</span> <span class="n">positive</span>                         <span class="c1"># ion mode</span>
+</span></span><span class="line"><span class="cl"><span class="n">RETENTIONTIME</span><span class="p">:</span> <span class="mf">3.31</span>                       <span class="c1"># retention time in minutes</span>
+</span></span><span class="line"><span class="cl"><span class="n">CCS</span><span class="p">:</span> <span class="mf">136.82</span>                               <span class="c1"># collisional cross section</span>
+</span></span><span class="line"><span class="cl"><span class="n">FORMULA</span><span class="p">:</span> <span class="n">C9H11NO2</span>                         <span class="c1"># chemical formula</span>
+</span></span><span class="line"><span class="cl"><span class="n">SMILES</span><span class="p">:</span> <span class="n">C1</span><span class="o">=</span><span class="n">CC</span><span class="o">=</span><span class="n">C</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="n">C1</span><span class="p">)</span><span class="n">C</span><span class="p">[</span><span class="n">C</span><span class="o">@</span><span class="nd">@H</span><span class="p">](</span><span class="n">C</span><span class="p">(</span><span class="o">=</span><span class="n">O</span><span class="p">)</span><span class="n">O</span><span class="p">)</span><span class="n">N</span>     <span class="c1"># SMILES string</span>
+</span></span><span class="line"><span class="cl"><span class="n">INCHIKEY</span><span class="p">:</span> <span class="n">COLNVLDHVKWLRT</span><span class="o">-</span><span class="n">QMMMGPOBSA</span><span class="o">-</span><span class="n">N</span>     <span class="c1"># InChIKey</span>
+</span></span><span class="line"><span class="cl"><span class="n">INSTRUMENTTYPE</span><span class="p">:</span> <span class="n">LC</span><span class="o">-</span><span class="n">ESI</span><span class="o">-</span><span class="n">QFT</span>                <span class="c1"># instrument type</span>
+</span></span><span class="line"><span class="cl"><span class="n">COLLISIONENERGY</span><span class="p">:</span> <span class="mf">35.0</span> <span class="n">eV</span>                  <span class="c1"># collision energy</span>
+</span></span><span class="line"><span class="cl"><span class="n">Num</span> <span class="n">Peaks</span><span class="p">:</span> <span class="mi">7</span>                              <span class="c1"># number of fragment signals</span>
+</span></span><span class="line"><span class="cl"><span class="mf">103.054</span>	<span class="mi">15</span>                                <span class="c1"># m/z and intensity of fragment signals</span>
+</span></span><span class="line"><span class="cl"><span class="mf">107.049</span>	<span class="mi">14</span>
+</span></span><span class="line"><span class="cl"><span class="mf">120.081</span>	<span class="mi">1000</span>
+</span></span><span class="line"><span class="cl"><span class="mf">121.084</span>	<span class="mi">16</span>
+</span></span><span class="line"><span class="cl"><span class="mf">131.049</span>	<span class="mi">41</span>
+</span></span><span class="line"><span class="cl"><span class="mf">149.059</span>	<span class="mi">16</span>
+</span></span><span class="line"><span class="cl"><span class="mf">166.086</span>	<span class="mi">56</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -817,14 +878,9 @@ Download a database For users without programming experience or just want to use
     </button>
   </div>
 </div>
-<p>Here, NAME, PRECURSORMZ and PRECURSORTYPE is mandatory. In particular,</p>
-<ol>
-<li>if RETENTIONTIME is not provided, level 1 annotation (i.e. retention time and MS2 matching) will not be performed.</li>
-<li>if any of FORMULA, SMILES or INCHIKEY is not provided, they will be missing in the output.</li>
-<li>if MS2 spectra (lines below Num Peaks) are not provided but retention time is provided, mzrt matching will be performed. In this case, no similarity score will be calculated. But you can compare the experimental and matched retention time to see if they are close.</li>
-</ol>
+<p>NAME, PRECURSORMZ, PRECURSORTYPE, IONMODE, and fragment signals are mandatory.</p>
 <h3>Pickle format<span class="absolute -mt-20" id="pickle-format"></span>
-    <a href="#pickle-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A .pkl database is a FlashEntropySearch object that contains the MS2 database. ms_entropy version 1.2.2 is highly recommended to generate this object (other versions may not work). Here is an example of how to generate a .pkl database from a msp file:</p>
+    <a href="#pickle-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A .pkl database is a <code>FlashEntropySearch</code> object that contains the MS2 database. ms_entropy version 1.3.4 is highly recommended to generate this object (other versions may not work). Here is an example of how to generate a .pkl database from a msp file:</p>
 <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">masscube.annotation</span> <span class="kn">import</span> <span class="n">index_msp_to_pkl</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># it will output a database.pkl file in the same folder</span>
@@ -838,25 +894,23 @@ Download a database For users without programming experience or just want to use
     </button>
   </div>
 </div>
-<p>Check the source code of <code>index_.msp_to_pkl</code> for more details.</p>
+<p>Please refer to the source code of <code>index_msp_to_pkl</code> for more details.</p>
 <h3>JSON format<span class="absolute -mt-20" id="json-format"></span>
-    <a href="#json-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A JSON database is a list of dictionaries, each dictionary contains</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;L-PHENYLALANINE&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;precursor_mz&#34;</span><span class="p">:</span> <span class="mf">166.086013793945</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;precursor_type&#34;</span><span class="p">:</span> <span class="s2">&#34;[M+H]+&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ionmode&#34;</span><span class="p">:</span> <span class="s2">&#34;Positive&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;retentiontime&#34;</span><span class="p">:</span> <span class="s2">&#34;3.30520009994507&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ccs&#34;</span><span class="p">:</span> <span class="s2">&#34;136.819671630859&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;formula&#34;</span><span class="p">:</span> <span class="s2">&#34;C9H11NO2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;ontology&#34;</span><span class="p">:</span> <span class="s2">&#34;Phenylalanine and derivatives&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;smiles&#34;</span><span class="p">:</span> <span class="s2">&#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;inchikey&#34;</span><span class="p">:</span> <span class="s2">&#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;instrumenttype&#34;</span><span class="p">:</span> <span class="s2">&#34;LC-ESI-QFT&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;collisionenergy&#34;</span><span class="p">:</span> <span class="s2">&#34;35.0 eV&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;comment&#34;</span><span class="p">:</span> <span class="s2">&#34;DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;num peaks&#34;</span><span class="p">:</span> <span class="s2">&#34;7&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;peaks&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <a href="#json-format" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A JSON database is a list of dictionaries. Each dictionary represents a compound with the following keys:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;L-PHENYLALANINE&#34;</span><span class="p">,</span>                  <span class="c1"># name</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;precursor_mz&#34;</span><span class="p">:</span> <span class="mf">166.086013793945</span><span class="p">,</span>           <span class="c1"># precursor m/z</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;precursor_type&#34;</span><span class="p">:</span> <span class="s2">&#34;[M+H]+&#34;</span><span class="p">,</span>                 <span class="c1"># adduct</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ion_mode&#34;</span><span class="p">:</span> <span class="s2">&#34;Positive&#34;</span><span class="p">,</span>                     <span class="c1"># ion mode</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;retention_time&#34;</span><span class="p">:</span> <span class="s2">&#34;3.30520009994507&#34;</span><span class="p">,</span>       <span class="c1"># retention time in minutes</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ccs&#34;</span><span class="p">:</span> <span class="s2">&#34;136.819671630859&#34;</span><span class="p">,</span>                  <span class="c1"># collisional cross section</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;formula&#34;</span><span class="p">:</span> <span class="s2">&#34;C9H11NO2&#34;</span><span class="p">,</span>                      <span class="c1"># chemical formula</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;smiles&#34;</span><span class="p">:</span> <span class="s2">&#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&#34;</span><span class="p">,</span>  <span class="c1"># SMILES string</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;inchikey&#34;</span><span class="p">:</span> <span class="s2">&#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&#34;</span><span class="p">,</span>  <span class="c1"># InChIKey</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;instrument_type&#34;</span><span class="p">:</span> <span class="s2">&#34;LC-ESI-QFT&#34;</span><span class="p">,</span>            <span class="c1"># instrument type</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;collision_energy&#34;</span><span class="p">:</span> <span class="s2">&#34;35.0 eV&#34;</span><span class="p">,</span>              <span class="c1"># collision energy</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;num peaks&#34;</span><span class="p">:</span> <span class="s2">&#34;7&#34;</span><span class="p">,</span>                           <span class="c1"># number of fragment signals</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;peaks&#34;</span><span class="p">:</span> <span class="p">[</span>                                  <span class="c1"># fragment signals</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;103.054&#34;</span><span class="p">,</span> <span class="s2">&#34;15&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;107.049&#34;</span><span class="p">,</span> <span class="s2">&#34;14&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s2">&#34;120.081&#34;</span><span class="p">,</span> <span class="s2">&#34;1000&#34;</span><span class="p">],</span>
@@ -875,7 +929,19 @@ Download a database For users without programming experience or just want to use
     </button>
   </div>
 </div>
-<p>Please see explanations of the keys in the MSP format.</p>
+<p>To index a JSON database, you can use the <code>index_json_to_pkl</code> function:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">masscube.annotation</span> <span class="kn">import</span> <span class="n">index_json_to_pkl</span>
+</span></span><span class="line"><span class="cl"><span class="n">index_json_to_pkl</span><span class="p">(</span><span class="s1">&#39;database.json&#39;</span><span class="p">,</span> <span class="s1">&#39;database.pkl&#39;</span><span class="p">)</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Please refer to the source code of <code>index_json_to_pkl</code> for more details.</p>
 
         </div>
         <div class="mt-16"></div>

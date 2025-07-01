@@ -4,61 +4,39 @@ title: "Data preparation"
 weight: 1
 ---
 
-## File conversion
+## Convert raw data files
 
-Raw LC-MS data need to be converted to **mzML** or **mxXML** format for further processing in MassCube.
-
-{{< callout type="warnings" >}}
-Currently, only **centroid** data are supported in MassCube.
-{{< /callout >}}
+Raw mass spectrometry data need to be converted to <u>centroid</u> **mzML** or **mxXML** format for MassCube data processing.
 
 We recommend to use **MSConvert** for file conversion.
 
-### Download and install MSConvert
-
-Visit the [official website](https://proteowizard.sourceforge.io/download.html) to download ProteoWizard.
-
-### File conversion using MSConvert
+Visit the [official website](https://proteowizard.sourceforge.io/download.html) to download ProteoWizard and install MSConvert.
 
 ![](MSConvert.png "Fig. 1. MSConvert GUI")
 
 {{% steps %}}
 
-### Step 1. Set options
+#### Step 1. Set options
 
 Check the boxes as shown in **Fig. 1**.
 
 {{< callout type="warning" >}}
-Do NOT check **Use Zlib compression**.
+Do NOT check **Use zlib compression**.
 {{< /callout >}}
 
-### Step 2. Set the Peak Picking filter
+#### Step 2. Set the peak picking filter
 
-### Step 3. Add the Peak Picking filter
+#### Step 3. Add the peak picking filter
 
-### Step 4. Browse and load files
+#### Step 4. Browse and load files
 
-### Step 5. Start conversion
+#### Step 5. Start conversion
+
+{{< /steps >}}
 
 By default, the converted files will be saved in the same directory as the raw files.
 
-{{% /steps %}}
-
-{{< details title="Convert files in command line mode" closed="true">}}
-You can also convert files using MSConvert in command line mode. For more information, please refer to the [documentation](https://proteowizard.sourceforge.io/tools/msconvert.html).
-{{< /details >}}
-
-## Parameter file
-
-A parameter file (.csv) is used to set parameters for the workflow. A templete is provided [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). If not provided, the [default parameters](../parameters) will be applied. For MassCube version 1.0 or earlier, please use this [template](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters_ver1.csv).
-
-## Sample table
-
-A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). For MassCube version 1.0 or earlier, please use this [template](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table_ver1.csv)
-
-For large-scale metabolomics data, it's not easy to prepare the sample table manually. In MassCube, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.
-
-### Automatically generate sample table
+## Generate a sample table
 
 In the project folder, open a terminal and run the following command:
 
@@ -77,6 +55,14 @@ my_project
 |── ...
 ```
 
-{{< callout type="warnings" >}}
-You need to further edit the generated sample table to specify QCs, blanks and sample groups.
-{{< /callout >}}
+Set **yes** in the 'is_blank' column for blank samples, and **yes** in the 'is_qc' column for quality control (QC) samples. You can add more columns to the sample table to claim biological groups or other information. For example, you can add a column named 'treatment' to claim the treatment of each sample like drug A, drug B, or control. Example:
+
+| name    | is_blank | is_qc | treatment |
+| ------- | -------- | ----- | --------- |
+| sample1 | no       | no    | drug A    |
+| sample2 | no       | no    | drug B    |
+| sample3 | no       | no    | control   |
+| QC1     | no       | yes   | NA        |
+| QC2     | no       | yes   | NA        |
+| blank1  | yes      | no    | NA        |
+| blank2  | yes      | no    | NA        |

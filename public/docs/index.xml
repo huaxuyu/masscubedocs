@@ -419,80 +419,36 @@ selected_features : one-dimensional numpy array
       <description>
         
         
-        &lt;h2&gt;File conversion&lt;span class=&#34;absolute -mt-20&#34; id=&#34;file-conversion&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#file-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Raw LC-MS data need to be converted to &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for further processing in MassCube.&lt;/p&gt;
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300&#34;&gt;
-  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
-    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      Currently, only &lt;strong&gt;centroid&lt;/strong&gt; data are supported in MassCube.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
+        &lt;h2&gt;Convert raw data files&lt;span class=&#34;absolute -mt-20&#34; id=&#34;convert-raw-data-files&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#convert-raw-data-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
 &lt;p&gt;We recommend to use &lt;strong&gt;MSConvert&lt;/strong&gt; for file conversion.&lt;/p&gt;
-&lt;h3&gt;Download and install MSConvert&lt;span class=&#34;absolute -mt-20&#34; id=&#34;download-and-install-msconvert&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#download-and-install-msconvert&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard.&lt;/p&gt;
-&lt;h3&gt;File conversion using MSConvert&lt;span class=&#34;absolute -mt-20&#34; id=&#34;file-conversion-using-msconvert&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#file-conversion-using-msconvert&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard and install MSConvert.&lt;/p&gt;
+&lt;p&gt;
     &lt;figure&gt;
     &lt;img src=&#34;../MSConvert.png&#34; title=&#34;Fig. 1. MSConvert GUI&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Fig. 1. MSConvert GUI&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Step 1. Set options&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-set-options&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-set-options&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Check the boxes as shown in &lt;strong&gt;Fig. 1&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4&gt;Step 1. Set options&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-set-options&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-1-set-options&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Check the boxes as shown in &lt;strong&gt;Fig. 1&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200&#34;&gt;
   &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;div class=&#34;select-none text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
         ⚠️
       &lt;/div&gt;&lt;/div&gt;
   &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
     &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      Do NOT check &lt;strong&gt;Use Zlib compression&lt;/strong&gt;.
+      Do NOT check &lt;strong&gt;Use zlib compression&lt;/strong&gt;.
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;Step 2. Set the Peak Picking filter&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-set-the-peak-picking-filter&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-2-set-the-peak-picking-filter&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Step 3. Add the Peak Picking filter&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-add-the-peak-picking-filter&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-3-add-the-peak-picking-filter&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Step 4. Browse and load files&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-4-browse-and-load-files&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-4-browse-and-load-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Step 5. Start conversion&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-5-start-conversion&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-5-start-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;By default, the converted files will be saved in the same directory as the raw files.&lt;/p&gt;
-&lt;/div&gt;
-&lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;
-  &lt;summary class=&#34;flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[&#39;&#39;] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90&#34;&gt;
-    &lt;strong class=&#34;text-lg&#34;&gt;Convert files in command line mode&lt;/strong&gt;
-  &lt;/summary&gt;
-  &lt;div class=&#34;p-2 overflow-hidden&#34;&gt;
-    You can also convert files using MSConvert in command line mode. For more information, please refer to the &lt;a href=&#34;https://proteowizard.sourceforge.io/tools/msconvert.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/details&gt;
-
-&lt;h2&gt;Parameter file&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter-file&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#parameter-file&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A parameter file (.csv) is used to set parameters for the workflow. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../parameters&#34; &gt;default parameters&lt;/a&gt; will be applied. For MassCube version 1.0 or earlier, please use this &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A sample table (.csv) is used to claim the name of samples and their groups including biological groups, quality control samples, or blank samples. A templete is provided &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For MassCube version 1.0 or earlier, please use this &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table_ver1.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;For large-scale metabolomics data, it&amp;rsquo;s not easy to prepare the sample table manually. In MassCube, we provide a function to automatically generate the sample table based on the file names in the data folder, and users can further define the groups.&lt;/p&gt;
-&lt;h3&gt;Automatically generate sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;automatically-generate-sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#automatically-generate-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
+&lt;h4&gt;Step 2. Set the peak picking filter&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-set-the-peak-picking-filter&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-2-set-the-peak-picking-filter&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h4&gt;Step 3. Add the peak picking filter&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-3-add-the-peak-picking-filter&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-3-add-the-peak-picking-filter&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h4&gt;Step 4. Browse and load files&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-4-browse-and-load-files&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-4-browse-and-load-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h4&gt;Step 5. Start conversion&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-5-start-conversion&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#step-5-start-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
+&lt;p&gt;By default, the converted files will be saved in the same directory as the raw files.&lt;/p&gt;
+&lt;h2&gt;Generate a sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;generate-a-sample-table&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#generate-a-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;generate-sample-table&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
@@ -519,34 +475,61 @@ selected_features : one-dimensional numpy array
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300&#34;&gt;
-  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
-    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
-      You need to further edit the generated sample table to specify QCs, blanks and sample groups.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
+&lt;p&gt;Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. You can add more columns to the sample table to claim biological groups or other information. For example, you can add a column named &amp;rsquo;treatment&amp;rsquo; to claim the treatment of each sample like drug A, drug B, or control. Example:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;is_blank&lt;/th&gt;
+&lt;th&gt;is_qc&lt;/th&gt;
+&lt;th&gt;treatment&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;sample1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;drug A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sample2&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;drug B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sample3&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC2&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blank1&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blank2&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
       </description>
     </item>
@@ -1892,8 +1875,15 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
       <description>
         
         
-        &lt;p&gt;Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. &lt;em&gt;masscube&lt;/em&gt; provides a default parameter setting for users to start with.&lt;/p&gt;
-&lt;p&gt;The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.&lt;/p&gt;
+        &lt;p&gt;&lt;code&gt;masscube&lt;/code&gt; provides default parameters for users to start with. &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download the default parameters&lt;/a&gt;. You only need to change two settings based on your data:&lt;/p&gt;
+&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;ion_mode&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ion_mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ion_mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;&lt;/p&gt;
+&lt;h3&gt;ms1_abs_int_tol&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms1_abs_int_tol&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ms1_abs_int_tol&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;30000 for Orbitrap data, and 1000 for TOF data.&lt;/p&gt;
+&lt;h3&gt;ms2_library_path&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms2_library_path&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ms2_library_path&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)&lt;/p&gt;
+&lt;/div&gt;
 &lt;h2&gt;Key parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;key-parameters&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#key-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here we summarized six most important parameters in &lt;em&gt;masscube&lt;/em&gt; for untargeted metabolomics data processing:&lt;/p&gt;
 &lt;ol&gt;
@@ -1904,153 +1894,8 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;li&gt;&lt;strong&gt;MS/MS similarity score threshold&lt;/strong&gt;: the threshold for MS/MS similarity score. &lt;code&gt;0.7-0.8&lt;/code&gt; is recommended.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MS/MS library&lt;/strong&gt;: the MS/MS library for MS/MS annotation.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Default parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;default-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#default-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; automatically acquire the analytical metadata from the raw files including the mass spectrometer type and ionization mode. The corresponding default parameters will be applied based on the metadata.&lt;/p&gt;
-&lt;h2&gt;Customize parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;customize-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#customize-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;From the &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;template&lt;/a&gt;, you can customize the parameters by providing a parameter file. The parameter file should be a &lt;code&gt;.csv&lt;/code&gt; file with the following columns:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Parameter&lt;/th&gt;
-&lt;th&gt;Value&lt;/th&gt;
-&lt;th&gt;Explanation&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ion_mode&lt;/td&gt;
-&lt;td&gt;positive&lt;/td&gt;
-&lt;td&gt;MS ion mode, &amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ms_type&lt;/td&gt;
-&lt;td&gt;qtof&lt;/td&gt;
-&lt;td&gt;type of MS, &amp;ldquo;orbitrap&amp;rdquo;, &amp;ldquo;qtof&amp;rdquo;, &amp;ldquo;tripletof&amp;rdquo; or &amp;ldquo;others&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;is_centroid&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether the raw data is centroid data, &amp;ldquo;yes&amp;rdquo; or &amp;ldquo;no&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mz_lower_limit&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;lower limit of m/z in Da&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mz_upper_limit&lt;/td&gt;
-&lt;td&gt;100000&lt;/td&gt;
-&lt;td&gt;upper limit of m/z in Da&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rt_lower_limit&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;lower limit of retention time in minutes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rt_upper_limit&lt;/td&gt;
-&lt;td&gt;10000&lt;/td&gt;
-&lt;td&gt;upper limit of retention time in minutes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ms1_abs_int_tol&lt;/td&gt;
-&lt;td&gt;1000&lt;/td&gt;
-&lt;td&gt;absolute intensity threshold for MS1, recommend 30000 for Orbitrap and 1000 for QTOF&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ms2_abs_int_tol&lt;/td&gt;
-&lt;td&gt;500&lt;/td&gt;
-&lt;td&gt;absolute intensity threshold for MS2, recommend 10000 for Orbitrap and 500 for QTOF&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mz_tol_ms1&lt;/td&gt;
-&lt;td&gt;0.01&lt;/td&gt;
-&lt;td&gt;m/z tolerance for MS1, default is 0.01&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mz_tol_ms2&lt;/td&gt;
-&lt;td&gt;0.015&lt;/td&gt;
-&lt;td&gt;m/z tolerance for MS2, default is 0.015&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;scan_scan_cor_tol&lt;/td&gt;
-&lt;td&gt;0.7&lt;/td&gt;
-&lt;td&gt;scan-to-scan correlation tolerance for feature grouping, default is 0.7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;mz_tol_alignment&lt;/td&gt;
-&lt;td&gt;0.01&lt;/td&gt;
-&lt;td&gt;m/z tolerance for alignment, default is 0.01&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rt_tol_alignment&lt;/td&gt;
-&lt;td&gt;0.2&lt;/td&gt;
-&lt;td&gt;RT tolerance for alignment, default is 0.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;correct_rt&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to perform RT correction&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;merge_features&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to clean feature table by merging features with almost the same m/z and RT&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ms2_library_path&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;path to the MS2 library (.msp or .pickle)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ms2_sim_tol&lt;/td&gt;
-&lt;td&gt;0.7&lt;/td&gt;
-&lt;td&gt;MS2 similarity tolerance&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;fuzzy_search&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to perform fuzzy search&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;sample_normalization&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;whether to normalize the data based on total sample amount/concentration&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;signal_normalization&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;whether to run feature-wised normalization to correct systematic signal drift&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;run_statistics&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;whether to perform statistical analysis&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;plot_bpc&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to plot base peak chromatograms&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;plot_ms2&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to plot mirror plots for MS2 matching&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;plot_normalization&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;whether to plot normalization results&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;quant_method&lt;/td&gt;
-&lt;td&gt;peak_height&lt;/td&gt;
-&lt;td&gt;value for quantification and output, &amp;ldquo;peak_height&amp;rdquo;, &amp;ldquo;peak_area&amp;rdquo; or &amp;ldquo;top_average&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 &lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Much more parameters in &lt;em&gt;masscube&lt;/em&gt; are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the &lt;a href=&#34;https://example.org/masscubedocs/docs/api&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
+    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For advanced programming users, much more parameters in &lt;code&gt;masscube&lt;/code&gt; are tunable. Please refer to the &lt;a href=&#34;https://example.org/docs/api&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
@@ -2067,15 +1912,15 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
         &lt;p&gt;Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.&lt;/p&gt;
 &lt;p&gt;If you haven’t installed MassCube yet, be sure to follow the &lt;a href=&#34;../installation&#34; &gt;installation guide&lt;/a&gt; before proceeding.&lt;/p&gt;
 &lt;h2&gt;The MassCube untargeted metabolomics workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;the-masscube-untargeted-metabolomics-workflow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#the-masscube-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (&lt;strong&gt;Fig. 1&lt;/strong&gt;).&lt;/p&gt;
+    &lt;a href=&#34;#the-masscube-untargeted-metabolomics-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;One command to process untargeted metabolomics data (&lt;strong&gt;Fig. 1&lt;/strong&gt;).&lt;/p&gt;
 &lt;p&gt;
     &lt;figure&gt;
     &lt;img src=&#34;../untargeted_workflow.png&#34; title=&#34;Fig. 1. The MassCube untargeted metabolomics workflow&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Fig. 1. The MassCube untargeted metabolomics workflow&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Input (3+1)&lt;span class=&#34;absolute -mt-20&#34; id=&#34;input-31&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#input-31&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You need &lt;u&gt;three components&lt;/u&gt; for the project plus &lt;u&gt;one MS/MS library&lt;/u&gt; for annotation.&lt;/p&gt;
+&lt;h3&gt;Input (4 items)&lt;span class=&#34;absolute -mt-20&#34; id=&#34;input-4-items&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#input-4-items&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You will need &lt;u&gt;data&lt;/u&gt;, &lt;u&gt;sample table&lt;/u&gt;, &lt;u&gt;parameters&lt;/u&gt;, and &lt;u&gt;MS/MS database&lt;/u&gt; to run the workflow.&lt;/p&gt;
 &lt;p&gt;In your project folder (e.g. &lt;strong&gt;my_project&lt;/strong&gt;), you need to prepare the following components:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
 ├── data
@@ -2095,25 +1940,24 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. Instructions for file conversion are provided &lt;a href=&#34;../workflows/data_preparation&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. &lt;a href=&#34;../workflows/data_preparation&#34; &gt;I don&amp;rsquo;t know how to convert my files&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. You could also use MassCube to &lt;a href=&#34;../workflows/data_preparation&#34; &gt;generate&lt;/a&gt; a sample table and edit. If not provided, normalization and statistical analysis will not be applied. &lt;strong&gt;Note:&lt;/strong&gt; In sample table, please specify if a sample is blank or qc from the &amp;ldquo;is_blank&amp;rdquo; and &amp;ldquo;is_qc&amp;rdquo; columns, respectively.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to &lt;a href=&#34;../workflows/data_preparation#generate-a-sample-table&#34; &gt;generate a sample table&lt;/a&gt; and then edit. Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; or download a template &lt;a href=&#34;https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. If not provided, the &lt;a href=&#34;../workflows/parameters&#34; &gt;default parameters&lt;/a&gt; will be applied, yet &lt;strong&gt;annotation will not be performed since the MS/MS library is not provided&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Set and download a parameter file&lt;/a&gt;. If not provided, the &lt;a href=&#34;../workflows/parameters&#34; &gt;default parameters&lt;/a&gt; will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;MS2 database&lt;/strong&gt;: To annotate MS/MS spectra, you need to download a MS/MS library from &lt;a href=&#34;https://zenodo.org/records/14991522&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For faster database loading, please download and use the .pkl format.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MS/MS database&lt;/code&gt;: &lt;a href=&#34;https://zenodo.org/records/15740986&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download a MS/MS database&lt;/a&gt; for MS/MS spectral annotation. You may also &lt;a href=&#34;../workflows/database/#prepare-a-database-for-advanced-users&#34; &gt;prepare your own MS/MS database&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;
   &lt;summary class=&#34;flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[&#39;&#39;] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90&#34;&gt;
-    &lt;strong class=&#34;text-lg&#34;&gt;Choose the right MS/MS database version&lt;/strong&gt;
+    &lt;strong class=&#34;text-lg&#34;&gt;Using MassCube 1.0 or 1.1&lt;/strong&gt;
   &lt;/summary&gt;
   &lt;div class=&#34;p-2 overflow-hidden&#34;&gt;
-    For MassCube version 1.2.0 or later, please use &lt;a href=&#34;https://zenodo.org/records/14991522&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New MS/MS Databases&lt;/a&gt;
-For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Old MS/MS Databases&lt;/a&gt;
+    For MassCube 1.1 or earlier, please use the &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;old MS/MS databases&lt;/a&gt;
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;strong&gt;Extra component for annotation:&lt;/strong&gt;&lt;/p&gt;
@@ -2124,7 +1968,7 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
 &lt;a
   class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;../workflows/data_preparation&#34; &gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z&#34;/&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;Data Preparation&lt;/span&gt;&lt;/a&gt;
 &lt;a
-  class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;https://zenodo.org/records/14869318&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4&#34;/&gt;&lt;/svg&gt;Demo data&lt;/span&gt;&lt;/a&gt;
+  class=&#34;hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900&#34;href=&#34;https://zenodo.org/records/15173232&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;&lt;span class=&#34;flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4&#34;/&gt;&lt;/svg&gt;Demo data&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the project folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
@@ -2201,7 +2045,7 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
     </item>
     
     <item>
-      <title>Prepare a database</title>
+      <title>MS/MS database</title>
       <link>https://example.org/docs/workflows/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -2210,34 +2054,91 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
         
         
         &lt;h2&gt;Introduction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A database is a collection of m/z, MS2 spectra, retentiont time, collision cross section, and other information of known compounds. It is used to identify the compounds in the LC-MS data. In this workflow, we introduce how to prepare a database for &lt;em&gt;masscube&lt;/em&gt;.&lt;/p&gt;
-&lt;h2&gt;Download a database&lt;span class=&#34;absolute -mt-20&#34; id=&#34;download-a-database&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#download-a-database&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For users without programming experience or just want to use a database directly, you can download a database from the &lt;a href=&#34;https://zenodo.org/records/11363475&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. For faster database loading, please download and use the .pkl format.&lt;/p&gt;
+    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A MS/MS database contains m/z, MS/MS spectrum, retentiont time and other information of known compounds. It will be used for compound annotation. You can either &lt;u&gt;download a MS/MS database&lt;/u&gt; or &lt;u&gt;prepare your own database&lt;/u&gt;.&lt;/p&gt;
+&lt;p&gt;MassCube uses unweighted entropy similarity for spectral matching based on the &lt;a href=&#34;https://msentropy.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ms_entropy&lt;/a&gt; Python package.&lt;/p&gt;
+&lt;h2&gt;Download a MS/MS database&lt;span class=&#34;absolute -mt-20&#34; id=&#34;download-a-msms-database&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#download-a-msms-database&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;You can &lt;a href=&#34;https://zenodo.org/records/15740986&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download&lt;/a&gt; a combined public MS/MS databases (including MassBank, GNPS, MS-DIAL and MassBank EU). The database is in .pkl format for faster loading speed in &lt;code&gt;masscube&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Prepare a database (for advanced users)&lt;span class=&#34;absolute -mt-20&#34; id=&#34;prepare-a-database-for-advanced-users&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#prepare-a-database-for-advanced-users&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Three formats are supported for the database: pickle, msp, and json. The pickle format is recommended for faster loading. The msp format is recommended for compatibility with other software. The json format is another human-readable format commonly used in Python.&lt;/p&gt;
+    &lt;a href=&#34;#prepare-a-database-for-advanced-users&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Three formats are supported for the database: pickle, msp, and json.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-orange-100 bg-orange-50 text-orange-800 dark:border-orange-400/30 dark:bg-orange-400/20 dark:text-orange-300&#34;&gt;
+  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;div class=&#34;select-none text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        🌐
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
+    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
+      We highly recommend generating the pickle (.pkl) format MS/MS database.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;MSP format&lt;span class=&#34;absolute -mt-20&#34; id=&#34;msp-format&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#msp-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;An MSP database is a text file that contains the MS2 database. Each block contains the information of a compound. IMPORTANT: make sure the keys are consistent with the example below.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME: L-PHENYLALANINE
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PRECURSORMZ: 166.086013793945
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PRECURSORTYPE: [M+H]+
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;IONMODE: Positive
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RETENTIONTIME: 3.30520009994507
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CCS: 136.819671630859
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FORMULA: C9H11NO2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ONTOLOGY: Phenylalanine and derivatives
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SMILES: C1=CC=C(C=C1)C[C@@H](C(=O)O)N
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INCHIKEY: COLNVLDHVKWLRT-QMMMGPOBSA-N
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INSTRUMENTTYPE: LC-ESI-QFT
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;COLLISIONENERGY: 35.0 eV
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;COMMENT: DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Num Peaks: 7
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;103.054	15
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;107.049	14
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;120.081	1000
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;121.084	16
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;131.049	41
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;149.059	16
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;166.086	56&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;a href=&#34;#msp-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is the most commonly used database format. Each block is one compound separated by a blank line.&lt;/p&gt;
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2&#34;&gt;&lt;div class=&#34;select-none text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ℹ️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;w-full min-w-0 leading-7&#34;&gt;
+    &lt;div class=&#34;mt-6 leading-7 first:mt-0&#34;&gt;
+      You must provide the MSP file with the keys examplified below.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;NAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PHENYLALANINE&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PRECURSORMZ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;166.0860&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# precursor m/z&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PRECURSORTYPE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# adduct&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;IONMODE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt;                         &lt;span class=&#34;c1&#34;&gt;# ion mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;RETENTIONTIME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.31&lt;/span&gt;                       &lt;span class=&#34;c1&#34;&gt;# retention time in minutes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;136.82&lt;/span&gt;                               &lt;span class=&#34;c1&#34;&gt;# collisional cross section&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FORMULA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C9H11NO2&lt;/span&gt;                         &lt;span class=&#34;c1&#34;&gt;# chemical formula&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;SMILES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# SMILES string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;INCHIKEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;COLNVLDHVKWLRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QMMMGPOBSA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# InChIKey&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;INSTRUMENTTYPE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ESI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QFT&lt;/span&gt;                &lt;span class=&#34;c1&#34;&gt;# instrument type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;COLLISIONENERGY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;35.0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eV&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# collision energy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Num&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Peaks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;                              &lt;span class=&#34;c1&#34;&gt;# number of fragment signals&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;103.054&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;                                &lt;span class=&#34;c1&#34;&gt;# m/z and intensity of fragment signals&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;107.049&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;120.081&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;121.084&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;131.049&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;41&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;149.059&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mf&#34;&gt;166.086&lt;/span&gt;	&lt;span class=&#34;mi&#34;&gt;56&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -2247,14 +2148,9 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Here, NAME, PRECURSORMZ and PRECURSORTYPE is mandatory. In particular,&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;if RETENTIONTIME is not provided, level 1 annotation (i.e. retention time and MS2 matching) will not be performed.&lt;/li&gt;
-&lt;li&gt;if any of FORMULA, SMILES or INCHIKEY is not provided, they will be missing in the output.&lt;/li&gt;
-&lt;li&gt;if MS2 spectra (lines below Num Peaks) are not provided but retention time is provided, mzrt matching will be performed. In this case, no similarity score will be calculated. But you can compare the experimental and matched retention time to see if they are close.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;NAME, PRECURSORMZ, PRECURSORTYPE, IONMODE, and fragment signals are mandatory.&lt;/p&gt;
 &lt;h3&gt;Pickle format&lt;span class=&#34;absolute -mt-20&#34; id=&#34;pickle-format&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#pickle-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A .pkl database is a FlashEntropySearch object that contains the MS2 database. ms_entropy version 1.2.2 is highly recommended to generate this object (other versions may not work). Here is an example of how to generate a .pkl database from a msp file:&lt;/p&gt;
+    &lt;a href=&#34;#pickle-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A .pkl database is a &lt;code&gt;FlashEntropySearch&lt;/code&gt; object that contains the MS2 database. ms_entropy version 1.3.4 is highly recommended to generate this object (other versions may not work). Here is an example of how to generate a .pkl database from a msp file:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.annotation&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;index_msp_to_pkl&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# it will output a database.pkl file in the same folder&lt;/span&gt;
@@ -2268,25 +2164,23 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Check the source code of &lt;code&gt;index_.msp_to_pkl&lt;/code&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Please refer to the source code of &lt;code&gt;index_msp_to_pkl&lt;/code&gt; for more details.&lt;/p&gt;
 &lt;h3&gt;JSON format&lt;span class=&#34;absolute -mt-20&#34; id=&#34;json-format&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#json-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A JSON database is a list of dictionaries, each dictionary contains&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;L-PHENYLALANINE&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;precursor_mz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;166.086013793945&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;precursor_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[M+H]+&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;ionmode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;retentiontime&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;3.30520009994507&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;ccs&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;136.819671630859&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;formula&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C9H11NO2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;ontology&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Phenylalanine and derivatives&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;smiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;inchikey&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;instrumenttype&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;LC-ESI-QFT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;collisionenergy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;35.0 eV&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;comment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;DB#=EMBL-MCF_spec98214; origin=EMBL - Metabolomics Core Facility Spectral Library&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;num peaks&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;7&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;peaks&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;a href=&#34;#json-format&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A JSON database is a list of dictionaries. Each dictionary represents a compound with the following keys:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dic&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;L-PHENYLALANINE&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;precursor_mz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;166.086013793945&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# precursor m/z&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;precursor_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[M+H]+&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                 &lt;span class=&#34;c1&#34;&gt;# adduct&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;ion_mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# ion mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;retention_time&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;3.30520009994507&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# retention time in minutes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;ccs&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;136.819671630859&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# collisional cross section&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;formula&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C9H11NO2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                      &lt;span class=&#34;c1&#34;&gt;# chemical formula&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;smiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# SMILES string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;inchikey&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# InChIKey&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;instrument_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;LC-ESI-QFT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;# instrument type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;collision_energy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;35.0 eV&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;              &lt;span class=&#34;c1&#34;&gt;# collision energy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;num peaks&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;7&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                           &lt;span class=&#34;c1&#34;&gt;# number of fragment signals&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;peaks&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;                                  &lt;span class=&#34;c1&#34;&gt;# fragment signals&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;103.054&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;15&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;107.049&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;14&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;120.081&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1000&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
@@ -2305,7 +2199,19 @@ For the earlier version, please use &lt;a href=&#34;https://zenodo.org/records/1
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Please see explanations of the keys in the MSP format.&lt;/p&gt;
+&lt;p&gt;To index a JSON database, you can use the &lt;code&gt;index_json_to_pkl&lt;/code&gt; function:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.annotation&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;index_json_to_pkl&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;index_json_to_pkl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;database.json&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;database.pkl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Please refer to the source code of &lt;code&gt;index_json_to_pkl&lt;/code&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>

@@ -10,15 +10,15 @@ If you haven’t installed MassCube yet, be sure to follow the [installation gui
 
 ## The MassCube untargeted metabolomics workflow
 
-The workflow integrates metadata curation, feature detection, evaluation, alignment, annotation, and statistical analysis to provide users with a comprehensive view of the data (**Fig. 1**).
+One command to process untargeted metabolomics data (**Fig. 1**).
 
 ![](untargeted_workflow.png "Fig. 1. The MassCube untargeted metabolomics workflow")
 
 {{% steps %}}
 
-### Input (3+1)
+### Input (4 items)
 
-You need <u>three components</u> for the project plus <u>one MS/MS library</u> for annotation.
+You will need <u>data</u>, <u>sample table</u>, <u>parameters</u>, and <u>MS/MS database</u> to run the workflow.
 
 In your project folder (e.g. **my_project**), you need to prepare the following components:
 
@@ -32,17 +32,16 @@ my_project
 └── parameters.csv
 ```
 
-1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. Instructions for file conversion are provided [here](../workflows/data_preparation).
+1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. [I don't know how to convert my files](../workflows/data_preparation).
 
-2. `sample_table.csv` file: a csv file to claim the sample groups including biological groups, quality control samples, or blank samples. A template can be downloaded from [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/sample_table.csv). You could also use MassCube to [generate](../workflows/data_preparation) a sample table and edit. If not provided, normalization and statistical analysis will not be applied. **Note:** In sample table, please specify if a sample is blank or qc from the "is_blank" and "is_qc" columns, respectively.
+2. `sample_table.csv` file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to [generate a sample table](../workflows/data_preparation#generate-a-sample-table) and then edit. Set **yes** in the 'is_blank' column for blank samples, and **yes** in the 'is_qc' column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.
 
-3. `parameters.csv` file: a csv file to set parameters for the workflow. You can set parameters and download the file for the workflow from [here](https://huaxuyu.github.io/masscube_parameters/) or download a template [here](https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv). If not provided, the [default parameters](../workflows/parameters) will be applied, yet **annotation will not be performed since the MS/MS library is not provided**.
+3. `parameters.csv` file: [Set and download a parameter file](https://huaxuyu.github.io/masscube_parameters/). If not provided, the [default parameters](../workflows/parameters) will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.
 
-4. **MS2 database**: To annotate MS/MS spectra, you need to download a MS/MS library from [here](https://zenodo.org/records/14991522). For faster database loading, please download and use the .pkl format.
+4. `MS/MS database`: [Download a MS/MS database](https://zenodo.org/records/15740986) for MS/MS spectral annotation. You may also [prepare your own MS/MS database](../workflows/database/#prepare-a-database-for-advanced-users).
 
-{{< details title="Choose the right MS/MS database version" closed="true" >}}
-For MassCube version 1.2.0 or later, please use [New MS/MS Databases](https://zenodo.org/records/14991522)
-For the earlier version, please use [Old MS/MS Databases](https://zenodo.org/records/11363475)
+{{< details title="Using MassCube 1.0 or 1.1" closed="true" >}}
+For MassCube 1.1 or earlier, please use the [old MS/MS databases](https://zenodo.org/records/11363475)
 {{< /details >}}
 
 **Extra component for annotation:**
@@ -51,7 +50,7 @@ For the earlier version, please use [Old MS/MS Databases](https://zenodo.org/rec
 
 {{< cards >}}
 {{< card link="../workflows/data_preparation" title="Data Preparation" icon="play">}}
-{{< card link="https://zenodo.org/records/14869318" title="Demo data" icon="database">}}
+{{< card link="https://zenodo.org/records/15173232" title="Demo data" icon="database">}}
 {{< /cards >}}
 
 ### Processing

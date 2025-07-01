@@ -12,8 +12,10 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>Parameters – MassCube</title>
-  <meta name="description" content="Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. masscube provides a default parameter setting for users to start with.
-The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.
+  <meta name="description" content="masscube provides default parameters for users to start with. Download the default parameters. You only need to change two settings based on your data:
+ion_mode “positive” or “negative”
+ms1_abs_int_tol 30000 for Orbitrap data, and 1000 for TOF data.
+ms2_library_path absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)
 Key parameters Here we summarized six most important parameters in masscube for untargeted metabolomics data processing:
 MS1 mass tolerance: the mass tolerance for MS1 feature detection." />
   
@@ -24,8 +26,10 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection." />
   
 
 <meta property="og:title" content="Parameters" />
-<meta property="og:description" content="Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. masscube provides a default parameter setting for users to start with.
-The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.
+<meta property="og:description" content="masscube provides default parameters for users to start with. Download the default parameters. You only need to change two settings based on your data:
+ion_mode &ldquo;positive&rdquo; or &ldquo;negative&rdquo;
+ms1_abs_int_tol 30000 for Orbitrap data, and 1000 for TOF data.
+ms2_library_path absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)
 Key parameters Here we summarized six most important parameters in masscube for untargeted metabolomics data processing:
 MS1 mass tolerance: the mass tolerance for MS1 feature detection." />
 <meta property="og:type" content="article" />
@@ -34,15 +38,19 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection." />
 
 
   <meta itemprop="name" content="Parameters">
-<meta itemprop="description" content="Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. masscube provides a default parameter setting for users to start with.
-The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.
+<meta itemprop="description" content="masscube provides default parameters for users to start with. Download the default parameters. You only need to change two settings based on your data:
+ion_mode &ldquo;positive&rdquo; or &ldquo;negative&rdquo;
+ms1_abs_int_tol 30000 for Orbitrap data, and 1000 for TOF data.
+ms2_library_path absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)
 Key parameters Here we summarized six most important parameters in masscube for untargeted metabolomics data processing:
 MS1 mass tolerance: the mass tolerance for MS1 feature detection.">
 
-<meta itemprop="wordCount" content="496">
+<meta itemprop="wordCount" content="171">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Parameters"/>
-<meta name="twitter:description" content="Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. masscube provides a default parameter setting for users to start with.
-The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.
+<meta name="twitter:description" content="masscube provides default parameters for users to start with. Download the default parameters. You only need to change two settings based on your data:
+ion_mode &ldquo;positive&rdquo; or &ldquo;negative&rdquo;
+ms1_abs_int_tol 30000 for Orbitrap data, and 1000 for TOF data.
+ms2_library_path absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)
 Key parameters Here we summarized six most important parameters in masscube for untargeted metabolomics data processing:
 MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 
@@ -245,21 +253,15 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
   
     <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
               <a
+                href="#"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              ></a>
+            </li>
+          <li>
+              <a
                 href="#key-parameters"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Key parameters</a>
-            </li>
-          <li>
-              <a
-                href="#default-parameters"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Default parameters</a>
-            </li>
-          <li>
-              <a
-                href="#customize-parameters"
-                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Customize parameters</a>
             </li>
           <li>
               <a
@@ -745,15 +747,19 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 <nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
     <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#ion_mode">ion_mode
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#ms1_abs_int_tol">ms1_abs_int_tol
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#ms2_library_path">ms2_library_path
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#key-parameters">Key parameters
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#default-parameters">Default parameters
-        </a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#customize-parameters">Customize parameters
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -785,8 +791,15 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 
         <div class="content">
           <h1>Parameters</h1>
-          <p>Parameters are critical for MS data processing. However, setting parameters are often challenging, especially for beginners. <em>masscube</em> provides a default parameter setting for users to start with.</p>
-<p>The default parameters are optimized for most untargeted metabolomics studies. Users can also customize the parameters by providing a parameter file.</p>
+          <p><code>masscube</code> provides default parameters for users to start with. <a href="https://huaxuyu.github.io/masscube_parameters/" target="_blank" rel="noopener">Download the default parameters</a>. You only need to change two settings based on your data:</p>
+<div class="steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]">
+<h3>ion_mode<span class="absolute -mt-20" id="ion_mode"></span>
+    <a href="#ion_mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>&ldquo;positive&rdquo; or &ldquo;negative&rdquo;</p>
+<h3>ms1_abs_int_tol<span class="absolute -mt-20" id="ms1_abs_int_tol"></span>
+    <a href="#ms1_abs_int_tol" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>30000 for Orbitrap data, and 1000 for TOF data.</p>
+<h3>ms2_library_path<span class="absolute -mt-20" id="ms2_library_path"></span>
+    <a href="#ms2_library_path" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)</p>
+</div>
 <h2>Key parameters<span class="absolute -mt-20" id="key-parameters"></span>
     <a href="#key-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here we summarized six most important parameters in <em>masscube</em> for untargeted metabolomics data processing:</p>
 <ol>
@@ -797,153 +810,8 @@ MS1 mass tolerance: the mass tolerance for MS1 feature detection."/>
 <li><strong>MS/MS similarity score threshold</strong>: the threshold for MS/MS similarity score. <code>0.7-0.8</code> is recommended.</li>
 <li><strong>MS/MS library</strong>: the MS/MS library for MS/MS annotation.</li>
 </ol>
-<h2>Default parameters<span class="absolute -mt-20" id="default-parameters"></span>
-    <a href="#default-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><em>masscube</em> automatically acquire the analytical metadata from the raw files including the mass spectrometer type and ionization mode. The corresponding default parameters will be applied based on the metadata.</p>
-<h2>Customize parameters<span class="absolute -mt-20" id="customize-parameters"></span>
-    <a href="#customize-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>From the <a href="https://github.com/huaxuyu/masscubedocs/blob/main/content/docs/parameters.csv" target="_blank" rel="noopener">template</a>, you can customize the parameters by providing a parameter file. The parameter file should be a <code>.csv</code> file with the following columns:</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ion_mode</td>
-<td>positive</td>
-<td>MS ion mode, &ldquo;positive&rdquo; or &ldquo;negative&rdquo;</td>
-</tr>
-<tr>
-<td>ms_type</td>
-<td>qtof</td>
-<td>type of MS, &ldquo;orbitrap&rdquo;, &ldquo;qtof&rdquo;, &ldquo;tripletof&rdquo; or &ldquo;others&rdquo;</td>
-</tr>
-<tr>
-<td>is_centroid</td>
-<td>yes</td>
-<td>whether the raw data is centroid data, &ldquo;yes&rdquo; or &ldquo;no&rdquo;</td>
-</tr>
-<tr>
-<td>mz_lower_limit</td>
-<td>0</td>
-<td>lower limit of m/z in Da</td>
-</tr>
-<tr>
-<td>mz_upper_limit</td>
-<td>100000</td>
-<td>upper limit of m/z in Da</td>
-</tr>
-<tr>
-<td>rt_lower_limit</td>
-<td>0</td>
-<td>lower limit of retention time in minutes</td>
-</tr>
-<tr>
-<td>rt_upper_limit</td>
-<td>10000</td>
-<td>upper limit of retention time in minutes</td>
-</tr>
-<tr>
-<td>ms1_abs_int_tol</td>
-<td>1000</td>
-<td>absolute intensity threshold for MS1, recommend 30000 for Orbitrap and 1000 for QTOF</td>
-</tr>
-<tr>
-<td>ms2_abs_int_tol</td>
-<td>500</td>
-<td>absolute intensity threshold for MS2, recommend 10000 for Orbitrap and 500 for QTOF</td>
-</tr>
-<tr>
-<td>mz_tol_ms1</td>
-<td>0.01</td>
-<td>m/z tolerance for MS1, default is 0.01</td>
-</tr>
-<tr>
-<td>mz_tol_ms2</td>
-<td>0.015</td>
-<td>m/z tolerance for MS2, default is 0.015</td>
-</tr>
-<tr>
-<td>scan_scan_cor_tol</td>
-<td>0.7</td>
-<td>scan-to-scan correlation tolerance for feature grouping, default is 0.7</td>
-</tr>
-<tr>
-<td>mz_tol_alignment</td>
-<td>0.01</td>
-<td>m/z tolerance for alignment, default is 0.01</td>
-</tr>
-<tr>
-<td>rt_tol_alignment</td>
-<td>0.2</td>
-<td>RT tolerance for alignment, default is 0.2</td>
-</tr>
-<tr>
-<td>correct_rt</td>
-<td>yes</td>
-<td>whether to perform RT correction</td>
-</tr>
-<tr>
-<td>merge_features</td>
-<td>yes</td>
-<td>whether to clean feature table by merging features with almost the same m/z and RT</td>
-</tr>
-<tr>
-<td>ms2_library_path</td>
-<td></td>
-<td>path to the MS2 library (.msp or .pickle)</td>
-</tr>
-<tr>
-<td>ms2_sim_tol</td>
-<td>0.7</td>
-<td>MS2 similarity tolerance</td>
-</tr>
-<tr>
-<td>fuzzy_search</td>
-<td>yes</td>
-<td>whether to perform fuzzy search</td>
-</tr>
-<tr>
-<td>sample_normalization</td>
-<td>no</td>
-<td>whether to normalize the data based on total sample amount/concentration</td>
-</tr>
-<tr>
-<td>signal_normalization</td>
-<td>no</td>
-<td>whether to run feature-wised normalization to correct systematic signal drift</td>
-</tr>
-<tr>
-<td>run_statistics</td>
-<td>no</td>
-<td>whether to perform statistical analysis</td>
-</tr>
-<tr>
-<td>plot_bpc</td>
-<td>yes</td>
-<td>whether to plot base peak chromatograms</td>
-</tr>
-<tr>
-<td>plot_ms2</td>
-<td>yes</td>
-<td>whether to plot mirror plots for MS2 matching</td>
-</tr>
-<tr>
-<td>plot_normalization</td>
-<td>yes</td>
-<td>whether to plot normalization results</td>
-</tr>
-<tr>
-<td>quant_method</td>
-<td>peak_height</td>
-<td>value for quantification and output, &ldquo;peak_height&rdquo;, &ldquo;peak_area&rdquo; or &ldquo;top_average&rdquo;</td>
-</tr>
-</tbody>
-</table>
 <h2>More about parameters<span class="absolute -mt-20" id="more-about-parameters"></span>
-    <a href="#more-about-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Much more parameters in <em>masscube</em> are tunable to ensure flexibility and adaptability for different datasets. For programmers, please refer to each function and object in the <a href="/masscubedocs/docs/api" >API documentation</a> for more details.</p>
+    <a href="#more-about-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For advanced programming users, much more parameters in <code>masscube</code> are tunable. Please refer to the <a href="/docs/api" >API documentation</a> for more details.</p>
 
         </div>
         <div class="mt-16"></div>
