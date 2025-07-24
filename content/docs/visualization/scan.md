@@ -4,9 +4,9 @@ title: MS scan visualization
 weight: 2
 ---
 
-## Visualize a single MS1 or MS/MS scan
+In case you need a [demo data](/raw_files/demo_data.mzML) file.
 
-In case you need a [demo data](demo_data.mzML) file.
+## Visualize a single MS1 or MS/MS scan
 
 Plot by scan index:
 
