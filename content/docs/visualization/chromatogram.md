@@ -4,7 +4,7 @@ title: Chromatogram visualization
 weight: 1
 ---
 
-In case you need a [demo data](/raw_files/demo_data.mzML) file.
+In case you need a [demo data]({{ "raw_files/demo_data.mzML" | relURL }}) file.
 
 ## Base peak chromatogram
 

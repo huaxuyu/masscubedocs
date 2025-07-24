@@ -23,7 +23,7 @@
       <description>
         
         
-        &lt;p&gt;In case you need a &lt;a href=&#34;https://example.org/raw_files/demo_data.mzML&#34; &gt;demo data&lt;/a&gt; file.&lt;/p&gt;
+        &lt;p&gt;In case you need a [demo data]({{ &amp;ldquo;raw_files/demo_data.mzML&amp;rdquo; | relURL }}) file.&lt;/p&gt;
 &lt;h2&gt;Base peak chromatogram&lt;span class=&#34;absolute -mt-20&#34; id=&#34;base-peak-chromatogram&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#base-peak-chromatogram&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Visualize the base peak chromatogram for a raw file:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read_raw_file_to_obj&lt;/span&gt;
@@ -127,7 +127,7 @@
       <description>
         
         
-        &lt;p&gt;In case you need a &lt;a href=&#34;https://example.org/raw_files/demo_data.mzML&#34; &gt;demo data&lt;/a&gt; file.&lt;/p&gt;
+        &lt;p&gt;In case you need a [demo data]({{ &amp;ldquo;raw_files/demo_data.mzML&amp;rdquo; | relURL }}) file.&lt;/p&gt;
 &lt;h2&gt;Visualize a single MS1 or MS/MS scan&lt;span class=&#34;absolute -mt-20&#34; id=&#34;visualize-a-single-ms1-or-msms-scan&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#visualize-a-single-ms1-or-msms-scan&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Plot by scan index:&lt;/p&gt;
 &lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read_raw_file_to_obj&lt;/span&gt;

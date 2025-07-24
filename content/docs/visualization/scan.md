@@ -4,7 +4,7 @@ title: MS scan visualization
 weight: 2
 ---
 
-In case you need a [demo data](/raw_files/demo_data.mzML) file.
+In case you need a [demo data]({{ "raw_files/demo_data.mzML" | relURL }}) file.
 
 ## Visualize a single MS1 or MS/MS scan
 
