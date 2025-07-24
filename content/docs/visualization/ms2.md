@@ -1,7 +1,7 @@
 ---
 linkTitle: "MS/MS spectra"
 title: MS/MS spectra visualization
-weight: 1
+weight: 3
 ---
 
 ## Mirror plot
@@ -29,4 +29,4 @@ ms2_1 and ms2_2 are MS/MS spectra in the format "m/z;intensity" pairs separated 
 
 ### example output
 
-![Mirror plot](salsolinol_sulfate.png)
+![Mirror plot](plots/salsolinol_sulfate.png)

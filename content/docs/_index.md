@@ -5,7 +5,7 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2025-07-01 **Version**: 1.2.7
+**Date**: 2025-07-24 **Version**: 1.2.9
 
 <!--more-->
 
@@ -30,8 +30,10 @@ MassCube is a Python computing library for mass spectrometry data processing in 
 {{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
 {{< /cards >}}
 
-## Release Notes for v1.2.7
+## Release Notes for v1.2.9
 
 - Only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/15740986).
+
+- Improve the speed of gap filling by 30-40%.
 
 - Bug fixes and performance improvements.
