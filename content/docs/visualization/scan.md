@@ -1,6 +1,6 @@
 ---
-linkTitle: "MS Scans"
-title: MS scan visualization
+linkTitle: "MS scans"
+title: MS scans
 weight: 2
 ---
 

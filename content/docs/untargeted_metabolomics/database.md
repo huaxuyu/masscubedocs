@@ -1,7 +1,7 @@
 ---
-linkTitle: "Database"
+linkTitle: "About MS/MS database"
 title: "MS/MS database"
-weight: 3
+weight: 4
 ---
 
 ## Introduction
@@ -36,7 +36,7 @@ PRECURSORMZ: 166.0860                     # precursor m/z
 PRECURSORTYPE: [M+H]+                     # adduct
 IONMODE: positive                         # ion mode
 RETENTIONTIME: 3.31                       # retention time in minutes
-CCS: 136.82                               # collisional cross section
+CCS: 136.82                               # collision cross section
 FORMULA: C9H11NO2                         # chemical formula
 SMILES: C1=CC=C(C=C1)C[C@@H](C(=O)O)N     # SMILES string
 INCHIKEY: COLNVLDHVKWLRT-QMMMGPOBSA-N     # InChIKey
@@ -78,7 +78,7 @@ dic = {
   "precursor_type": "[M+H]+",                 # adduct
   "ion_mode": "Positive",                     # ion mode
   "retention_time": "3.30520009994507",       # retention time in minutes
-  "ccs": "136.819671630859",                  # collisional cross section
+  "ccs": "136.819671630859",                  # collision cross section
   "formula": "C9H11NO2",                      # chemical formula
   "smiles": "C1=CC=C(C=C1)C[C@@H](C(=O)O)N",  # SMILES string
   "inchikey": "COLNVLDHVKWLRT-QMMMGPOBSA-N",  # InChIKey

@@ -1,6 +1,6 @@
 ---
 linkTitle: "MS/MS spectra"
-title: MS/MS spectra visualization
+title: MS/MS spectra
 weight: 3
 ---
 

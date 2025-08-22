@@ -295,7 +295,7 @@
     </item>
     
     <item>
-      <title>Chromatogram visualization</title>
+      <title>Chromatograms</title>
       <link>https://example.org/docs/visualization/chromatogram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -515,16 +515,15 @@ selected_features : one-dimensional numpy array
     </item>
     
     <item>
-      <title>Data preparation</title>
-      <link>https://example.org/docs/workflows/data_preparation/</link>
+      <title>Convert raw MS data</title>
+      <link>https://example.org/docs/untargeted_metabolomics/convert_ms_data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/data_preparation/</guid>
+      <guid>https://example.org/docs/untargeted_metabolomics/convert_ms_data/</guid>
       <description>
         
         
-        &lt;h2&gt;Convert raw data files&lt;span class=&#34;absolute -mt-20&#34; id=&#34;convert-raw-data-files&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#convert-raw-data-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
+        &lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
 &lt;p&gt;We recommend to use &lt;strong&gt;MSConvert&lt;/strong&gt; for file conversion.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard and install MSConvert.&lt;/p&gt;
 &lt;p&gt;
@@ -551,89 +550,6 @@ selected_features : one-dimensional numpy array
     &lt;a href=&#34;#step-4-browse-and-load-files&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;h4&gt;Step 5. Start conversion&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-5-start-conversion&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-5-start-conversion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;/div&gt;
 &lt;p&gt;By default, the converted files will be saved in the same directory as the raw files.&lt;/p&gt;
-&lt;h2&gt;Generate a sample table&lt;span class=&#34;absolute -mt-20&#34; id=&#34;generate-a-sample-table&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#generate-a-sample-table&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;generate-sample-table&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Your project folder should include a subfolder named &lt;strong&gt;data&lt;/strong&gt; that contains the raw LC-MS data files in &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mzXML&lt;/strong&gt; format.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── data
-│ ├── sample1.mzML
-│ ├── sample2.mzML
-| └── ...
-|── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. You can add more columns to the sample table to claim biological groups or other information. For example, you can add a column named &amp;rsquo;treatment&amp;rsquo; to claim the treatment of each sample like drug A, drug B, or control. Example:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;is_blank&lt;/th&gt;
-&lt;th&gt;is_qc&lt;/th&gt;
-&lt;th&gt;treatment&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;sample1&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;drug A&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;sample2&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;drug B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;sample3&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;control&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;QC1&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;NA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;QC2&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;NA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;blank1&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;NA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;blank2&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;td&gt;NA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
       </description>
     </item>
@@ -1207,7 +1123,7 @@ selected_features : one-dimensional numpy array
     </item>
     
     <item>
-      <title>params</title>
+      <title></title>
       <link>https://example.org/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1215,137 +1131,157 @@ selected_features : one-dimensional numpy array
       <description>
         
         
-        &lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;params&lt;/code&gt; module defines a class &lt;code&gt;Params&lt;/code&gt; to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function &lt;code&gt;find_ms_info&lt;/code&gt; to determine the type of mass spectrometer and ionization mode from a raw file.&lt;/p&gt;
+        &lt;h1&gt;&lt;code&gt;params&lt;/code&gt;&lt;/h1&gt;&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;params&lt;/code&gt; module defines a class &lt;code&gt;Params&lt;/code&gt; that stores and manages parameters for &lt;strong&gt;mass spectrometry-based untargeted metabolomics data processing&lt;/strong&gt;. It also exposes a helper function &lt;code&gt;find_ms_info&lt;/code&gt; and two dictionaries of parameter &lt;strong&gt;ranges&lt;/strong&gt; and &lt;strong&gt;defaults&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This documentation is synchronized with the current implementation in &lt;code&gt;params.py&lt;/code&gt; and reflects &lt;strong&gt;all attributes, methods, behaviors, defaults, and edge cases&lt;/strong&gt; present in the code.&lt;/p&gt;
 &lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Params&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;params&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#params&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to store and manage parameters for mass spectrometry data processing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sample_names&lt;/code&gt; (list): Sample names without extension.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_abs_paths&lt;/code&gt; (list): Absolute paths of the raw MS data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_metadata&lt;/code&gt; (DataFrame): Sample metadata.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;project_dir&lt;/code&gt; (str): Project directory.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_dir&lt;/code&gt; (str): Directory for the raw MS data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;single_file_dir&lt;/code&gt; (str): Directory for the single file output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tmp_file_dir&lt;/code&gt; (str): Directory for the intermediate file output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_matching_dir&lt;/code&gt; (str): Directory for the MS2 matching output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bpc_dir&lt;/code&gt; (str): Directory for the base peak chromatogram output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;project_file_dir&lt;/code&gt; (str): Directory for the project files.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;normalization_dir&lt;/code&gt; (str): Directory for the normalization output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;statistics_dir&lt;/code&gt; (str): Directory for the statistical analysis output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;problematic_files&lt;/code&gt; (dict): Problematic files.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): File name of the raw data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_path&lt;/code&gt; (str): Absolute path of the raw data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): MS ion mode.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; (str): Type of MS.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;is_centroid&lt;/code&gt; (bool): Whether the raw data is centroid data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_format&lt;/code&gt; (str): File type in lower case.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;time&lt;/code&gt; (datetime): When the data file was acquired.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_time_unit&lt;/code&gt; (str): Time unit of the scan time.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_lower_limit&lt;/code&gt; (float): Lower limit of m/z in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_upper_limit&lt;/code&gt; (float): Upper limit of m/z in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_lower_limit&lt;/code&gt; (float): Lower limit of RT in minutes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_upper_limit&lt;/code&gt; (float): Upper limit of RT in minutes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_levels&lt;/code&gt; (list): Scan levels to be read.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;centroid_mz_tol&lt;/code&gt; (float): m/z tolerance for centroiding.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms1_abs_int_tol&lt;/code&gt; (float): Absolute intensity threshold for MS1.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_abs_int_tol&lt;/code&gt; (float): Absolute intensity threshold for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_rel_int_tol&lt;/code&gt; (float): Relative intensity threshold to base peak for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;precursor_mz_offset&lt;/code&gt; (float): Offset for MS2 m/z range in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_ms1&lt;/code&gt; (float): m/z tolerance for MS1.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_ms2&lt;/code&gt; (float): m/z tolerance for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;feature_gap_tol&lt;/code&gt; (int): Gap tolerance within a feature.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; (int): Batch size for parallel processing.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;percent_cpu_to_use&lt;/code&gt; (float): Percentage of CPU to use.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;group_features_single_file&lt;/code&gt; (bool): Whether to group features in a single file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_scan_cor_tol&lt;/code&gt; (float): Scan-to-scan correlation tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_feature_grouping&lt;/code&gt; (float): m/z tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_feature_grouping&lt;/code&gt; (float): RT tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;valid_charge_states&lt;/code&gt; (list): Valid charge states for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_alignment&lt;/code&gt; (float): m/z tolerance for alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_alignment&lt;/code&gt; (float): RT tolerance for alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;correct_rt&lt;/code&gt; (bool): Whether to perform RT correction.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_number_cutoff&lt;/code&gt; (int): Feature with non-zero scan number greater than the cutoff will be aligned.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;detection_rate_cutoff&lt;/code&gt; (float): Features detected need to be &amp;gt;rate*(qc+sample).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;merge_features&lt;/code&gt; (bool): Whether to merge features with almost the same m/z and RT.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_merge_features&lt;/code&gt; (float): m/z tolerance for merging features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_merge_features&lt;/code&gt; (float): RT tolerance for merging features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; (bool): Whether to group features after alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fill_gaps&lt;/code&gt; (bool): Whether to fill the gaps in the aligned features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gap_filling_method&lt;/code&gt; (str): Method for gap filling.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gap_filling_rt_window&lt;/code&gt; (float): RT window for finding local maximum.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_library_path&lt;/code&gt; (str): Path to the MS2 library.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_sim_tol&lt;/code&gt; (float): MS2 similarity tolerance.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fuzzy_search&lt;/code&gt; (bool): Whether to perform fuzzy search.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_normalization&lt;/code&gt; (bool): Whether to normalize the data based on total sample amount/concentration.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_norm_method&lt;/code&gt; (str): Sample normalization method.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;signal_normalization&lt;/code&gt; (bool): Whether to run feature-wised normalization to correct systematic signal drift.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;signal_norm_method&lt;/code&gt; (str): Normalization method for signal drift.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;run_statistics&lt;/code&gt; (bool): Whether to perform statistical analysis.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_bpc&lt;/code&gt; (bool): Whether to plot base peak chromatograms.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_ms2&lt;/code&gt; (bool): Whether to plot mirror plots for MS2 matching.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_normalization&lt;/code&gt; (bool): Whether to plot the normalization results.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;by_group_name&lt;/code&gt; (str): Group name for classifier building.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_single_file&lt;/code&gt; (bool): Whether to output the processed individual files to a csv file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_ms1_scans&lt;/code&gt; (bool): Whether to output all MS1 scans to a pickle file for faster data reloading.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_aligned_file&lt;/code&gt; (bool): Whether to output aligned features to a csv file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;quant_method&lt;/code&gt; (str): Value for quantification and output.&lt;/li&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Params&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;params-1&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#params-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls.&lt;/p&gt;
+&lt;h2&gt;Attributes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;attributes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Project &amp;amp; Metadata&lt;span class=&#34;absolute -mt-20&#34; id=&#34;project--metadata&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project--metadata&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sample_metadata&lt;/code&gt; &lt;em&gt;(pandas.DataFrame | None)&lt;/em&gt; — sample table held in-memory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — project root directory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — directory for raw MS data; set during workflow prep.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;single_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — outputs for single-file processing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tmp_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — temporary/intermediate files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_matching_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — MS/MS matching outputs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bpc_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — base peak chromatogram outputs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — auxiliary project files (sample table with time, etc.).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normalization_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — normalization results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistics_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — statistical analysis results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;problematic_files&lt;/code&gt; &lt;em&gt;(dict)&lt;/em&gt; — problematic files mapping &lt;code&gt;{file_name: error_message}&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;read_parameters_from_csv(path)&lt;/code&gt;: Read parameters from a CSV file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;read_sample_metadata(path)&lt;/code&gt;: Read sample metadata from a CSV file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_untargeted_metabolomics_workflow_preparation()&lt;/code&gt;: Prepare the parameters for the untargeted metabolomics workflow.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;set_default(ms_type, ion_mode)&lt;/code&gt;: Set the parameters by the type of MS.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;check_parameters()&lt;/code&gt;: Check if the parameters are correct using &lt;code&gt;PARAMETER_RAGES&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_parameters(path, format=&amp;quot;json&amp;quot;)&lt;/code&gt;: Output the parameters to a file.&lt;/li&gt;
+&lt;h3&gt;Raw Data Reading &amp;amp; Cleaning&lt;span class=&#34;absolute -mt-20&#34; id=&#34;raw-data-reading--cleaning&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#raw-data-reading--cleaning&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — file name of the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file_path&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — absolute path of the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;positive&amp;quot;&lt;/code&gt; (default) or &lt;code&gt;&amp;quot;negative&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;qtof&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;others&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_centroid&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — whether data is centroided (&lt;code&gt;True&lt;/code&gt; by default).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file_format&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — lower-case type (&lt;code&gt;&amp;quot;mzml&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;mzxml&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;mzjson&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;mzjson.gz&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_time_unit&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;minute&amp;quot;&lt;/code&gt; (default) or &lt;code&gt;&amp;quot;second&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_lower_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — lower m/z bound (default &lt;code&gt;0.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_upper_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — upper m/z bound (default &lt;code&gt;100000.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_lower_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — lower RT bound in minutes (default &lt;code&gt;0.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_upper_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — upper RT bound in minutes (default &lt;code&gt;10000.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_levels&lt;/code&gt; &lt;em&gt;(list[int])&lt;/em&gt; — scan levels to read (default &lt;code&gt;[1, 2]&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid_mz_tol&lt;/code&gt; &lt;em&gt;(float | None)&lt;/em&gt; — m/z tolerance for centroiding (&lt;code&gt;0.005&lt;/code&gt; by default; set &lt;code&gt;None&lt;/code&gt; to disable centroiding).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms1_abs_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS1 absolute intensity threshold (recommend &lt;code&gt;30000&lt;/code&gt; Orbitrap, &lt;code&gt;1000&lt;/code&gt; QTOF).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_abs_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 absolute intensity threshold (recommend &lt;code&gt;10000&lt;/code&gt; Orbitrap, &lt;code&gt;500&lt;/code&gt; QTOF).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_rel_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 relative intensity to base peak (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;precursor_mz_offset&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z offset for defining MS2 range (default &lt;code&gt;2.0&lt;/code&gt;).&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;Feature Detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-detection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms1&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS1 m/z tolerance (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms2&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 m/z tolerance (default &lt;code&gt;0.015&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature_gap_tol&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — tolerance in &lt;strong&gt;consecutive scans&lt;/strong&gt; without signal inside a feature (default &lt;strong&gt;&lt;code&gt;10&lt;/code&gt;&lt;/strong&gt; in &lt;code&gt;Params&lt;/code&gt;; see note below about &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — parallel processing batch size (default &lt;code&gt;100&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;percent_cpu_to_use&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — fraction of CPU to use (default &lt;code&gt;0.8&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Grouping&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-grouping&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-grouping&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;group_features_single_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — group features within a single file (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_scan_cor_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — scan-to-scan correlation threshold (default &lt;code&gt;0.7&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_feature_grouping&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for grouping (default &lt;strong&gt;&lt;code&gt;0.015&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_feature_grouping&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for grouping (default &lt;code&gt;0.1&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid_charge_states&lt;/code&gt; &lt;em&gt;(list[int])&lt;/em&gt; — allowed charge states (default &lt;code&gt;[1]&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Alignment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-alignment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_alignment&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for alignment (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_alignment&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for alignment (default &lt;code&gt;0.2&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_rt_correction&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — &lt;strong&gt;expected max RT shift&lt;/strong&gt; for RT correction (default &lt;code&gt;0.5&lt;/code&gt; min).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;correct_rt&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — perform RT correction (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_number_cutoff&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — minimum non-zero scans to be aligned (default &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;detection_rate_cutoff&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — required detection rate across QC+samples (default &lt;code&gt;0.1&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merge_features&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — merge near-duplicate features (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_merge_features&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for merging (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_merge_features&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for merging (default &lt;strong&gt;&lt;code&gt;0.02&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — group after alignment (default &lt;strong&gt;&lt;code&gt;True&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fill_gaps&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — fill gaps in aligned features (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_filling_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — method used in gap filling (default &lt;code&gt;&amp;quot;local_maximum&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_filling_rt_window&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT window for finding local maxima (default &lt;code&gt;0.05&lt;/code&gt; min).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_rel_int_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — isotope intensity upper limit relative to base peak (default &lt;code&gt;1.5&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2_library_path&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — path to MS2 library (&lt;code&gt;.msp&lt;/code&gt; or &lt;code&gt;.pickle&lt;/code&gt;); set to &lt;code&gt;None&lt;/code&gt; if not existing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fuzzy_search&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — enable fuzzy search (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;consider_rt&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — consider RT in MS2 matching (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_annotation&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for annotation (default &lt;code&gt;0.2&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_sim_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 similarity threshold (default &lt;code&gt;0.7&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spectral_similarity_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — similarity method (default &lt;code&gt;&amp;quot;unweighted_entropy&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sample_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — sample-wise normalization by total amount/concentration (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_norm_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — method for sample normalization (default &lt;code&gt;&amp;quot;pqn&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signal_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — feature-wise drift correction (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signal_norm_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — drift correction method (default &lt;code&gt;&amp;quot;lowess&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Statistics&lt;span class=&#34;absolute -mt-20&#34; id=&#34;statistics&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#statistics&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;run_statistics&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — run statistical analysis (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;visualization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;plot_bpc&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot BPC chromatograms (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_ms2&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot MS2 mirror plots (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot normalization results (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Classifier Building&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classifier-building&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classifier-building&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;by_group_name&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — group name for classifier training (if used).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;output_single_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export processed single-file outputs (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_ms1_scans&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export all MS1 scans to pickle for fast reloading (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_aligned_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export aligned features (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;quant_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;peak_height&amp;quot;&lt;/code&gt; (default), &lt;code&gt;&amp;quot;peak_area&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;top_average&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Methods&lt;span class=&#34;absolute -mt-20&#34; id=&#34;methods&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#methods&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;read_parameters_from_csv(path)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read_parameters_from_csvpath&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read_parameters_from_csvpath&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Reads a CSV of key–value pairs and sets attributes. Values convertible to &lt;code&gt;float&lt;/code&gt; are cast; otherwise, &lt;code&gt;&amp;quot;true&amp;quot;/&amp;quot;yes&amp;quot;&lt;/code&gt; → &lt;code&gt;True&lt;/code&gt;, &lt;code&gt;&amp;quot;false&amp;quot;/&amp;quot;no&amp;quot;&lt;/code&gt; → &lt;code&gt;False&lt;/code&gt;. Calls &lt;code&gt;check_parameters()&lt;/code&gt; afterward.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;read_sample_metadata(path)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read_sample_metadatapath&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read_sample_metadatapath&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Loads sample metadata from CSV. Lower-cases columns named &lt;code&gt;&amp;quot;is_qc&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;is_blank&amp;quot;&lt;/code&gt;; converts &lt;code&gt;&amp;quot;yes&amp;quot;/&amp;quot;no&amp;quot;&lt;/code&gt; strings to booleans (otherwise defaults both columns to &lt;code&gt;False&lt;/code&gt;). Sorts so &lt;strong&gt;QC appear first&lt;/strong&gt; and &lt;strong&gt;blanks last&lt;/strong&gt;; adds &lt;code&gt;VALID&lt;/code&gt; and &lt;code&gt;ABSOLUTE_PATH&lt;/code&gt; columns; stores in &lt;code&gt;sample_metadata&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;_untargeted_metabolomics_workflow_preparation()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_untargeted_metabolomics_workflow_preparation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_untargeted_metabolomics_workflow_preparation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Prepares a project for the &lt;strong&gt;untargeted metabolomics&lt;/strong&gt; workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Validates &lt;code&gt;project_dir&lt;/code&gt;; derives standard subdirectories and creates them if missing.&lt;/li&gt;
+&lt;li&gt;Ensures raw data exist in &lt;code&gt;project_dir/data&lt;/code&gt; (currently auto-detects only &lt;strong&gt;&lt;code&gt;.mzML&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;.mzXML&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;sample_table.csv&lt;/code&gt; is missing, disables normalization/statistics and prints notices.&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;parameters.csv&lt;/code&gt; is missing, prints notices, infers &lt;code&gt;(ms_type, ion_mode)&lt;/code&gt; from the first sample via &lt;code&gt;find_ms_info&lt;/code&gt;, calls &lt;code&gt;set_default&lt;/code&gt;, and enables &lt;code&gt;plot_bpc&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Loads sample table if present; otherwise builds from discovered file basenames. Validates presence of raw files, computes acquisition &lt;code&gt;time&lt;/code&gt; via &lt;code&gt;get_start_time&lt;/code&gt;, filters invalid, sorts by time, adds sequential &lt;code&gt;analytical_order&lt;/code&gt;, and assigns batch IDs via &lt;code&gt;label_batch_id&lt;/code&gt;. Writes &lt;code&gt;project_files/sample_table_with_time.csv&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sets output toggles: &lt;code&gt;output_single_file=True&lt;/code&gt;, &lt;code&gt;output_ms1_scans=True&lt;/code&gt;, &lt;code&gt;output_aligned_file=True&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;&lt;code&gt;set_default(ms_type, ion_mode)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;set_defaultms_type-ion_mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#set_defaultms_type-ion_mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;, sets &lt;code&gt;ms1_abs_int_tol=30000&lt;/code&gt;, &lt;code&gt;ms2_abs_int_tol=10000&lt;/code&gt;; for others, &lt;code&gt;ms1_abs_int_tol=1000&lt;/code&gt;, &lt;code&gt;ms2_abs_int_tol=500&lt;/code&gt;. Also sets &lt;code&gt;ion_mode&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;check_parameters()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;check_parameters&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#check_parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Validates all numeric parameters against &lt;code&gt;PARAMETER_RAGES&lt;/code&gt;. If a value is &lt;strong&gt;out of range&lt;/strong&gt;, it prints a warning and resets that parameter to the value in &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;. If &lt;code&gt;ms2_library_path&lt;/code&gt; does &lt;strong&gt;not&lt;/strong&gt; exist, sets it to &lt;code&gt;None&lt;/code&gt;. Casts &lt;code&gt;batch_size&lt;/code&gt; to &lt;code&gt;int&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The code refers to &lt;code&gt;PARAMETER_RAGES&lt;/code&gt; throughout (typo intentional to match the implementation).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;&lt;code&gt;output_parameters(path, format=&amp;quot;json&amp;quot;)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_parameterspath-formatjson&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output_parameterspath-formatjson&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Exports &lt;strong&gt;all&lt;/strong&gt; parameters (except &lt;code&gt;project_dir&lt;/code&gt;) to JSON, including &lt;code&gt;&amp;quot;MassCube_version&amp;quot;&lt;/code&gt; obtained from &lt;code&gt;importlib.metadata.version(&amp;quot;masscube&amp;quot;)&lt;/code&gt;. Only &lt;code&gt;&amp;quot;json&amp;quot;&lt;/code&gt; is supported.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;_check_raw_files_in_data_dir()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_check_raw_files_in_data_dir&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_check_raw_files_in_data_dir&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Cross-references basenames from &lt;code&gt;sample_metadata&lt;/code&gt; with files in &lt;code&gt;sample_dir&lt;/code&gt; (currently only &lt;code&gt;.mzML&lt;/code&gt;/&lt;code&gt;.mzXML&lt;/code&gt;), sets &lt;code&gt;VALID&lt;/code&gt; and populates &lt;code&gt;ABSOLUTE_PATH&lt;/code&gt; accordingly.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;find_ms_info&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_ms_info&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#find_ms_info&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_ms_info(file_name)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Find the type of mass spectrometer and ionization mode from the raw file.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;find_ms_info(file_name)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_ms_infofile_name&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_ms_infofile_name&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Reads up to the first 200 lines of an &lt;strong&gt;&lt;code&gt;.mzML&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code&gt;.mzXML&lt;/code&gt;&lt;/strong&gt; file (lower-cased text) to infer:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): The file name of the raw file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt;: &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt; if it contains &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;/&lt;code&gt;&amp;quot;q exactive&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt; if &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt;, else &lt;code&gt;&amp;quot;qtof&amp;quot;&lt;/code&gt; if contains &lt;code&gt;&amp;quot;tof&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt;: &lt;code&gt;&amp;quot;positive&amp;quot;&lt;/code&gt; or &lt;code&gt;&amp;quot;negative&amp;quot;&lt;/code&gt; if mentioned.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt;: &lt;code&gt;True&lt;/code&gt; if &lt;code&gt;&amp;quot;centroid spectrum&amp;quot;&lt;/code&gt; or &lt;code&gt;centroided=&amp;quot;1&amp;quot;&lt;/code&gt; present.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; (str): The type of MS, &amp;ldquo;orbitrap&amp;rdquo;, &amp;ldquo;qtof&amp;rdquo;, &amp;ldquo;tripletof&amp;rdquo; or &amp;ldquo;others&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): The ion mode, &amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt; (bool): Whether the data is centroid data.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Returns &lt;code&gt;(ms_type, ion_mode, centroid)&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Constants&lt;span class=&#34;absolute -mt-20&#34; id=&#34;constants&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;valid parameter ranges&lt;span class=&#34;absolute -mt-20&#34; id=&#34;valid-parameter-ranges&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#valid-parameter-ranges&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PARAMETER_RAGES&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A dictionary of valid parameter ranges.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_RAGES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;PARAMETER_RAGES&lt;/code&gt; — Valid Ranges&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_rages--valid-ranges&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_rages--valid-ranges&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_RAGES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_upper_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;10000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
@@ -1366,9 +1302,7 @@ selected_features : one-dimensional numpy array
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.02&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ms2_sim_tol&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -1378,36 +1312,8 @@ selected_features : one-dimensional numpy array
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;default parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;default-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#default-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A dictionary of default parameters.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_DEFAULT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;h3&gt;&lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt; — Defaults Used on Reset&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_default--defaults-used-on-reset&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_default--defaults-used-on-reset&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_DEFAULT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_upper_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -1428,9 +1334,7 @@ selected_features : one-dimensional numpy array
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ms2_sim_tol&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -1440,6 +1344,20 @@ selected_features : one-dimensional numpy array
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Discrepancy note:&lt;/strong&gt; In the &lt;code&gt;Params&lt;/code&gt; initializer, &lt;code&gt;feature_gap_tol&lt;/code&gt; defaults to &lt;strong&gt;&lt;code&gt;10&lt;/code&gt;&lt;/strong&gt;, whereas &lt;code&gt;PARAMETER_DEFAULT[&amp;quot;feature_gap_tol&amp;quot;]&lt;/code&gt; is &lt;strong&gt;&lt;code&gt;30&lt;/code&gt;&lt;/strong&gt;. If &lt;code&gt;check_parameters()&lt;/code&gt; resets values (due to range violations), it will use the &lt;strong&gt;&lt;code&gt;30&lt;/code&gt;&lt;/strong&gt; from &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2&gt;Additional Notes &amp;amp; Gotchas&lt;span class=&#34;absolute -mt-20&#34; id=&#34;additional-notes--gotchas&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes--gotchas&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Raw file discovery&lt;/strong&gt; in workflow prep and path validation currently recognizes only &lt;code&gt;.mzML&lt;/code&gt; and &lt;code&gt;.mzXML&lt;/code&gt; files, even though &lt;code&gt;file_format&lt;/code&gt; supports &lt;code&gt;&amp;quot;mzjson&amp;quot;&lt;/code&gt;/&lt;code&gt;&amp;quot;mzjson.gz&amp;quot;&lt;/code&gt; in principle.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; is &lt;strong&gt;&lt;code&gt;True&lt;/code&gt;&lt;/strong&gt; in the initializer (despite an inline comment that mentions &lt;code&gt;False&lt;/code&gt;), and &lt;code&gt;gap_filling_method&lt;/code&gt; is the string &lt;code&gt;&amp;quot;local_maximum&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;ms2_library_path&lt;/code&gt; points to a &lt;strong&gt;non-existent&lt;/strong&gt; path, it is automatically set to &lt;code&gt;None&lt;/code&gt; during parameter checking.&lt;/li&gt;
+&lt;li&gt;Exported JSON via &lt;code&gt;output_parameters()&lt;/code&gt; omits &lt;code&gt;project_dir&lt;/code&gt; and includes a &lt;code&gt;&amp;quot;MassCube_version&amp;quot;&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;The code consistently uses the identifier &lt;code&gt;PARAMETER_RAGES&lt;/code&gt; (with a &lt;strong&gt;G&lt;/strong&gt;), and method docs reflect that spelling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This documentation mirrors the current &lt;code&gt;params.py&lt;/code&gt; implementation.&lt;/em&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -1860,7 +1778,102 @@ Converted signals in string format. Format: &amp;ldquo;mz1;intensity1|mz2;intens
     </item>
     
     <item>
-      <title>MS scan visualization</title>
+      <title>Make a sample table</title>
+      <link>https://example.org/docs/untargeted_metabolomics/generate_sample_table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/untargeted_metabolomics/generate_sample_table/</guid>
+      <description>
+        
+        
+        &lt;p&gt;In the project folder, open a terminal and run the following command:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;generate-sample-table&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Your project folder should include a subfolder named &lt;strong&gt;data&lt;/strong&gt; that contains the raw LC-MS data files in &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mzXML&lt;/strong&gt; format.&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
+├── data
+│ ├── sample1.mzML
+│ ├── sample2.mzML
+| └── ...
+|── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. You can add more columns to the sample table to claim biological groups or other information. For example, you can add a column named &amp;rsquo;treatment&amp;rsquo; to claim the treatment of each sample like drug A, drug B, or control. Example:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;name&lt;/th&gt;
+&lt;th&gt;is_blank&lt;/th&gt;
+&lt;th&gt;is_qc&lt;/th&gt;
+&lt;th&gt;treatment&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;sample1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;drug A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sample2&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;drug B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sample3&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;QC2&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blank1&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blank2&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>MS scans</title>
       <link>https://example.org/docs/visualization/scan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1996,40 +2009,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
         
         
         &lt;p&gt;Documentation is under construction. Please check our source code directly for the latest updates.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Parameters</title>
-      <link>https://example.org/docs/workflows/parameters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/workflows/parameters/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;code&gt;masscube&lt;/code&gt; provides default parameters for users to start with. &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download the default parameters&lt;/a&gt;. You only need to change two settings based on your data:&lt;/p&gt;
-&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;ion_mode&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ion_mode&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ion_mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;&lt;/p&gt;
-&lt;h3&gt;ms1_abs_int_tol&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms1_abs_int_tol&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ms1_abs_int_tol&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;30000 for Orbitrap data, and 1000 for TOF data.&lt;/p&gt;
-&lt;h3&gt;ms2_library_path&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms2_library_path&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ms2_library_path&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML)&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2&gt;Key parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;key-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here we summarized six most important parameters in &lt;em&gt;masscube&lt;/em&gt; for untargeted metabolomics data processing:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;MS1 mass tolerance&lt;/strong&gt;: the mass tolerance for MS1 feature detection. &lt;code&gt;0.005-0.01&lt;/code&gt; Da is recommended.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Intensity tolerance&lt;/strong&gt;: the intensity tolerance for MS signals. &lt;code&gt;1000&lt;/code&gt; is recommended for TOF data, and &lt;code&gt;30000&lt;/code&gt; is recommended for Orbitrap data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mass tolerance for alignement&lt;/strong&gt;: the mass tolerance for feature alignment. &lt;code&gt;0.01-0.015&lt;/code&gt; Da is recommended.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RT tolerance for alignment&lt;/strong&gt;: the RT tolerance for feature alignment. &lt;code&gt;0.1-0.3&lt;/code&gt; min is recommended.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MS/MS similarity score threshold&lt;/strong&gt;: the threshold for MS/MS similarity score. &lt;code&gt;0.7-0.8&lt;/code&gt; is recommended.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MS/MS library&lt;/strong&gt;: the MS/MS library for MS/MS annotation.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For advanced programming users, much more parameters in &lt;code&gt;masscube&lt;/code&gt; are tunable. Please refer to the &lt;a href=&#34;https://example.org/docs/api&#34; &gt;API documentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
@@ -2179,11 +2158,88 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     </item>
     
     <item>
-      <title>MS/MS database</title>
-      <link>https://example.org/docs/workflows/database/</link>
+      <title>MS/MS spectra</title>
+      <link>https://example.org/docs/visualization/ms2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/workflows/database/</guid>
+      <guid>https://example.org/docs/visualization/ms2/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Mirror plot&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror-plot&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#mirror-plot&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Compare a pair of MS/MS spectra using a mirror plot:&lt;/p&gt;
+&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.annotation&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.visualization&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mirror_ms2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;260.056&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;precursor_2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;180.1019&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ms2_1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ms2_2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;signals1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms2_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# convert string to 2D numpy array&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;signals2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms2_2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# convert string to 2D numpy array&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Salsolinol&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.84&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mirror_ms2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signals1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signals2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;score&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+    &lt;button
+      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
+      title=&#34;Copy code&#34;
+    &gt;
+      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;ms2_1 and ms2_2 are MS/MS spectra in the format &amp;ldquo;m/z;intensity&amp;rdquo; pairs separated by &amp;ldquo;|&amp;rdquo;. You can copy them directly from the &lt;strong&gt;MS2&lt;/strong&gt; (experimental MS/MS) and &lt;strong&gt;matched_MS2&lt;/strong&gt; (database MS/MS) columns in the aligned_feature_table generated by the &lt;strong&gt;untargeted-metabolomics&lt;/strong&gt; command.&lt;/p&gt;
+&lt;h3&gt;example output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-output&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#example-output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;
+    &lt;img src=&#34;../plots/salsolinol_sulfate.png&#34; alt=&#34;Mirror plot&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Set parameters</title>
+      <link>https://example.org/docs/untargeted_metabolomics/parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/untargeted_metabolomics/parameters/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download the default parameters&lt;/a&gt;. Make sure to check and adjust the following three key parameters:&lt;/p&gt;
+&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
+&lt;h3&gt;ion_mode&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ion_mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ion_mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Set to &amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;.&lt;/p&gt;
+&lt;h3&gt;ms1_abs_int_tol&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms1_abs_int_tol&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ms1_abs_int_tol&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;You may use 30000 for Orbitrap data, and 1000 for TOF data.&lt;/p&gt;
+&lt;h3&gt;ms2_library_path&lt;span class=&#34;absolute -mt-20&#34; id=&#34;ms2_library_path&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#ms2_library_path&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The absolute path to the MS/MS database file (e.g. D:/databases/ms2_library.mzML).&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2&gt;Key parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;key-parameters&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#key-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Here we summarized six most important parameters in &lt;em&gt;masscube&lt;/em&gt; for untargeted metabolomics data processing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;mz_tol_ms1&lt;/strong&gt;: the mass tolerance for MS1 feature detection. &lt;code&gt;0.005-0.01&lt;/code&gt; Da is recommended.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ms1_abs_int_tol&lt;/strong&gt;: the intensity tolerance for MS signals. &lt;code&gt;1000&lt;/code&gt; is recommended for TOF data, and &lt;code&gt;30000&lt;/code&gt; is recommended for Orbitrap data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mz_tol_alignment&lt;/strong&gt;: the mass tolerance for feature alignment. &lt;code&gt;0.01-0.015&lt;/code&gt; Da is recommended.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rt_tol_alignment&lt;/strong&gt;: the RT tolerance for feature alignment. &lt;code&gt;0.1-0.3&lt;/code&gt; min is recommended.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ms2_sim_tol&lt;/strong&gt;: the threshold for MS/MS similarity score. &lt;code&gt;0.7-0.8&lt;/code&gt; is recommended.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ms2_library_path&lt;/strong&gt;: the MS/MS library for MS/MS annotation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;More about parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;more-about-parameters&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#more-about-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Explanation of the commonly used parameters for the &lt;code&gt;untargeted-metabolomics&lt;/code&gt; workflow can be found &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more tunable parameters, please refer to the &lt;a href=&#34;https://example.org/docs/api&#34; &gt;API documentation&lt;/a&gt; or the source code in the &lt;code&gt;params&lt;/code&gt; module.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>MS/MS database</title>
+      <link>https://example.org/docs/untargeted_metabolomics/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/untargeted_metabolomics/database/</guid>
       <description>
         
         
@@ -2259,7 +2315,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PRECURSORTYPE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# adduct&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;IONMODE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positive&lt;/span&gt;                         &lt;span class=&#34;c1&#34;&gt;# ion mode&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;RETENTIONTIME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.31&lt;/span&gt;                       &lt;span class=&#34;c1&#34;&gt;# retention time in minutes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;136.82&lt;/span&gt;                               &lt;span class=&#34;c1&#34;&gt;# collisional cross section&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;136.82&lt;/span&gt;                               &lt;span class=&#34;c1&#34;&gt;# collision cross section&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FORMULA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C9H11NO2&lt;/span&gt;                         &lt;span class=&#34;c1&#34;&gt;# chemical formula&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;SMILES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# SMILES string&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;INCHIKEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;COLNVLDHVKWLRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QMMMGPOBSA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# InChIKey&lt;/span&gt;
@@ -2307,7 +2363,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;precursor_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[M+H]+&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                 &lt;span class=&#34;c1&#34;&gt;# adduct&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;ion_mode&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Positive&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                     &lt;span class=&#34;c1&#34;&gt;# ion mode&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;retention_time&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;3.30520009994507&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# retention time in minutes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;ccs&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;136.819671630859&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# collisional cross section&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;ccs&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;136.819671630859&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# collision cross section&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;formula&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C9H11NO2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;                      &lt;span class=&#34;c1&#34;&gt;# chemical formula&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;smiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C1=CC=C(C=C1)C[C@@H](C(=O)O)N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# SMILES string&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;inchikey&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;COLNVLDHVKWLRT-QMMMGPOBSA-N&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# InChIKey&lt;/span&gt;
@@ -2351,53 +2407,11 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
     </item>
     
     <item>
-      <title>MS/MS spectra visualization</title>
-      <link>https://example.org/docs/visualization/ms2/</link>
+      <title>The untargeted metabolomics workflow</title>
+      <link>https://example.org/docs/untargeted_metabolomics/the_workflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/docs/visualization/ms2/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;Mirror plot&lt;span class=&#34;absolute -mt-20&#34; id=&#34;mirror-plot&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#mirror-plot&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Compare a pair of MS/MS spectra using a mirror plot:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.annotation&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;masscube.visualization&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mirror_ms2&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;260.056&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;precursor_2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;180.1019&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ms2_1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;115.0538;0.1441|117.0689;0.3008|145.064;0.2618|163.0741;0.1822|180.1004;0.1111&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ms2_2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;79.0542;0.0034|91.0542;0.0308|105.0699;0.01|107.0491;0.0075|115.0542;0.0599|117.0699;0.3268|119.0491;0.0066|123.0441;0.0046|127.0542;0.0267|133.0648;0.0052|135.0661;0.0213|137.0597;0.0277|145.0648;0.3076|148.0519;0.0035|151.0754;0.021|163.0754;0.1376&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;signals1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms2_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# convert string to 2D numpy array&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;signals2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extract_signals_from_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ms2_2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# convert string to 2D numpy array&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Salsolinol&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.84&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mirror_ms2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;precursor_1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signals1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signals2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;score&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;similarity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;ms2_1 and ms2_2 are MS/MS spectra in the format &amp;ldquo;m/z;intensity&amp;rdquo; pairs separated by &amp;ldquo;|&amp;rdquo;. You can copy them directly from the &lt;strong&gt;MS2&lt;/strong&gt; (experimental MS/MS) and &lt;strong&gt;matched_MS2&lt;/strong&gt; (database MS/MS) columns in the aligned_feature_table generated by the &lt;strong&gt;untargeted-metabolomics&lt;/strong&gt; command.&lt;/p&gt;
-&lt;h3&gt;example output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;example-output&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#example-output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;
-    &lt;img src=&#34;../plots/salsolinol_sulfate.png&#34; alt=&#34;Mirror plot&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Untargeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/untargeted_metabolomics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/workflows/untargeted_metabolomics/</guid>
+      <guid>https://example.org/docs/untargeted_metabolomics/the_workflow/</guid>
       <description>
         
         
@@ -2492,281 +2506,6 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;h3&gt;Step 9. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-9-data-visualization&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#step-9-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers. The MS/MS matching plots are generated for the annotated compounds. PCA plots are generated for the statistical analysis.&lt;/p&gt;
 &lt;/div&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Single file processing by applying default parameters depending on the data</title>
-      <link>https://example.org/docs/workflows/batch_processing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/workflows/batch_processing/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;Introduction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Processing each raw LC-MS data individually can be useful for further customized analysis. In this workflow, we introduce how to process single files in batch mode using &lt;em&gt;masscube&lt;/em&gt;. Note, the processed files will not be aligned across samples. Also, files with different ion modes and instruments are allowed in the same batch, as &lt;em&gt;masscube&lt;/em&gt; will apply different parameters depending on the data.&lt;/p&gt;
-&lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Organize the data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;organize-the-data&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#organize-the-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Similar to the untargeted metabolomics workflow, the data should be organized in the following structure:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── data
-│   ├── sample1.mzML
-│   ├── sample2.mzML
-|   └── ...
-├── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;You cannot set parameters here.&lt;/p&gt;
-&lt;h3&gt;Processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;processing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the project folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;process-files&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After the processing, you will find the following files and folders in the project folder:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;project/
-├── data
-├── single_file_output
-│   ├── sample1.txt
-│   ├── sample2.txt
-│   └── ...
-├── chromatogram
-│   ├── sample1.png
-│   ├── sample2.png
-│   └── ...
-├── ...&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;single_file_output&lt;/code&gt; folder: a folder containing the feature table for each sample.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;chromatogram&lt;/code&gt; folder: a folder containing the chromatogram for each sample.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;h2&gt;Explainations of the workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;explainations-of-the-workflow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#explainations-of-the-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;batch_file_processing&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;segment_feature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;group_features&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;evaluate_peak_shape&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         &lt;span class=&#34;n&#34;&gt;annotate_ms2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ms2_library_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cpu_ratio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;batch_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Process single files using default parameters.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Parameters
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ----------
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    path : str
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The working directory. If None, the current working directory is used.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    segment_feature : bool
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to segment the feature to peaks for distinguishing possible isomers. Default is True.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    group_features : bool
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to group features by isotopes, adducts and in-source fragments. Default is True.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    evaluate_peak_shape : bool
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to evaluate the peak shape by calculating noise score and asymmetry factor. Default is True.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    annotate_ms2 : bool
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Whether to annotate MS2 spectra. Default is True.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ms2_library_path : str
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The path to the MS2 library.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    cpu_ratio : float
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The percentage of CPU cores to use. Default is 0.8.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    batch_size : int
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The number of files to process in each batch. Default is 100.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Step 1. Single file processing&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-single-file-processing&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-single-file-processing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Individual files are processed for feature detection, which envolves the detection of peak apex, edges, area, and related MS/MS spectra. It also includes the determination of isotopes, charge states, adducts, and in-source fragments.&lt;/p&gt;
-&lt;p&gt;To accelerate the processing, &lt;em&gt;masscube&lt;/em&gt; supports parallel computing for multiple files. By default, the number of threads is set to be the 80% (&lt;code&gt;cpu_ratio=0.8&lt;/code&gt;) of the total CPU cores so that the computer can still be used for other tasks.&lt;/p&gt;
-&lt;p&gt;To control the memory usage, the files are processed in batches. The default batch size is 100 (&lt;code&gt;batch_size=100&lt;/code&gt;).&lt;/p&gt;
-&lt;h3&gt;Step 2. Data visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-data-visualization&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-2-data-visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Users can choose to plot the base peak chromatogram (BPC) to verify possible bad injections or outliers.&lt;/p&gt;
-&lt;/div&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Find outliers</title>
-      <link>https://example.org/docs/workflows/find-outliers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/workflows/find-outliers/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;Introduction&lt;span class=&#34;absolute -mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Outliers are data files that differ significantly from the rest of the dataset. In MS experiments, outliers can arise due to various factors such as instrument error, sample preparation issues, or biological variation. Identifying and removing outliers before downstream analysis is crucial to avoid misleading results.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;masscube&lt;/em&gt; evaluates the analytical sequence and reports problematic samples in an unsupervised manner. It assesses the quality of the raw data by analyzing the total peak height of all detected features. Files with a Z-score lower than -2 (by default) are recognized as outliers, ensuring that only high-quality data are included in the downstream analysis.&lt;/p&gt;
-&lt;h2&gt;How to use&lt;span class=&#34;absolute -mt-20&#34; id=&#34;how-to-use&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-use&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;steps ml-4 mb-12 border-l border-gray-200 pl-6 dark:border-neutral-800 [counter-reset:step]&#34;&gt;
-&lt;h3&gt;Step 1. Organize the data&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-1-organize-the-data&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-1-organize-the-data&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Put all processed raw data files in a folder. The data should be organized in the following structure:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── single_files
-│   ├── sample1.txt
-│   ├── sample2.txt
-|   └── ...
-└── sample_table.csv&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Please provide a sample table to specify the blank samples so that they can be excluded from the outlier detection.&lt;/p&gt;
-&lt;h3&gt;Step 2. Run the outlier detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;step-2-run-the-outlier-detection&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#step-2-run-the-outlier-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;In the data folder&lt;/strong&gt;, open a terminal and run the following command:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find-outliers&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After the processing, you will find the following files and folders in the data folder:&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;pre&gt;&lt;code&gt;my_project
-├── single_files
-│   ├── sample1.txt
-│   ├── sample2.txt
-|   └── ...
-|── sample_table.csv
-└── problematic_files.txt&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;problematic_samples.txt&lt;/code&gt;: a text file containing the names of the problematic samples.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;single_files&lt;/code&gt;: a folder containing the feature detection results for each sample.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;h2&gt;Explanation of the workflow&lt;span class=&#34;absolute -mt-20&#34; id=&#34;explanation-of-the-workflow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#explanation-of-the-workflow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run_evaluation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;zscore_threshold&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Evaluate the run and report the problematic files.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    Parameters
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    ----------
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    path : str
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        Path to the project directory.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    zscore_threshold : float
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        The threshold of z-score for detecting problematic files. Default is -2.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
-    &lt;button
-      class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
-      title=&#34;Copy code&#34;
-    &gt;
-      &lt;div class=&#34;group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4&#34;&gt;&lt;/div&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The &lt;code&gt;run_evaluation&lt;/code&gt; function evaluates the run and reports the problematic files. It checks the quality of the raw data and identifies the problematic samples based on the number of detected features.&lt;/p&gt;
-&lt;p&gt;The function generates a &lt;code&gt;problematic_samples.txt&lt;/code&gt; file that lists the names of the problematic samples. Users can further investigate the outliers and decide whether to remove them before downstream analysis.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Targeted metabolomics workflow</title>
-      <link>https://example.org/docs/workflows/targeted_metabolomics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.org/docs/workflows/targeted_metabolomics/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Workflow is under development. Please check back later.&lt;/p&gt;
 
       </description>
     </item>

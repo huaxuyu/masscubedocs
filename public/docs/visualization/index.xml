@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Chromatogram visualization</title>
+      <title>Chromatograms</title>
       <link>https://example.org/docs/visualization/chromatogram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -119,7 +119,7 @@
     </item>
     
     <item>
-      <title>MS scan visualization</title>
+      <title>MS scans</title>
       <link>https://example.org/docs/visualization/scan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -191,7 +191,7 @@
     </item>
     
     <item>
-      <title>MS/MS spectra visualization</title>
+      <title>MS/MS spectra</title>
       <link>https://example.org/docs/visualization/ms2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

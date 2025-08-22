@@ -11,8 +11,10 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>params – MassCube</title>
-  <meta name="description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file." />
+  <title>MassCube</title>
+  <meta name="description" content="paramsOverview The params module defines a class Params that stores and manages parameters for mass spectrometry-based untargeted metabolomics data processing. It also exposes a helper function find_ms_info and two dictionaries of parameter ranges and defaults.
+This documentation is synchronized with the current implementation in params.py and reflects all attributes, methods, behaviors, defaults, and edge cases present in the code.
+Classes Params A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls." />
   
   
     <link rel="canonical" href="https://example.org/docs/api/params/" itemprop="url" />
@@ -20,19 +22,25 @@
 
   
 
-<meta property="og:title" content="params" />
-<meta property="og:description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file." />
+<meta property="og:title" content="" />
+<meta property="og:description" content="paramsOverview The params module defines a class Params that stores and manages parameters for mass spectrometry-based untargeted metabolomics data processing. It also exposes a helper function find_ms_info and two dictionaries of parameter ranges and defaults.
+This documentation is synchronized with the current implementation in params.py and reflects all attributes, methods, behaviors, defaults, and edge cases present in the code.
+Classes Params A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.org/docs/api/params/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="params">
-<meta itemprop="description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file.">
+  <meta itemprop="name" content="">
+<meta itemprop="description" content="paramsOverview The params module defines a class Params that stores and manages parameters for mass spectrometry-based untargeted metabolomics data processing. It also exposes a helper function find_ms_info and two dictionaries of parameter ranges and defaults.
+This documentation is synchronized with the current implementation in params.py and reflects all attributes, methods, behaviors, defaults, and edge cases present in the code.
+Classes Params A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls.">
 
-<meta itemprop="wordCount" content="908">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="params"/>
-<meta name="twitter:description" content="Overview The params module defines a class Params to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function find_ms_info to determine the type of mass spectrometer and ionization mode from a raw file."/>
+<meta itemprop="wordCount" content="1389">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="paramsOverview The params module defines a class Params that stores and manages parameters for mass spectrometry-based untargeted metabolomics data processing. It also exposes a helper function find_ms_info and two dictionaries of parameter ranges and defaults.
+This documentation is synchronized with the current implementation in params.py and reflects all attributes, methods, behaviors, defaults, and edge cases present in the code.
+Classes Params A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls."/>
 
     <link rel="preload" href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" as="style" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
     <link href="/css/compiled/main.min.5a06ca26e024c4f511f45ee6c33a2a1faefaebe6be8a38d36e100f40a4c59c06.css" rel="stylesheet" integrity="sha256-WgbKJuAkxPUR9F7mwzoqH6766&#43;a&#43;ijjTbhAPQKTFnAY=" />
@@ -209,66 +217,50 @@
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/"
+    href="/docs/untargeted_metabolomics/"
     
-  >Workflows
+  >Untargeted metabolomics
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:pr-0 overflow-hidden">
         <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/data_preparation/"
+    href="/docs/untargeted_metabolomics/convert_ms_data/"
     
-  >Data preparation
+  >Convert raw MS data
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/parameters/"
+    href="/docs/untargeted_metabolomics/generate_sample_table/"
     
-  >Parameters
+  >Make a sample table
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/database/"
+    href="/docs/untargeted_metabolomics/parameters/"
     
-  >Database
+  >Set parameters
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/untargeted_metabolomics/"
+    href="/docs/untargeted_metabolomics/database/"
     
-  >Untargeted metabolomics
+  >About MS/MS database
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/batch_processing/"
+    href="/docs/untargeted_metabolomics/the_workflow/"
     
-  >Batch processing
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/find-outliers/"
-    
-  >Outlier detection
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/targeted_metabolomics/"
-    
-  >Targeted metabolomics
+  >The workflow
     </a>
               
             </li></ul>
@@ -295,7 +287,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/visualization/scan/"
     
-  >MS Scans
+  >MS scans
     </a>
               
             </li><li class="flex flex-col "><a
@@ -403,6 +395,18 @@
             </li>
           <li>
               <a
+                href="#attributes"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Attributes</a>
+            </li>
+          <li>
+              <a
+                href="#methods"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Methods</a>
+            </li>
+          <li>
+              <a
                 href="#functions"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Functions</a>
@@ -412,6 +416,12 @@
                 href="#constants"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
               >Constants</a>
+            </li>
+          <li>
+              <a
+                href="#additional-notes--gotchas"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Additional Notes &amp;amp; Gotchas</a>
             </li>
           </ul>
   
@@ -505,65 +515,49 @@
           <li class=""><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/"
+    href="/docs/untargeted_metabolomics/"
     
-  >Workflows
+  >Untargeted metabolomics
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
     </a><div class="ltr:pr-0 overflow-hidden">
         <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/data_preparation/"
+    href="/docs/untargeted_metabolomics/convert_ms_data/"
     
-  >Data preparation
+  >Convert raw MS data
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/parameters/"
+    href="/docs/untargeted_metabolomics/generate_sample_table/"
     
-  >Parameters
+  >Make a sample table
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/database/"
+    href="/docs/untargeted_metabolomics/parameters/"
     
-  >Database
+  >Set parameters
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/untargeted_metabolomics/"
+    href="/docs/untargeted_metabolomics/database/"
     
-  >Untargeted metabolomics
+  >About MS/MS database
     </a>
               
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/batch_processing/"
+    href="/docs/untargeted_metabolomics/the_workflow/"
     
-  >Batch processing
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/find-outliers/"
-    
-  >Outlier detection
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/workflows/targeted_metabolomics/"
-    
-  >Targeted metabolomics
+  >The workflow
     </a>
               
             </li></ul>
@@ -589,7 +583,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
     href="/docs/visualization/scan/"
     
-  >MS Scans
+  >MS scans
     </a>
               
             </li><li class="flex flex-col "><a
@@ -773,7 +767,87 @@
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#params">Params
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#params-1">Params
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#attributes">Attributes
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#project--metadata">Project &amp; Metadata
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#raw-data-reading--cleaning">Raw Data Reading &amp; Cleaning
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature-detection">Feature Detection
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature-grouping">Feature Grouping
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature-alignment">Feature Alignment
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#feature-annotation">Feature Annotation
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#normalization">Normalization
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#statistics">Statistics
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#visualization">Visualization
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#classifier-building">Classifier Building
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#output">Output
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#methods">Methods
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#read_parameters_from_csvpath">read_parameters_from_csv(path)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#read_sample_metadatapath">read_sample_metadata(path)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_untargeted_metabolomics_workflow_preparation">_untargeted_metabolomics_workflow_preparation()
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#set_defaultms_type-ion_mode">set_default(ms_type, ion_mode)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#check_parameters">check_parameters()
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#output_parameterspath-formatjson">output_parameters(path, format=&#34;json&#34;)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#_check_raw_files_in_data_dir">_check_raw_files_in_data_dir()
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -781,7 +855,7 @@
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_ms_info">find_ms_info
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find_ms_infofile_name">find_ms_info(file_name)
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -789,11 +863,15 @@
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#valid-parameter-ranges">valid parameter ranges
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#parameter_rages--valid-ranges">PARAMETER_RAGES — Valid Ranges
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#default-parameters">default parameters
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#parameter_default--defaults-used-on-reset">PARAMETER_DEFAULT — Defaults Used on Reset
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#additional-notes--gotchas">Additional Notes &amp; Gotchas
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -820,138 +898,158 @@
 </div>
 
         <div class="content">
-          <h1>params</h1>
-          <h2>Overview<span class="absolute -mt-20" id="overview"></span>
-    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>params</code> module defines a class <code>Params</code> to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function <code>find_ms_info</code> to determine the type of mass spectrometer and ionization mode from a raw file.</p>
+          <h1></h1>
+          <h1><code>params</code></h1><h2>Overview<span class="absolute -mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>params</code> module defines a class <code>Params</code> that stores and manages parameters for <strong>mass spectrometry-based untargeted metabolomics data processing</strong>. It also exposes a helper function <code>find_ms_info</code> and two dictionaries of parameter <strong>ranges</strong> and <strong>defaults</strong>.</p>
+<p>This documentation is synchronized with the current implementation in <code>params.py</code> and reflects <strong>all attributes, methods, behaviors, defaults, and edge cases</strong> present in the code.</p>
 <h2>Classes<span class="absolute -mt-20" id="classes"></span>
-    <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>Params</code><span class="absolute -mt-20" id="params"></span>
-    <a href="#params" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A class to store and manage parameters for mass spectrometry data processing.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><code>sample_names</code> (list): Sample names without extension.</li>
-<li><code>sample_abs_paths</code> (list): Absolute paths of the raw MS data.</li>
-<li><code>sample_metadata</code> (DataFrame): Sample metadata.</li>
-<li><code>project_dir</code> (str): Project directory.</li>
-<li><code>sample_dir</code> (str): Directory for the raw MS data.</li>
-<li><code>single_file_dir</code> (str): Directory for the single file output.</li>
-<li><code>tmp_file_dir</code> (str): Directory for the intermediate file output.</li>
-<li><code>ms2_matching_dir</code> (str): Directory for the MS2 matching output.</li>
-<li><code>bpc_dir</code> (str): Directory for the base peak chromatogram output.</li>
-<li><code>project_file_dir</code> (str): Directory for the project files.</li>
-<li><code>normalization_dir</code> (str): Directory for the normalization output.</li>
-<li><code>statistics_dir</code> (str): Directory for the statistical analysis output.</li>
-<li><code>problematic_files</code> (dict): Problematic files.</li>
-<li><code>file_name</code> (str): File name of the raw data.</li>
-<li><code>file_path</code> (str): Absolute path of the raw data.</li>
-<li><code>ion_mode</code> (str): MS ion mode.</li>
-<li><code>ms_type</code> (str): Type of MS.</li>
-<li><code>is_centroid</code> (bool): Whether the raw data is centroid data.</li>
-<li><code>file_format</code> (str): File type in lower case.</li>
-<li><code>time</code> (datetime): When the data file was acquired.</li>
-<li><code>scan_time_unit</code> (str): Time unit of the scan time.</li>
-<li><code>mz_lower_limit</code> (float): Lower limit of m/z in Da.</li>
-<li><code>mz_upper_limit</code> (float): Upper limit of m/z in Da.</li>
-<li><code>rt_lower_limit</code> (float): Lower limit of RT in minutes.</li>
-<li><code>rt_upper_limit</code> (float): Upper limit of RT in minutes.</li>
-<li><code>scan_levels</code> (list): Scan levels to be read.</li>
-<li><code>centroid_mz_tol</code> (float): m/z tolerance for centroiding.</li>
-<li><code>ms1_abs_int_tol</code> (float): Absolute intensity threshold for MS1.</li>
-<li><code>ms2_abs_int_tol</code> (float): Absolute intensity threshold for MS2.</li>
-<li><code>ms2_rel_int_tol</code> (float): Relative intensity threshold to base peak for MS2.</li>
-<li><code>precursor_mz_offset</code> (float): Offset for MS2 m/z range in Da.</li>
-<li><code>mz_tol_ms1</code> (float): m/z tolerance for MS1.</li>
-<li><code>mz_tol_ms2</code> (float): m/z tolerance for MS2.</li>
-<li><code>feature_gap_tol</code> (int): Gap tolerance within a feature.</li>
-<li><code>batch_size</code> (int): Batch size for parallel processing.</li>
-<li><code>percent_cpu_to_use</code> (float): Percentage of CPU to use.</li>
-<li><code>group_features_single_file</code> (bool): Whether to group features in a single file.</li>
-<li><code>scan_scan_cor_tol</code> (float): Scan-to-scan correlation tolerance for feature grouping.</li>
-<li><code>mz_tol_feature_grouping</code> (float): m/z tolerance for feature grouping.</li>
-<li><code>rt_tol_feature_grouping</code> (float): RT tolerance for feature grouping.</li>
-<li><code>valid_charge_states</code> (list): Valid charge states for feature grouping.</li>
-<li><code>mz_tol_alignment</code> (float): m/z tolerance for alignment.</li>
-<li><code>rt_tol_alignment</code> (float): RT tolerance for alignment.</li>
-<li><code>correct_rt</code> (bool): Whether to perform RT correction.</li>
-<li><code>scan_number_cutoff</code> (int): Feature with non-zero scan number greater than the cutoff will be aligned.</li>
-<li><code>detection_rate_cutoff</code> (float): Features detected need to be &gt;rate*(qc+sample).</li>
-<li><code>merge_features</code> (bool): Whether to merge features with almost the same m/z and RT.</li>
-<li><code>mz_tol_merge_features</code> (float): m/z tolerance for merging features.</li>
-<li><code>rt_tol_merge_features</code> (float): RT tolerance for merging features.</li>
-<li><code>group_features_after_alignment</code> (bool): Whether to group features after alignment.</li>
-<li><code>fill_gaps</code> (bool): Whether to fill the gaps in the aligned features.</li>
-<li><code>gap_filling_method</code> (str): Method for gap filling.</li>
-<li><code>gap_filling_rt_window</code> (float): RT window for finding local maximum.</li>
-<li><code>ms2_library_path</code> (str): Path to the MS2 library.</li>
-<li><code>ms2_sim_tol</code> (float): MS2 similarity tolerance.</li>
-<li><code>fuzzy_search</code> (bool): Whether to perform fuzzy search.</li>
-<li><code>sample_normalization</code> (bool): Whether to normalize the data based on total sample amount/concentration.</li>
-<li><code>sample_norm_method</code> (str): Sample normalization method.</li>
-<li><code>signal_normalization</code> (bool): Whether to run feature-wised normalization to correct systematic signal drift.</li>
-<li><code>signal_norm_method</code> (str): Normalization method for signal drift.</li>
-<li><code>run_statistics</code> (bool): Whether to perform statistical analysis.</li>
-<li><code>plot_bpc</code> (bool): Whether to plot base peak chromatograms.</li>
-<li><code>plot_ms2</code> (bool): Whether to plot mirror plots for MS2 matching.</li>
-<li><code>plot_normalization</code> (bool): Whether to plot the normalization results.</li>
-<li><code>by_group_name</code> (str): Group name for classifier building.</li>
-<li><code>output_single_file</code> (bool): Whether to output the processed individual files to a csv file.</li>
-<li><code>output_ms1_scans</code> (bool): Whether to output all MS1 scans to a pickle file for faster data reloading.</li>
-<li><code>output_aligned_file</code> (bool): Whether to output aligned features to a csv file.</li>
-<li><code>quant_method</code> (str): Value for quantification and output.</li>
+    <a href="#classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>Params</code><span class="absolute -mt-20" id="params-1"></span>
+    <a href="#params-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls.</p>
+<h2>Attributes<span class="absolute -mt-20" id="attributes"></span>
+    <a href="#attributes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Project &amp; Metadata<span class="absolute -mt-20" id="project--metadata"></span>
+    <a href="#project--metadata" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>sample_metadata</code> <em>(pandas.DataFrame | None)</em> — sample table held in-memory.</li>
+<li><code>project_dir</code> <em>(str | None)</em> — project root directory.</li>
+<li><code>sample_dir</code> <em>(str | None)</em> — directory for raw MS data; set during workflow prep.</li>
+<li><code>single_file_dir</code> <em>(str | None)</em> — outputs for single-file processing.</li>
+<li><code>tmp_file_dir</code> <em>(str | None)</em> — temporary/intermediate files.</li>
+<li><code>ms2_matching_dir</code> <em>(str | None)</em> — MS/MS matching outputs.</li>
+<li><code>bpc_dir</code> <em>(str | None)</em> — base peak chromatogram outputs.</li>
+<li><code>project_file_dir</code> <em>(str | None)</em> — auxiliary project files (sample table with time, etc.).</li>
+<li><code>normalization_dir</code> <em>(str | None)</em> — normalization results.</li>
+<li><code>statistics_dir</code> <em>(str | None)</em> — statistical analysis results.</li>
+<li><code>problematic_files</code> <em>(dict)</em> — problematic files mapping <code>{file_name: error_message}</code>.</li>
 </ul>
-<p><strong>Methods:</strong></p>
-<ul>
-<li><code>read_parameters_from_csv(path)</code>: Read parameters from a CSV file.</li>
-<li><code>read_sample_metadata(path)</code>: Read sample metadata from a CSV file.</li>
-<li><code>_untargeted_metabolomics_workflow_preparation()</code>: Prepare the parameters for the untargeted metabolomics workflow.</li>
-<li><code>set_default(ms_type, ion_mode)</code>: Set the parameters by the type of MS.</li>
-<li><code>check_parameters()</code>: Check if the parameters are correct using <code>PARAMETER_RAGES</code>.</li>
-<li><code>output_parameters(path, format=&quot;json&quot;)</code>: Output the parameters to a file.</li>
+<h3>Raw Data Reading &amp; Cleaning<span class="absolute -mt-20" id="raw-data-reading--cleaning"></span>
+    <a href="#raw-data-reading--cleaning" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>file_name</code> <em>(str | None)</em> — file name of the raw data.</li>
+<li><code>file_path</code> <em>(str | None)</em> — absolute path of the raw data.</li>
+<li><code>ion_mode</code> <em>(str)</em> — <code>&quot;positive&quot;</code> (default) or <code>&quot;negative&quot;</code>.</li>
+<li><code>ms_type</code> <em>(str | None)</em> — <code>&quot;orbitrap&quot;</code>, <code>&quot;qtof&quot;</code>, <code>&quot;tripletof&quot;</code>, or <code>&quot;others&quot;</code>.</li>
+<li><code>is_centroid</code> <em>(bool)</em> — whether data is centroided (<code>True</code> by default).</li>
+<li><code>file_format</code> <em>(str | None)</em> — lower-case type (<code>&quot;mzml&quot;</code>, <code>&quot;mzxml&quot;</code>, <code>&quot;mzjson&quot;</code>, or <code>&quot;mzjson.gz&quot;</code>).</li>
+<li><code>scan_time_unit</code> <em>(str)</em> — <code>&quot;minute&quot;</code> (default) or <code>&quot;second&quot;</code>.</li>
+<li><code>mz_lower_limit</code> <em>(float)</em> — lower m/z bound (default <code>0.0</code>).</li>
+<li><code>mz_upper_limit</code> <em>(float)</em> — upper m/z bound (default <code>100000.0</code>).</li>
+<li><code>rt_lower_limit</code> <em>(float)</em> — lower RT bound in minutes (default <code>0.0</code>).</li>
+<li><code>rt_upper_limit</code> <em>(float)</em> — upper RT bound in minutes (default <code>10000.0</code>).</li>
+<li><code>scan_levels</code> <em>(list[int])</em> — scan levels to read (default <code>[1, 2]</code>).</li>
+<li><code>centroid_mz_tol</code> <em>(float | None)</em> — m/z tolerance for centroiding (<code>0.005</code> by default; set <code>None</code> to disable centroiding).</li>
+<li><code>ms1_abs_int_tol</code> <em>(float)</em> — MS1 absolute intensity threshold (recommend <code>30000</code> Orbitrap, <code>1000</code> QTOF).</li>
+<li><code>ms2_abs_int_tol</code> <em>(float)</em> — MS2 absolute intensity threshold (recommend <code>10000</code> Orbitrap, <code>500</code> QTOF).</li>
+<li><code>ms2_rel_int_tol</code> <em>(float)</em> — MS2 relative intensity to base peak (default <code>0.01</code>).</li>
+<li><code>precursor_mz_offset</code> <em>(float)</em> — m/z offset for defining MS2 range (default <code>2.0</code>).</li>
 </ul>
+<h3>Feature Detection<span class="absolute -mt-20" id="feature-detection"></span>
+    <a href="#feature-detection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>mz_tol_ms1</code> <em>(float)</em> — MS1 m/z tolerance (default <code>0.01</code>).</li>
+<li><code>mz_tol_ms2</code> <em>(float)</em> — MS2 m/z tolerance (default <code>0.015</code>).</li>
+<li><code>feature_gap_tol</code> <em>(int)</em> — tolerance in <strong>consecutive scans</strong> without signal inside a feature (default <strong><code>10</code></strong> in <code>Params</code>; see note below about <code>PARAMETER_DEFAULT</code>).</li>
+<li><code>batch_size</code> <em>(int)</em> — parallel processing batch size (default <code>100</code>).</li>
+<li><code>percent_cpu_to_use</code> <em>(float)</em> — fraction of CPU to use (default <code>0.8</code>).</li>
+</ul>
+<h3>Feature Grouping<span class="absolute -mt-20" id="feature-grouping"></span>
+    <a href="#feature-grouping" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>group_features_single_file</code> <em>(bool)</em> — group features within a single file (default <code>False</code>).</li>
+<li><code>scan_scan_cor_tol</code> <em>(float)</em> — scan-to-scan correlation threshold (default <code>0.7</code>).</li>
+<li><code>mz_tol_feature_grouping</code> <em>(float)</em> — m/z tolerance for grouping (default <strong><code>0.015</code></strong>).</li>
+<li><code>rt_tol_feature_grouping</code> <em>(float)</em> — RT tolerance for grouping (default <code>0.1</code>).</li>
+<li><code>valid_charge_states</code> <em>(list[int])</em> — allowed charge states (default <code>[1]</code>).</li>
+</ul>
+<h3>Feature Alignment<span class="absolute -mt-20" id="feature-alignment"></span>
+    <a href="#feature-alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>mz_tol_alignment</code> <em>(float)</em> — m/z tolerance for alignment (default <code>0.01</code>).</li>
+<li><code>rt_tol_alignment</code> <em>(float)</em> — RT tolerance for alignment (default <code>0.2</code>).</li>
+<li><code>rt_tol_rt_correction</code> <em>(float)</em> — <strong>expected max RT shift</strong> for RT correction (default <code>0.5</code> min).</li>
+<li><code>correct_rt</code> <em>(bool)</em> — perform RT correction (default <code>True</code>).</li>
+<li><code>scan_number_cutoff</code> <em>(int)</em> — minimum non-zero scans to be aligned (default <code>5</code>).</li>
+<li><code>detection_rate_cutoff</code> <em>(float)</em> — required detection rate across QC+samples (default <code>0.1</code>).</li>
+<li><code>merge_features</code> <em>(bool)</em> — merge near-duplicate features (default <code>True</code>).</li>
+<li><code>mz_tol_merge_features</code> <em>(float)</em> — m/z tolerance for merging (default <code>0.01</code>).</li>
+<li><code>rt_tol_merge_features</code> <em>(float)</em> — RT tolerance for merging (default <strong><code>0.02</code></strong>).</li>
+<li><code>group_features_after_alignment</code> <em>(bool)</em> — group after alignment (default <strong><code>True</code></strong>).</li>
+<li><code>fill_gaps</code> <em>(bool)</em> — fill gaps in aligned features (default <code>True</code>).</li>
+<li><code>gap_filling_method</code> <em>(str)</em> — method used in gap filling (default <code>&quot;local_maximum&quot;</code>).</li>
+<li><code>gap_filling_rt_window</code> <em>(float)</em> — RT window for finding local maxima (default <code>0.05</code> min).</li>
+<li><code>isotope_rel_int_limit</code> <em>(float)</em> — isotope intensity upper limit relative to base peak (default <code>1.5</code>).</li>
+</ul>
+<h3>Feature Annotation<span class="absolute -mt-20" id="feature-annotation"></span>
+    <a href="#feature-annotation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>ms2_library_path</code> <em>(str | None)</em> — path to MS2 library (<code>.msp</code> or <code>.pickle</code>); set to <code>None</code> if not existing.</li>
+<li><code>fuzzy_search</code> <em>(bool)</em> — enable fuzzy search (default <code>False</code>).</li>
+<li><code>consider_rt</code> <em>(bool)</em> — consider RT in MS2 matching (default <code>False</code>).</li>
+<li><code>rt_tol_annotation</code> <em>(float)</em> — RT tolerance for annotation (default <code>0.2</code>).</li>
+<li><code>ms2_sim_tol</code> <em>(float)</em> — MS2 similarity threshold (default <code>0.7</code>).</li>
+<li><code>spectral_similarity_method</code> <em>(str)</em> — similarity method (default <code>&quot;unweighted_entropy&quot;</code>).</li>
+</ul>
+<h3>Normalization<span class="absolute -mt-20" id="normalization"></span>
+    <a href="#normalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>sample_normalization</code> <em>(bool)</em> — sample-wise normalization by total amount/concentration (default <code>False</code>).</li>
+<li><code>sample_norm_method</code> <em>(str)</em> — method for sample normalization (default <code>&quot;pqn&quot;</code>).</li>
+<li><code>signal_normalization</code> <em>(bool)</em> — feature-wise drift correction (default <code>False</code>).</li>
+<li><code>signal_norm_method</code> <em>(str)</em> — drift correction method (default <code>&quot;lowess&quot;</code>).</li>
+</ul>
+<h3>Statistics<span class="absolute -mt-20" id="statistics"></span>
+    <a href="#statistics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>run_statistics</code> <em>(bool)</em> — run statistical analysis (default <code>False</code>).</li>
+</ul>
+<h3>Visualization<span class="absolute -mt-20" id="visualization"></span>
+    <a href="#visualization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>plot_bpc</code> <em>(bool)</em> — plot BPC chromatograms (default <code>False</code>).</li>
+<li><code>plot_ms2</code> <em>(bool)</em> — plot MS2 mirror plots (default <code>False</code>).</li>
+<li><code>plot_normalization</code> <em>(bool)</em> — plot normalization results (default <code>False</code>).</li>
+</ul>
+<h3>Classifier Building<span class="absolute -mt-20" id="classifier-building"></span>
+    <a href="#classifier-building" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>by_group_name</code> <em>(str | None)</em> — group name for classifier training (if used).</li>
+</ul>
+<h3>Output<span class="absolute -mt-20" id="output"></span>
+    <a href="#output" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><code>output_single_file</code> <em>(bool)</em> — export processed single-file outputs (default <code>False</code>; set <code>True</code> during workflow prep).</li>
+<li><code>output_ms1_scans</code> <em>(bool)</em> — export all MS1 scans to pickle for fast reloading (default <code>False</code>; set <code>True</code> during workflow prep).</li>
+<li><code>output_aligned_file</code> <em>(bool)</em> — export aligned features (default <code>False</code>; set <code>True</code> during workflow prep).</li>
+<li><code>quant_method</code> <em>(str)</em> — <code>&quot;peak_height&quot;</code> (default), <code>&quot;peak_area&quot;</code>, or <code>&quot;top_average&quot;</code>.</li>
+</ul>
+<h2>Methods<span class="absolute -mt-20" id="methods"></span>
+    <a href="#methods" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>read_parameters_from_csv(path)</code><span class="absolute -mt-20" id="read_parameters_from_csvpath"></span>
+    <a href="#read_parameters_from_csvpath" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Reads a CSV of key–value pairs and sets attributes. Values convertible to <code>float</code> are cast; otherwise, <code>&quot;true&quot;/&quot;yes&quot;</code> → <code>True</code>, <code>&quot;false&quot;/&quot;no&quot;</code> → <code>False</code>. Calls <code>check_parameters()</code> afterward.</p>
+<h3><code>read_sample_metadata(path)</code><span class="absolute -mt-20" id="read_sample_metadatapath"></span>
+    <a href="#read_sample_metadatapath" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Loads sample metadata from CSV. Lower-cases columns named <code>&quot;is_qc&quot;</code> and <code>&quot;is_blank&quot;</code>; converts <code>&quot;yes&quot;/&quot;no&quot;</code> strings to booleans (otherwise defaults both columns to <code>False</code>). Sorts so <strong>QC appear first</strong> and <strong>blanks last</strong>; adds <code>VALID</code> and <code>ABSOLUTE_PATH</code> columns; stores in <code>sample_metadata</code>.</p>
+<h3><code>_untargeted_metabolomics_workflow_preparation()</code><span class="absolute -mt-20" id="_untargeted_metabolomics_workflow_preparation"></span>
+    <a href="#_untargeted_metabolomics_workflow_preparation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Prepares a project for the <strong>untargeted metabolomics</strong> workflow:</p>
+<ol>
+<li>Validates <code>project_dir</code>; derives standard subdirectories and creates them if missing.</li>
+<li>Ensures raw data exist in <code>project_dir/data</code> (currently auto-detects only <strong><code>.mzML</code></strong> and <strong><code>.mzXML</code></strong>).</li>
+<li>If <code>sample_table.csv</code> is missing, disables normalization/statistics and prints notices.</li>
+<li>If <code>parameters.csv</code> is missing, prints notices, infers <code>(ms_type, ion_mode)</code> from the first sample via <code>find_ms_info</code>, calls <code>set_default</code>, and enables <code>plot_bpc</code>.</li>
+<li>Loads sample table if present; otherwise builds from discovered file basenames. Validates presence of raw files, computes acquisition <code>time</code> via <code>get_start_time</code>, filters invalid, sorts by time, adds sequential <code>analytical_order</code>, and assigns batch IDs via <code>label_batch_id</code>. Writes <code>project_files/sample_table_with_time.csv</code>.</li>
+<li>Sets output toggles: <code>output_single_file=True</code>, <code>output_ms1_scans=True</code>, <code>output_aligned_file=True</code>.</li>
+</ol>
+<h3><code>set_default(ms_type, ion_mode)</code><span class="absolute -mt-20" id="set_defaultms_type-ion_mode"></span>
+    <a href="#set_defaultms_type-ion_mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For <code>&quot;orbitrap&quot;</code>, sets <code>ms1_abs_int_tol=30000</code>, <code>ms2_abs_int_tol=10000</code>; for others, <code>ms1_abs_int_tol=1000</code>, <code>ms2_abs_int_tol=500</code>. Also sets <code>ion_mode</code>.</p>
+<h3><code>check_parameters()</code><span class="absolute -mt-20" id="check_parameters"></span>
+    <a href="#check_parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Validates all numeric parameters against <code>PARAMETER_RAGES</code>. If a value is <strong>out of range</strong>, it prints a warning and resets that parameter to the value in <code>PARAMETER_DEFAULT</code>. If <code>ms2_library_path</code> does <strong>not</strong> exist, sets it to <code>None</code>. Casts <code>batch_size</code> to <code>int</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> The code refers to <code>PARAMETER_RAGES</code> throughout (typo intentional to match the implementation).</p>
+</blockquote>
+<h3><code>output_parameters(path, format=&quot;json&quot;)</code><span class="absolute -mt-20" id="output_parameterspath-formatjson"></span>
+    <a href="#output_parameterspath-formatjson" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Exports <strong>all</strong> parameters (except <code>project_dir</code>) to JSON, including <code>&quot;MassCube_version&quot;</code> obtained from <code>importlib.metadata.version(&quot;masscube&quot;)</code>. Only <code>&quot;json&quot;</code> is supported.</p>
+<h3><code>_check_raw_files_in_data_dir()</code><span class="absolute -mt-20" id="_check_raw_files_in_data_dir"></span>
+    <a href="#_check_raw_files_in_data_dir" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Cross-references basenames from <code>sample_metadata</code> with files in <code>sample_dir</code> (currently only <code>.mzML</code>/<code>.mzXML</code>), sets <code>VALID</code> and populates <code>ABSOLUTE_PATH</code> accordingly.</p>
+<hr>
 <h2>Functions<span class="absolute -mt-20" id="functions"></span>
-    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>find_ms_info<span class="absolute -mt-20" id="find_ms_info"></span>
-    <a href="#find_ms_info" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>find_ms_info(file_name)</code></p>
-<p>Find the type of mass spectrometer and ionization mode from the raw file.</p>
-<p><strong>Parameters:</strong></p>
+    <a href="#functions" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>find_ms_info(file_name)</code><span class="absolute -mt-20" id="find_ms_infofile_name"></span>
+    <a href="#find_ms_infofile_name" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Reads up to the first 200 lines of an <strong><code>.mzML</code></strong> or <strong><code>.mzXML</code></strong> file (lower-cased text) to infer:</p>
 <ul>
-<li><code>file_name</code> (str): The file name of the raw file.</li>
+<li><code>ms_type</code>: <code>&quot;orbitrap&quot;</code> if it contains <code>&quot;orbitrap&quot;</code>/<code>&quot;q exactive&quot;</code>, <code>&quot;tripletof&quot;</code> if <code>&quot;tripletof&quot;</code>, else <code>&quot;qtof&quot;</code> if contains <code>&quot;tof&quot;</code>.</li>
+<li><code>ion_mode</code>: <code>&quot;positive&quot;</code> or <code>&quot;negative&quot;</code> if mentioned.</li>
+<li><code>centroid</code>: <code>True</code> if <code>&quot;centroid spectrum&quot;</code> or <code>centroided=&quot;1&quot;</code> present.</li>
 </ul>
-<p><strong>Returns:</strong></p>
-<ul>
-<li><code>ms_type</code> (str): The type of MS, &ldquo;orbitrap&rdquo;, &ldquo;qtof&rdquo;, &ldquo;tripletof&rdquo; or &ldquo;others&rdquo;.</li>
-<li><code>ion_mode</code> (str): The ion mode, &ldquo;positive&rdquo; or &ldquo;negative&rdquo;.</li>
-<li><code>centroid</code> (bool): Whether the data is centroid data.</li>
-</ul>
+<p>Returns <code>(ms_type, ion_mode, centroid)</code>.</p>
+<hr>
 <h2>Constants<span class="absolute -mt-20" id="constants"></span>
-    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>valid parameter ranges<span class="absolute -mt-20" id="valid-parameter-ranges"></span>
-    <a href="#valid-parameter-ranges" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>PARAMETER_RAGES</code></p>
-<p>A dictionary of valid parameter ranges.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_RAGES</span> <span class="o">=</span> <span class="p">{</span>
+    <a href="#constants" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3><code>PARAMETER_RAGES</code> — Valid Ranges<span class="absolute -mt-20" id="parameter_rages--valid-ranges"></span>
+    <a href="#parameter_rages--valid-ranges" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_RAGES</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_lower_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_upper_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_lower_limit&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10000.0</span><span class="p">),</span>
@@ -972,9 +1070,7 @@
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_merge_features&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_merge_features&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_sim_tol&#34;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -984,36 +1080,8 @@
     </button>
   </div>
 </div>
-<h3>default parameters<span class="absolute -mt-20" id="default-parameters"></span>
-    <a href="#default-parameters" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><code>PARAMETER_DEFAULT</code></p>
-<p>A dictionary of default parameters.</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_DEFAULT</span> <span class="o">=</span> <span class="p">{</span>
+<h3><code>PARAMETER_DEFAULT</code> — Defaults Used on Reset<span class="absolute -mt-20" id="parameter_default--defaults-used-on-reset"></span>
+    <a href="#parameter_default--defaults-used-on-reset" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PARAMETER_DEFAULT</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_lower_limit&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_upper_limit&#34;</span><span class="p">:</span> <span class="mf">100000.0</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_lower_limit&#34;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -1034,9 +1102,7 @@
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;mz_tol_merge_features&#34;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;rt_tol_merge_features&#34;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;ms2_sim_tol&#34;</span><span class="p">:</span> <span class="mf">0.7</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
       title="Copy code"
@@ -1046,6 +1112,20 @@
     </button>
   </div>
 </div>
+<blockquote>
+<p><strong>Discrepancy note:</strong> In the <code>Params</code> initializer, <code>feature_gap_tol</code> defaults to <strong><code>10</code></strong>, whereas <code>PARAMETER_DEFAULT[&quot;feature_gap_tol&quot;]</code> is <strong><code>30</code></strong>. If <code>check_parameters()</code> resets values (due to range violations), it will use the <strong><code>30</code></strong> from <code>PARAMETER_DEFAULT</code>.</p>
+</blockquote>
+<hr>
+<h2>Additional Notes &amp; Gotchas<span class="absolute -mt-20" id="additional-notes--gotchas"></span>
+    <a href="#additional-notes--gotchas" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><strong>Raw file discovery</strong> in workflow prep and path validation currently recognizes only <code>.mzML</code> and <code>.mzXML</code> files, even though <code>file_format</code> supports <code>&quot;mzjson&quot;</code>/<code>&quot;mzjson.gz&quot;</code> in principle.</li>
+<li><code>group_features_after_alignment</code> is <strong><code>True</code></strong> in the initializer (despite an inline comment that mentions <code>False</code>), and <code>gap_filling_method</code> is the string <code>&quot;local_maximum&quot;</code>.</li>
+<li>If <code>ms2_library_path</code> points to a <strong>non-existent</strong> path, it is automatically set to <code>None</code> during parameter checking.</li>
+<li>Exported JSON via <code>output_parameters()</code> omits <code>project_dir</code> and includes a <code>&quot;MassCube_version&quot;</code> field.</li>
+<li>The code consistently uses the identifier <code>PARAMETER_RAGES</code> (with a <strong>G</strong>), and method docs reflect that spelling.</li>
+</ul>
+<hr>
+<p><em>This documentation mirrors the current <code>params.py</code> implementation.</em></p>
 
         </div>
         <div class="mt-16"></div>

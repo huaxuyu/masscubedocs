@@ -1,6 +1,6 @@
 ---
-linkTitle: "Workflows"
-title: Workflows
+linkTitle: "Untargeted metabolomics"
+title: Untargeted metabolomics
 weight: 3
 ---
 

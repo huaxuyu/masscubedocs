@@ -10,7 +10,7 @@
   </url><url>
     <loc>https://example.org/docs/api/classifier_builder/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/data_preparation/</loc>
+    <loc>https://example.org/docs/untargeted_metabolomics/convert_ms_data/</loc>
   </url><url>
     <loc>https://example.org/docs/api/feature_detection/</loc>
   </url><url>
@@ -34,37 +34,33 @@
   </url><url>
     <loc>https://example.org/docs/api/workflows/</loc>
   </url><url>
+    <loc>https://example.org/docs/untargeted_metabolomics/generate_sample_table/</loc>
+  </url><url>
     <loc>https://example.org/docs/visualization/scan/</loc>
   </url><url>
     <loc>https://example.org/docs/api/mzpkl/</loc>
   </url><url>
     <loc>https://example.org/docs/api/network/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/parameters/</loc>
-  </url><url>
     <loc>https://example.org/docs/quickstart/</loc>
-  </url><url>
-    <loc>https://example.org/docs/workflows/database/</loc>
   </url><url>
     <loc>https://example.org/docs/visualization/ms2/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/</loc>
+    <loc>https://example.org/docs/untargeted_metabolomics/parameters/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/untargeted_metabolomics/</loc>
+    <loc>https://example.org/docs/untargeted_metabolomics/</loc>
+  </url><url>
+    <loc>https://example.org/docs/untargeted_metabolomics/database/</loc>
   </url><url>
     <loc>https://example.org/docs/visualization/</loc>
   </url><url>
     <loc>https://example.org/docs/algorithms/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/batch_processing/</loc>
+    <loc>https://example.org/docs/untargeted_metabolomics/the_workflow/</loc>
   </url><url>
     <loc>https://example.org/docs/api/</loc>
   </url><url>
-    <loc>https://example.org/docs/workflows/find-outliers/</loc>
-  </url><url>
     <loc>https://example.org/docs/plans/</loc>
-  </url><url>
-    <loc>https://example.org/docs/workflows/targeted_metabolomics/</loc>
   </url><url>
     <loc>https://example.org/about/</loc>
   </url><url>

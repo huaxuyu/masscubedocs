@@ -861,7 +861,7 @@ selected_features : one-dimensional numpy array
     </item>
     
     <item>
-      <title>params</title>
+      <title></title>
       <link>https://example.org/docs/api/params/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -869,137 +869,157 @@ selected_features : one-dimensional numpy array
       <description>
         
         
-        &lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;params&lt;/code&gt; module defines a class &lt;code&gt;Params&lt;/code&gt; to store and manage parameters for mass spectrometry data processing. The class provides methods to read parameters from a CSV file, set default parameters based on the type of mass spectrometer and ionization mode, check the validity of parameters, and output parameters to a file. The module also includes a function &lt;code&gt;find_ms_info&lt;/code&gt; to determine the type of mass spectrometer and ionization mode from a raw file.&lt;/p&gt;
+        &lt;h1&gt;&lt;code&gt;params&lt;/code&gt;&lt;/h1&gt;&lt;h2&gt;Overview&lt;span class=&#34;absolute -mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;params&lt;/code&gt; module defines a class &lt;code&gt;Params&lt;/code&gt; that stores and manages parameters for &lt;strong&gt;mass spectrometry-based untargeted metabolomics data processing&lt;/strong&gt;. It also exposes a helper function &lt;code&gt;find_ms_info&lt;/code&gt; and two dictionaries of parameter &lt;strong&gt;ranges&lt;/strong&gt; and &lt;strong&gt;defaults&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This documentation is synchronized with the current implementation in &lt;code&gt;params.py&lt;/code&gt; and reflects &lt;strong&gt;all attributes, methods, behaviors, defaults, and edge cases&lt;/strong&gt; present in the code.&lt;/p&gt;
 &lt;h2&gt;Classes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Params&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;params&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#params&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A class to store and manage parameters for mass spectrometry data processing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Attributes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sample_names&lt;/code&gt; (list): Sample names without extension.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_abs_paths&lt;/code&gt; (list): Absolute paths of the raw MS data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_metadata&lt;/code&gt; (DataFrame): Sample metadata.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;project_dir&lt;/code&gt; (str): Project directory.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_dir&lt;/code&gt; (str): Directory for the raw MS data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;single_file_dir&lt;/code&gt; (str): Directory for the single file output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tmp_file_dir&lt;/code&gt; (str): Directory for the intermediate file output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_matching_dir&lt;/code&gt; (str): Directory for the MS2 matching output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bpc_dir&lt;/code&gt; (str): Directory for the base peak chromatogram output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;project_file_dir&lt;/code&gt; (str): Directory for the project files.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;normalization_dir&lt;/code&gt; (str): Directory for the normalization output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;statistics_dir&lt;/code&gt; (str): Directory for the statistical analysis output.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;problematic_files&lt;/code&gt; (dict): Problematic files.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): File name of the raw data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_path&lt;/code&gt; (str): Absolute path of the raw data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): MS ion mode.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; (str): Type of MS.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;is_centroid&lt;/code&gt; (bool): Whether the raw data is centroid data.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;file_format&lt;/code&gt; (str): File type in lower case.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;time&lt;/code&gt; (datetime): When the data file was acquired.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_time_unit&lt;/code&gt; (str): Time unit of the scan time.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_lower_limit&lt;/code&gt; (float): Lower limit of m/z in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_upper_limit&lt;/code&gt; (float): Upper limit of m/z in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_lower_limit&lt;/code&gt; (float): Lower limit of RT in minutes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_upper_limit&lt;/code&gt; (float): Upper limit of RT in minutes.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_levels&lt;/code&gt; (list): Scan levels to be read.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;centroid_mz_tol&lt;/code&gt; (float): m/z tolerance for centroiding.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms1_abs_int_tol&lt;/code&gt; (float): Absolute intensity threshold for MS1.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_abs_int_tol&lt;/code&gt; (float): Absolute intensity threshold for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_rel_int_tol&lt;/code&gt; (float): Relative intensity threshold to base peak for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;precursor_mz_offset&lt;/code&gt; (float): Offset for MS2 m/z range in Da.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_ms1&lt;/code&gt; (float): m/z tolerance for MS1.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_ms2&lt;/code&gt; (float): m/z tolerance for MS2.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;feature_gap_tol&lt;/code&gt; (int): Gap tolerance within a feature.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; (int): Batch size for parallel processing.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;percent_cpu_to_use&lt;/code&gt; (float): Percentage of CPU to use.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;group_features_single_file&lt;/code&gt; (bool): Whether to group features in a single file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_scan_cor_tol&lt;/code&gt; (float): Scan-to-scan correlation tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_feature_grouping&lt;/code&gt; (float): m/z tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_feature_grouping&lt;/code&gt; (float): RT tolerance for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;valid_charge_states&lt;/code&gt; (list): Valid charge states for feature grouping.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_alignment&lt;/code&gt; (float): m/z tolerance for alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_alignment&lt;/code&gt; (float): RT tolerance for alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;correct_rt&lt;/code&gt; (bool): Whether to perform RT correction.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;scan_number_cutoff&lt;/code&gt; (int): Feature with non-zero scan number greater than the cutoff will be aligned.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;detection_rate_cutoff&lt;/code&gt; (float): Features detected need to be &amp;gt;rate*(qc+sample).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;merge_features&lt;/code&gt; (bool): Whether to merge features with almost the same m/z and RT.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mz_tol_merge_features&lt;/code&gt; (float): m/z tolerance for merging features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;rt_tol_merge_features&lt;/code&gt; (float): RT tolerance for merging features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; (bool): Whether to group features after alignment.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fill_gaps&lt;/code&gt; (bool): Whether to fill the gaps in the aligned features.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gap_filling_method&lt;/code&gt; (str): Method for gap filling.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gap_filling_rt_window&lt;/code&gt; (float): RT window for finding local maximum.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_library_path&lt;/code&gt; (str): Path to the MS2 library.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ms2_sim_tol&lt;/code&gt; (float): MS2 similarity tolerance.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fuzzy_search&lt;/code&gt; (bool): Whether to perform fuzzy search.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_normalization&lt;/code&gt; (bool): Whether to normalize the data based on total sample amount/concentration.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sample_norm_method&lt;/code&gt; (str): Sample normalization method.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;signal_normalization&lt;/code&gt; (bool): Whether to run feature-wised normalization to correct systematic signal drift.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;signal_norm_method&lt;/code&gt; (str): Normalization method for signal drift.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;run_statistics&lt;/code&gt; (bool): Whether to perform statistical analysis.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_bpc&lt;/code&gt; (bool): Whether to plot base peak chromatograms.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_ms2&lt;/code&gt; (bool): Whether to plot mirror plots for MS2 matching.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;plot_normalization&lt;/code&gt; (bool): Whether to plot the normalization results.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;by_group_name&lt;/code&gt; (str): Group name for classifier building.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_single_file&lt;/code&gt; (bool): Whether to output the processed individual files to a csv file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_ms1_scans&lt;/code&gt; (bool): Whether to output all MS1 scans to a pickle file for faster data reloading.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_aligned_file&lt;/code&gt; (bool): Whether to output aligned features to a csv file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;quant_method&lt;/code&gt; (str): Value for quantification and output.&lt;/li&gt;
+    &lt;a href=&#34;#classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;Params&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;params-1&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#params-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A configuration container for project-level and file-level processing parameters, including project setup, raw data reading/cleaning, feature detection, grouping, alignment, annotation, normalization, statistics, visualization, and output controls.&lt;/p&gt;
+&lt;h2&gt;Attributes&lt;span class=&#34;absolute -mt-20&#34; id=&#34;attributes&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Project &amp;amp; Metadata&lt;span class=&#34;absolute -mt-20&#34; id=&#34;project--metadata&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#project--metadata&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sample_metadata&lt;/code&gt; &lt;em&gt;(pandas.DataFrame | None)&lt;/em&gt; — sample table held in-memory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — project root directory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — directory for raw MS data; set during workflow prep.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;single_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — outputs for single-file processing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tmp_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — temporary/intermediate files.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_matching_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — MS/MS matching outputs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bpc_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — base peak chromatogram outputs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project_file_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — auxiliary project files (sample table with time, etc.).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normalization_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — normalization results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistics_dir&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — statistical analysis results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;problematic_files&lt;/code&gt; &lt;em&gt;(dict)&lt;/em&gt; — problematic files mapping &lt;code&gt;{file_name: error_message}&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;read_parameters_from_csv(path)&lt;/code&gt;: Read parameters from a CSV file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;read_sample_metadata(path)&lt;/code&gt;: Read sample metadata from a CSV file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_untargeted_metabolomics_workflow_preparation()&lt;/code&gt;: Prepare the parameters for the untargeted metabolomics workflow.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;set_default(ms_type, ion_mode)&lt;/code&gt;: Set the parameters by the type of MS.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;check_parameters()&lt;/code&gt;: Check if the parameters are correct using &lt;code&gt;PARAMETER_RAGES&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;output_parameters(path, format=&amp;quot;json&amp;quot;)&lt;/code&gt;: Output the parameters to a file.&lt;/li&gt;
+&lt;h3&gt;Raw Data Reading &amp;amp; Cleaning&lt;span class=&#34;absolute -mt-20&#34; id=&#34;raw-data-reading--cleaning&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#raw-data-reading--cleaning&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — file name of the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file_path&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — absolute path of the raw data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;positive&amp;quot;&lt;/code&gt; (default) or &lt;code&gt;&amp;quot;negative&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;qtof&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;others&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is_centroid&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — whether data is centroided (&lt;code&gt;True&lt;/code&gt; by default).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file_format&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — lower-case type (&lt;code&gt;&amp;quot;mzml&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;mzxml&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;mzjson&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;mzjson.gz&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_time_unit&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;minute&amp;quot;&lt;/code&gt; (default) or &lt;code&gt;&amp;quot;second&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_lower_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — lower m/z bound (default &lt;code&gt;0.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_upper_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — upper m/z bound (default &lt;code&gt;100000.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_lower_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — lower RT bound in minutes (default &lt;code&gt;0.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_upper_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — upper RT bound in minutes (default &lt;code&gt;10000.0&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_levels&lt;/code&gt; &lt;em&gt;(list[int])&lt;/em&gt; — scan levels to read (default &lt;code&gt;[1, 2]&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid_mz_tol&lt;/code&gt; &lt;em&gt;(float | None)&lt;/em&gt; — m/z tolerance for centroiding (&lt;code&gt;0.005&lt;/code&gt; by default; set &lt;code&gt;None&lt;/code&gt; to disable centroiding).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms1_abs_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS1 absolute intensity threshold (recommend &lt;code&gt;30000&lt;/code&gt; Orbitrap, &lt;code&gt;1000&lt;/code&gt; QTOF).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_abs_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 absolute intensity threshold (recommend &lt;code&gt;10000&lt;/code&gt; Orbitrap, &lt;code&gt;500&lt;/code&gt; QTOF).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_rel_int_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 relative intensity to base peak (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;precursor_mz_offset&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z offset for defining MS2 range (default &lt;code&gt;2.0&lt;/code&gt;).&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;Feature Detection&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-detection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-detection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms1&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS1 m/z tolerance (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_ms2&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 m/z tolerance (default &lt;code&gt;0.015&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature_gap_tol&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — tolerance in &lt;strong&gt;consecutive scans&lt;/strong&gt; without signal inside a feature (default &lt;strong&gt;&lt;code&gt;10&lt;/code&gt;&lt;/strong&gt; in &lt;code&gt;Params&lt;/code&gt;; see note below about &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;batch_size&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — parallel processing batch size (default &lt;code&gt;100&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;percent_cpu_to_use&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — fraction of CPU to use (default &lt;code&gt;0.8&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Grouping&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-grouping&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-grouping&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;group_features_single_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — group features within a single file (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_scan_cor_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — scan-to-scan correlation threshold (default &lt;code&gt;0.7&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_feature_grouping&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for grouping (default &lt;strong&gt;&lt;code&gt;0.015&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_feature_grouping&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for grouping (default &lt;code&gt;0.1&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;valid_charge_states&lt;/code&gt; &lt;em&gt;(list[int])&lt;/em&gt; — allowed charge states (default &lt;code&gt;[1]&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Alignment&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-alignment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_alignment&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for alignment (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_alignment&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for alignment (default &lt;code&gt;0.2&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_rt_correction&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — &lt;strong&gt;expected max RT shift&lt;/strong&gt; for RT correction (default &lt;code&gt;0.5&lt;/code&gt; min).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;correct_rt&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — perform RT correction (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scan_number_cutoff&lt;/code&gt; &lt;em&gt;(int)&lt;/em&gt; — minimum non-zero scans to be aligned (default &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;detection_rate_cutoff&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — required detection rate across QC+samples (default &lt;code&gt;0.1&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merge_features&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — merge near-duplicate features (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mz_tol_merge_features&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — m/z tolerance for merging (default &lt;code&gt;0.01&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_merge_features&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for merging (default &lt;strong&gt;&lt;code&gt;0.02&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — group after alignment (default &lt;strong&gt;&lt;code&gt;True&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fill_gaps&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — fill gaps in aligned features (default &lt;code&gt;True&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_filling_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — method used in gap filling (default &lt;code&gt;&amp;quot;local_maximum&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gap_filling_rt_window&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT window for finding local maxima (default &lt;code&gt;0.05&lt;/code&gt; min).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isotope_rel_int_limit&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — isotope intensity upper limit relative to base peak (default &lt;code&gt;1.5&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Feature Annotation&lt;span class=&#34;absolute -mt-20&#34; id=&#34;feature-annotation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#feature-annotation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ms2_library_path&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — path to MS2 library (&lt;code&gt;.msp&lt;/code&gt; or &lt;code&gt;.pickle&lt;/code&gt;); set to &lt;code&gt;None&lt;/code&gt; if not existing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fuzzy_search&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — enable fuzzy search (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;consider_rt&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — consider RT in MS2 matching (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rt_tol_annotation&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — RT tolerance for annotation (default &lt;code&gt;0.2&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms2_sim_tol&lt;/code&gt; &lt;em&gt;(float)&lt;/em&gt; — MS2 similarity threshold (default &lt;code&gt;0.7&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spectral_similarity_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — similarity method (default &lt;code&gt;&amp;quot;unweighted_entropy&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Normalization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;normalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#normalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sample_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — sample-wise normalization by total amount/concentration (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sample_norm_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — method for sample normalization (default &lt;code&gt;&amp;quot;pqn&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signal_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — feature-wise drift correction (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;signal_norm_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — drift correction method (default &lt;code&gt;&amp;quot;lowess&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Statistics&lt;span class=&#34;absolute -mt-20&#34; id=&#34;statistics&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#statistics&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;run_statistics&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — run statistical analysis (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Visualization&lt;span class=&#34;absolute -mt-20&#34; id=&#34;visualization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#visualization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;plot_bpc&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot BPC chromatograms (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_ms2&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot MS2 mirror plots (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plot_normalization&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — plot normalization results (default &lt;code&gt;False&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Classifier Building&lt;span class=&#34;absolute -mt-20&#34; id=&#34;classifier-building&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#classifier-building&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;by_group_name&lt;/code&gt; &lt;em&gt;(str | None)&lt;/em&gt; — group name for classifier training (if used).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Output&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;output_single_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export processed single-file outputs (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_ms1_scans&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export all MS1 scans to pickle for fast reloading (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output_aligned_file&lt;/code&gt; &lt;em&gt;(bool)&lt;/em&gt; — export aligned features (default &lt;code&gt;False&lt;/code&gt;; set &lt;code&gt;True&lt;/code&gt; during workflow prep).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;quant_method&lt;/code&gt; &lt;em&gt;(str)&lt;/em&gt; — &lt;code&gt;&amp;quot;peak_height&amp;quot;&lt;/code&gt; (default), &lt;code&gt;&amp;quot;peak_area&amp;quot;&lt;/code&gt;, or &lt;code&gt;&amp;quot;top_average&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Methods&lt;span class=&#34;absolute -mt-20&#34; id=&#34;methods&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#methods&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;read_parameters_from_csv(path)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read_parameters_from_csvpath&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read_parameters_from_csvpath&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Reads a CSV of key–value pairs and sets attributes. Values convertible to &lt;code&gt;float&lt;/code&gt; are cast; otherwise, &lt;code&gt;&amp;quot;true&amp;quot;/&amp;quot;yes&amp;quot;&lt;/code&gt; → &lt;code&gt;True&lt;/code&gt;, &lt;code&gt;&amp;quot;false&amp;quot;/&amp;quot;no&amp;quot;&lt;/code&gt; → &lt;code&gt;False&lt;/code&gt;. Calls &lt;code&gt;check_parameters()&lt;/code&gt; afterward.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;read_sample_metadata(path)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;read_sample_metadatapath&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#read_sample_metadatapath&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Loads sample metadata from CSV. Lower-cases columns named &lt;code&gt;&amp;quot;is_qc&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;is_blank&amp;quot;&lt;/code&gt;; converts &lt;code&gt;&amp;quot;yes&amp;quot;/&amp;quot;no&amp;quot;&lt;/code&gt; strings to booleans (otherwise defaults both columns to &lt;code&gt;False&lt;/code&gt;). Sorts so &lt;strong&gt;QC appear first&lt;/strong&gt; and &lt;strong&gt;blanks last&lt;/strong&gt;; adds &lt;code&gt;VALID&lt;/code&gt; and &lt;code&gt;ABSOLUTE_PATH&lt;/code&gt; columns; stores in &lt;code&gt;sample_metadata&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;_untargeted_metabolomics_workflow_preparation()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_untargeted_metabolomics_workflow_preparation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_untargeted_metabolomics_workflow_preparation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Prepares a project for the &lt;strong&gt;untargeted metabolomics&lt;/strong&gt; workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Validates &lt;code&gt;project_dir&lt;/code&gt;; derives standard subdirectories and creates them if missing.&lt;/li&gt;
+&lt;li&gt;Ensures raw data exist in &lt;code&gt;project_dir/data&lt;/code&gt; (currently auto-detects only &lt;strong&gt;&lt;code&gt;.mzML&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;.mzXML&lt;/code&gt;&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;sample_table.csv&lt;/code&gt; is missing, disables normalization/statistics and prints notices.&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;parameters.csv&lt;/code&gt; is missing, prints notices, infers &lt;code&gt;(ms_type, ion_mode)&lt;/code&gt; from the first sample via &lt;code&gt;find_ms_info&lt;/code&gt;, calls &lt;code&gt;set_default&lt;/code&gt;, and enables &lt;code&gt;plot_bpc&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Loads sample table if present; otherwise builds from discovered file basenames. Validates presence of raw files, computes acquisition &lt;code&gt;time&lt;/code&gt; via &lt;code&gt;get_start_time&lt;/code&gt;, filters invalid, sorts by time, adds sequential &lt;code&gt;analytical_order&lt;/code&gt;, and assigns batch IDs via &lt;code&gt;label_batch_id&lt;/code&gt;. Writes &lt;code&gt;project_files/sample_table_with_time.csv&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sets output toggles: &lt;code&gt;output_single_file=True&lt;/code&gt;, &lt;code&gt;output_ms1_scans=True&lt;/code&gt;, &lt;code&gt;output_aligned_file=True&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;&lt;code&gt;set_default(ms_type, ion_mode)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;set_defaultms_type-ion_mode&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#set_defaultms_type-ion_mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;, sets &lt;code&gt;ms1_abs_int_tol=30000&lt;/code&gt;, &lt;code&gt;ms2_abs_int_tol=10000&lt;/code&gt;; for others, &lt;code&gt;ms1_abs_int_tol=1000&lt;/code&gt;, &lt;code&gt;ms2_abs_int_tol=500&lt;/code&gt;. Also sets &lt;code&gt;ion_mode&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;check_parameters()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;check_parameters&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#check_parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Validates all numeric parameters against &lt;code&gt;PARAMETER_RAGES&lt;/code&gt;. If a value is &lt;strong&gt;out of range&lt;/strong&gt;, it prints a warning and resets that parameter to the value in &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;. If &lt;code&gt;ms2_library_path&lt;/code&gt; does &lt;strong&gt;not&lt;/strong&gt; exist, sets it to &lt;code&gt;None&lt;/code&gt;. Casts &lt;code&gt;batch_size&lt;/code&gt; to &lt;code&gt;int&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The code refers to &lt;code&gt;PARAMETER_RAGES&lt;/code&gt; throughout (typo intentional to match the implementation).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;&lt;code&gt;output_parameters(path, format=&amp;quot;json&amp;quot;)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;output_parameterspath-formatjson&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#output_parameterspath-formatjson&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Exports &lt;strong&gt;all&lt;/strong&gt; parameters (except &lt;code&gt;project_dir&lt;/code&gt;) to JSON, including &lt;code&gt;&amp;quot;MassCube_version&amp;quot;&lt;/code&gt; obtained from &lt;code&gt;importlib.metadata.version(&amp;quot;masscube&amp;quot;)&lt;/code&gt;. Only &lt;code&gt;&amp;quot;json&amp;quot;&lt;/code&gt; is supported.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;_check_raw_files_in_data_dir()&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;_check_raw_files_in_data_dir&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#_check_raw_files_in_data_dir&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Cross-references basenames from &lt;code&gt;sample_metadata&lt;/code&gt; with files in &lt;code&gt;sample_dir&lt;/code&gt; (currently only &lt;code&gt;.mzML&lt;/code&gt;/&lt;code&gt;.mzXML&lt;/code&gt;), sets &lt;code&gt;VALID&lt;/code&gt; and populates &lt;code&gt;ABSOLUTE_PATH&lt;/code&gt; accordingly.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Functions&lt;span class=&#34;absolute -mt-20&#34; id=&#34;functions&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;find_ms_info&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_ms_info&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#find_ms_info&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;find_ms_info(file_name)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Find the type of mass spectrometer and ionization mode from the raw file.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Parameters:&lt;/strong&gt;&lt;/p&gt;
+    &lt;a href=&#34;#functions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;find_ms_info(file_name)&lt;/code&gt;&lt;span class=&#34;absolute -mt-20&#34; id=&#34;find_ms_infofile_name&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#find_ms_infofile_name&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Reads up to the first 200 lines of an &lt;strong&gt;&lt;code&gt;.mzML&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code&gt;.mzXML&lt;/code&gt;&lt;/strong&gt; file (lower-cased text) to infer:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;file_name&lt;/code&gt; (str): The file name of the raw file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt;: &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt; if it contains &lt;code&gt;&amp;quot;orbitrap&amp;quot;&lt;/code&gt;/&lt;code&gt;&amp;quot;q exactive&amp;quot;&lt;/code&gt;, &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt; if &lt;code&gt;&amp;quot;tripletof&amp;quot;&lt;/code&gt;, else &lt;code&gt;&amp;quot;qtof&amp;quot;&lt;/code&gt; if contains &lt;code&gt;&amp;quot;tof&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt;: &lt;code&gt;&amp;quot;positive&amp;quot;&lt;/code&gt; or &lt;code&gt;&amp;quot;negative&amp;quot;&lt;/code&gt; if mentioned.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt;: &lt;code&gt;True&lt;/code&gt; if &lt;code&gt;&amp;quot;centroid spectrum&amp;quot;&lt;/code&gt; or &lt;code&gt;centroided=&amp;quot;1&amp;quot;&lt;/code&gt; present.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Returns:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ms_type&lt;/code&gt; (str): The type of MS, &amp;ldquo;orbitrap&amp;rdquo;, &amp;ldquo;qtof&amp;rdquo;, &amp;ldquo;tripletof&amp;rdquo; or &amp;ldquo;others&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ion_mode&lt;/code&gt; (str): The ion mode, &amp;ldquo;positive&amp;rdquo; or &amp;ldquo;negative&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;centroid&lt;/code&gt; (bool): Whether the data is centroid data.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Returns &lt;code&gt;(ms_type, ion_mode, centroid)&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Constants&lt;span class=&#34;absolute -mt-20&#34; id=&#34;constants&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;valid parameter ranges&lt;span class=&#34;absolute -mt-20&#34; id=&#34;valid-parameter-ranges&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#valid-parameter-ranges&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PARAMETER_RAGES&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A dictionary of valid parameter ranges.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_RAGES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;a href=&#34;#constants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;&lt;code&gt;PARAMETER_RAGES&lt;/code&gt; — Valid Ranges&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_rages--valid-ranges&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_rages--valid-ranges&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_RAGES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_upper_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;10000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
@@ -1020,9 +1040,7 @@ selected_features : one-dimensional numpy array
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.02&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ms2_sim_tol&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -1032,36 +1050,8 @@ selected_features : one-dimensional numpy array
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3&gt;default parameters&lt;span class=&#34;absolute -mt-20&#34; id=&#34;default-parameters&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#default-parameters&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;A dictionary of default parameters.&lt;/p&gt;
-&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_DEFAULT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;h3&gt;&lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt; — Defaults Used on Reset&lt;span class=&#34;absolute -mt-20&#34; id=&#34;parameter_default--defaults-used-on-reset&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#parameter_default--defaults-used-on-reset&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;code-block relative mt-6 first:mt-0 group/code&#34;&gt;&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PARAMETER_DEFAULT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_upper_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;100000.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_lower_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -1082,9 +1072,7 @@ selected_features : one-dimensional numpy array
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mz_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;rt_tol_merge_features&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ms2_sim_tol&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0&#34;&gt;
     &lt;button
       class=&#34;code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50&#34;
       title=&#34;Copy code&#34;
@@ -1094,6 +1082,20 @@ selected_features : one-dimensional numpy array
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Discrepancy note:&lt;/strong&gt; In the &lt;code&gt;Params&lt;/code&gt; initializer, &lt;code&gt;feature_gap_tol&lt;/code&gt; defaults to &lt;strong&gt;&lt;code&gt;10&lt;/code&gt;&lt;/strong&gt;, whereas &lt;code&gt;PARAMETER_DEFAULT[&amp;quot;feature_gap_tol&amp;quot;]&lt;/code&gt; is &lt;strong&gt;&lt;code&gt;30&lt;/code&gt;&lt;/strong&gt;. If &lt;code&gt;check_parameters()&lt;/code&gt; resets values (due to range violations), it will use the &lt;strong&gt;&lt;code&gt;30&lt;/code&gt;&lt;/strong&gt; from &lt;code&gt;PARAMETER_DEFAULT&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2&gt;Additional Notes &amp;amp; Gotchas&lt;span class=&#34;absolute -mt-20&#34; id=&#34;additional-notes--gotchas&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#additional-notes--gotchas&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Raw file discovery&lt;/strong&gt; in workflow prep and path validation currently recognizes only &lt;code&gt;.mzML&lt;/code&gt; and &lt;code&gt;.mzXML&lt;/code&gt; files, even though &lt;code&gt;file_format&lt;/code&gt; supports &lt;code&gt;&amp;quot;mzjson&amp;quot;&lt;/code&gt;/&lt;code&gt;&amp;quot;mzjson.gz&amp;quot;&lt;/code&gt; in principle.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;group_features_after_alignment&lt;/code&gt; is &lt;strong&gt;&lt;code&gt;True&lt;/code&gt;&lt;/strong&gt; in the initializer (despite an inline comment that mentions &lt;code&gt;False&lt;/code&gt;), and &lt;code&gt;gap_filling_method&lt;/code&gt; is the string &lt;code&gt;&amp;quot;local_maximum&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;ms2_library_path&lt;/code&gt; points to a &lt;strong&gt;non-existent&lt;/strong&gt; path, it is automatically set to &lt;code&gt;None&lt;/code&gt; during parameter checking.&lt;/li&gt;
+&lt;li&gt;Exported JSON via &lt;code&gt;output_parameters()&lt;/code&gt; omits &lt;code&gt;project_dir&lt;/code&gt; and includes a &lt;code&gt;&amp;quot;MassCube_version&amp;quot;&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;The code consistently uses the identifier &lt;code&gt;PARAMETER_RAGES&lt;/code&gt; (with a &lt;strong&gt;G&lt;/strong&gt;), and method docs reflect that spelling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This documentation mirrors the current &lt;code&gt;params.py&lt;/code&gt; implementation.&lt;/em&gt;&lt;/p&gt;
 
       </description>
     </item>

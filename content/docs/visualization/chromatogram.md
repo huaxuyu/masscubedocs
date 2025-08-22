@@ -1,6 +1,6 @@
 ---
 linkTitle: "Chromatograms"
-title: Chromatogram visualization
+title: Chromatograms
 weight: 1
 ---
 

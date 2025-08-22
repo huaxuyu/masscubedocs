@@ -1,7 +1,7 @@
 ---
-linkTitle: "Untargeted metabolomics"
-title: Untargeted metabolomics workflow
-weight: 4
+linkTitle: "The workflow"
+title: The untargeted metabolomics workflow
+weight: 5
 ---
 
 ## Introduction
