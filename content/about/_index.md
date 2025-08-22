@@ -16,7 +16,6 @@ Our teams are organized as follows:
 Labs and researchers interested in collaborating with us are welcome to contact us. Now we have the following labs working together:
 
 - [Fiehn Lab](https://fiehnlab.ucdavis.edu/)
-- [Huan Lab](https://huan.chem.ubc.ca/)
 
 ## Contact
 

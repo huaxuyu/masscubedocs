@@ -30,10 +30,11 @@ MassCube is a Python computing library for mass spectrometry data processing in 
 {{< card link="../docs/quickstart" title="Quick Start" icon="play">}}
 {{< /cards >}}
 
-## Release Notes for v1.2.9
+## Must reads
 
-- Only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/15740986).
+- Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/15740986).
 
-- Improve the speed of gap filling by 30-40%.
+## Release Notes for v1.2.11
 
-- Bug fixes and performance improvements.
+- Signal centroiding is now much faster (>300× faster).
+- Reduce memory usage in the "untargeted-metabolomics" workflow.
