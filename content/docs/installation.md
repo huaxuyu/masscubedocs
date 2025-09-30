@@ -5,11 +5,7 @@ weight: 1
 
 ## Install Python
 
-Visit the [official Python website](https://www.python.org/) to download Python. **Python 3.11** is recommended.
-
-{{% details title="Download Python 3.11.7" closed="true" %}}
-Download [Python 3.11.7](https://www.python.org/downloads/release/python-3117/).
-{{% /details %}}
+Download [Python 3.11.7](https://www.python.org/downloads/release/python-3117/) to start. Python >=3.8 is recommended.
 
 {{< callout emoji="❗" >}}
 Add Python to PATH during installation: check the box ☑️ Add Python 3.X to PATH.

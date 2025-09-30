@@ -882,15 +882,7 @@ selected_features : one-dimensional numpy array
         
         
         &lt;h2&gt;Install Python&lt;span class=&#34;absolute -mt-20&#34; id=&#34;install-python&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#install-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Visit the &lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official Python website&lt;/a&gt; to download Python. &lt;strong&gt;Python 3.11&lt;/strong&gt; is recommended.&lt;/p&gt;
-&lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;
-  &lt;summary class=&#34;flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[&#39;&#39;] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90&#34;&gt;
-    &lt;strong class=&#34;text-lg&#34;&gt;Download Python 3.11.7&lt;/strong&gt;
-  &lt;/summary&gt;
-  &lt;div class=&#34;p-2 overflow-hidden&#34;&gt;
-    Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11.7&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/details&gt;
+    &lt;a href=&#34;#install-python&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Download &lt;a href=&#34;https://www.python.org/downloads/release/python-3117/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python 3.11.7&lt;/a&gt; to start. Python &amp;gt;=3.8 is recommended.&lt;/p&gt;
 
 
 
