@@ -42,3 +42,7 @@ It helps manage everything from individual files to ultra-large metabolomics stu
 {{< card link="about" title="About" icon="user" >}}
 
 {{< /cards >}}
+
+## Cite
+
+Yu, H., Ding, J., Shen, T. et al. MassCube improves accuracy for metabolomics data processing from raw files to phenotype classifiers. Nat Commun 16, 5487 (2025). https://doi.org/10.1038/s41467-025-60640-5

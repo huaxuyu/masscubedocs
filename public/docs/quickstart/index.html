@@ -39,7 +39,7 @@ If you haven’t installed MassCube yet, be sure to follow the installation guid
 The MassCube untargeted metabolomics workflow One command to process untargeted metabolomics data (Fig. 1).
 Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will need data, sample table, parameters, and MS/MS database to run the workflow.">
 
-<meta itemprop="wordCount" content="501">
+<meta itemprop="wordCount" content="433">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Quick Start"/>
 <meta name="twitter:description" content="Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.
 If you haven’t installed MassCube yet, be sure to follow the installation guide before proceeding.
@@ -274,6 +274,14 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
     href="/docs/untargeted_metabolomics/the_workflow/"
     
   >The workflow
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/untargeted_metabolomics/output/"
+    
+  >About the output
     </a>
               
             </li></ul>
@@ -526,6 +534,14 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
     href="/docs/untargeted_metabolomics/the_workflow/"
     
   >The workflow
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/untargeted_metabolomics/output/"
+    
+  >About the output
     </a>
               
             </li></ul>
@@ -847,17 +863,18 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
 </details>
 <h3>Output<span class="absolute -mt-20" id="output"></span>
     <a href="#output" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After the processing, you will find the following files and folders in the project folder:</p>
-<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>project/
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code>my_project/
 ├── data
 ├── sample_table.csv
 ├── parameters.csv
-├── mzrt_list.csv (optional)
-├── project_files
-│   ├── data_processing_metadata_[DATE].pkl
-│   ├── features.msp
-│   └── ...
+├── mzrt_list.csv
 ├── aligned_feature_table.txt
-|── normalized_feature_table.txt (if signal normalization applied)
+├── normalized_feature_table.txt
+├── project_files
+│   ├── features.msp
+│   ├── aligned_feature_table_before_annotation.txt
+
+│   └── ...
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -871,10 +888,10 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
 │   ├── compound2.png
 │   └── ...
 ├── statistical_analysis
-├── normalization results
-|   ├──feature_0_normalization.png
-|   ├──feature_1_normalization.png
-|   └── ...
+├── normalization_results
+│   ├── feature_1_normalization.png
+│   ├── feature_2_normalization.png
+│   └── ...
 ├── ...</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
     <button
       class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
@@ -885,15 +902,7 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
     </button>
   </div>
 </div>
-<ol>
-<li><code>project_files</code> folder: a folder containing the metadata file for data processing.</li>
-<li><code>aligned_feature_table.txt</code> file: feature table after alignment (if applied).</li>
-<li><code>single_files</code> folder: a folder containing the feature table for each sample.</li>
-<li><code>chromatograms</code> folder: a folder containing the chromatogram for each sample.</li>
-<li><code>ms2_matching</code> folder: a folder containing the MS/MS matching for each annotated compound.</li>
-<li><code>statistical_analysis</code> folder: a folder containing the statistical analysis results.</li>
-<li><code>normalization results</code> folder: a folder containing the normalization results (if applied).</li>
-</ol>
+<p>See <a href="../untargeted_metabolomics/output" >explanation of output files</a> for more details.</p>
 </div>
 
         </div>

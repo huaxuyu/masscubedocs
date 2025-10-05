@@ -58,6 +58,8 @@
   </url><url>
     <loc>https://example.org/docs/untargeted_metabolomics/the_workflow/</loc>
   </url><url>
+    <loc>https://example.org/docs/untargeted_metabolomics/output/</loc>
+  </url><url>
     <loc>https://example.org/docs/api/</loc>
   </url><url>
     <loc>https://example.org/docs/plans/</loc>

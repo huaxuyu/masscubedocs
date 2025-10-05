@@ -70,17 +70,18 @@ Make sure the terminal directory is set to the project folder. For [Windows user
 After the processing, you will find the following files and folders in the project folder:
 
 ```
-project/
+my_project/
 ├── data
 ├── sample_table.csv
 ├── parameters.csv
-├── mzrt_list.csv (optional)
-├── project_files
-│   ├── data_processing_metadata_[DATE].pkl
-│   ├── features.msp
-│   └── ...
+├── mzrt_list.csv
 ├── aligned_feature_table.txt
-|── normalized_feature_table.txt (if signal normalization applied)
+├── normalized_feature_table.txt
+├── project_files
+│   ├── features.msp
+│   ├── aligned_feature_table_before_annotation.txt
+
+│   └── ...
 ├── single_files
 │   ├── sample1.txt
 │   ├── sample2.txt
@@ -94,19 +95,13 @@ project/
 │   ├── compound2.png
 │   └── ...
 ├── statistical_analysis
-├── normalization results
-|   ├──feature_0_normalization.png
-|   ├──feature_1_normalization.png
-|   └── ...
+├── normalization_results
+│   ├── feature_1_normalization.png
+│   ├── feature_2_normalization.png
+│   └── ...
 ├── ...
 ```
 
-1. `project_files` folder: a folder containing the metadata file for data processing.
-2. `aligned_feature_table.txt` file: feature table after alignment (if applied).
-3. `single_files` folder: a folder containing the feature table for each sample.
-4. `chromatograms` folder: a folder containing the chromatogram for each sample.
-5. `ms2_matching` folder: a folder containing the MS/MS matching for each annotated compound.
-6. `statistical_analysis` folder: a folder containing the statistical analysis results.
-7. `normalization results` folder: a folder containing the normalization results (if applied).
+See [explanation of output files](../untargeted_metabolomics/output) for more details.
 
 {{% /steps %}}
