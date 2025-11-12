@@ -13,7 +13,7 @@
 
   <title>MassCube Documentation – MassCube</title>
   <meta name="description" content="Hello! Welcome to the MassCube documentation!
-Date: 2025-09-30 Version: 1.2.11" />
+Date: 2025-11-12 Version: 1.2.12" />
   
   
     <link rel="canonical" href="https://example.org/docs/" itemprop="url" />
@@ -213,9 +213,9 @@ Date: 2025-09-30 Version: 1.2.11" />
             </li>
           <li>
               <a
-                href="#release-notes-for-v1211"
+                href="#release-notes-for-v1212"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Release Notes for v1.2.11</a>
+              >Release Notes for v1.2.12</a>
             </li>
           </ul>
   <div class="ltr:pr-0 overflow-hidden">
@@ -767,7 +767,7 @@ Date: 2025-09-30 Version: 1.2.11" />
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#release-notes-for-v1211">Release Notes for v1.2.11
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#release-notes-for-v1212">Release Notes for v1.2.12
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -790,7 +790,7 @@ Date: 2025-09-30 Version: 1.2.11" />
         <div class="content">
           <h1>MassCube Documentation</h1>
           <p>Hello! Welcome to the MassCube documentation!</p>
-<p><strong>Date</strong>: 2025-09-30 <strong>Version</strong>: 1.2.11</p>
+<p><strong>Date</strong>: 2025-11-12 <strong>Version</strong>: 1.2.12</p>
 <h2>What is MassCube?<span class="absolute -mt-20" id="what-is-masscube"></span>
     <a href="#what-is-masscube" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>MassCube is a Python computing library for mass spectrometry data processing in metabolomics.</p>
 <h2>Features<span class="absolute -mt-20" id="features"></span>
@@ -799,7 +799,7 @@ Date: 2025-09-30 Version: 1.2.11" />
 <p><strong>Open-source</strong>: Free for non-commercial use.</p>
 </li>
 <li>
-<p><strong>Workflows</strong>: Run the entire data processing pipeline with a single command.</p>
+<p><strong>Workflows</strong>: Complete the entire data processing pipeline with a single command.</p>
 </li>
 <li>
 <p><strong>Accurate</strong>: Efficient large-scale data processing with human-expert level accuracy.</p>
@@ -822,10 +822,23 @@ Date: 2025-09-30 Version: 1.2.11" />
     <a href="#must-reads" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you <a href="https://zenodo.org/records/15740986" target="_blank" rel="noopener">download the latest version of MS/MS database</a>.</li>
 </ul>
-<h2>Release Notes for v1.2.11<span class="absolute -mt-20" id="release-notes-for-v1211"></span>
-    <a href="#release-notes-for-v1211" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>Signal centroiding is now much faster (&gt;300× faster).</li>
-<li>Reduce memory usage in the &ldquo;untargeted-metabolomics&rdquo; workflow.</li>
+<h2>Release Notes for v1.2.12<span class="absolute -mt-20" id="release-notes-for-v1212"></span>
+    <a href="#release-notes-for-v1212" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>Split the feature segmentation method into a standalone module.</p>
+</li>
+<li>
+<p>Re-optimized parameters for gf-prominence method (sigma = 0.6, prom_ratio = 0.01).</p>
+</li>
+<li>
+<p>Fixed overly long peak shape output in the aligned feature table.</p>
+</li>
+<li>
+<p>Updated formula_to_isotope_distribution function.</p>
+</li>
+<li>
+<p>Minor text and code edits.</p>
+</li>
 </ul>
         </div>
         <div class="mt-16"></div>
