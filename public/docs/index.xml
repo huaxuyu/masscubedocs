@@ -2054,7 +2054,7 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Set and download a parameter file&lt;/a&gt;. If not provided, the &lt;a href=&#34;../workflows/parameters&#34; &gt;default parameters&lt;/a&gt; will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;MS/MS database&lt;/code&gt;: &lt;a href=&#34;https://zenodo.org/records/15740986&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download a MS/MS database&lt;/a&gt; for MS/MS spectral annotation. You may also &lt;a href=&#34;../workflows/database/#prepare-a-database-for-advanced-users&#34; &gt;prepare your own MS/MS database&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MS/MS database&lt;/code&gt;: &lt;a href=&#34;https://zenodo.org/records/17902514&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download a MS/MS database&lt;/a&gt; for MS/MS spectral annotation. You may also &lt;a href=&#34;../workflows/database/#prepare-a-database-for-advanced-users&#34; &gt;prepare your own MS/MS database&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;details class=&#34;last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group&#34; &gt;

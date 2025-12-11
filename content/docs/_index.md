@@ -32,7 +32,7 @@ MassCube is a Python computing library for mass spectrometry data processing in 
 
 ## Must reads
 
-- Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/15740986).
+- Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/17902514).
 
 ## Release Notes for v1.2.12
 

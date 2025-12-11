@@ -38,7 +38,7 @@ my_project
 
 3. `parameters.csv` file: [Set and download a parameter file](https://huaxuyu.github.io/masscube_parameters/). If not provided, the [default parameters](../workflows/parameters) will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.
 
-4. `MS/MS database`: [Download a MS/MS database](https://zenodo.org/records/15740986) for MS/MS spectral annotation. You may also [prepare your own MS/MS database](../workflows/database/#prepare-a-database-for-advanced-users).
+4. `MS/MS database`: [Download a MS/MS database](https://zenodo.org/records/17902514) for MS/MS spectral annotation. You may also [prepare your own MS/MS database](../workflows/database/#prepare-a-database-for-advanced-users).
 
 {{< details title="Using MassCube 1.0 or 1.1" closed="true" >}}
 For MassCube 1.1 or earlier, please use the [old MS/MS databases](https://zenodo.org/records/11363475)
