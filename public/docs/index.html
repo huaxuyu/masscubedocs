@@ -213,9 +213,9 @@ Date: 2025-11-12 Version: 1.2.12" />
             </li>
           <li>
               <a
-                href="#release-notes-for-v1212"
+                href="#patch-notes-for-v1214"
                 class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
-              >Release Notes for v1.2.12</a>
+              >Patch notes for v1.2.14</a>
             </li>
           </ul>
   <div class="ltr:pr-0 overflow-hidden">
@@ -471,9 +471,9 @@ Date: 2025-11-12 Version: 1.2.12" />
             </li><li class="flex flex-col "><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/plans/"
+    href="/docs/release_notes/"
     
-  >Plans for development
+  >Patch Notes
     </a>
               
             </li></ul>
@@ -728,9 +728,9 @@ Date: 2025-11-12 Version: 1.2.12" />
           <li class=""><a
     class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
-    href="/docs/plans/"
+    href="/docs/release_notes/"
     
-  >Plans for development
+  >Patch Notes
     </a></li>
         
       </ul>
@@ -767,7 +767,7 @@ Date: 2025-11-12 Version: 1.2.12" />
         </a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#release-notes-for-v1212">Release Notes for v1.2.12
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#patch-notes-for-v1214">Patch notes for v1.2.14
         </a>
       </li></ul>
       <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
@@ -822,24 +822,25 @@ Date: 2025-11-12 Version: 1.2.12" />
     <a href="#must-reads" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you <a href="https://zenodo.org/records/17902514" target="_blank" rel="noopener">download the latest version of MS/MS database</a>.</li>
 </ul>
-<h2>Release Notes for v1.2.12<span class="absolute -mt-20" id="release-notes-for-v1212"></span>
-    <a href="#release-notes-for-v1212" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<h2>Patch notes for v1.2.14<span class="absolute -mt-20" id="patch-notes-for-v1214"></span>
+    <a href="#patch-notes-for-v1214" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
 <li>
-<p>Split the feature segmentation method into a standalone module.</p>
+<p>Added precursor ion fraction (PIF) as an indicative metric for MS/MS spectrum quality. The PIF value is calculated based on isolation window and all ions present in the window that may contribute to the MS/MS spectrum. The PIF value is available in the aligned feature table in the &ldquo;precursor_ion_fraction&rdquo; column.</p>
 </li>
 <li>
-<p>Re-optimized parameters for gf-prominence method (sigma = 0.6, prom_ratio = 0.02).</p>
+<p>Added precursor window as an attribute in the Scan object (Scan.isolation_window).</p>
 </li>
 <li>
-<p>Fixed overly long peak shape output in the aligned feature table.</p>
+<p>Bug fix: now MassCube can correctly handle mzXML files without timestamps. Explanation: timestamps are automatically acquired in MassCube for signal drift normalization (if enabled). However, some mzXML files may not contain timestamps, which may lead to errors during data processing. This bug has been fixed in this version.</p>
 </li>
 <li>
 <p>Updated formula_to_isotope_distribution function.</p>
 </li>
 <li>
-<p>Minor text and code edits.</p>
+<p>Minor text edits for the untargeted metabolomics workflow command line application.</p>
 </li>
 </ul>
+<p>Previous patch notes can be found <a href="/docs/release_notes" >here</a>.</p>
         </div>
         <div class="mt-16"></div>
         

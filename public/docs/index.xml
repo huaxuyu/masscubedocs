@@ -2592,5 +2592,40 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
       </description>
     </item>
     
+    <item>
+      <title>Patch Notes</title>
+      <link>https://example.org/docs/release_notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/docs/release_notes/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;v1.2.13&lt;span class=&#34;absolute -mt-20&#34; id=&#34;v1213&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v1213&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Fixed a bug that may cause failed MS/MS parsing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;v1.2.12&lt;span class=&#34;absolute -mt-20&#34; id=&#34;v1212&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v1212&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Split the feature segmentation method into a standalone module.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Re-optimized parameters for gf-prominence method (sigma = 0.6, prom_ratio = 0.02).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed overly long peak shape output in the aligned feature table.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated formula_to_isotope_distribution function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Minor text and code edits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

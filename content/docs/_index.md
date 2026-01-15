@@ -34,14 +34,16 @@ MassCube is a Python computing library for mass spectrometry data processing in 
 
 - Starting from MassCube ver. 1.2.8, only one database is needed for the untargeted metabolomics workflow. Make sure you [download the latest version of MS/MS database](https://zenodo.org/records/17902514).
 
-## Release Notes for v1.2.12
+## Patch notes for v1.2.14
 
-- Split the feature segmentation method into a standalone module.
+- Added precursor ion fraction (PIF) as an indicative metric for MS/MS spectrum quality. The PIF value is calculated based on isolation window and all ions present in the window that may contribute to the MS/MS spectrum. The PIF value is available in the aligned feature table in the "precursor_ion_fraction" column.
 
-- Re-optimized parameters for gf-prominence method (sigma = 0.6, prom_ratio = 0.02).
+- Added precursor window as an attribute in the Scan object (Scan.isolation_window).
 
-- Fixed overly long peak shape output in the aligned feature table.
+- Bug fix: now MassCube can correctly handle mzXML files without timestamps. Explanation: timestamps are automatically acquired in MassCube for signal drift normalization (if enabled). However, some mzXML files may not contain timestamps, which may lead to errors during data processing. This bug has been fixed in this version.
 
 - Updated formula_to_isotope_distribution function.
 
-- Minor text and code edits.
+- Minor text edits for the untargeted metabolomics workflow command line application.
+
+Previous patch notes can be found [here](/docs/release_notes).
