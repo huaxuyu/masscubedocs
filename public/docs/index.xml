@@ -2601,7 +2601,25 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
       <description>
         
         
-        &lt;h2&gt;v1.2.13&lt;span class=&#34;absolute -mt-20&#34; id=&#34;v1213&#34;&gt;&lt;/span&gt;
+        &lt;h2&gt;Patch notes for v1.2.14&lt;span class=&#34;absolute -mt-20&#34; id=&#34;patch-notes-for-v1214&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#patch-notes-for-v1214&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Added precursor ion fraction (PIF) as an indicative metric for MS/MS spectrum quality. The PIF value is calculated based on isolation window and all ions present in the window that may contribute to the MS/MS spectrum. The PIF value is available in the aligned feature table in the &amp;ldquo;precursor_ion_fraction&amp;rdquo; column.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added precursor window as an attribute in the Scan object (Scan.isolation_window).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bug fix: now MassCube can correctly handle mzXML files without timestamps. Explanation: timestamps are automatically acquired in MassCube for signal drift normalization (if enabled). However, some mzXML files may not contain timestamps, which may lead to errors during data processing. This bug has been fixed in this version.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated formula_to_isotope_distribution function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Minor text edits for the untargeted metabolomics workflow command line application.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;v1.2.13&lt;span class=&#34;absolute -mt-20&#34; id=&#34;v1213&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#v1213&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Fixed a bug that may cause failed MS/MS parsing.&lt;/li&gt;
 &lt;/ul&gt;
