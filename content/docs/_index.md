@@ -45,4 +45,4 @@ MassCube is a Python computing library for mass spectrometry data processing in 
 - Feature alignment speed is improved.
 - Scan index (the index of the MS/MS scan in the raw reference file) is now provided for the MS/MS spectrum in the feature table that is used for annotation.
 
-Previous patch notes can be found [here](../release_notes).
+Previous patch notes can be found [here](../docs/release_notes).
