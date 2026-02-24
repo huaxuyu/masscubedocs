@@ -5,7 +5,7 @@ title: MassCube Documentation
 
 Hello! Welcome to the MassCube documentation!
 
-**Date**: 2026-01-26 **Version**: 1.2.15
+**Date**: 2026-02-23 **Version**: 1.2.16
 
 <!--more-->
 
