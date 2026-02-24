@@ -3,6 +3,17 @@ title: "Patch Notes"
 weight: 7
 ---
 
+## Patch notes for v1.2.15
+
+- Scan-to-scan correlation values are now reported for annotated adducts and in-source fragments.
+- Isotope state is clearly specified in the feature table (e.g. M+2 instead of “isotope”)
+- Isotope recognition accuracy has been improved for high-resolution MS data: C and S isotopes can be better distinguished
+- Feature grouping speed is now improved by 10-fold
+- Bug fix: mzXML file may not correctly specify the isolation window for DDA, which can trigger an error for precursor ion fraction calculation
+- Bug fix: in very rare cases, feature segmentation may fail
+- Feature alignment speed is improved.
+- Scan index (the index of the MS/MS scan in the raw reference file) is now provided for the MS/MS spectrum in the feature table that is used for annotation.
+
 ## Patch notes for v1.2.14
 
 - Added precursor ion fraction (PIF) as an indicative metric for MS/MS spectrum quality. The PIF value is calculated based on isolation window and all ions present in the window that may contribute to the MS/MS spectrum. The PIF value is available in the aligned feature table in the "precursor_ion_fraction" column.
