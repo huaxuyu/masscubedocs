@@ -23,7 +23,7 @@
       <description>
         
         
-        &lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
+        &lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mzXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
 &lt;p&gt;We recommend to use &lt;strong&gt;MSConvert&lt;/strong&gt; for file conversion.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard and install MSConvert.&lt;/p&gt;
 &lt;p&gt;

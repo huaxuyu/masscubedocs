@@ -4,7 +4,7 @@ title: "Convert raw MS data"
 weight: 1
 ---
 
-Raw mass spectrometry data need to be converted to <u>centroid</u> **mzML** or **mxXML** format for MassCube data processing.
+Raw mass spectrometry data need to be converted to <u>centroid</u> **mzML** or **mzXML** format for MassCube data processing.
 
 We recommend to use **MSConvert** for file conversion.
 

@@ -39,7 +39,7 @@ If you haven’t installed MassCube yet, be sure to follow the installation guid
 The MassCube untargeted metabolomics workflow One command to process untargeted metabolomics data (Fig. 1).
 Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will need data, sample table, parameters, and MS/MS database to run the workflow.">
 
-<meta itemprop="wordCount" content="433">
+<meta itemprop="wordCount" content="428">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Quick Start"/>
 <meta name="twitter:description" content="Let’s dive into the untargeted metabolomics workflow, designed to simplify and streamline untargeted metabolomics analysis. This powerful workflow delivers comprehensive results with just a single command.
 If you haven’t installed MassCube yet, be sure to follow the installation guide before proceeding.
@@ -811,10 +811,10 @@ Fig. 1. The MassCube untargeted metabolomics workflow Input (4 items) You will n
 </div>
 <ol>
 <li>
-<p><code>data</code> folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It&rsquo;s <strong>mandatory</strong>. <a href="../workflows/data_preparation" >I don&rsquo;t know how to convert my files</a>.</p>
+<p><code>data</code> folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It&rsquo;s <strong>mandatory</strong>. <a href="../untargeted_metabolomics/convert_ms_data" >File conversion instructions.</a>.</p>
 </li>
 <li>
-<p><code>sample_table.csv</code> file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to <a href="../workflows/data_preparation#generate-a-sample-table" >generate a sample table</a> and then edit. Set <strong>yes</strong> in the &lsquo;is_blank&rsquo; column for blank samples, and <strong>yes</strong> in the &lsquo;is_qc&rsquo; column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.</p>
+<p><code>sample_table.csv</code> file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to <a href="../untargeted_metabolomics/generate_sample_table" >generate a sample table</a> and then edit. Set <strong>yes</strong> in the &lsquo;is_blank&rsquo; column for blank samples, and <strong>yes</strong> in the &lsquo;is_qc&rsquo; column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.</p>
 </li>
 <li>
 <p><code>parameters.csv</code> file: <a href="https://huaxuyu.github.io/masscube_parameters/" target="_blank" rel="noopener">Set and download a parameter file</a>. If not provided, the <a href="../workflows/parameters" >default parameters</a> will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.</p>

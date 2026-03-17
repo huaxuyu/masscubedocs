@@ -523,7 +523,7 @@ selected_features : one-dimensional numpy array
       <description>
         
         
-        &lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mxXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
+        &lt;p&gt;Raw mass spectrometry data need to be converted to &lt;u&gt;centroid&lt;/u&gt; &lt;strong&gt;mzML&lt;/strong&gt; or &lt;strong&gt;mzXML&lt;/strong&gt; format for MassCube data processing.&lt;/p&gt;
 &lt;p&gt;We recommend to use &lt;strong&gt;MSConvert&lt;/strong&gt; for file conversion.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://proteowizard.sourceforge.io/download.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official website&lt;/a&gt; to download ProteoWizard and install MSConvert.&lt;/p&gt;
 &lt;p&gt;
@@ -2045,10 +2045,10 @@ for faster reloading. The &lt;code&gt;mzpkl&lt;/code&gt; file format is a pickle
 &lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. &lt;a href=&#34;../workflows/data_preparation&#34; &gt;I don&amp;rsquo;t know how to convert my files&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;data&lt;/code&gt; folder: a file folder containing all raw LC-MS data in &lt;u&gt;.mzML&lt;/u&gt; or &lt;u&gt;.mzXML&lt;/u&gt; format. It&amp;rsquo;s &lt;strong&gt;mandatory&lt;/strong&gt;. &lt;a href=&#34;../untargeted_metabolomics/convert_ms_data&#34; &gt;File conversion instructions.&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to &lt;a href=&#34;../workflows/data_preparation#generate-a-sample-table&#34; &gt;generate a sample table&lt;/a&gt; and then edit. Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sample_table.csv&lt;/code&gt; file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to &lt;a href=&#34;../untargeted_metabolomics/generate_sample_table&#34; &gt;generate a sample table&lt;/a&gt; and then edit. Set &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_blank&amp;rsquo; column for blank samples, and &lt;strong&gt;yes&lt;/strong&gt; in the &amp;lsquo;is_qc&amp;rsquo; column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;parameters.csv&lt;/code&gt; file: &lt;a href=&#34;https://huaxuyu.github.io/masscube_parameters/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Set and download a parameter file&lt;/a&gt;. If not provided, the &lt;a href=&#34;../workflows/parameters&#34; &gt;default parameters&lt;/a&gt; will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.&lt;/p&gt;

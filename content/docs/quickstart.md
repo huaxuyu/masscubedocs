@@ -32,9 +32,9 @@ my_project
 └── parameters.csv
 ```
 
-1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. [I don't know how to convert my files](../workflows/data_preparation).
+1. `data` folder: a file folder containing all raw LC-MS data in <u>.mzML</u> or <u>.mzXML</u> format. It's **mandatory**. [File conversion instructions.](../untargeted_metabolomics/convert_ms_data).
 
-2. `sample_table.csv` file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to [generate a sample table](../workflows/data_preparation#generate-a-sample-table) and then edit. Set **yes** in the 'is_blank' column for blank samples, and **yes** in the 'is_qc' column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.
+2. `sample_table.csv` file: a csv file to claim quality control samples, blank samples and biological groups. Use MassCube to [generate a sample table](../untargeted_metabolomics/generate_sample_table) and then edit. Set **yes** in the 'is_blank' column for blank samples, and **yes** in the 'is_qc' column for quality control (QC) samples. If not provided, normalization and statistical analysis will not be applied.
 
 3. `parameters.csv` file: [Set and download a parameter file](https://huaxuyu.github.io/masscube_parameters/). If not provided, the [default parameters](../workflows/parameters) will be applied, but annotation will not be performed since the file location of the MS/MS database is not provided.
 
