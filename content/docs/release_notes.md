@@ -3,6 +3,16 @@ title: "Patch Notes"
 weight: 7
 ---
 
+## Patch notes for v1.2.17 and v1.2.18
+
+- Minor code and note edits.
+
+## Patch notes for v1.2.16
+
+- Bug fix: now the scan number and precursor ion fraction values are correctly assigned based on the reference MS/MS - spectrum (i.e. the spectrum used for annotation)
+- Empty adduct is now allowed for calculating the isotope distribution.
+- Other minor changes of code notes.
+
 ## Patch notes for v1.2.15
 
 - Scan-to-scan correlation values are now reported for annotated adducts and in-source fragments.
