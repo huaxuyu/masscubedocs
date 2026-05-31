@@ -5,4 +5,4 @@ title: Contribute
 
 We welcome contributions to the code, workflows, and documentation.
 
-- **Developer and maintainer:** Huaxu Yu: hxuyu@ucdavis.edu; yhxchem@outlook.com
+- **Developer and maintainer:** Huaxu Yu: huaxuyu@zju.edu.cn; yhxchem@outlook.com

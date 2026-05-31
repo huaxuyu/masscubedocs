@@ -11,7 +11,7 @@ Hello! Welcome to the MassCube documentation!
 
 ## What is MassCube?
 
-    MassCube is a Python computing library for mass spectrometry data processing in metabolomics.
+MassCube is a Python computing library for mass spectrometry data processing in metabolomics.
 
 ## Features
 
